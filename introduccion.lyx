@@ -1,0 +1,543 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter*
+
+\series bold
+\size large
+Introducción
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Introducción}
+\end_layout
+
+\end_inset
+
+
+\lang spanish
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+TODO: cosas generales sobre el proyecto
+\end_layout
+
+\begin_layout Standard
+A continuación, se describen los antecedentes, el planteamiento y solución
+ del problema que justifican el proyecto de pasantías desarrollado\SpecialChar \@.
+ Además,
+ se exponen los objetivos generales y específicos que se busca alcanzar
+ en este desarrollo, y el alcance que abarca este proyecto\SpecialChar \@.
+ Esta información
+ tiene la intención de que el lector comprenda el contexto general del proyecto
+ y conozca el propósito del mismo\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 7.5pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Antecedentes
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 7.5pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+PRX Solutions es una empresa dedicada al diseño de soluciones tecnológicas
+ para el sector salud, farmacéutico y asegurador\SpecialChar \@.
+ Los productos y servicios
+ de PRX Solutions están dirigidos al análisis de reclamos de salud, supervisión
+ de la dispensación de tratamientos farmacológicos y el control de la salud
+ de pacientes\SpecialChar \@.
+ El principal objetivo de la empresa es aumentar la rentabilidad
+ de sus clientes a través de detección de fraudes, reducción de costos operativo
+s, optimización de procesos, aumento de la competitividad y control y supervisió
+n de los pacientes\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La empresa nace en el año 2011 como una unidad de negocios independiente
+ de AUXIMED, empresa que tiene más de 5 años en el mercado dispensando tratamien
+tos farmacológicos a través de programas de salud del mercado asegurador\SpecialChar \@.
+
+ PRX Control Solutions desarrolla dos aplicaciones web interactivas: PCA
+ Audit y PCA Farma\SpecialChar \@.
+ PCA Audit es una herramienta para analizar farmacológicamente
+ los reclamos de salud, permitiendo a proveedores de planes de salud detectar
+ más de 30 tipos de fraude, lo cual se resume en un ahorro de un 20% a un
+ 30% sobre la siniestralidad\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La funcionalidad de PCA Audit está orientada en tres módulos: una plataforma
+ de autogestión para asegurados, un sistema de generación de órdenes de
+ servicio a través de la atención primaria de salud, y una herramienta que
+ facilita la extracción de estadísticas por analistas de los proveedores
+ de planes de salud sobre el uso del sistema\SpecialChar \@.
+ PCA Audit fue desarrollado
+ en base a una necesidad del mercado asegurador de contar con herramientas
+ tecnológicas que permitan controlar el gasto de siniestralidad de los reclamos
+ de salud\SpecialChar \@.
+ Actualmente este producto cuenta con 4 clientes operativos: Mercantil
+ Seguros, AON, Humanitas y Seguros Caroní\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+PCA Farma es una aplicación que ayuda a las farmacias aumentar las ventas
+ a través del control y seguimiento de pacientes crónicos\SpecialChar \@.
+ A través de PCA
+ Farma las farmacias pueden retener a sus pacientes, ofreciendo un servicio
+ personalizado y garantizando que renueven los tratamientos en sus tiendas
+ y así competir con las grandes cadenas\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+PRX Control Solutions ofrece PCA Audit y PCA Farma a través de un modelo
+ SaaS, el cual consiste en la distribución de la aplicación como un servicio,
+ empleando un modelo de ingresos por uso\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 7.5pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Planteamiento del problema
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 7.5pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La fuente principal del valor en los productos de PRX Control Solutions
+ está en la información acumulada en la base de datos común que utilizan\SpecialChar \@.
+
+ Los procesos de análisis y detección de fraude en reclamos de salud se
+ basan en la capacidad del sistema de establecer relaciones farmacológicas
+ en las solicitudes de pacientes\SpecialChar \@.
+ A pesar de que los productos de la empresa
+ han pasado por varias iteraciones de desarrollo y las aplicaciones particulares
+ han sido reimplementadas varias veces para adaptarse a las exigencias del
+ mercado, han continuado usando, sin embargo, el mismo modelo de datos,
+ el cual ha sido objeto de modificaciones 
+\shape italic
+ad hoc
+\shape default
+ que preservan la misma estructura básica original pero agregan la información
+ particular requerida por nuevos requerimientos, procesos y productos.
+\end_layout
+
+\begin_layout Standard
+Esta práctica ha permitido la evolución gradual de los productos de la empresa\SpecialChar \@.
+
+ Sin embargo, la estrategia de mercado de la empresa y el enfoque de sus
+ productos ha cambiado significativamente desde el momento en que el modelo
+ de datos fue originalmente diseñado e implantado.
+ Al tener que adaptarse a más clientes, cada uno con su propia metodología
+ de trabajo y sus propios requerimientos específicos, se ha hecho difícil
+ adaptar el modelo de datos existente a nuevos procesos, y se ha observado
+ una fuerte disminución de la productividad en el desarrollo asociado a
+ la integración con nuevos clientes atribuible en buena parte a que el modelo
+ de datos actual no es capaz de representar con facilidad ciertas metodologías
+ de trabajo\SpecialChar \@.
+ Esto se acentúa por la gran cantidad de modificaciones hechas
+ al modelo simple original para adaptarlo a nuevos procesos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Es así como PRX Control Solutions se propone desarrollar un modelo de datos
+ nuevo que considere todos los requerimientos de diseño que ahora se conocen.
+ Con el modelo de datos nuevo se busca no solo mejorar los productos y servicios
+ actualmente ofrecidos por la empresa a sus clientes, sino también proveer
+ un fundamento sólido y extensible que facilite el crecimiento y los futuros
+ desarrollos de productos de la empresa.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 7.5pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Solución del problema
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 7.5pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se requiere diseñar e implantar un modelo de datos que permita registrar
+ información sobre órdenes de farmacia y casos de reembolso, incluyendo
+ las relaciones entre medicamentos y patologías, además de recopilar históricos
+ de informes médicos y facturas de asegurados.
+\end_layout
+
+\begin_layout Standard
+Se debe desarrollar una abstracción para la manipulación de los datos del
+ nuevo modelo para su utilización uniforme desde las aplicaciones de la
+ empresa.
+ Esta abstracción debe facilitar la integración con aplicaciones Web y
+\end_layout
+
+\begin_layout Standard
+El nuevo modelo de datos debe permitir 
+\end_layout
+
+\begin_layout Standard
+Debe contar con una base de datos de medicamentos, los cuales pueden ser
+ prescritos por el médico a sus pacientes.
+ Se debe poder imprimir reportes de las consultas.
+ Se debe poder solicitar exámenes y perfiles de laboratorio en el transcurso
+ de una consulta.
+ 
+\end_layout
+
+\begin_layout Standard
+La aplicación debe permitir ingresar la información de manera fácil, intuitiva
+ y rápida.
+ 
+\end_layout
+
+\begin_layout Standard
+Sobre la propuesta planteada, se realizó el diseño e implementación de una
+ aplicación que integrará los requerimientos de la empresa: gestión de consultas
+ de pacientes, solicitud de exámenes de laboratorio y exposición de reportes
+ estadísticos de patologías recurrentes.
+\end_layout
+
+\begin_layout Standard
+Se propone iniciar el desarrollo utilizando el marco de desarrollo (
+\shape slanted
+framework
+\shape default
+) de PHP, denominado CakePHP, en el entorno de desarrollo integrado (IDE)
+ Aptana para diseñar e implementar los elementos pertenecientes al cliente
+ y para la comunicación con los servidores.
+ Se utilizará el lenguaje de programación Javascript, mediante el 
+\shape slanted
+framework
+\shape default
+ jQuery, para el desarrollo de las comunicaciones basadas en AJAX, y para
+ la generación de contenidos dinámicos en el lado del cliente.
+\end_layout
+
+\begin_layout Standard
+Para la generación de informes médicos y reporte de interconsultas, se plantea
+ utilizar la librería TCPDF, desarrollada para trabajar con PHP, que provee
+ de una interfaz para la generación de documentos en formato PDF y para
+ el despliege en Flash de los reportes estadísticos, se empleará la librería
+ 
+\shape slanted
+Open Flash Chart 2
+\shape default
+, desarrollada en PHP, para generar gráficos y cuadros estadísticos.
+\end_layout
+
+\begin_layout Standard
+El manejo de información en cuanto a consultas y registros se realizaría
+ sobre los servidores con los que trabajan actualmente en la empresa y de
+ ser necesario se aplicarían ajustes para lograr que la nueva aplicación
+ pueda integrarse sin problemas con los demás sistemas.
+ Estos servidores poseen bases de datos que funcionan bajo el manejador
+ relacional MySQL.
+\end_layout
+
+\begin_layout Standard
+A continuación, se presentan los objetivos del proyecto de pasantía larga.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 7.5pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Objetivo general
+\series default
+
+\begin_inset VSpace 7.5pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Desarrollar un sistema que permita a los médicos atender las consultas de
+ sus pacientes, paso a paso y de manera intuitiva, registrando la información
+ recopilada en la consulta, y permitiendo que sea visualizada posteriormente.
+\begin_inset VSpace 7.5pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Objetivos específicos
+\series default
+
+\begin_inset VSpace 7.5pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Establecer la visión del sistema.
+\end_layout
+
+\begin_layout Itemize
+Especificar los requerimientos del sistema.
+\end_layout
+
+\begin_layout Itemize
+Implementar el login para el manejo de consultas.
+\end_layout
+
+\begin_layout Itemize
+Diseñar la arquitectura del sistema.
+\end_layout
+
+\begin_layout Itemize
+Implementar módulos para antecedentes médicos, resultados de exámenes físicos,
+ funcionales y paraclínicos (exámenes de laboratorio y estudios de gabinete)
+ y prescripción de medicamentos, e interconsultas.
+\end_layout
+
+\begin_layout Itemize
+Integrar el sistema de atención con los sistemas ya existentes de la empresa
+ Venemergencia (sistema de gestión de citas de laboratorio).
+\end_layout
+
+\begin_layout Itemize
+Implementar los reportes de patologías de los pacientes, posibilidad de
+ imprimir reportes de las consultas.
+\end_layout
+
+\begin_layout Itemize
+Documentar el sistema.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 7.5pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Alcance
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 7.5pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Desarrollar una aplicación de carácter médico para gestión de consultas
+ médicas.
+ Esta aplicación debe manejar la siguiente información relacionada con los
+ pacientes: antecedentes médicos, hábitos, consultas previas, resultados
+ de exámenes paraclínicos, registro de exámenes físicos y funcionales, diagnósti
+co de patologías, prescripción de medicamentos, entre otras.
+\end_layout
+
+\begin_layout Standard
+Un aspecto importante, es la posibilidad de solicitar exámenes y perfiles
+ médicos al laboratorio Venelab, perteneciente al GRUPO VENEMERGENCIA.
+ La aplicación debe estar desarrollada para ser utilizada a través de un
+ navegador web, para simplificar su utilización y asi no requerir ningún
+ procedimiento de instalación que dificulte esta tarea; requiere estar disponibl
+e en todo momento para cualquier médico que cuente con un registro de datos
+ de paciente con la empresa, siempre y cuando se disponga de una conexión
+ a internet.
+ El trasfondo de desarrollar una aplicación como tal es buscar de alguna
+ manera crear una base de datos de antecedentes médicos de pacientes a la
+ cual un medíco pueda acceder en el momento que quiera sin tener que perder
+ tiempo esperando a que se ubique el historial médico archivado; tiempo
+ que puede ser invertido en ir tratando al paciente, la idea es agilizar
+ y dar apoyo al proceso de asistencia para mejorar la calidad del servicio.
+\end_layout
+
+\begin_layout Standard
+La aplicación debe estar diseñada para manejar cualquier tipo de información
+ médica relevante.
+ Debe contar con una interfaz intuitiva y amigable adaptándose a las exigencias
+ de los médicos quienes deben poder ingresar la información de manera fácil
+ y rápida, entorpeciendo lo menos posible su labor.
+\end_layout
+
+\begin_layout Standard
+Es relevante indicar sobre el objetivo relacionado a la integración con
+ el sistema de gestión de citas de laboratorio, que su alcance fue modificado
+ debido a la reestructuración de dicho sistema, que ejecuta la empresa Venectecn
+ología, donde se plantea utilizar una nueva aplicación para realizar estas
+ actividades.
+ En consecuencia, la integración se simplificó a la realización de un proceso
+ de solicitud de citas via correo electrónico, a través de los datos capturados
+ en las consultas médicas, además, de el desarrollo de un módulo de carga
+ de archivos e imágenes, que permite asociar documentos digitalizados a
+ una consulta médica.
+\end_layout
+
+\begin_layout Standard
+El alcance de la aplicación a desarrollar, consiste en la entrega de un
+ prototipo 80% funcional, a nivel de casos de uso.
+ La aplicación debe cubrir los aspectos operativos necesarios que le permitan
+ a un médico la utilización de la herramienta de manera confiable y segura
+ proporcionándole la información necesaria para atender a un paciente de
+ manera inmediata, teniendo en cuenta la preservación y confidencialidad
+ de los datos a los que se tendrá acesso.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

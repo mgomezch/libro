@@ -1,0 +1,484 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+
+\usepackage{sectsty} 
+\chapterfont{\centering} 
+\end_preamble
+\use_default_options true
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children true
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\branch Resumen
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Portada
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Acta
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Dedicatoria
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Agradecimientos
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Introducción
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch SímbolosAbreviaturas
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Bibliografía
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Capítulo-1
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Capítulo-2
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+bibname}{Referencias Bibliográficas}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\paragraph_spacing single
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Venemergencia"
+
+\end_inset
+
+Grupo Venemergencia.
+ 2010.
+ VENEMERGENCIA, ¡La Excelencia en Primeros Auxilios Médicos!.
+ Disponible en Internet: http://venemergencia.com/, consultado el 9 de diciembre
+ de 2011.
+\end_layout
+
+\begin_layout Bibliography
+\paragraph_spacing single
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "CronologiaV"
+
+\end_inset
+
+González, A.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Cronología Grupo Venemergencia
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Grupo Venemergencia, Documento Interno.
+ (2011).
+\end_layout
+
+\begin_layout Bibliography
+\paragraph_spacing single
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "RaeDiagnostico"
+
+\end_inset
+
+Real Academia Española, 
+\begin_inset Quotes eld
+\end_inset
+
+Diccionario de la Lengua Española, Vigésima Primera Edición, Tomo I
+\begin_inset Quotes erd
+\end_inset
+
+, Editorial Espasa, Madrid, pp.
+ 743.
+ (1992).
+\end_layout
+
+\begin_layout Bibliography
+\paragraph_spacing single
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "ClienteServidor"
+
+\end_inset
+
+Elizalde, Manuel.
+ 2001.
+ Modelo Cliente-Servidor Disponible en Internet: http://www.fismat.umich.mx/~anta/t
+esis/node32.html, consultado el 3 de enero de 2012.
+\end_layout
+
+\begin_layout Bibliography
+\paragraph_spacing single
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "OsloMVC"
+
+\end_inset
+
+Reenskaug, T., 
+\begin_inset Quotes eld
+\end_inset
+
+The Model-View-Controller (MVC).
+ Its Past and Present
+\begin_inset Quotes erd
+\end_inset
+
+, University of Oslo, Noruega, pp.
+ 1 (2003).
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Referencias Bibliográficas}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\paragraph_spacing single
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "LibroJoomla"
+
+\end_inset
+
+Serrats, C., 
+\begin_inset Quotes eld
+\end_inset
+
+Programació de components MVC per Joomla! 1.5.x
+\begin_inset Quotes erd
+\end_inset
+
+, CESI Informàtica i Comunicacions, Girona, pp.
+ 5 (2008).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "MVCCakePHP"
+
+\end_inset
+
+Cake Software Foundation, Inc.
+ 2010.
+ Understanding Model-View-Controller.
+ Disponible en Internet: http://book.cakephp.org/1.3/en/view/890/Understanding-Mode
+l-View-Controller, consultado el 11 de diciembre de 2011.
+\end_layout
+
+\begin_layout Bibliography
+\paragraph_spacing single
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "ManualPHP"
+
+\end_inset
+
+The PHP Group.
+ 2011.
+ Manual de PHP.
+ Disponible en Internet: http://www.php.net/manual/es/preface.php, consultado
+ el 10 de diciembre de 2011.
+\end_layout
+
+\begin_layout Bibliography
+\paragraph_spacing single
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "QueEsCakePHP"
+
+\end_inset
+
+Cake Software Foundation, Inc.
+ 2010.
+ ¿Qué es CakePHP y por qué hay que utilizarlo?.
+ Disponible en Internet: http://book.cakephp.org/1.3/es/view/880/Qu%C3%A9-es-CakePH
+P-y-por-qu%C3%A9-hay-que-utilizarlo, consultado el 10 de diciembre de 2011.
+\end_layout
+
+\begin_layout Bibliography
+\paragraph_spacing single
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "EstructuraCakePHP"
+
+\end_inset
+
+Cake Software Foundation, Inc.
+ 2010.
+ Estructura de CakePHP.
+ Disponible en Internet: http://book.cakephp.org/es/view/893/Estructura-de-CakePHP
+, consultado el 12 de diciembre de 2011.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "CakePHP-Request"
+
+\end_inset
+
+Cake Software Foundation, Inc.
+ 2010.
+ A Typical CakePHP Request.
+ Disponible en Internet: http://book.cakephp.org/1.3/en/view/898/A-Typical-CakePHP-
+Request, consultado el 12 de diciembre de 2011.
+\end_layout
+
+\begin_layout Bibliography
+\paragraph_spacing single
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "IntroAjax"
+
+\end_inset
+
+Pérez, J.
+ E., 
+\begin_inset Quotes eld
+\end_inset
+
+Introducción a AJAX
+\begin_inset Quotes erd
+\end_inset
+
+, librosweb.es, pp.
+ 6 (2008).
+\end_layout
+
+\begin_layout Bibliography
+\paragraph_spacing single
+
+\lang english
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Ajax"
+
+\end_inset
+
+
+\lang spanish
+Garret, Jesse.
+ 2005.
+ Ajax: A New Approach to Web Applications.
+ Disponible en Internet: http://www.adaptivepath.com/ideas/ajax-new-approach-web-a
+pplications, consultado el 15 de diciembre de 2011.
+\end_layout
+
+\begin_layout Bibliography
+\paragraph_spacing single
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "AUP"
+
+\end_inset
+
+Ambler, Scott.
+ 2009.
+ The Agile Unified Process (AUP).
+ Disponible en Internet: http://www.ambysoft.com/unifiedprocess/agileUP.html,
+ consultado el 21 de diciembre de 2011.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "MYSQL"
+
+\end_inset
+
+Oracle Corporation.
+ 2011.
+ Why MySQL?.
+ Disponible en Internet: http://www.mysql.com/why-mysql/, consultado el 2
+ de enero de 2012.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "PrincipiosCake"
+
+\end_inset
+
+Cake Software Foundation, Inc.
+ 2010.
+ Principios básicos de CakePHP.
+ Disponible en Internet: http://book.cakephp.org/1.3/es/view/892/Principios-b%C3%A1
+sicos-de-CakePHP, consultado el 2 de enero de 2012.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "jQuery"
+
+\end_inset
+
+The jQuery Project.
+ 2010.
+ jQuery: write less, do more.
+ Disponible en Internet: http://jquery.com/, consultado el 10 de octubre
+ de 2011.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Cake1.3Api"
+
+\end_inset
+
+Cake Software Foundation, Inc.
+ 2010.
+ The API 1.3.X.
+ Disponible en Internet: http://api13.cakephp.org/ , consultado el 3 de septiembre
+ de 2011.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Cookbook"
+
+\end_inset
+
+Cake Software Foundation, Inc.
+ 2010.
+ El manual .
+ Disponible en Internet: http://book.cakephp.org/1.3/es/view/876/El-manual,
+ consultado el 3 de septiembre de 2011.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "build_Acl"
+
+\end_inset
+
+Cake Software Foundation, Inc.
+ 2010.
+ An Automated tool for creating ACOs.
+ Disponible en Internet: http://book.cakephp.org/1.3/en/view/1549/An-Automated-tool
+-for-creating-ACOs, consultado el 5 de septiembre de 2011.
+\end_layout
+
+\end_body
+\end_document

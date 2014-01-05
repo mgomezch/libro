@@ -1,0 +1,243 @@
+
+\chapter*{{\large Introducción}}
+
+\selectlanguage{english}%
+\addcontentsline{toc}{chapter}{Introducción}\foreignlanguage{spanish}{\thispagestyle{empty} }
+
+\selectlanguage{spanish}%
+Venetecnología, empresa integrante del GRUPO VENEMERGENCIA, se encarga
+del desarrollo de soluciones tecnológicas en el área de la salud,
+para atender las necesidades de las empresas constituyentes del GRUPO
+VENEMERGENCIA. En este sentido, Veneocupacional, empresa de atención
+médica ocupacional, requiere una aplicación que apoye el proceso de
+gestión de consultas médicas, para mejorar los tiempos de atención
+efectiva a los pacientes, la generación y entrega de informes médicos,
+y la generación de reportes estadísticos sobre patologías recurrentes.
+Estas tareas se realizan de manera poco eficiente, y requieren de
+procesos que automaticen y optimicen los tiempos de ejecución de ellas,
+debido al incremento de la cantidad de pacientes evaluados. Ésto motivó
+a Venetecnología a ejecutar un proyecto de pasantía larga que atendiera
+estas necesidades.
+
+A continuación, se describen los antecedentes, el planteamiento y
+solución del problema, que justifican el proyecto de pasantías desarrollado.
+Además, se exponen los objetivos generales y específicos que se busca
+alcanzar en este desarrollo, y el alcance que abarca este proyecto.
+Esta información tiene la intención de que el lector comprenda el
+contexto general del proyecto y conozca el propósito del mismo.
+
+\vspace{7.5pt}
+
+
+\noindent \textbf{Antecedentes}
+
+\vspace{7.5pt}
+
+
+El GRUPO VENEMERGENCIA se encuentra constituido por un conjunto de
+empresas cuya misión es crear cultura de prevención en el área de
+salud y asistencia médica a través del adiestramiento de comunidades
+en primeros auxilios, distribución de botiquines de primeros auxilios,
+servicio de atención médica, paramédica, gestión de salud ocupacional
+para empresas y desarrollo de aplicaciones tecnológicas que mejoren
+los procedimientos médicos. El grupo se encuentra constituido por
+las empresas Venemergencia AG, C.A., Venelab C.A., Veneocupacional
+C.A., Venetecnología C.A. y la Fundación Venemergencia, cada una de
+las cuales se encarga de cubrir un área específica dentro del esquema
+de negocio.
+
+Venetecnología surge a principios del año 2010 ``como respuesta al
+déficit de soluciones tecnológicas para el sector salud, específicamente
+software especializado y personalizado. El objetivo principal es integrar
+las distintas líneas de negocio en un solo sistema, por motivos de
+eficiencia y mejor manejo del negocio. Otros objetivos incluyen el
+desarrollo de soluciones para fomentar la prevención dentro del campo
+salud''~\cite{Venemergencia}.
+
+Para mediados del mismo año, Venetecnología decide iniciar el desarrollo
+de dos proyectos que permitirían modernizar y automatizar las operaciones
+relacionadas con los traslados de ambulancias así como también la
+solicitud de citas y exámenes de laboratorio tanto para clientes particulares
+como para corporativos (empresas afliliadas a los servicios de salud
+ocupacional). Es así como se inicia el desarrollo del Sistema de Ambulancias,
+el cual sería utilizado por el personal paramédico de Venemergencia
+para encargarse de recibir y gestionar todas las solicitudes de traslados
+desde Caracas a cualquier lugar en el país, y el Sistema de Citas
+de Laboratorio para ser utilizado dentro de Venelab para gestionar
+sus actividades y que a su vez funcionaría como un portal web que
+le permite a los pacientes solicitar citas y exámenes de laboratorio,
+desde la comodidad de sus hogares, al igual que poder revisar los
+resultados obtenidos a través del mismo.
+
+En este mismo año, también se crea Veneocupacional con el fin de separar
+la línea de negocios de medicina ocupacional y atención primaria en
+salud para maximizar los beneficios que se veían en esa oportunidad
+de mercado. Venetecnología decide entonces iniciar el desarrollo del
+Sistema Veneocupacional para dar apoyo en esta área.
+
+\vspace{7.5pt}
+
+
+\noindent \textbf{Planteamiento del problema}
+
+\vspace{7.5pt}
+
+
+Debido a la rápida expansión que ha tenido la empresa dentro del mercado,
+lo que trae como consecuencia un incremento en la demanda de los servicios
+ofrecidos, se hace necesario automatizar y mejorar la eficiencia de
+los procesos relacionados en el manejo de consultas médicas. El aumento
+en la afluencia de pacientes en el consultorio de Veneocupacional,
+ha llevado a necesitar herramientas tecnológicas para evitar tiempos
+de respuesta inadecuados y falta de atención a los pacientes, para
+así continuar proporcionando un servicio de calidad a sus usuarios. 
+
+Es así como Venetecnología, se propone desarrollar un sistema de atención
+médica. Con dicha aplicación, se busca no sólo facilitar a un médico
+el acceso a información de los pacientes a los que trata, sino también,
+mejorar su eficiencia en el desarrollo de las consultas médicas, y
+a su vez, liberarlo de tareas que pueden automatizarse con la información
+recolectada en la misma, como la generación de informes médicos. 
+
+\vspace{7.5pt}
+
+
+\noindent \textbf{Solución del problema}
+
+\vspace{7.5pt}
+
+
+Se requiere desarrollar un sistema de información que permita a los
+médicos gestionar las consultas médicas de sus pacientes. El sistema
+debe ser capaz de llevar el registro de los pacientes, antecedentes
+médicos e historias.
+
+El sistema debe incluir un módulo de inicio de sesión de usuarios,
+que defina la vista de información por jerarquías. El sistema debe
+mostrar información dependiendo del tipo de usuario conectado y la
+permisología para el mismo. 
+
+Debe contar con una base de datos de medicamentos, los cuales pueden
+ser prescritos por el médico a sus pacientes. Se debe poder imprimir
+reportes de las consultas. Se debe poder solicitar exámenes y perfiles
+de laboratorio en el transcurso de una consulta. 
+
+La aplicación debe permitir ingresar la información de manera fácil,
+intuitiva y rápida. 
+
+Sobre la propuesta planteada, se realizó el diseño e implementación
+de una aplicación que integrará los requerimientos de la empresa:
+gestión de consultas de pacientes, solicitud de exámenes de laboratorio
+y exposición de reportes estadísticos de patologías recurrentes.
+
+Se propone iniciar el desarrollo utilizando el marco de desarrollo
+(\textsl{framework}) de PHP, denominado CakePHP, en el entorno de
+desarrollo integrado (IDE) Aptana para diseñar e implementar los elementos
+pertenecientes al cliente y para la comunicación con los servidores.
+Se utilizará el lenguaje de programación Javascript, mediante el \textsl{framework}
+jQuery, para el desarrollo de las comunicaciones basadas en AJAX,
+y para la generación de contenidos dinámicos en el lado del cliente.
+
+Para la generación de informes médicos y reporte de interconsultas,
+se plantea utilizar la librería TCPDF, desarrollada para trabajar
+con PHP, que provee de una interfaz para la generación de documentos
+en formato PDF y para el despliege en Flash de los reportes estadísticos,
+se empleará la librería \textsl{Open Flash Chart 2}, desarrollada
+en PHP, para generar gráficos y cuadros estadísticos.
+
+El manejo de información en cuanto a consultas y registros se realizaría
+sobre los servidores con los que trabajan actualmente en la empresa
+y de ser necesario se aplicarían ajustes para lograr que la nueva
+aplicación pueda integrarse sin problemas con los demás sistemas.
+Estos servidores poseen bases de datos que funcionan bajo el manejador
+relacional MySQL.
+
+A continuación, se presentan los objetivos del proyecto de pasantía
+larga.
+
+\vspace{7.5pt}
+
+
+\noindent \textbf{Objetivo general}\vspace{7.5pt}
+
+
+Desarrollar un sistema que permita a los médicos atender las consultas
+de sus pacientes, paso a paso y de manera intuitiva, registrando la
+información recopilada en la consulta, y permitiendo que sea visualizada
+posteriormente.\vspace{7.5pt}
+
+
+\noindent \textbf{Objetivos específicos}\vspace{7.5pt}
+
+\begin{itemize}
+\item Establecer la visión del sistema.
+\item Especificar los requerimientos del sistema.
+\item Implementar el login para el manejo de consultas.
+\item Diseñar la arquitectura del sistema.
+\item Implementar módulos para antecedentes médicos, resultados de exámenes
+físicos, funcionales y paraclínicos (exámenes de laboratorio y estudios
+de gabinete) y prescripción de medicamentos, e interconsultas.
+\item Integrar el sistema de atención con los sistemas ya existentes de
+la empresa Venemergencia (sistema de gestión de citas de laboratorio).
+\item Implementar los reportes de patologías de los pacientes, posibilidad
+de imprimir reportes de las consultas.
+\item Documentar el sistema.
+\end{itemize}
+\vspace{7.5pt}
+
+
+\noindent \textbf{Alcance}
+
+\vspace{7.5pt}
+
+
+Desarrollar una aplicación de carácter médico para gestión de consultas
+médicas. Esta aplicación debe manejar la siguiente información relacionada
+con los pacientes: antecedentes médicos, hábitos, consultas previas,
+resultados de exámenes paraclínicos, registro de exámenes físicos
+y funcionales, diagnóstico de patologías, prescripción de medicamentos,
+entre otras.
+
+Un aspecto importante, es la posibilidad de solicitar exámenes y perfiles
+médicos al laboratorio Venelab, perteneciente al GRUPO VENEMERGENCIA.
+La aplicación debe estar desarrollada para ser utilizada a través
+de un navegador web, para simplificar su utilización y asi no requerir
+ningún procedimiento de instalación que dificulte esta tarea; requiere
+estar disponible en todo momento para cualquier médico que cuente
+con un registro de datos de paciente con la empresa, siempre y cuando
+se disponga de una conexión a internet. El trasfondo de desarrollar
+una aplicación como tal es buscar de alguna manera crear una base
+de datos de antecedentes médicos de pacientes a la cual un medíco
+pueda acceder en el momento que quiera sin tener que perder tiempo
+esperando a que se ubique el historial médico archivado; tiempo que
+puede ser invertido en ir tratando al paciente, la idea es agilizar
+y dar apoyo al proceso de asistencia para mejorar la calidad del servicio.
+
+La aplicación debe estar diseñada para manejar cualquier tipo de información
+médica relevante. Debe contar con una interfaz intuitiva y amigable
+adaptándose a las exigencias de los médicos quienes deben poder ingresar
+la información de manera fácil y rápida, entorpeciendo lo menos posible
+su labor.
+
+Es relevante indicar sobre el objetivo relacionado a la integración
+con el sistema de gestión de citas de laboratorio, que su alcance
+fue modificado debido a la reestructuración de dicho sistema, que
+ejecuta la empresa Venectecnología, donde se plantea utilizar una
+nueva aplicación para realizar estas actividades. En consecuencia,
+la integración se simplificó a la realización de un proceso de solicitud
+de citas via correo electrónico, a través de los datos capturados
+en las consultas médicas, además, de el desarrollo de un módulo de
+carga de archivos e imágenes, que permite asociar documentos digitalizados
+a una consulta médica.
+
+El alcance de la aplicación a desarrollar, consiste en la entrega
+de un prototipo 80\% funcional, a nivel de casos de uso. La aplicación
+debe cubrir los aspectos operativos necesarios que le permitan a un
+médico la utilización de la herramienta de manera confiable y segura
+proporcionándole la información necesaria para atender a un paciente
+de manera inmediata, teniendo en cuenta la preservación y confidencialidad
+de los datos a los que se tendrá acesso.
+
+\selectlanguage{english}%
+\pagebreak{}\selectlanguage{spanish}%
+

@@ -1,0 +1,235 @@
+%% LyX 2.0.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,oneside,english,spanish]{book}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=3cm,rmargin=2cm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setcounter{secnumdepth}{3}
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[unicode=true,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 1},backref=section,colorlinks=false]
+ {hyperref}
+\hypersetup{pdftitle={Sistema de Atención de Consultas Médicas},
+ pdfauthor={Miguel Miguel Ambrosio Gómez},
+ pdfkeywords={USB, Pasantía Larga, Venetecnología, Consultas Médicas,  Agile UP, MVC, Cliente-Servidor, Aplicación Web, CakePHP, PHP, jQuery.}}
+\usepackage{breakurl}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\newcommand{\noun}[1]{\textsc{#1}}
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+ \usepackage{titlesec}
+\newcommand*{\justifyheading}{\raggedright}
+
+\titleformat{\chapter}[display]
+ {\normalfont\Large\bfseries\centering}
+ {\chaptertitlename\ \thechapter}{0pt}{\large}
+\titlespacing*{\chapter}{0pt}{-30pt}{20pt}
+
+\titleformat{\section}
+ {\normalfont\normalsize\bfseries\justifyheading}
+ {\thesection}{1em}{}
+
+\titleformat{\subsection}
+ {\normalfont\normalsize\bfseries\justifyheading}
+ {\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+ {\normalfont\normalsize\bfseries\justifyheading}
+ {\thesubsubsection}{1em}{}
+
+\usepackage{pdfpages}
+\pretolerance=2000
+\tolerance=3000
+
+\makeatother
+
+\begin{document}
+\pagestyle{empty}
+
+\include{caratula}
+
+\cleardoublepage{}
+
+\include{portada}
+
+\cleardoublepage{}
+
+\include{acta}
+
+
+
+\cleardoublepage{}
+
+\pagestyle{fancyplain}
+
+\fancypagestyle{plain}{ % 
+\fancyhf{} % remove everything 
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt} % remove lines as well 
+\renewcommand{\footrulewidth}{0pt}}
+
+
+\pagestyle{plain}
+
+\include{resumen}
+
+\cleardoublepage{}
+
+\include{dedicatoria}
+
+\cleardoublepage{}
+
+\selectlanguage{english}%
+\pagestyle{empty}
+
+\selectlanguage{spanish}%
+\include{agradecimientos}
+
+\cleardoublepage{}
+
+\pagestyle{fancy}
+
+\addcontentsline{toc}{chapter}{Índice general}\tableofcontents{}
+
+\cleardoublepage{}
+
+\selectlanguage{english}%
+\addcontentsline{toc}{chapter}{Índice de cuadros}
+
+\selectlanguage{spanish}%
+\listoftables
+
+
+\cleardoublepage{}
+
+\addcontentsline{toc}{chapter}{Índice de figuras}
+
+\listoffigures
+
+
+\cleardoublepage{}
+
+\pagestyle{fancy}
+
+\include{simbolosabreviaturas}
+
+\cleardoublepage{}
+
+\pagestyle{myheadings}
+
+\markright{}
+
+\selectlanguage{english}%
+\renewcommand{\thepage}{\arabic{page}}
+
+\setcounter{page}{1}
+
+\setlength{\parskip}{7.5pt}
+
+\selectlanguage{spanish}%
+\include{introduccion}
+
+\include{capitulo1}
+
+\include{capitulo2}
+
+\include{capitulo3}
+
+\include{capitulo4}
+
+\include{conclusiones}
+
+\selectlanguage{english}%
+\setlength{\parskip}{7pt}
+
+\selectlanguage{spanish}%
+\include{bibliografia}
+
+\selectlanguage{english}%
+\setlength{\parskip}{7.5pt}
+
+\selectlanguage{spanish}%
+\appendix
+
+\chapter{Modelo de Datos del Sistema~\label{chap:Modelo-de-Datos}}
+
+\begin{center}
+\includegraphics[scale=0.35]{ER-VeneOcupacional}
+\begin{figure}
+\caption{Diagrama Entidad - Relación del Sistema.}
+\end{figure}
+
+\par\end{center}
+
+
+\chapter{Diagrama de Casos de Uso}
+
+\begin{center}
+\includegraphics[scale=0.5]{CasosUsoSistema2}
+\begin{figure}
+\caption{Diagrama de Casos de Uso}
+
+
+\end{figure}
+
+\par\end{center}
+
+
+\chapter{Documento Visión del Sistema~\label{chap:Documento-Visi=0000F3n}}
+
+A continuación, se adjunta el documento Visión del Sistema, que presenta
+una imagen inicial de las necesidades que serán satisfechas con el
+desarrollo del proyecto, los interesados, usuarios, detalles del producto,
+entre otros. 
+
+\begin{center}
+\includepdf[pages={1-},pagecommand={\thispagestyle{myheadings}},scale=0.95]{Documento_Vision_Venetecnologia}
+\par\end{center}
+
+
+\chapter{Especificación de Requerimientos de Software\label{chap:Especificaci=0000F3n-de-Requerimientos}}
+
+A continuación, se adjunta el documento de Especificación de Requerimientos
+de Software, que detalla cada uno de los requerimientos y casos de
+uso determinados para desarrollar en el proyecto de pasantías.
+
+\begin{center}
+\includepdf[pages=-,pagecommand={\thispagestyle{myheadings}},scale=0.95]{Especificaciones_de_Requerimientos_del_Software}
+\par\end{center}
+
+
+\chapter{Documento de Arquitectura de Software\label{chap:Documento-de-Arquitectura}}
+
+A continuación, se adjunta el Documento de Arquitectura de Software,
+que describe la estructura de la aplicación a desarrollar en base
+al Modelo de las 4+1 vistas.
+
+\begin{center}
+\includepdf[pages={1-},pagecommand={\thispagestyle{myheadings}},scale=0.95]{Documento_Arquitectura_Software}
+\par\end{center}
+
+\cleardoublepage{}
+
+\cleardoublepage{}
+\end{document}

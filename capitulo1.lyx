@@ -1,0 +1,273 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Entorno Empresarial
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este capítulo tiene como objetivo dar a conocer el entorno empresarial en
+ el cual se desarrolla el proyecto de pasantías.
+ Busca mostrar la labor del GRUPO VENEMERGENCIA, y las empresas que lo componen,
+ dando una idea de sus objetivos, misión y aspectos históricos relevantes.
+ 
+\end_layout
+
+\begin_layout Section
+Descripción general
+\end_layout
+
+\begin_layout Standard
+El Grupo Venemergencia se consolida como un holding en el año 2010 para
+ integrar las actividades de las empresas Venemergencia AG, C.A., Venelab
+ C.A., Veneocupacional C.A., Venetecnología C.A.
+ y la Fundación Venemergencia.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+El desarrollo y crecimiento sostenible es el objetivo del Grupo Venemergencia
+ para el futuro próximo.
+ Sus planes responden a la visión clara de continuar transformando el mercado
+ de los servicios de salud en Venezuela
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CronologiaV"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Venetecnología
+\end_layout
+
+\begin_layout Standard
+A continuación se presentará una breve descripción de Venetecnología C.A.,
+ empresa parte del Grupo Venemergencia, encargada del desarrollo de aplicaciones
+ para satisfacer los requerimientos y necesidades existentes en el área
+ de la salud.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Historia
+\end_layout
+
+\begin_layout Standard
+En el año 2010, 
+\begin_inset Quotes eld
+\end_inset
+
+se crea Venetecnología como respuesta al déficit de soluciones tecnológicas
+ para el sector salud, especificamente software especializado y personalizado
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CronologiaV"
+
+\end_inset
+
+.
+ Venetecnología se plantea un único objetivo de abarcar el área de soluciones
+ tecnológicas para el sector salud.
+\end_layout
+
+\begin_layout Subsubsection
+Misión
+\end_layout
+
+\begin_layout Standard
+Su objetivo principal es integrar las distintas líneas de negocio, de tal
+ forma que se puedan crear aplicaciones o sistemas que le permitan al personal
+ manejar de manera eficiente las operaciones diarias, así como también ofrecer
+ soluciones tecnológicas en los diferentes centros especializados en atención
+ médica.
+\end_layout
+
+\begin_layout Subsubsection
+Visión
+\end_layout
+
+\begin_layout Standard
+Adentrarse en el área de la telemedicina para crear las mejores soluciones
+ tecnológicas adaptadas a las necesidades de los pacientes, permitiendo
+ atacar los problemas existentes en la actualidad en los diferentes centros
+ de atención médica del país.
+\end_layout
+
+\begin_layout Section
+Estructura organizacional
+\end_layout
+
+\begin_layout Standard
+Venetecnología es una empresa pequeña.
+ Sus operaciones dependen de la Gerencia de Tecnología, quien está a cargo
+ de la supervisión de los proyectos en desarrollo, y de la Dirección General
+ del Grupo Venemergencia.
+ Un pequeño grupo de desarrolladores, se encarga del desarrollo de las aplicacio
+nes y proyectos de la empresa, entre los que se encuentra el proyecto de
+ pasantías a ejecutar.
+ 
+\end_layout
+
+\begin_layout Standard
+La aplicación se desarrolló en el área de Venetecnología, sin embargo, la
+ misma dará apoyo al sistema de citas de laboratorio de Venelab, se utilizará
+ para facilitar el proceso de consultas médicas en Veneocupacional y trabajará
+ en conjunto con el sistema de telemedicina y asistencia médica remota,
+ vía celular ContactaMed; siendo así una aplicación que sirve de puente
+ entre estas ramas del negocio.
+\end_layout
+
+\begin_layout Standard
+En la Figura 1.1, se muestra la estructura organizacional de Venetecnología.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename EstructuraVenetec.png
+	scale 60
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Estructura organizacional Venetecnología C.A.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

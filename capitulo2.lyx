@@ -1,0 +1,908 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 4
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Marco Teórico y Tecnológico
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuación, se presentan los conceptos teóricos relevantes sobre los
+ cuales se fundamentó el proyecto de pasantía.
+ Adicionalmente, se definirán aquellos conceptos, componentes y nociones
+ que están asociados con los diferentes servicios que brinda la empresa
+ y que fueron beneficiados con el proyecto, también se darán a conocer qué
+ herramientas informáticas fueron utilizadas para llevar a cabo el desarrollo
+ del mismo.
+ 
+\end_layout
+
+\begin_layout Section
+Conceptos básicos
+\end_layout
+
+\begin_layout Standard
+En esta sección, se definen los conceptos teóricos importantes y aspectos
+ del negocio que forman parte del desarrollo del proyecto.
+ Se pretende introducir al lector en los términos manejados en el área médica,
+ que son relevantes para la gestión de consultas médicas.
+ Estos conceptos básicos se obtuvieron mediante entrevistas directamente
+ con los directores del GRUPO VENEMERGENCIA, médicos y conocedores del negocio.
+\end_layout
+
+\begin_layout Subsection
+Consultas médicas
+\end_layout
+
+\begin_layout Standard
+Una consulta médica es un procedimiento en el cual un paciente invierte
+ tiempo junto a un profesional de la medicina en un lugar o espacio determinado
+ (un consultorio o el domicilio de quien presenta problemas de salud); en
+ tal procedimiento, el médico brinda sus puntos de vista acerca del estado
+ de salud del paciente y suministra recomendaciones a seguir para mantenerlo
+ o mejorarlo.
+\end_layout
+
+\begin_layout Standard
+Las consultas médicas realizadas por un médico generalmente quedan registradas
+ en un documento de carácter informativo, científico y legal conocido como
+ historia clínica o médica del paciente.
+ En la historia clínica queda constancia del estado de salud del paciente,
+ así como también de la actuación que ha tenido un médico con el mismo.
+\end_layout
+
+\begin_layout Standard
+Un médico, durante una consulta médica, recopila información sobre la situación
+ del paciente, ya sea a través de preguntas de un cuestionario médico, como
+ a través de la realización de diferentes tipos de exámenes.
+ Esta información es organizada y analizada para poder emitir un diagnóstico
+ al cual, por lo general, se le diseñará un plan de acción para hacer frente
+ a las irregularidades presentes, ya sea por medio de tratamiento a partir
+ de prescripción de medicinas o asesoramiento con hábitos físicos, alimenticios,
+ etc.
+\end_layout
+
+\begin_layout Standard
+Dentro de la empresa se realizan consultas médicas a través de la línea
+ de negocios de Veneocupacional, la cual se encarga de brindar servicio
+ de asistencia en salud ocupacional.
+ En la actualidad se realizan:
+\end_layout
+
+\begin_layout Itemize
+Consultas anuales.
+\end_layout
+
+\begin_layout Itemize
+Consultas de pre-empleo.
+\end_layout
+
+\begin_layout Itemize
+Consultas de egreso.
+\end_layout
+
+\begin_layout Itemize
+Consultas de emergencia.
+\end_layout
+
+\begin_layout Itemize
+Consultas para conferimiento de reposo.
+\end_layout
+
+\begin_layout Itemize
+Consultas por accidentes laborales.
+\end_layout
+
+\begin_layout Itemize
+Consultas por reubicación laboral.
+\end_layout
+
+\begin_layout Itemize
+Consultas prevacacionales.
+\end_layout
+
+\begin_layout Itemize
+Consultas postvacacionales.
+\end_layout
+
+\begin_layout Itemize
+Consultas por operativos de salud.
+\end_layout
+
+\begin_layout Itemize
+Consultas para obtención de certificado médico vial.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con el desarrollo del proyecto de pasantía, se desea interactuar con consultas
+ desarrolladas a través del uso de la aplicación para dispositivos móviles
+ 
+\shape slanted
+ContactaMed,
+\shape default
+ por lo que se añadirían a la lista anterior:
+\end_layout
+
+\begin_layout Itemize
+Consultas realizadas a través de una llamada telefónica.
+\end_layout
+
+\begin_layout Itemize
+Consultas realizadas a través de un mensaje de texto.
+\end_layout
+
+\begin_layout Itemize
+Consultas realizadas a través de un correo electrónico.
+\end_layout
+
+\begin_layout Subsection
+Interconsultas
+\end_layout
+
+\begin_layout Standard
+Una interconsulta es un documento remitido por un médico en el cual se indica
+ a un paciente que requiere evaluación de un determinado especialista en
+ el campo de la salud.
+\end_layout
+
+\begin_layout Subsection
+Historia clínica
+\end_layout
+
+\begin_layout Standard
+La historia clínica de un paciente es un documento en el cual se lleva un
+ registro del estado de salud del mismo respaldado por las diferentes prácticas
+ que, a lo largo del tiempo, un médico ha realizado.
+ La función primordial de una historia clínica es poder llevar un seguimiento
+ de la situación de un paciente y permitirle a un médico realizar un diagnóstico
+ a la hora de presentarse alguna patología, sea recurrente o no.
+\end_layout
+
+\begin_layout Standard
+Una historia clínica se encuentra compuesta por los antecedentes médicos,
+ hábitos, consultas y exámenes que se le han realizado previamente a un
+ paciente.
+\end_layout
+
+\begin_layout Subsection
+Antecedentes médicos
+\end_layout
+
+\begin_layout Standard
+Consiste en la recopilación de información acerca de la salud de una persona.
+ Los antecedentes médicos contienen información relevante sobre alergías
+ a medicamentos, ambientales, procedimientos quirúrgicos previos de importancia,
+ problemas cardiológicos, hipertensión, entre otros.
+\end_layout
+
+\begin_layout Standard
+Los antecedentes médicos pueden categorizarse en personales y familiares.
+ Los personales se refieren a las condiciones previamente mencionadas presentes
+ en el paciente a evaluar, y los familiares, a condiciones presentes en
+ parientes cercanos al sujeto a evaluar, que indiquen una propensión a dichas
+ enfermedades.
+\end_layout
+
+\begin_layout Subsection
+Hábitos
+\end_layout
+
+\begin_layout Standard
+Se refiere a las actividades, costumbres, y actitudes habituales del paciente,
+ que son relevantes para determinar su estilo de vida, y que pueden indicar
+ propensión a alguna patología o condición médica determinada.
+ Por ejemplo, si el paciente fuma, consume alcohol, realiza ejercicio periódicam
+ente, entre otras.
+\end_layout
+
+\begin_layout Subsection
+Exámenes
+\end_layout
+
+\begin_layout Standard
+Constituyen las pruebas y los estudios realizados por médicos y otros profesiona
+les de la salud, para determinar si un paciente presenta una enfermedad,
+ evaluar si presenta riesgos de problemas médicos en el futuro, o servir
+ de seguimiento del progreso de una afección conocida que ya presente el
+ mismo.
+ 
+\end_layout
+
+\begin_layout Standard
+Los exámenes que se realizan o evalúan durante una consulta médica son:
+ examen funcional, examen físico y exámenes paraclínicos.
+\end_layout
+
+\begin_layout Subsubsection
+Examen funcional
+\end_layout
+
+\begin_layout Standard
+Constituye el interrogatorio de un grupo de síntomas (fenómenos clínicos
+ subjetivos) ó funciones de órganos y sistemas del paciente con sus característi
+cas.
+ Explora las funciones de órganos y sistemas, a fin de determinar la tendencia
+ o manifestación de las funciones de éstos, que puedan indicar problemas
+ existentes en el paciente o algún tipo de enfermedad, asociado o no al
+ motivo original de la consulta.
+\end_layout
+
+\begin_layout Subsubsection
+Examen físico
+\end_layout
+
+\begin_layout Standard
+Es el procedimiento de estudio del cuerpo de un paciente para determinar
+ la presencia o ausencia de problemas físicos mediante el reconocimiento
+ de alteraciones o signos producidos por una enfermedad, valiéndose de los
+ sentidos y los instrumentos diseñados para tal fin.
+ En el examen físico intervienen cuatro (4) métodos de exploración clínica:
+ inspección, palpación, auscultación y percusión.
+\end_layout
+
+\begin_layout Subsubsection
+Examen paraclínico
+\end_layout
+
+\begin_layout Standard
+Se refiere a todos aquellos estudios o exámenes que son requeridos por un
+ médico a un paciente para comprobar o descartar un diagnóstico.
+ El médico recurre a laboratorios o médicos especializados para realizar
+ los estudios que requiere para hacer una evaluación del paciente.
+ Entre estos exámenes podemos encontrar: exámenes de laboratorio, radiológicos,
+ tomografías, entre otros.
+\end_layout
+
+\begin_layout Subsection
+Diagnósticos
+\end_layout
+
+\begin_layout Standard
+Un diagnóstico se refiere a la 
+\begin_inset Quotes eld
+\end_inset
+
+calificación que da el médico a la enfermedad según los signos que advierte
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RaeDiagnostico"
+
+\end_inset
+
+.
+ En base a los síntomas y signos mostrados por el paciente en los los exámenes
+ que le son efectuados, el médico determina si el mismo presenta una patología
+ específica.
+\end_layout
+
+\begin_layout Subsection
+Proceso de Atención de Pacientes
+\end_layout
+
+\begin_layout Standard
+El proceso de atención de pacientes requiere de la ejecución de cada uno
+ de los conceptos teóricos previos.
+ Se presenta como se lleva a cabo en la actualidad y en qué actividades
+ existen problemas y hacia cuáles de ellos apunta la solución a desarrollar.
+\end_layout
+
+\begin_layout Standard
+En la figura 2.1, se presenta un diagrama de actividades, que muestra el
+ desarrollo del proceso de atención de pacientes.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ActividadesAtención.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagrama de actividades del proceso de atención de pacientes.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los problemas del proceso de atención de pacientes ocurren principalmente,
+ en la Recopilación de Antecedentes y Hábitos del paciente, donde se utiliza
+ tiempo para capturar los antedecendentes, personales y familiares de los
+ pacientes en cada una de las consultas; también ocurren en la solicitud
+ de interconsultas y citas de laboratorio, y en la generación de informes
+ médicos, que deben ser realizados de manera manual, por lo que se debe
+ invertir tiempo de los médicos en su redacción, pudiendo ser tomados directamen
+te de los datos capturados en la consulta médica.
+ 
+\end_layout
+
+\begin_layout Section
+Herramientas informáticas
+\end_layout
+
+\begin_layout Standard
+En esta sección, se introduce al lector en los conceptos tecnológicos informátic
+os que forman parte del desarrollo del proyecto de pasantías.
+ Se pretende reflejar no sólo sus definiciones, sino también, el papel que
+ dichas herramientas juegan en la arquitectura del sistema.
+\end_layout
+
+\begin_layout Subsection
+Modelo Cliente - Servidor
+\end_layout
+
+\begin_layout Standard
+La arquitectura cliente-servidor permite al usuario en una máquina, llamada
+ el cliente, requerir algún tipo de servicio de una máquina a la que está
+ unido, llamado el servidor, mediante una red como una LAN (Red de Area
+ Local) o una WAN (Red de Area Mundial).
+ Estos servicios pueden ser peticiones de datos de una base de datos, de
+ información contenida en archivos o los archivos en sí mismos, o peticiones
+ de imprimir datos en una impresora asociada
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ClienteServidor"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El modelo cliente-servidor se fundamenta en la idea de que un proveedor
+ de datos por si mismo puede abastecer las solicitudes de numerosos clientes
+ que requieren de sus servicios.
+\end_layout
+
+\begin_layout Standard
+La aplicación a desarrollar es un ejemplo de un sistema basado en este modelo.
+ Cada cliente estará representado por un navegador web, que realizará solicitude
+s al servidor mediante las vistas desplegadas por el sitio web; y el servidor,
+ que contendrá la aplicación de gestión de consultas médicas, y atenderá
+ cada una de las solicitudes del cliente.
+\end_layout
+
+\begin_layout Subsection
+Modelo Vista Controlador (MVC)
+\end_layout
+
+\begin_layout Standard
+El patrón de diseño MVC define una estructura de desarrollo de software
+ que separa las diferentes tareas que deben ser atendidas en una aplicación,
+ con la finalidad de mejorar la mantenibilidad del código.
+ 
+\end_layout
+
+\begin_layout Standard
+MVC fue concebido en 1978 como la solución de diseño para un problema particular.
+ Su objetivo de primordial fue apoyar el modelo mental del usuario del espacio
+ de la información relevante y que el usuario pueda inspeccionar y editar
+ esta información
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "OsloMVC"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El objetivo de usar este patrón de diseño, es separar separa los datos de
+ una aplicación, la interfaz de usuario, y la lógica de control en tres
+ componentes distintos.
+ El patrón MVC se ve frecuentemente en aplicaciones Web, donde la vista
+ es la página HTML y el código que provee de datos dinámicos a la página,
+ el modelo es el Sistema de Gestión de Base de Datos y el controlador representa
+ la Lógica de negocio
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LibroJoomla"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En el proyecto, se empleó el MVC mediante el sistema de vistas, controladores
+ y modelos que provee CakePHP, donde, efectivamente, se diferencian las
+ tareas de acceso a los datos, la lógica de programa y la interfaz gráfica;
+ tal característica facilita la labor del desarrollador, ya que le permite
+ mantener un control de los problemas que pueden estar ocurriendo en las
+ fases de desarrollo, al conocer en cual componente exactamente está sucediendo,
+ además facilita las tareas donde dependiendo de los datos, se debe acceder
+ a una u otra vista determinada, permitiendo a los modelos tener diferentes
+ vistas, que pueden ser accedidas en los diferentes casos.
+\end_layout
+
+\begin_layout Standard
+En la figura 2.2, se observa un diagrama de la interacción entre las distintas
+ partes de una aplicación basada en el patrón MVC, mostrando la comunicación
+ entre el Modelo (
+\shape slanted
+Model
+\shape default
+) y Controlador (
+\shape slanted
+Controller
+\shape default
+), el Controlador comunicándose con la Vista (
+\shape slanted
+View
+\shape default
+) y la interacción del Cliente (
+\shape slanted
+Client
+\shape default
+) con la aplicación para acceder a las operaciones presentes en el Controlador.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename basic_mvc.png
+	scale 70
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Arquitectura básica del patrón MVC
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MVCCakePHP"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+PHP: Hypertext Preprocessor (PHP)
+\end_layout
+
+\begin_layout Standard
+PHP, acrónimo de "PHP: Hypertext Preprocessor", es un lenguaje "Open Source"
+ interpretado de alto nivel, especialmente pensado para desarrollos web
+ y el cual puede ser incrustado en páginas HTML.
+ La mayoría de su sintaxis es similar a C, Java y Perl y es fácil de aprender.
+ La meta de este lenguaje es permitir escribir a los creadores de páginas
+ web, páginas dinámicas de una manera rápida y fácil, aunque se pueda hacer
+ mucho más con PHP
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ManualPHP"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En el proyecto se emplea, fundamentalmente, este lenguaje para el desarrollo
+ de la aplicación, apoyándose en el Marco de Desarrollo (
+\shape slanted
+framework
+\shape default
+) CakePHP.
+\end_layout
+
+\begin_layout Subsection
+CakePHP
+\end_layout
+
+\begin_layout Standard
+CakePHP es un marco de desarrollo (
+\shape slanted
+framework
+\shape default
+) rápido para PHP, libre, de código abierto.
+ Se trata de una estructura que sirve de base a los programadores para que
+ éstos puedan crear aplicaciones Web
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "QueEsCakePHP"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+El objetivo principal de CakePHP es dar al programador herramientas para
+ trabajar de manera estructurada y rápida, sin pérdida de flexibilidad.
+ Es una herramienta muy útil, que provee al desarrollador de características
+ interesantes como:
+\end_layout
+
+\begin_layout Itemize
+Ayudantes para AJAX, Javascript, formularios.
+\end_layout
+
+\begin_layout Itemize
+Componentes de Seguridad, Sesión, Email.
+\end_layout
+
+\begin_layout Itemize
+Listas de Control de Acceso.
+\end_layout
+
+\begin_layout Itemize
+Configuración simplificada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+CakePHP incluye las clases Controlador, Modelo y Vista, pero también incluye
+ otras clases y objetos que hacen que el desarrollo en MVC sea un poco más
+ rápido y agradable.
+ Los Componentes (
+\shape slanted
+Components
+\shape default
+), Comportamientos (
+\shape slanted
+Behaviors
+\shape default
+), y Ayudantes (
+\shape slanted
+Helpers
+\shape default
+) son clases que proporcionan extensibilidad y reusabilidad; agregan rápidamente
+ funcionalidad a las clases base MVC de las aplicaciones
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "EstructuraCakePHP"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En la figura 2.3, se muestra un diagrama de la interacción de las diferentes
+ clases y objetos utilizados por CakePHP para implementar su versión del
+ MVC.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename typical-cake-request.gif
+	scale 60
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Petición típica de una aplicación en CakePHP
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CakePHP-Request"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+CakePHP es el entorno de desarrollo principal de la aplicación a desarrollar,
+ englobando las tareas de conexión con la base de datos, procesamiento de
+ información y presentación al usuario, mediante su esquema de Modelos,
+ Vistas y Controladores.
+ Ésto permite simplificar en gran medida la configuración de la aplicación
+ y el envio de información entre cada una de las capas del MVC, además de
+ facilitar gran cantidad de tareas al desarrollador mediante las diferentes
+ funciones de alto nivel y 
+\shape slanted
+Helpers
+\shape default
+ que provee este 
+\shape slanted
+framework
+\shape default
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Asynchronous JavaScript and XML (AJAX)
+\end_layout
+
+\begin_layout Standard
+JavaScript asíncrono y XML (Asynchronous JavaScript and XML) o AJAX, se
+ refiere a un conjunto de técnicas utilizadas en el desarrollo web, basadas
+ en el modelo cliente-servidor, empleadas para la construcción de aplicaciones
+ interactivas, que se ejecutan a nivel del cliente, interactuando de manera
+ asíncrona con el servidor, para la solicitud de datos.
+ De esta forma, es posible generar cambios en las vistas presentadas al
+ usuario sin necesidad de recargar la página, con lo que se mejora la interactiv
+idad y usabilidad de las aplicaciones.
+\end_layout
+
+\begin_layout Standard
+Las aplicaciones construidas con AJAX eliminan la recarga constante de páginas
+ mediante la creación de un elemento intermedio entre el usuario y el servidor.
+ La nueva capa intermedia de AJAX mejora la respuesta de la aplicación,
+ ya que el usuario nunca se encuentra con una ventana del navegador vacía
+ esperando la respuesta del servidor
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IntroAjax"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En la Figura 2.3, se presenta una comparación entre el procesamiento de una
+ aplicación web síncrona clásica y una aplicación desarrolla mediante las
+ técnicas asíncronas de AJAX.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ajax-fig2_small_es.png
+	scale 50
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Comparación de procesamiento entre una aplicación web clásica y una aplicación
+ web basada en AJAX
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ajax"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La utilización de AJAX es fundamental para el desarrollo del proyecto, sobre
+ todo en el proceso de creación y gestión de consultas médicas, que, básicamente
+, requiere procesar gran cantidad de formularios diferentes, sin recargar
+ la vista de la consulta médica, para permitir al usuario ejecutar tareas,
+ y además evitando el reenvío por parte del servidor de información que
+ ya se encuentra presente en la página, aligerando así, la carga de operaciones
+ sobre el mismo.
+\end_layout
+
+\end_body
+\end_document

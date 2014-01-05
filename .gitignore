@@ -1,0 +1,8 @@
+*.doc
+*~
+*#
+*.toc
+*.log
+*.aux
+*.pdf
+*.eps
