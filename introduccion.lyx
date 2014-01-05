@@ -108,10 +108,6 @@ thispagestyle{empty}
 \end_layout
 
 \begin_layout Standard
-TODO: cosas generales sobre el proyecto
-\end_layout
-
-\begin_layout Standard
 A continuación, se describen los antecedentes, el planteamiento y solución
  del problema que justifican el proyecto de pasantías desarrollado\SpecialChar \@.
  Además,
@@ -163,27 +159,30 @@ La empresa nace en el año 2011 como una unidad de negocios independiente
  de AUXIMED, empresa que tiene más de 5 años en el mercado dispensando tratamien
 tos farmacológicos a través de programas de salud del mercado asegurador\SpecialChar \@.
 
- PRX Control Solutions desarrolla dos aplicaciones web interactivas: PCA
- Audit y PCA Farma\SpecialChar \@.
- PCA Audit es una herramienta para analizar farmacológicamente
- los reclamos de salud, permitiendo a proveedores de planes de salud detectar
- más de 30 tipos de fraude, lo cual se resume en un ahorro de un 20% a un
- 30% sobre la siniestralidad\SpecialChar \@.
+ PRX Control Solutions comercializa dos aplicaciones 
+\emph on
+Web
+\emph default
+ interactivas: PCA Audit y PCA Farma\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-La funcionalidad de PCA Audit está orientada en tres módulos: una plataforma
- de autogestión para asegurados, un sistema de generación de órdenes de
- servicio a través de la atención primaria de salud, y una herramienta que
- facilita la extracción de estadísticas por analistas de los proveedores
- de planes de salud sobre el uso del sistema\SpecialChar \@.
- PCA Audit fue desarrollado
- en base a una necesidad del mercado asegurador de contar con herramientas
- tecnológicas que permitan controlar el gasto de siniestralidad de los reclamos
- de salud\SpecialChar \@.
- Actualmente este producto cuenta con 4 clientes operativos: Mercantil
- Seguros, AON, Humanitas y Seguros Caroní\SpecialChar \@.
+PCA Audit es una herramienta para analizar farmacológicamente los reclamos
+ de salud, permitiendo a proveedores de planes de salud detectar más de
+ 30 tipos de fraude, lo cual se resume en un ahorro de un 20% a un 30% sobre
+ la siniestralidad\SpecialChar \@.
+ La funcionalidad de PCA Audit está orientada en tres
+ módulos: una plataforma de autogestión para asegurados, un sistema de generació
+n de órdenes de servicio a través de la atención primaria de salud, y una
+ herramienta que facilita la extracción de estadísticas por analistas de
+ los proveedores de planes de salud sobre el uso del sistema\SpecialChar \@.
+ PCA Audit fue
+ desarrollado en base a una necesidad del mercado asegurador de contar con
+ herramientas tecnológicas que permitan controlar el gasto de siniestralidad
+ de los reclamos de salud\SpecialChar \@.
+ Actualmente este producto cuenta con 4 clientes
+ operativos: Mercantil Seguros, AON, Humanitas y Seguros Caroní\SpecialChar \@.
 
 \end_layout
 
@@ -264,11 +263,13 @@ Esta práctica ha permitido la evolución gradual de los productos de la empresa
 
 \begin_layout Standard
 Es así como PRX Control Solutions se propone desarrollar un modelo de datos
- nuevo que considere todos los requerimientos de diseño que ahora se conocen.
+ nuevo que considere todos los requerimientos de diseño que ahora se conocen\SpecialChar \@.
+
  Con el modelo de datos nuevo se busca no solo mejorar los productos y servicios
  actualmente ofrecidos por la empresa a sus clientes, sino también proveer
  un fundamento sólido y extensible que facilite el crecimiento y los futuros
- desarrollos de productos de la empresa.
+ desarrollos de productos de la empresa\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
@@ -301,72 +302,67 @@ Se requiere diseñar e implantar un modelo de datos que permita registrar
 
 \begin_layout Standard
 Se debe desarrollar una abstracción para la manipulación de los datos del
- nuevo modelo para su utilización uniforme desde las aplicaciones de la
- empresa.
- Esta abstracción debe facilitar la integración con aplicaciones Web y
+ nuevo modelo.
+ Esta abstracción será utilizada para desacoplar las aplicaciones de la
+ empresa de los detalles de la implantación de la base de datos y debe permitir
+ la representación concisa de operaciones complejas sobre los datos, todo
+ esto para facilitar el desarrollo de aplicaciones que usen el nuevo modelo.
 \end_layout
 
 \begin_layout Standard
-El nuevo modelo de datos debe permitir 
+El nuevo modelo de datos debe emplear una representación de los procesos
+ propios de las aplicaciones de la empresa que sea suficientemente flexible,
+ general y expresiva para utilizarse para cada esquema de trabajo específico
+ que requiera cada cliente de la empresa\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
-Debe contar con una base de datos de medicamentos, los cuales pueden ser
- prescritos por el médico a sus pacientes.
- Se debe poder imprimir reportes de las consultas.
- Se debe poder solicitar exámenes y perfiles de laboratorio en el transcurso
- de una consulta.
- 
+Deben tomarse en cuenta los requerimientos especiales de seguridad, extensibilid
+ad y persistencia de los datos, con un enfoque a la posibilidad de efectuar
+ auditorías y tomar estadísticas detalladas de la operación de los servicios
+ de la empresa, ya que el historial de los datos asociados a su operación
+ con frecuencia son de valor para la empresa\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
-La aplicación debe permitir ingresar la información de manera fácil, intuitiva
- y rápida.
- 
+Sobre la propuesta planteada, se realizó el diseño e implantación de un
+ modelo de datos y una abstracción para su manipulación por parte de las
+ aplicaciones de la empresa que integrara los requerimientos.
 \end_layout
 
 \begin_layout Standard
-Sobre la propuesta planteada, se realizó el diseño e implementación de una
- aplicación que integrará los requerimientos de la empresa: gestión de consultas
- de pacientes, solicitud de exámenes de laboratorio y exposición de reportes
- estadísticos de patologías recurrentes.
+Se propuso la utilización de una técnica de diseño para la base de datos
+ nueva que incluya información temporal detallada sobre todos los datos
+ para facilitar la toma de estadísticas y el análisis detallado del funcionamien
+to de los productos de la empresa, y en general para proveer una implantación
+ que se adapte a los requerimientos específicos de consistencia y mantenibilidad
+ de los clientes de la empresa\SpecialChar \@.
+ Se desarrolló una herramienta nueva, llamada
+ Squealer, para facilitar la implantación de la base de datos usando esta
+ técnica\SpecialChar \@.
+ Se utilizó el gestor de bases de datos relacionales PostgreSQL
+ en la implantación de la base de datos para aprovechar su flexibilidad
+ en la provisión de abstracción a nivel de datos\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
-Se propone iniciar el desarrollo utilizando el marco de desarrollo (
-\shape slanted
-framework
-\shape default
-) de PHP, denominado CakePHP, en el entorno de desarrollo integrado (IDE)
- Aptana para diseñar e implementar los elementos pertenecientes al cliente
- y para la comunicación con los servidores.
- Se utilizará el lenguaje de programación Javascript, mediante el 
-\shape slanted
-framework
-\shape default
- jQuery, para el desarrollo de las comunicaciones basadas en AJAX, y para
- la generación de contenidos dinámicos en el lado del cliente.
-\end_layout
-
-\begin_layout Standard
-Para la generación de informes médicos y reporte de interconsultas, se plantea
- utilizar la librería TCPDF, desarrollada para trabajar con PHP, que provee
- de una interfaz para la generación de documentos en formato PDF y para
- el despliege en Flash de los reportes estadísticos, se empleará la librería
- 
-\shape slanted
-Open Flash Chart 2
-\shape default
-, desarrollada en PHP, para generar gráficos y cuadros estadísticos.
-\end_layout
-
-\begin_layout Standard
-El manejo de información en cuanto a consultas y registros se realizaría
- sobre los servidores con los que trabajan actualmente en la empresa y de
- ser necesario se aplicarían ajustes para lograr que la nueva aplicación
- pueda integrarse sin problemas con los demás sistemas.
- Estos servidores poseen bases de datos que funcionan bajo el manejador
- relacional MySQL.
+Se diseñó una capa de abstracción de datos para las aplicaciones en forma
+ de un servicio HTTP siguiendo los principios de diseño de la arquitectura
+ REST para facilitar la manipulación del modelo de datos nuevo en forma
+ abstracta y flexible por parte de las aplicaciones de la empresa\SpecialChar \@.
+ Se utilizó
+ el formato HAL para los mensajes del servicio para facilitar la construcción
+ dinámica y automática de herramientas de manipulación del servicio para
+ ajustarse a los principios de la arquitectura REST\SpecialChar \@.
+ Se implantó este servicio
+ usando el marco de desarrollo Yesod para sistemas 
+\emph on
+Web
+\emph default
+ en el lenguaje de programación Haskell.
 \end_layout
 
 \begin_layout Standard
@@ -394,9 +390,13 @@ Objetivo general
 \end_layout
 
 \begin_layout Standard
-Desarrollar un sistema que permita a los médicos atender las consultas de
- sus pacientes, paso a paso y de manera intuitiva, registrando la información
- recopilada en la consulta, y permitiendo que sea visualizada posteriormente.
+Diseñar e implantar un modelo de datos que permita registrar información
+ sobre órdenes de farmacia y casos de reembolso, incluyendo las relaciones
+ entre medicamentos y patologías, además de recopilar históricos de informes
+ médicos y facturas de asegurados, y desarrollar una capa de abstracción
+ de datos para utilizar el modelo en las aplicaciones de la empresa de manera
+ flexible y desacoplada.
+ 
 \begin_inset VSpace 7.5pt
 \end_inset
 
@@ -417,39 +417,36 @@ Objetivos específicos
 \end_layout
 
 \begin_layout Itemize
-Establecer la visión del sistema.
+Establecer los conceptos específicos que deben incluirse en el modelo nuevo.
 \end_layout
 
 \begin_layout Itemize
-Especificar los requerimientos del sistema.
+Especificar las propiedades generales que deben caracterizar al modelo nuevo.
 \end_layout
 
 \begin_layout Itemize
-Implementar el login para el manejo de consultas.
+Diseñar el nuevo modelo de datos.
 \end_layout
 
 \begin_layout Itemize
-Diseñar la arquitectura del sistema.
+Implantar la base de datos según el modelo nuevo.
 \end_layout
 
 \begin_layout Itemize
-Implementar módulos para antecedentes médicos, resultados de exámenes físicos,
- funcionales y paraclínicos (exámenes de laboratorio y estudios de gabinete)
- y prescripción de medicamentos, e interconsultas.
+Diseñar una capa de abstracción de acceso a los datos del modelo nuevo.
 \end_layout
 
 \begin_layout Itemize
-Integrar el sistema de atención con los sistemas ya existentes de la empresa
- Venemergencia (sistema de gestión de citas de laboratorio).
+Implantar la capa de abstracción de acceso a los datos del modelo nuevo.
 \end_layout
 
 \begin_layout Itemize
-Implementar los reportes de patologías de los pacientes, posibilidad de
- imprimir reportes de las consultas.
+Especificar mecanismos para la puesta en producción de la nueva base de
+ datos.
 \end_layout
 
 \begin_layout Itemize
-Documentar el sistema.
+Especificar mecanismos para la puesta en producción del servicio de datos.
 \end_layout
 
 \begin_layout Standard
@@ -474,60 +471,51 @@ Alcance
 \end_layout
 
 \begin_layout Standard
-Desarrollar una aplicación de carácter médico para gestión de consultas
- médicas.
- Esta aplicación debe manejar la siguiente información relacionada con los
- pacientes: antecedentes médicos, hábitos, consultas previas, resultados
- de exámenes paraclínicos, registro de exámenes físicos y funcionales, diagnósti
-co de patologías, prescripción de medicamentos, entre otras.
+PRX Control Solutions actualmente desarrolla cuatro productos:
+\end_layout
+
+\begin_layout Itemize
+PRX Vademécum es un directorio gratuito publicado en la 
+\emph on
+Web
+\emph default
+ con información de medicamentos, enfermedades y fármacos.
+\end_layout
+
+\begin_layout Itemize
+PCA Audit es una aplicación tecnológica que permite a proveedores de planes
+ de salud analizar y controlar reclamos de salud, detectando más de 30 tipos
+ de fraude y logrando grandes volúmenes de ahorro a empresas de seguros,
+ administradoras de planes de salud, instituciones gubernamentales y empresas
+ de medicina prepagada.
+\end_layout
+
+\begin_layout Itemize
+PCA Farma es una aplicación que ayuda a las farmacias a aumentar las ventas
+ a través de la supervisión y seguimiento de pacientes crónicos.
+\end_layout
+
+\begin_layout Itemize
+PRX Metric es una aplicación 
+\emph on
+Web
+\emph default
+ que permite organizar la información registrada de los siniestros analizados
+ por PCA Audit y la dispensación de medicamentos a usuarios de PCA Farma,
+ produciendo una gran cantidad de información estadística para ser comercializad
+a al mercado asegurador, la industria farmacéutica y el estado.
 \end_layout
 
 \begin_layout Standard
-Un aspecto importante, es la posibilidad de solicitar exámenes y perfiles
- médicos al laboratorio Venelab, perteneciente al GRUPO VENEMERGENCIA.
- La aplicación debe estar desarrollada para ser utilizada a través de un
- navegador web, para simplificar su utilización y asi no requerir ningún
- procedimiento de instalación que dificulte esta tarea; requiere estar disponibl
-e en todo momento para cualquier médico que cuente con un registro de datos
- de paciente con la empresa, siempre y cuando se disponga de una conexión
- a internet.
- El trasfondo de desarrollar una aplicación como tal es buscar de alguna
- manera crear una base de datos de antecedentes médicos de pacientes a la
- cual un medíco pueda acceder en el momento que quiera sin tener que perder
- tiempo esperando a que se ubique el historial médico archivado; tiempo
- que puede ser invertido en ir tratando al paciente, la idea es agilizar
- y dar apoyo al proceso de asistencia para mejorar la calidad del servicio.
+Aunque la operación de estos sistemas es en buena parte independiente, todos
+ utilizan la misma base de datos, ya que manipulan la misma información.
 \end_layout
 
 \begin_layout Standard
-La aplicación debe estar diseñada para manejar cualquier tipo de información
- médica relevante.
- Debe contar con una interfaz intuitiva y amigable adaptándose a las exigencias
- de los médicos quienes deben poder ingresar la información de manera fácil
- y rápida, entorpeciendo lo menos posible su labor.
-\end_layout
-
-\begin_layout Standard
-Es relevante indicar sobre el objetivo relacionado a la integración con
- el sistema de gestión de citas de laboratorio, que su alcance fue modificado
- debido a la reestructuración de dicho sistema, que ejecuta la empresa Venectecn
-ología, donde se plantea utilizar una nueva aplicación para realizar estas
- actividades.
- En consecuencia, la integración se simplificó a la realización de un proceso
- de solicitud de citas via correo electrónico, a través de los datos capturados
- en las consultas médicas, además, de el desarrollo de un módulo de carga
- de archivos e imágenes, que permite asociar documentos digitalizados a
- una consulta médica.
-\end_layout
-
-\begin_layout Standard
-El alcance de la aplicación a desarrollar, consiste en la entrega de un
- prototipo 80% funcional, a nivel de casos de uso.
- La aplicación debe cubrir los aspectos operativos necesarios que le permitan
- a un médico la utilización de la herramienta de manera confiable y segura
- proporcionándole la información necesaria para atender a un paciente de
- manera inmediata, teniendo en cuenta la preservación y confidencialidad
- de los datos a los que se tendrá acesso.
+El alcance del desarrollo consiste en la implantación de un modelo de datos
+ suficientemente general para cubrir la operación de estas aplicaciones,
+ teniendo en cuenta la preservación, integridad y confidencialidad de los
+ datos a los que se tendrá acesso.
 \end_layout
 
 \begin_layout Standard
