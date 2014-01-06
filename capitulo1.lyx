@@ -88,7 +88,8 @@ thispagestyle{empty}
 \begin_layout Standard
 Este capítulo tiene como objetivo dar a conocer los conceptos manejados
  por los sistemas de PRX Control Solutions que sean relevantes para el diseño
- del modelo de datos.
+ del modelo de datos\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Section
@@ -118,7 +119,11 @@ asociación
 farmacológica
 \series default
 \bar default
- es la combinación de uno o más fármacos.
+ es la combinación de uno o más fármacos, y tiene un 
+\series bold
+nombre
+\series default
+\SpecialChar \@.
  Dependiendo
 \series bold
  
@@ -174,7 +179,8 @@ Las unidades posológicas se introducen en el organismo mediante una
 forma de administración
 \series default
 \bar default
-, la cual representa el mecanismo y la forma física de la toma del medicamento.
+, la cual representa el mecanismo y la forma física de la toma del medicamento\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
@@ -220,10 +226,11 @@ código
 \series bold
 descripción
 \series default
- textual.
- Esto permite identificar a una asociación farmacológica de manera estandarizada
-, lo cual facilita la interoperabilidad con otros sistemas que manejen informaci
-ón farmacológica.
+ textual\SpecialChar \@.
+ Esto permite identificar a una asociación farmacológica de manera
+ estandarizada, lo cual facilita la interoperabilidad con otros sistemas
+ que manejen información farmacológica\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Section
@@ -231,7 +238,8 @@ Medicamentos
 \end_layout
 
 \begin_layout Standard
-La industria farmacéutica desarrolla, produce y comercializa medicamentos.
+La industria farmacéutica desarrolla, produce y comercializa medicamentos\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
@@ -254,7 +262,8 @@ dirección
 \series bold
 teléfono
 \series default
- de contacto, etc.
+ de contacto, etc\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
@@ -268,7 +277,8 @@ marca
 \series bold
 nombre
 \series default
- comercial que agrupa a varios productos.
+ comercial que agrupa a varios productos\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
@@ -286,10 +296,11 @@ marca
 \series bold
 nombre
 \series default
- particular.
- Es típico que a un producto corresponda exactamente una asociación farmacológic
-a, pero existen nombres comerciales específicos dentro de marcas que usan
- asociaciones farmacológicas ligeramente diferentes entre sus presentaciones.
+ particular\SpecialChar \@.
+ Es típico que a un producto corresponda exactamente una asociación
+ farmacológica, pero existen nombres comerciales específicos dentro de marcas
+ que usan asociaciones farmacológicas ligeramente diferentes entre sus presentac
+iones\SpecialChar \@.
  Sin embargo, es típico que las 
 \series bold
 indicaciones
@@ -311,7 +322,8 @@ posología
 \series bold
 palabras clave
 \series default
- para facilitar su búsqueda en un directorio farmacológico.
+ para facilitar su búsqueda en un directorio farmacológico\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
@@ -322,7 +334,7 @@ presentación
 \series default
 \bar default
  es la forma comercial específica de un medicamento que puede adquirirse
- concretamente.
+ concretamente\SpecialChar \@.
  Una presentación tiene un 
 \series bold
 nombre
@@ -347,7 +359,7 @@ unidad posológica
 \series bold
 forma de administración
 \series default
- particular.
+ particular\SpecialChar \@.
  Además, una presentación puede ser 
 \series bold
 genérica o de marca
@@ -360,12 +372,13 @@ dispensada con o sin prescripción facultativa o solo para hospitalización
 \series bold
 asociada al sexo masculino o femenino o no estar asociada al sexo
 \series default
-.
+\SpecialChar \@.
  A cada presentación se asocia un 
 \series bold
 precio de referecia
 \series default
- que refleja el valor esperado de la presentación en el mercado.
+ que refleja el valor esperado de la presentación en el mercado\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Section
@@ -373,6 +386,352 @@ Enfermedades
 \end_layout
 
 \begin_layout Standard
+Los sistemas de PRX Control Solutions utilizan una taxonomía jerárquica
+ de las enfermedades similar a la 
+\emph on
+clasificación internacional de enfermedades, décima versión
+\emph default
+ (CIE-10) de la Organización Mundial de la Salud, pero con modificaciones\SpecialChar \@.
+
+ La clasificación tiene tres niveles; en orden de más general a más específico:
+ el 
+\series bold
+\bar under
+tipo de enfermedad
+\series default
+\bar default
+, el 
+\series bold
+\bar under
+subtipo de la enfermedad
+\series default
+\bar default
+, y la 
+\series bold
+\bar under
+enfermedad
+\series default
+\bar default
+\SpecialChar \@.
+ A cada nivel corresponde un 
+\series bold
+código
+\series default
+ y una 
+\series bold
+descripción
+\series default
+ textual, y una enfermedad puede estar relacionada con uno o más subtipos
+ de enfermedad\SpecialChar \@.
+ Adicionalmente, las enfermedades tienen 
+\series bold
+palabras clave
+\series default
+ asociadas para facilitar su búsqueda en un directorio\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+Seguros médicos
+\end_layout
+
+\begin_layout Standard
+La aplicación PCA Audit maneja datos sobre seguros médicos:
+\end_layout
+
+\begin_layout Standard
+Un 
+\series bold
+\bar under
+asegurador
+\series default
+\bar default
+ es una empresa de seguros médicos o un administrador de seguros, que tiene
+ un 
+\series bold
+nombre
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Una 
+\series bold
+\bar under
+póliza
+\series default
+\bar default
+ representa el conjunto de reglas y condiciones de cobertura de un seguro
+ médico al cual una persona puede afiliarse.
+ Se caracteriza por un 
+\series bold
+código
+\series default
+ suministrado por el 
+\series bold
+asegurador
+\series default
+ que provee el seguro\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Una 
+\series bold
+\bar under
+afiliación
+\series default
+\bar default
+ representa que un 
+\series bold
+asegurado
+\series default
+ está cubierto por una 
+\series bold
+póliza
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+Solicitudes
+\end_layout
+
+\begin_layout Standard
+Las aplicaciones de PRX Control Solutions mantienen información sobre el
+ historial de medicación de personas, ya sea a través del registro de los
+ reclamos de salud de asegurados cuyos datos son administrados por PCA Audit,
+ o por el seguimiento de adquisición de medicamentos de pacientes crónicos
+ por PCA Farma.
+\end_layout
+
+\begin_layout Standard
+Un 
+\series bold
+\bar under
+caso
+\series default
+\bar default
+ es una unidad de seguimiento del historial de solicitudes asociadas a una
+ 
+\series bold
+afiliación
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Un 
+\series bold
+\bar under
+informe médico
+\series default
+\bar default
+ contiene las observaciones e indicaciones resultantes de una consulta médica,
+ y se introduce como parte de la información asociada a un 
+\series bold
+caso
+\series default
+\SpecialChar \@.
+ Un informe es producido por un médico en su 
+\series bold
+fecha de emisión
+\series default
+ y es considerado válido hasta su 
+\series bold
+fecha de vencimiento
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Un 
+\series bold
+\bar under
+diagnóstico
+\series default
+\bar default
+ registra la inclusión de una 
+\series bold
+enfermedad
+\series default
+ en un 
+\series bold
+informe médico
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Un 
+\series bold
+\bar under
+medicamento prescrito
+\series default
+\bar default
+ en un 
+\series bold
+informe médico
+\series default
+ prescribe al paciente la toma de una cierta 
+\series bold
+cantidad
+\series default
+ de una 
+\series bold
+presentación
+\series default
+ de un medicamento con una cierta 
+\series bold
+frecuencia
+\series default
+ durante el tiempo de 
+\series bold
+duración del tratamiento
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La información asociada con la dispensación de medicamentos o reclamos de
+ reembolso por adquisición de medicamentos en farmacias por parte de un
+ paciente puede provenir de diversas fuentes\SpecialChar \@.
+ El aspecto común es que se
+ hace una 
+\series bold
+\bar under
+solicitud
+\series default
+\bar default
+ asociada a un 
+\series bold
+caso
+\series default
+, la cual puede asociarse con medicamentos de varias maneras\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Un 
+\series bold
+\bar under
+medicamento solicitado
+\series default
+\bar default
+ registra la inclusión de una 
+\series bold
+cantidad
+\series default
+ de una 
+\series bold
+presentación
+\series default
+ en una 
+\series bold
+solicitud
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Una 
+\series bold
+\bar under
+factura
+\series default
+\bar default
+ puede asociarse a una 
+\series bold
+solicitud
+\series default
+ en caso de que en ella esté registrada la compra de medicamentos asociados
+ a la solicitud\SpecialChar \@.
+ Las facturas tienen asociada una 
+\series bold
+fecha
+\series default
+ y posiblemente un 
+\series bold
+monto total
+\series default
+ para adecuarse a procesos de clientes que no ofrecen el monto detallado
+ de cada medicamento facturado\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Un 
+\series bold
+\bar under
+medicamento facturado
+\series default
+\bar default
+ registra la inclusión de un 
+\series bold
+medicamento facturado
+\series default
+ en una 
+\series bold
+factura
+\series default
+ con un cierto 
+\series bold
+precio unitario
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Cuando se completa el registro de una solicitud, PCA Audit y PCA Farma intentan
+ establecer cuáles son los 
+\series bold
+\bar under
+tratamientos relacionados
+\series default
+\bar default
+, lo cual consiste de determinar asociaciones farmacológicamente válidas
+ entre un 
+\series bold
+medicamento solicitado
+\series default
+ y un 
+\series bold
+medicamento prescrito
+\series default
+ en un informe médico del mismo caso\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Análogamente, PCA Audit y PCA Farma intentan establecer cuáles son los 
+\series bold
+\bar under
+diagnósticos relacionados
+\series default
+\bar default
+, lo cual consiste de determinar asociaciones farmacológicamente válidas
+ entre un 
+\series bold
+tratamiento relacionado
+\series default
+ y un 
+\series bold
+diagnóstico
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+TODO: Desviaciones
 \begin_inset Newpage newpage
 \end_inset
 
