@@ -244,8 +244,8 @@ Por otra parte, es frecuente que los usuarios de los sistemas de la empresa
  hagan observaciones sobre su comportamiento y reporten quejas o problemas
  con la información generada o reportada por ellos\SpecialChar \@.
  Durante el desarrollo
- de este proyecto de pasantía, ocurrieron con frecuencia reportes de incidencias
- por parte de los clientes que resultaron difíciles de rastrear a sus causas
+ de este proyecto de pasantías, ocurrieron con frecuencia reportes de incidencia
+s por parte de los clientes que resultaron difíciles de rastrear a sus causas
  debido a que los problemas fueron detectados cuando ya habían cambiado
  muchos datos relevantes en el sistema, y en consecuencia no se conocía
  el contexto en el cual el sistema efectuó el comportamiento indeseado ni
@@ -346,7 +346,7 @@ s\SpecialChar \@.
 \end_layout
 
 \begin_layout Standard
-Durante la realización de este proyecto de pasantía, la mayor parte del
+Durante la realización de este proyecto de pasantías, la mayor parte del
  esfuerzo de los miembros del equipo de desarrollo de la empresa se enfocaron
  día a día en la realización de modificaciones simples a PCA Audit en respuesta
  a cambios constantes y pequeños en los requerimientos de los clientes\SpecialChar \@.
@@ -436,7 +436,7 @@ suite
 \end_layout
 
 \begin_layout Standard
-Durante la realización de este proyecto de pasantía, este tipo de errores
+Durante la realización de este proyecto de pasantías, este tipo de errores
  causó grandes dificultades al equipo de desarrollo tanto por la frecuente
  necesidad de atender incidencias por fallas del sistema en producción como
  por la elevada dificultad del desarrollo de nueva funcionalidad en ausencia
@@ -473,8 +473,64 @@ Parametrización del comportamiento
 \end_layout
 
 \begin_layout Standard
-TODO: hablar del problema de las tablas de excepciones y tal, preparar terreno
- para el capítulo sobre el evaluador de reglas
+Los sistemas de PRX Control Solutions deben adaptarse a una gran cantidad
+ de requerimientos heterogéneos debido a la variedad de metodologías de
+ trabajo de sus clientes\SpecialChar \@.
+ En muchos casos, esto implica hacer modificaciones
+ al diseño y la implantación de las aplicaciones de la empresa para acomodar
+ las metodologías y los modelos de datos de los clientes\SpecialChar \@.
+ Sin embargo, en
+ una gran cantidad de casos, la variación requerida en el comportamiento
+ del sistema es suficientemente regular para que sea posible implantar esa
+ variación sin tener que programar específicamente cada uno de los escenarios
+ requeridos\SpecialChar \@.
+ En estos casos, es posible definir parámetros asociados a ciertos
+ objetos del sistema, como usuarios o pólizas de seguros, que hagan que
+ el sistema se comporte de la manera adecuada al caso, de forma tal que
+ estos parámetros puedan ser definidos por operadores del sistema sin necesidad
+ de modificar la implantación del mismo\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+En particular, PCA Audit debe tomar en cuenta las condiciones de cobertura
+ asociadas a cada póliza de seguros de sus clientes a la hora de evaluar
+ la validez de los reclamos de salud de los pacientes\SpecialChar \@.
+ Uno de los problemas
+ observados durante el desarrollo del proyecto de pasantías es que la capacidad
+ de modificar el comportamiento del sistema en muchos casos estaba limitada
+ por la técnica usada para implantar la parametrización: cada vez que se
+ quería agregar la posibilidad de expresar reglas de negocio más complejas
+ o dependientes de un parmámetro adicional, el equipo de desarrollo tuvo
+ que modificar la implantación para extender la posibilidad de parametrización
+ del sistema\SpecialChar \@.
+ Esto acarreó retrasos en la integración con clientes nuevos
+ de los servicios de la empresa, ya que el uso efectivo del sistema por
+ parte de los clientes requiere que éste opere bajo las reglas de negocio
+ propias de sus pólizas de cobertura para la adquisición de medicamentos\SpecialChar \@.
+
+ Puede esperarse que este problema se agrave significativamente como resultado
+ de los planes de expansión internacional de los servicios de la empresa\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Debido a esto, resulta importante 
+\series bold
+permitir la parametrización del comportamiento en forma expresiva
+\series default
+ para que una gran variedad de comportamientos puedan ser especificados
+ sin necesidad de la intervención del equipo de desarrollo\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Este criterio de diseño puede favorecerse mediante el empleo de lenguajes
+ de dominio específico para la parametrización del comportamiento de los
+ sistemas de la empresa, así como el desarrollo de interfaces con el usuario
+ que permitan a los operadores del sistema especificar parametrizaciones
+ complejas con facilidad\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Section
