@@ -112,16 +112,404 @@ submodules
  repositorio\SpecialChar \@.
  Sin embargo, un sistema como Git no está diseñado para ser
  usado como base de datos para un sistema de información, y sería tremendamente
- impráctico e ineficiente\SpecialChar \@.
- La base de datos que se desea implantar es basada
- en SQL por una diversidad de razones, la más notoria de las cuales es que
- facilita tremendamente la implantación de garantías de integridad mediante
- restricciones — pero ni SQL ni el modelo relacional que lo fundamenta manejan
- directamente el concepto de control de versión ni el de hacer referencias
- a una versión de un dato\SpecialChar \@.
- Sin embargo, dado un esquema relacional, es posible
- diseñar otro esquema relacional que sea capaz de representar toda la informació
-n histórica del primero\SpecialChar \@.
+ impráctico e ineficiente usarlo para este fin\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La base de datos que se desea implantar es basada en SQL por una diversidad
+ de razones, la más notoria de las cuales es que facilita tremendamente
+ la implantación de garantías de integridad mediante restricciones, y que
+ facilita la especificación de consultas con un lenguaje declarativo muy
+ conocido, por lo cual hay una gran cantidad de herramientas existentes
+ para abstraer y facilitar la construcción de consultas — pero ni SQL ni
+ el modelo relacional que lo fundamenta manejan directamente el concepto
+ de control de versión ni el de hacer referencias a una versión de un dato\SpecialChar \@.
+
+ Sin embargo, dada una descripción completa de un esquema relacional, es
+ posible diseñar otro esquema relacional basado en el primero que sea capaz
+ de representar toda su información histórica y establecer relaciones entre
+ versiones de datos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+La anatomía de un dato
+\end_layout
+
+\begin_layout Standard
+Cuando se desea representar la información de un conjunto de tipos de objetos
+ abstractos en un esquema relacional, es necesario modelarlos en relaciones\SpecialChar \@.
+
+ El modelado de datos relacional es un problema ampliamente estudiado y
+ hay técnicas de expresión establecidas para muchos patrones de datos; por
+ lo tanto, este problema no será tratado\SpecialChar \@.
+ Además, aunque sería un desarrollo
+ interesante, elaborar una descripción formal de la técnica usada escapa
+ del alcance de este proyecto, por lo cual se abandonará también el nivel
+ de abstracción del modelo relacional, y se discutirá en términos de SQL\SpecialChar \@.
+
+ Se supondrá entonces que se dispone de un conjunto de tablas de SQL que
+ modela a todos los datos de interés, y que se desea registrar la historia
+ de las filas de las tablas de ese esquema\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Las tablas en SQL contienen filas, y cada fila contiene un conjunto de columnas
+ con datos considerados atómicos\SpecialChar \@.
+ Supóngase que en cada tabla ha sido declarada
+ una restricción de clave primaria con un subconjunto de sus columnas\SpecialChar \@.
+ Se
+ desea mantener un registro de las modificaciones hechas a filas particulares
+ de cada tabla; por lo tanto, es necesario identificar cuándo se considera
+ que dos filas de una tabla son dos versiones del mismo dato\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Las columnas de una fila de una tabla se pueden dividir en dos categorías\SpecialChar \@.
+
+ Las que formen parte de la clave primaria de la tabla forman parte de la
+ 
+\emph on
+identidad
+\emph default
+ de la fila\SpecialChar \@.
+ Los demás datos serán llamados 
+\emph on
+atributos
+\emph default
+\SpecialChar \@.
+ En este sentido, al insertar una fila en la tabla original, se estaría
+ registrando la creación de una versión de la fila con la identidad y los
+ valores de atributos que fueron insertados en la tabla original, y se puede
+ registrar un número de serie para la versión y la fecha y hora de su aparición\SpecialChar \@.
+
+ Cuando se actualiza un atributo de una fila existente en la tabla original,
+ se deberá registrar la creación de una nueva versión con la misma identidad
+ pero con los valores nuevos de los atributos, y se registra con un número
+ de serie diferente para indicar que es una versión distinta a la anterior
+ — y también se registrará la fecha y hora en que fue creada la versión
+ nueva a raíz de la actualización\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+Implantación en SQL
+\end_layout
+
+\begin_layout Standard
+Este concepto de control de revisiones puede representarse fácilmente en
+ un esquema relacional\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Subsection
+Registro de identidades
+\end_layout
+
+\begin_layout Standard
+Para reducir la cantidad de información repetida y así ahorrar espacio,
+ se puede mantener una tabla que registre la identidad de cada fila de la
+ tabla original que haya sido alguna vez creada\SpecialChar \@.
+ Esta tabla, el
+\emph on
+ registro de identidades
+\emph default
+, deberá tener una restricción de unicidad asociada a todas las columnas
+ en las cuales se almacenen valores que compongan a la identidad de la tabla
+ original\SpecialChar \@.
+ Adicionalmente, se asignará un identificador secuencial generado
+ para cada identidad registrada como clave postiza, que será la clave primaria
+ del registro de identidades\SpecialChar \@.
+ Almacenar las identidades de esta manera, en
+ una tabla separada y con una clave postiza, es sencillamente una técnica
+ para hacer que la forma de las tablas del esquema generado para el control
+ de versión sea un poco más regular y ocupe menos espacio, pero no es estrictame
+nte necesario para la aplicación de esta técnica\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Subsection
+Bitácora de versiones
+\end_layout
+
+\begin_layout Standard
+Adicionalmente al registro de identidades, se mantendrá una 
+\emph on
+bitácora de versiones
+\emph default
+, que será una tabla con una fila por cada versión registrada de las filas
+ de la tabla original\SpecialChar \@.
+ A las filas de la bitácora de versiones se asignará
+ un identificador secuencial generado para cada versión registrada como
+ clave postiza, que será la clave primaria de la bitácora de versiones\SpecialChar \@.
+ Cada
+ fila de la bitácora de versiones incluirá también la fecha y hora de registro
+ de la versión que representa\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Subsection
+Tabla de versiones activas
+\end_layout
+
+\begin_layout Standard
+Por otra parte, se mantendrá una 
+\emph on
+tabla de versiones activas
+\emph default
+, que contendrá, para cada fila presente en la tabla original, una referencia
+ a su entrada en el registro de identidades y una referencia a la entrada
+ en la bitácora de versiones que represente a su versión activa\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Subsection
+Atributos
+\end_layout
+
+\begin_layout Standard
+Es necesario ahora mantener un registro de los valores de los atributos
+ de las filas de la tabla original en cada versión\SpecialChar \@.
+ Éstos podrían almacenarse
+ directamente en la bitácora de versiones\SpecialChar \@.
+ Sin embargo, considérese el caso
+ de una tabla original con una gran cantidad de columnas, donde algunas
+ de esas columnas contienen valores de tamaño considerable — por ejemplo,
+ columnas que contengan texto de longitud considerable\SpecialChar \@.
+ Si los valores de
+ los atributos en cada versión se almacenaran directamente en la bitácora
+ de versiones, una modificación de una única columna de una fila de la tabla
+ original implicaría crear una nueva fila con copias de todos los valores
+ de la versión anterior salvo por el que se modificó\SpecialChar \@.
+ En casos de tablas
+ con pocos atributos, y en especial si los atributos son valores pequeños,
+ esto no representa un problema, pero en muchos casos puede implicar un
+ desperdicio considerable de espacio\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Para evitar esto, los valores de los atributos pueden almacenarse en tablas
+ separadas\SpecialChar \@.
+ Para cada atributo, se utilizará una 
+\emph on
+tabla de estado
+\emph default
+ donde se almacena el valor del atributo y un identificador secuencial generado
+ al almacenarlo que servirá de clave primaria\SpecialChar \@.
+ Además, se utilizará una 
+\emph on
+tabla de atributo
+\emph default
+ que tendrá dos referencias: una referencia a la tabla de estado del atributo
+ correspondiente, y una referencia a la bitácora de versiones\SpecialChar \@.
+ La clave primaria
+ de la tabla de atributo estará compuesta de ambas referencias\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Subsection
+Inserción
+\end_layout
+
+\begin_layout Standard
+Con este esquema, cuando se inserte una nueva fila en la tabla original,
+ se deberá
+\end_layout
+
+\begin_layout Enumerate
+agregar su identidad al registro de identidades si no estaba ya presente;
+\end_layout
+
+\begin_layout Enumerate
+registrar una nueva fila en la bitácora de versiones que hará referencia
+ a la fila del registro de identidades correspondiente;
+\end_layout
+
+\begin_layout Enumerate
+crear filas en las tablas de estado con los valores de los atributos de
+ la fila nueva;
+\end_layout
+
+\begin_layout Enumerate
+crear filas en las tablas de atributo que asocien a la fila recién creada
+ de la bitácora de versiones con las filas recién creadas de las tablas
+ de estado; y
+\end_layout
+
+\begin_layout Enumerate
+registrar la asociación entre las filas correspondientes del registro de
+ identidades y de la bitácora de versiones en la tabla de versiones activas\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Subsection
+Eliminación
+\end_layout
+
+\begin_layout Standard
+Adicionalmente, se mantendrá una tabla separada, la 
+\emph on
+bitácora de revocación
+\emph default
+, que registre cuáles filas de la bitácora de versiones no contienen la
+ información de la versión actualmente presente en la tabla original\SpecialChar \@.
+ La
+ bitácora de revocación tendrá una referencia a la bitácora de versiones,
+ que además será su clave primaria, y también tendrá la fecha y hora en
+ la cual se determinó que la entrada referida de la bitácora de versiones
+ dejó de representar a la versión actualmente presente de la fila en la
+ tabla original\SpecialChar \@.
+ En ese sentido, cuando se elimine una fila de la tabla original,
+ se deberá
+\end_layout
+
+\begin_layout Enumerate
+encontrar la fila correspondiente del registro de identidades;
+\end_layout
+
+\begin_layout Enumerate
+encontrar la fila correspondiente a esa identidad en la tabla de versiones
+ activas;
+\end_layout
+
+\begin_layout Enumerate
+agregar una fila a la bitácora de revocación que se refiera a la fila de
+ la bitácora de versiones asociada a la identidad encontrada en la tabla
+ de versiones activas, registrando además la fecha y hora actuales; y
+\end_layout
+
+\begin_layout Enumerate
+eliminar la fila encontrada en la tabla de versiones activas\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Subsection
+Actualización
+\end_layout
+
+\begin_layout Standard
+Adicionalmente, se mantendrá una tabla separada, la 
+\emph on
+bitácora de sucesión
+\emph default
+, que registre cuáles filas de la bitácora de revocación fueron registradas
+ por la sucesión de una versión por otra debido a una actualización realizada
+ en la tabla original\SpecialChar \@.
+ La bitácora de sucesión tendrá una referencia a la
+ bitácora de revocación, que además será su clave primaria, y también tendrá
+ una referencia a la entrada de la bitácora de versiones que representa
+ a la versión que sucede a la referida por la clave primaria\SpecialChar \@.
+ En ese sentido,
+ cuando una fila ya existente en la tabla original se actualice cambiando
+ únicamente valores de atributos, se deberá
+\end_layout
+
+\begin_layout Enumerate
+encontrar la fila correspondiente en el registro de identidad;
+\end_layout
+
+\begin_layout Enumerate
+encontrar la fila correspondiente a esa identidad en la tabla de versiones
+ activas;
+\end_layout
+
+\begin_layout Enumerate
+agregar una fila a la bitácora de revocación que se refiera a la fila de
+ la bitácora de versiones asociada a la identidad encontrada en la tabla
+ de versiones activas, registrando además la fecha y hora actuales;
+\end_layout
+
+\begin_layout Enumerate
+registrar una nueva fila en la bitácora de versiones que hará referencia
+ a la fila del registro de identidades encontrada;
+\end_layout
+
+\begin_layout Enumerate
+agregar una fila a la bitácora de sucesión que se refiera a la fila recién
+ registrada de la bitácora de revocación en su clave primaria, y a la fila
+ recién registrada de la bitácora de versiones en su otra referencia;
+\end_layout
+
+\begin_layout Enumerate
+actualizar la tabla de versiones activas para indicar que la versión activa
+ correspondiente a la identidad encontrada ahora es representada por la
+ fila recién registrada en la bitácora de versiones;
+\end_layout
+
+\begin_layout Enumerate
+para cada atributo que cambió de valor, crear filas nuevas en las tablas
+ de estado con el valor nuevo del atributo, y además, crear filas en las
+ tablas de atributo que asocien a la fila recién creada de la bitácora de
+ versiones con las filas recién creadas de las tablas de estado; y
+\end_layout
+
+\begin_layout Enumerate
+para cada atributo que no cambió de valor, crear filas en las tablas de
+ atributo que asocien a la fila recién creada de la bitácora de versiones
+ con las filas de las tablas de atributo que estaban relacionadas con la
+ fila de la bitácora de versiones correspondiente a la versión anterior.
+\end_layout
+
+\begin_layout Subsection
+Vistas
+\end_layout
+
+\begin_layout Standard
+Al utilizar esta representación, la tabla original puede recuperarse juntando
+ a la tabla de versiones activas con el registro de identidades y las tablas
+ de atributos a través de la bitácora de versiones — por lo tanto, la tabla
+ original podría sustituirse por una vista que tome las acciones indicadas
+ cuando se solicite insertar, eliminar o actualizar datos en ella\SpecialChar \@.
+ Incluso
+ sería posible prescindir de la tabla de versiones activas: ella misma puede
+ recuperarse con una consulta sobre la bitácora de versiones, ya que las
+ filas de la tabla de versiones activas corresponden precisamente a aquellas
+ filas de la bitácora de versiones que no son referidas por una fila de
+ la bitácora de revocación\SpecialChar \@.
+ Sin embargo, la implantación de este sistema
+ resulta considerablemente más simple si se mantiene la tabla de versiones
+ activas como una tabla real\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+El gestor de bases de datos relacionales PostgreSQL permite la ejecución
+ de 
+\emph on
+triggers
+\emph default
+ que sustituyan acciones sobre vistas de inserción, eliminación y actualización,
+ lo cual permite implantar esta lógica con una vista en lugar de la tabla
+ original\SpecialChar \@.
+ Además, las consultas sobre vistas en PostgreSQL son transformadas
+ por reglas de reescritura en consultas sobre las tablas en la definición
+ de la vista, por lo cual esta implantación ofrece oportunidades al planificador
+ de consultas de solo incluir en la ejecución de consultas sobre estas vistas
+ a las tablas subyacentes que sean necesarias para computar los resultados\SpecialChar \@.
+
+ En consecuencia, a pesar de la naturaleza compleja del esquema usado para
+ representar las versiones de datos en una tabla, el costo de efectuar consultas
+ sobre vistas que representen a las tablas originales implantadas de esta
+ manera podría tener propiedades deseables para algunos patrones de consultas\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La complejidad considerable de este esquema es en buena medida causada por
+ usar un diseño para el esquema de control de versión que reduzca la repetición
+ de información entre versiones similares\SpecialChar \@.
+ Esto no es estrictamente necesario:
+ introduce claves postizas y tablas adicionales innecesarias y complica
+ significativamente el proceso de actualización\SpecialChar \@.
+ Sin embargo, la intención
+ de esta técnica es que se use para guardar la información histórica completa
+ de todos los datos de una tabla a lo largo de la vida útil de una base
+ de datos, por lo cual podría resultar muy significativo el ahorro de espacio
+ resultante de esta factorización\SpecialChar \@.
 
 \end_layout
 
