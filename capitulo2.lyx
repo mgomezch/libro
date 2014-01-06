@@ -393,6 +393,81 @@ s que faciliten la extensibilidad de la implantación, herramientas que facilite
 Garantías estáticas de correctitud
 \end_layout
 
+\begin_layout Standard
+La alta frecuencia de cambios en los requerimientos sobre los productos
+ y servicios de la empresa acarrea naturalmente una alta frecuencia de cambios
+ en la implantación, y una base de código en constante evolución\SpecialChar \@.
+ Esta forma
+ de desarrollo presenta numerosas oportunidades para introducir errores
+ de programación en los productos de la empresa, y el tamaño del equipo
+ de desarrollo junto con la necesidad de atender rápidamente las peticiones
+ de los clientes hace que la implantación usada en producción no sea probada
+ exhaustivamente antes de desplegarse\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Desgraciadamente y por razones de la escala de la empresa y del equipo de
+ desarrollo, los productos de PRX Control Solutions no cuentan con una 
+\emph on
+suite
+\emph default
+ de pruebas automatizadas que verifiquen la correctitud de la implantación\SpecialChar \@.
+
+ Esto ocasiona directamente una alta tasa de defectos, y la principal causa
+ de reportes de fallas en producción por parte de los clientes y usuarios
+ de los productos y servicios de la empresa, así como la principal causa
+ de dificultades en su modificación, extensión y refactorización, está asociada
+ con errores de programación relacionados con el uso de variables no asociadas
+ o inicializadas, con el uso inválido de valores por incompatibilidad de
+ tipos, y con inconsistencias entre la estructura de la base de datos esperada
+ por la aplicación y la que está disponible en producción\SpecialChar \@.
+ Los productos
+ de la empresa están implantados usando los lenguajes de programación PHP
+ y Python, ambos lenguajes con sistemas de tipos dinámicos que son poco
+ adecuados para ser objeto de herramientas de análisis estático, por lo
+ cual este tipo de problema es difícil de detectar de manera efectiva incluso
+ en presencia de una 
+\emph on
+suite
+\emph default
+ de pruebas completa\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Durante la realización de este proyecto de pasantía, este tipo de errores
+ causó grandes dificultades al equipo de desarrollo tanto por la frecuente
+ necesidad de atender incidencias por fallas del sistema en producción como
+ por la elevada dificultad del desarrollo de nueva funcionalidad en ausencia
+ de técnicas que favorecieran la construcción de implantaciones correctas\SpecialChar \@.
+
+ En particular, el equipo de desarrollo reportó con frecuencia que errores
+ de programación que hubieran sido trivialmente detectados con herramientas
+ básicas de análisis estático les causaron grandes dificultades y tomaron
+ tiempos inaceptablemente largos para encontrar la causa exacta de la falla\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+En este sentido, 
+\series bold
+usar tecnologías que provean fuertes garantías estáticas de correctitud
+\series default
+ eliminaría una gran cantidad de problemas simples que consumen mucho tiempo
+ y esfuerzo de los desarrolladores y generan muchas fallas y problemas para
+ los clientes\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Este criterio de diseño puede favorecerse utilizando herramientas de desarrollo
+ que efectúen análisis estático para verificar la consistencia de la implantació
+n, como lenguajes de programación con sistemas de tipos estáticos y herramientas
+ de generación de código que garanticen correctitud\SpecialChar \@.
+
+\end_layout
+
 \begin_layout Section
 Parametrización del comportamiento
 \end_layout
