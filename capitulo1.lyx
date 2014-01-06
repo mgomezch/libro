@@ -66,7 +66,7 @@
 \begin_body
 
 \begin_layout Chapter
-Modelo de datos
+Conceptos del modelo de datos
 \end_layout
 
 \begin_layout Standard
@@ -89,6 +89,31 @@ thispagestyle{empty}
 Este capítulo tiene como objetivo dar a conocer los conceptos manejados
  por los sistemas de PRX Control Solutions que sean relevantes para el diseño
  del modelo de datos\SpecialChar \@.
+ La definición precisa de estos conceptos está íntimamente
+ ligada al diseño final del modelo de datos, por lo cual la lectura de este
+ capítulo puede verse como una especificación parcial del nuevo modelo\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Con el fin de facilitar la comprensión de la relación entre la estructura
+ del nuevo modelo y estos conceptos, se han nombrado en 
+\series bold
+\bar under
+negrillas subrayadas
+\series default
+\bar default
+ a los conceptos que estén en correspondencia directa con entidades del
+ nuevo modelo, y aquellos de sus atributos que resulten notables para esta
+ descripción conceptual serán nombrados en 
+\series bold
+negrillas
+\series default
+ en el mismo párrafo\SpecialChar \@.
+ Esta enumeración de conceptos no sustituye, sin embargo,
+ a una descripción precisa del modelo de datos, pero se presenta en este
+ formato para motivar el diseño del modelo nuevo desde una perspectiva conceptua
+l\SpecialChar \@.
 
 \end_layout
 
@@ -697,7 +722,7 @@ Cuando se completa el registro de una solicitud, PCA Audit y PCA Farma intentan
 tratamientos relacionados
 \series default
 \bar default
-, lo cual consiste de determinar asociaciones farmacológicamente válidas
+, lo cual consiste en determinar asociaciones farmacológicamente válidas
  entre un 
 \series bold
 medicamento solicitado
@@ -717,8 +742,8 @@ Análogamente, PCA Audit y PCA Farma intentan establecer cuáles son los
 diagnósticos relacionados
 \series default
 \bar default
-, lo cual consiste de determinar asociaciones farmacológicamente válidas
- entre un 
+ al momento en que se indique que una solicitud está completa, lo cual consiste
+ en determinar asociaciones farmacológicamente válidas entre un 
 \series bold
 tratamiento relacionado
 \series default
@@ -730,8 +755,111 @@ diagnóstico
 
 \end_layout
 
+\begin_layout Section
+Desviaciones
+\end_layout
+
 \begin_layout Standard
-TODO: Desviaciones
+Una desviación es un registro de la detección de algún patrón en los datos
+ asociados a solicitudes que corresponda a irregularidades o a condiciones
+ que acarrean el rechazo parcial o total de la solicitud, sea en términos
+ de la cantidad solicitada de un medicamento, de su monto, de la totalidad
+ de una solicitud o de su monto, o de la validez o la imposibilidad de alguna
+ asociación entre diagnósticos, medicamentos solicitados, facturados, y
+ prescritos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+En general, todas las desviaciones tienen asociado un 
+\series bold
+tipo
+\series default
+ que especifica la causa por la cual se registró, y un usuario debidamente
+ autorizado puede indicar que una desviación debe ser 
+\series bold
+ignorada
+\series default
+ si se determina que la causa de su detección desea ser desconsiderada en
+ alguna situación particular\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+En particular, en el caso de una 
+\series bold
+\bar under
+desviación de solicitud
+\series default
+\bar default
+, se puede indicar un 
+\series bold
+monto total máximo aprobado
+\series default
+, que es una cota superior sobre el gasto considerado válido para efectos
+ de cobertura de planes de seguros totalizado entre todos los medicamentos
+ solicitados que se incluyan en una solicitud\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Análogamente, en el caso de una 
+\series bold
+\bar under
+desviación de medicamento solicitado
+\series default
+\bar default
+, se puede indicar un 
+\series bold
+precio unitario máximo aprobado
+\series default
+, que es una cota superior sobre el gasto considerado válido por cada unidad
+ de un 
+\series bold
+medicamento solicitado
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+En una 
+\series bold
+desviación de tratamiento relacionado
+\series default
+, se puede indicar una 
+\series bold
+cantidad máxima aprobada
+\series default
+, que es una cota superior sobre el número de unidades de la presentación
+ solicitada en el 
+\series bold
+tratamiento relacionado
+\series default
+ consideradas válidas.
+\end_layout
+
+\begin_layout Standard
+Finalmente, puede registrarse una 
+\series bold
+desviación de diagnóstico relacionado
+\series default
+ para indicar la invalidez de un 
+\series bold
+diagnóstico relacionado
+\series default
+.
+\end_layout
+
+\begin_layout Section
+Órdenes
+\end_layout
+
+\begin_layout Standard
+TBD
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 

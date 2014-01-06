@@ -66,7 +66,7 @@
 \begin_body
 
 \begin_layout Chapter
-Marco Teórico y Tecnológico
+Principios generales de diseño
 \end_layout
 
 \begin_layout Standard
@@ -83,6 +83,59 @@ thispagestyle{empty}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+La naturaleza de los productos y servicios de PRX Control Solutions inducen
+ un cierto conjunto de requerimientos generales sobre el diseño y la implantació
+n del modelo de datos y la abstracción de la capa de datos para los sistemas
+ de la empresa\SpecialChar \@.
+ Más allá de la necesidad de poder expresar ciertos conceptos
+ específicos, de adaptarse a metodologías de clientes particulares o de
+ facilitar la integración con ciertas tecnologías utilizadas en los sistemas
+ de la empresa, estos requerimientos son principios generales según los
+ cuales debe orientarse el diseño a todos los niveles de abstracción\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Este capítulo enumera los principios generales de diseño que se identificaron
+ como los más relevantes para la operación efectiva de los productos y servicios
+ de la empresa, junto con ejemplos ilustrativos de situaciones por las cuales
+ cada uno de estos criterios resulta crucial.
+ Esto justifica las decisiones de diseño y la selección de tecnologías 
+\end_layout
+
+\begin_layout Section
+Consistencia e integridad de los datos
+\end_layout
+
+\begin_layout Section
+Persistencia de datos históricos
+\end_layout
+
+\begin_layout Section
+Extensibilidad y facilidad de refactorización
+\end_layout
+
+\begin_layout Section
+Expresividad de las abstracciones
+\end_layout
+
+\begin_layout Section
+Garantías estáticas de correctitud
+\end_layout
+
+\begin_layout Section
+Parametrización del comportamiento
+\end_layout
+
+\begin_layout Section
+Equilibrio entre simplicidad y rendimiento
+\end_layout
+
+\begin_layout Standard
+--------
 \end_layout
 
 \begin_layout Standard
