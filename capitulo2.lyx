@@ -102,8 +102,19 @@ n del modelo de datos y la abstracción de la capa de datos para los sistemas
 Este capítulo enumera los principios generales de diseño que se identificaron
  como los más relevantes para la operación efectiva de los productos y servicios
  de la empresa, junto con ejemplos ilustrativos de situaciones por las cuales
- cada uno de estos criterios resulta crucial.
- Esto justifica las decisiones de diseño y la selección de tecnologías 
+ cada uno de estos criterios resulta crucial\SpecialChar \@.
+ Esto justifica las decisiones
+ de diseño y la selección de tecnologías empleadas en este proyecto de pasantías\SpecialChar \@.
+
+ A pesar de que algunos de estos principios son ideas fundamentales asociadas
+ a la calidad de 
+\emph on
+software
+\emph default
+ y no son específicos al desarrollo de esta empresa, se hace especial énfasis
+ en ellos por el impacto especial que tienen sobre la efectividad de los
+ productos, servicios y procesos particulares de PRX Control Solutions\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Section
@@ -538,9 +549,70 @@ Equilibrio entre simplicidad y rendimiento
 \end_layout
 
 \begin_layout Standard
-TODO: hablar del problema del analyzer, de lo difícil que es escribir consultas
- con sql a mano y de que aunque con el orm es muy fácil, el rendimiento
- hace que la aplicación no funcione en absoluto
+El diseño y la implantación de los sistemas de PRX Control Solutions debe
+ modificarse con frecuencia frente a los siempre cambiantes requerimientos
+ de los clientes, por lo cual es importante que las tecnologías empleadas
+ permitan un ciclo rápido de desarrollo y empleen interfaces de programación
+ sencillas que minimicen la cantidad de trabajo de desarrollo necesaria
+ para la implantación de los patrones de acciones más comúnes\SpecialChar \@.
+ Sin embargo,
+ algunos de los problemas atacados por las aplicaciones de la empresa son
+ de una naturaleza que entra en conflicto con el uso de herramientas que
+ optimicen los casos simples, ya que éstas con frecuencia sacrifican la
+ practicidad o el rendimiento de operaciones complejas en favor de las operacion
+es sencillas o comúnes\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Esta situación tiene un efecto particularmente notorio en las abstracciones
+ de acceso al modelo de datos utilizadas por las aplicaciones de la empresa\SpecialChar \@.
+
+ Durante la realización de este proyecto de pasantías se observó el empleo
+ de una biblioteca de correspondencia objeto-relacional utilizada extensivamente
+ en la implantación de las aplicaciones de la empresa, y si bien su utilización
+ facilita gran parte de la implantación de estas aplicaciones orientadas
+ a datos, en algunos casos fueron una fuente de fallas que inutilizaron
+ por completo a una de las aplicaciones de la empresa para muchos casos\SpecialChar \@.
+
+ La aplicación PRX Analyzer, encargada de generar reportes estadísticos
+ a partir de los datos de uso de la aplicación PCA Audit para beneficio
+ de los operadores y clientes de la aplicación, hace consultas complejas
+ a la base de datos de la empresa\SpecialChar \@.
+ A pesar de que la biblioteca de correspondenci
+a objeto-relacional empleada por la empresa no había presentado problemas
+ para la mayor parte de la implantación de sus sistemas, expresar las consultas
+ de naturaleza compleja requeridas por los reportes de PRX Analyzer resultó
+ inviable debido a las propiedades de rendimiento de la biblioteca para
+ ese tipo de consultas, y el producto resultó inutilizable para clientes
+ cuya escala de operación sobrepasara un cierto punto\SpecialChar \@.
+ A raíz de esta situación,
+ se decidió reescribir la implantación de las consultas problemáticas a
+ bajo nivel, sin usar la biblioteca en cuestión, y el sistema resultó usable
+ otra vez\SpecialChar \@.
+ Sin embargo, la implantación a bajo nivel perdió la simplicidad
+ y resultó poco robusta y mantenible, por lo cual no pudo ser adaptada a
+ cambios subsiguientes en la base de datos por no poder disponer de tanto
+ tiempo del equipo de desarrollo para esa tarea\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Debido a este tipo de problema, es necesario 
+\series bold
+utilizar abstracciones que hagan un equilibrio productivo de simplicidad
+ y rendimiento
+\series default
+ para la implantación de las aplicaciones de la empresa\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Este criterio de diseño puede favorecerse mediante el empleo de formas de
+ abstracción más expresivas, o con el uso simultáneo de varias abstracciones
+ compatibles o interoperables que optimicen diferentes tipos de objetivos
+ de implantación\SpecialChar \@.
+
 \end_layout
 
 \end_body
