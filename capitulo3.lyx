@@ -66,7 +66,7 @@
 \begin_body
 
 \begin_layout Chapter
-Marco Metodológico
+Control de versión en bases de datos
 \end_layout
 
 \begin_layout Standard
@@ -86,364 +86,43 @@ thispagestyle{empty}
 \end_layout
 
 \begin_layout Standard
-El desarrollo de este proyecto se lleva a cabo mediante la aplicación de
- la metodología Proceso Unificado Ágil (
-\shape italic
-Agile Unified Process
-\shape default
-, AUP o AgileUP).
- Esta metodología fue desarrollada por Scott W.
- Ambler.
+Los principios generales de diseño necesarios para atender en forma efectiva
+ los requerimientos asociados a las aplicaciones de PRX Control Solutions
+ afectan extensivamente al diseño del modelo de datos, y más aún a su implantaci
+ón\SpecialChar \@.
+ En particular, la combinación de los requerimientos de consistencia e
+ integridad de los datos y de persistencia de datos históricos inducen un
+ diseño complejo a la implantación de la base de datos: no basta con almacenar
+ los datos necesarios para la operación simple del sistema, sino que cada
+ estado que cada dato tuviera a lo largo del tiempo debe ser preservado,
+ no solo para su posterior análisis fuera de línea, sino porque un dato
+ debería poder indicar que hace referencia a una versión específica de otro
+ dato que existió en algún momento dentro de la base de datos\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
-AUP es una versión simplificada del Proceso Unificado de Rational 
-\shape italic
-(Rational Unified Process
-\shape default
- o RUP), que presenta una aproximación sencilla con técnicas orientadas
- al desarrollo de software ágil, pero manteniendo muchos conceptos importantes
- de RUP
-\begin_inset space ~
-\end_inset
+Existen sistemas de control de versión que proveen este tipo de referencias:
+ en el sistema de control de versión Git, un repositorio puede hacer referencia
+ a una revisión particular de otro repositorio usando 
+\emph on
+submodules
+\emph default
+, y en cada uno se almacena la historia completa de todos los estados del
+ repositorio\SpecialChar \@.
+ Sin embargo, un sistema como Git no está diseñado para ser
+ usado como base de datos para un sistema de información, y sería tremendamente
+ impráctico e ineficiente\SpecialChar \@.
+ La base de datos que se desea implantar es basada
+ en SQL por una diversidad de razones, la más notoria de las cuales es que
+ facilita tremendamente la implantación de garantías de integridad mediante
+ restricciones — pero ni SQL ni el modelo relacional que lo fundamenta manejan
+ directamente el concepto de control de versión ni el de hacer referencias
+ a una versión de un dato\SpecialChar \@.
+ Sin embargo, dado un esquema relacional, es posible
+ diseñar otro esquema relacional que sea capaz de representar toda la informació
+n histórica del primero\SpecialChar \@.
 
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "AUP"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-AUP emplea técnicas ágiles, incluyendo Desarrollo Guiado por Pruebas (
-\shape italic
-Test Driven Development
-\shape default
- o TDD), modelado ágil, gestión ágil de cambios y reconstrucción de bases
- de datos.
- Algunas de estas técnicas formaron parte integral del desarrollo del proyecto.
-\end_layout
-
-\begin_layout Standard
-Para la documentación y registro de los requerimientos del sistema, se utilizará
-n las plantillas de documentos para Documento de Visión del Sistema, Especificac
-ión de Requerimientos de Software (ERS) y Documento de Arquitectura de Software
- (DAS), pertenecientes a la metodología RUP.
-\end_layout
-
-\begin_layout Standard
-Se emplea AUP, debido a que, al ser una metodología ágil, presenta un equilibrio
- entre las etapas de diseño, planificación y documentación del sistema,
- con la implementación del mismo, por lo tanto, se sigue manteniendo un
- desarrollo estructurado y coherente, pero con una mayor flexibilidad para
- el programador, tanto para en tiempo efectivo de implementación, como en
- el manejo de cambios en el sistema a través del proceso de desarrollo.
-\end_layout
-
-\begin_layout Section
-Fases de AUP
-\end_layout
-
-\begin_layout Standard
-La metodología de AUP, de igual manera que RUP, propone dividir el desarrollo
- de software en cuatro (4) fases, cada una de las cuales comprende técnicas
- y disciplinas de desarrollo, que permiten iterar sobre ellas hasta lograr
- el cumplimiento de los objetivos planteados.
- Al ser una metodología flexible y ágil, AUP permite que las técnicas que
- componen cada fase, se puedan adecuar a las necesidades y realidades del
- proyecto.
- 
-\end_layout
-
-\begin_layout Standard
-A continuación, se muestra un gráfico con las fases de la metodología AUP
- (Figura 3.1).
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename AUPfases.png
-	scale 65
-
-\end_inset
-
-
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Fases y disciplinas de la metodología AUP 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "AUP"
-
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Inicio (
-\shape italic
-Inception
-\shape default
-)
-\end_layout
-
-\begin_layout Standard
-El objetivo es identificar el alcance inicial del proyecto, una arquitectura
- potencial de su sistema, el alcance estimado del proyecto, establecer cómo
- serán administrados los recursos, y obtener la aceptación del involucrado.
-\end_layout
-
-\begin_layout Standard
-La administración de los recursos corre por cuenta de Venetecnología y el
- Grupo Venemergencia, quienes encargaron el desarrollo de la aplicación,
- y además, también son los usuarios finales de la misma.
-\end_layout
-
-\begin_layout Standard
-De esta manera, las actividades que competen al pasante en esta fase están
- relacionadas con la definición de los requerimientos del sistema y selección
- de tecnologías a emplear en el desarrollo próximo.
-\end_layout
-
-\begin_layout Standard
-Se establecen claramente unos objetivos para esta fase:
-\end_layout
-
-\begin_layout Itemize
-Estudio de los sistemas existentes en la empresa, para determinar si se
- debe o no interactuar con ellos, y de qué manera se puede hacer posible
- dicha interacción.
-\end_layout
-
-\begin_layout Itemize
-Revisión inicial de los requerimientos funcionales del sistema, en base
- a la planificación de 20 semanas de ejecución del proyecto.
-\end_layout
-
-\begin_layout Itemize
-Familiarizarse con los términos y conceptos relacionados al negocio, que
- afecten o formen parte integral del proyecto.
-\end_layout
-
-\begin_layout Itemize
-Definición de tecnologías y herramientas a utilizar para el desarrollo del
- proyecto.
-\end_layout
-
-\begin_layout Subsection
-Elaboración (
-\shape italic
-Elaboration
-\shape default
-)
-\end_layout
-
-\begin_layout Standard
-Esta fase tiene como objetivo principal, definir la arquitectura del sistema,
- determinando cómo estará estructurada la aplicación, tanto a nivel de component
-es, como a nivel de modelo de datos.
- También contempla el refinamiento de los requerimientos funcionales, mediante
- la formalización de los mismos, a través de la definición de los casos
- de uso.
-\end_layout
-
-\begin_layout Standard
-Una de las actividades de mayor importacia en esta fase se concentra en
- la definición del modelo de datos a emplear, que en este proyecto debe
- integrar las necesidades nuevas requeridas por los usuarios para el sistema
- de gestión de consultas médicas, como las requeridas en el desarrollo del
- sistema de atención de consultas médicas, vía celular, ContactaMed.
-\end_layout
-
-\begin_layout Standard
-Los objetivos específicos de esta fase son:
-\end_layout
-
-\begin_layout Itemize
-Formalización y refinamiento de los requerimientos funcionales del sistema,
- mediante la construcción del documento de Especificación de Requerimientos
- de Software (ERS), y la realización del diagrama de casos de uso.
-\end_layout
-
-\begin_layout Itemize
-Definición de los componentes y subcomponentes del sistema.
-\end_layout
-
-\begin_layout Itemize
-Diseño y elaboración del Modelo de Datos del sistema, que debe integrar
- las necesidades de la aplicación de consultas médicas con las del sistema
- ContactaMed, que se encuentra en desarrollo.
-\end_layout
-
-\begin_layout Itemize
-Adiestramiento en las herramientas de programación, lenguajes y 
-\shape italic
-frameworks
-\shape default
- a utilizar en el desarrollo de la aplicación (PHP, CakePHP, jQuery, Javascript).
-\end_layout
-
-\begin_layout Subsection
-Construcción (
-\shape italic
-Construction
-\shape default
-)
-\end_layout
-
-\begin_layout Standard
-El objetivo primordial de esta fase está constituido por la implementación
- de un sistema, de manera incremental, donde, iteración a iteración, se
- van desarrollando los componentes y subcomponentes de la aplicación, basándose
- en la prioridad establecida de cada uno de los requerimientos definidos
- en las fases previas.
- 
-\end_layout
-
-\begin_layout Standard
-Este desarrollo incremental, se logra a través de la implementación de módulos
- parciales funcionales, que cumplan con las necesidades de los requerimientos
- asociados al desarrollo ejecutado.
- También, se van aplicando pruebas a través de cada iteración, para comprobar
- la estabilidad y confiabilidad del software generado.
-\end_layout
-
-\begin_layout Standard
-Para el desarrollo de la aplicación, se dividió esta fase en tres (3) iteracione
-s para la implementación de los Requerimientos:
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-Primera Iteración: Gestión de Usuarios del Sistema.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Diseño e implementación de módulo de registro de pacientes.
-\end_layout
-
-\begin_layout Itemize
-Diseño e implementación de módulo de registro de usuarios médicos y administrati
-vos.
-\end_layout
-
-\begin_layout Itemize
-Desarrollo de módulo de gestión de pacientes y usuarios médico-administrativos.
-\end_layout
-
-\begin_layout Itemize
-Desarrollo de módulo de login de usuarios (tanto médico-administrativos,
- como pacientes).
-\end_layout
-
-\begin_layout Itemize
-Establecimiento del sistema de Listas de Control de Acceso (
-\shape italic
-Access Control Lists
-\shape default
-) o ACL, para establecer permisologías dependiendo del tipo de usuario.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\series bold
-Segunda Iteración: Gestión de Consultas Médicas.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Diseño e implementación de módulo de registro de antecedentes y hábitos.
-\end_layout
-
-\begin_layout Itemize
-Diseño e implementación de módulo de prescripción de medicamentos.
-\end_layout
-
-\begin_layout Itemize
-Construcción de módulo de exámenes funcionales, físicos y paraclínicos.
-\end_layout
-
-\begin_layout Itemize
-Construcción de módulo de interconsultas.
-\end_layout
-
-\begin_layout Itemize
-Diseño e implementación de módulo de solicitud de citas de laboratorio con
- Venelab.
-\end_layout
-
-\begin_layout Itemize
-Diseño e implementación de módulo de carga de archivos e imágenes.
-\end_layout
-
-\begin_layout Itemize
-Construcción de módulo de diagnósticos.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\series bold
-Tercera Iteración: Generación de Reportes y Visualización de Consultas.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Diseño e implementación de módulo de Generación de Informes de Consultas.
-\end_layout
-
-\begin_layout Itemize
-Diseño e implementación de módulo de reporte de patologías recurrentes.
-\end_layout
-
-\begin_layout Itemize
-Construcción de módulo de visualización y edición de consultas previas.
-\end_layout
-
-\end_deeper
-\begin_layout Subsection
-Transición (
-\shape italic
-Transition
-\shape default
-)
-\end_layout
-
-\begin_layout Standard
-Esta fase tiene como objetivo validar y desplegar el sistema en un ambiente
- de producción, sin embargo, en el contexto de las veinte (20) semanas definidas
- para la ejecución del proyecto, se determinó que la puesta en producción
- de la aplicación no forma parte del alcance del mismo.
- Por lo tanto, en esta pasantía, el alcance de la fase de transición del
- sistema se limita a pruebas técnicas para determinar la estabilidad, integridad
- y buen funcionamiento de la aplicación.
 \end_layout
 
 \begin_layout Standard

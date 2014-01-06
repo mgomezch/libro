@@ -365,7 +365,9 @@ Se diseñó una capa de abstracción de datos para las aplicaciones en forma
 \emph on
 Web
 \emph default
- en el lenguaje de programación Haskell.
+, la biblioteca de correspondencia algebráico-relacional Groundhog y la
+ biblioteca de álgebra relacional HaskellDB en el lenguaje de programación
+ Haskell.
 \end_layout
 
 \begin_layout Standard
