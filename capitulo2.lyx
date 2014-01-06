@@ -472,8 +472,19 @@ n, como lenguajes de programación con sistemas de tipos estáticos y herramient
 Parametrización del comportamiento
 \end_layout
 
+\begin_layout Standard
+TODO: hablar del problema de las tablas de excepciones y tal, preparar terreno
+ para el capítulo sobre el evaluador de reglas
+\end_layout
+
 \begin_layout Section
 Equilibrio entre simplicidad y rendimiento
+\end_layout
+
+\begin_layout Standard
+TODO: hablar del problema del analyzer, de lo difícil que es escribir consultas
+ con sql a mano y de que aunque con el orm es muy fácil, el rendimiento
+ hace que la aplicación no funcione en absoluto
 \end_layout
 
 \end_body
