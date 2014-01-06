@@ -110,12 +110,196 @@ Este capítulo enumera los principios generales de diseño que se identificaron
 Consistencia e integridad de los datos
 \end_layout
 
+\begin_layout Standard
+La base de datos actual de los sistemas de PRX Control Solutions fue diseñada
+ originalmente para dar soporte a prototipos de los productos actuales de
+ la empresa, pero esos prototipos han sido abandonados o modificados a tal
+ punto que queda muy poco de sus implantaciones originales como resultado
+ de la realización de nuevas iteraciones en su desarrollo\SpecialChar \@.
+ Estos prototipos
+ originales de los productos de la empresa fueron diseñados principalmente
+ como pruebas de concepto con el fin de ofrecer los productos a clientes
+ y evaluar la viabilidad del negocio en un momento en que no estaba definida
+ con precisión la naturaleza del negocio\SpecialChar \@.
+ Por lo tanto, no se hizo énfasis
+ en producir diseños robustos y con una estructura que sirviera de fundamento
+ a desarrollos posteriores, sino que se dio prioridad al desarrollo rápido
+ y ágil para facilitar la adaptación a los deseos de los clientes que estudiaban
+ la posibilidad de integrar estos productos en sus procesos internos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+En particular, la base de datos actual de los sistemas de la empresa tiene
+ un diseño compuesto significativamente por soluciones 
+\emph on
+ad hoc
+\emph default
+ a problemas que se presentaron a lo largo de la historia de su desarrollo\SpecialChar \@.
+
+ A pesar de que se trata de una base de datos relacional, es muy frecuente
+ encontrar información duplicada, relaciones sin claves especificadas, referenci
+as sin restricciones de clave foránea, relaciones enteras que no se usan
+ en absoluto desde versiones muy antiguas de las aplicaciones, y varias
+ otras fallas de diseño\SpecialChar \@.
+ Más allá de ser errores en el diseño, todas estas
+ propiedades son resultados naturales de un proceso de desarrollo que, por
+ presiones del mercado y límites de tiempo y recursos, no tuvo alternativas
+ viables a transformar prototipos en sistemas en producción\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Como es de esperarse, un sistema en producción hecho de esta manera sufre
+ de numerosas propiedades indeseables\SpecialChar \@.
+ Una de las fuentes principales de
+ errores y de lentitud en el desarrollo está en la gran cantidad de invariantes
+ de datos que son necesarios para la correcta operación de la implantación
+ de las aplicaciones de la empresa, mas no están especificadas en la implantació
+n de la base de datos mediante restricciones o por la simple estructura
+ del modelo\SpecialChar \@.
+ Durante la realización de este proyecto de pasantías, hubo frecuente
+s incidentes en los cuales un servicio prestado a un cliente falló por causa
+ de la ausencia de este tipo de restricción, ya sea debido a referencias
+ colgantes en la base de datos que no se detectaron debido a la ausencia
+ de algunas restricciones de claves foráneas, datos duplicados o mal identificad
+os debido a la ausencia de algunas restricciones de unicidad y claves primarias,
+ información obsoleta debido a actualizaciones incorrectas que no consideraron
+ la falta de normalización en la base de datos, etc\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Este tipo de problema ha causado inconvenientes fuertes a clientes en operación,
+ incluyendo retraso en la atención de los reclamos de salud de pacientes
+ de algunas aseguradoras\SpecialChar \@.
+ Por lo tanto, puede identificarse como un criterio
+ esencial de diseño para los sistemas de la empresa 
+\series bold
+garantizar la consistencia e integridad de la información en la base de
+ datos
+\series default
+ para reducir la incidencia de fallas graves en operación.
+\end_layout
+
+\begin_layout Standard
+Las estrategias específicas que pueden utilizarse para favorecer este criterio
+ de diseño incluyen utilizar un modelo normalizado en la implantación de
+ la base de datos, y la utilización de un gestor de bases de datos relacionales
+ con buen soporte para restricciones de integridad\SpecialChar \@.
+ Como los cambios en el
+ diseño son inevitables por la continua variabilidad de los requerimientos
+ de los clientes de la empresa, es importante utilizar un diseño que facilite
+ que los cambios al modelo de datos se reduzcan en frecuencia y alcance,
+ lo cual puede lograrse usando un modelo más expresivo, que permita representar
+ metodologías de trabajo más variadas sin necesidad de hacer modificaciones
+ profundas al diseño\SpecialChar \@.
+ Además, cuando sea necesario hacer tales modificaciones,
+ debería facilitarse hacerlas en maneras que promuevan la exclusión de datos
+ inconsistentes — aunque los cambios sean inevitables, es posible implantar
+ soluciones tecnológicas que dificulten los cambios que introduzcan inconsistenc
+ias y faciliten los que preservan la integridad del modelo\SpecialChar \@.
+
+\end_layout
+
 \begin_layout Section
 Persistencia de datos históricos
 \end_layout
 
+\begin_layout Standard
+La principal fuente de valor explotada por los productos y servicios de
+ PRX Control Solutions está asociada con la conducción de auditorías y otras
+ formas de análisis sobre la validez de procesos de la industria de la salud\SpecialChar \@.
+
+ Para poder hacer un análisis efectivo de estos procesos, es importante
+ contar con información altamente detallada sobre cada paso, cada etapa
+ y cada aspecto involucrado en los procesos que se analizan\SpecialChar \@.
+ En particular,
+ es esencial conocer en detalle la evolución de los datos asociados a un
+ proceso para poder detectar irregularidades o hacer estudios estadísticos
+ del desarrollo de esos procesos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Sin embargo, esto entra en conflicto con la naturaleza variable de gran
+ parte de la información asociada a los procesos que están en el alcance
+ de los productos y servicios de la empresa\SpecialChar \@.
+ Los medicamentos cambian de
+ precio y entran y salen del mercado, los cuadros clínicos de los pacientes
+ evolucionan, las condiciones de cobertura de seguros médicos se alteran
+ en respuesta a las demandas del mercado y a cambios en su marco legal y
+ regulatorio, etc\SpecialChar \@.
+ Más aún, incluso en casos en los cuales la información
+ real que se utiliza en los sistemas de la empresa pudiera ser invariable,
+ si es que existen tales casos, debe considerarse que la información registrada
+ en el sistema puede ser incompleta o incorrecta, y sin embargo es la que
+ se utiliza para efectuar los diversos procesos que deben ser potenciales
+ sujetos de análisis y auditoría\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Por otra parte, es frecuente que los usuarios de los sistemas de la empresa
+ hagan observaciones sobre su comportamiento y reporten quejas o problemas
+ con la información generada o reportada por ellos\SpecialChar \@.
+ Para poder atender efectivame
+nte estas inquietudes de los clientes de la empresa y entender el origen
+ preciso de las posibles fallas en los procesos de los sistemas de la empresa,
+ es importante contar con la información completa del contexto en el cual
+ se produjo cada paso en el funcionamiento de estos sistemas\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Algunos de los datos que registran los sistemas de la empresa tienen el
+ carácter de transacciones comerciales en el sentido de que acarrean gastos
+ para los clientes de la empresa; por ejemplo, cuando PCA Audit genera una
+ órden para que un medicamento sea dispensado a un asegurado en una farmacia,
+ la empresa aseguradora deberá luego cancelar el monto aprobado de la órden
+ a la farmacia que efectúe la dispensación.
+ Los datos asociados a este tipo de dato que representa una transacción
+ comercial deben manejarse con un fuerte énfasis en la integridad, y esto
+ implica que debe indicarse en estos datos cuáles fueron los datos exactos
+ usados para realizar los cálculos relevantes.
+ Sin embargo, como esos datos pueden variar —por ejemplo, porque el precio
+ de un medicamento cambie, o por cualquier condición de cobertura que altere
+ los montos aprobados—, sería necesario asociar a cada transacción comercial
+ una copia momentánea de todos los datos que fueran usados para calcular
+ sus propiedades.
+\end_layout
+
+\begin_layout Standard
+Hacer esto explícitamente introduciría gran complejidad al modelo de datos.
+ Una solución a este problema es relacionar a las transacciones comerciales
+ con la 
+\emph on
+versión histórica
+\emph default
+ de cada dato que fuera usado para computar sus propiedades.
+ En este sentido, resulta esencial 
+\series bold
+preservar la totalidad de la historia de toda la información manejada por
+ el modelo de datos
+\series default
+ dado que puede ser sujeto de dependencias por parte de transacciones comerciale
+s cuya historia debe preservarse, y también por el simple hecho de que la
+ información histórica de los procesos de los sistemas de la empresa tiene
+ valor intrínsico por el hecho de poder efectuar análisis sobre esa información
+ con fines comerciales.
+\end_layout
+
 \begin_layout Section
 Extensibilidad y facilidad de refactorización
+\end_layout
+
+\begin_layout Standard
+En términos de su estructura empresarial, PRX Control Solutions puede ser
+ aún considerada un 
+\emph on
+startup
+\emph default
+, por lo cual su modelo de negocios 
 \end_layout
 
 \begin_layout Section
