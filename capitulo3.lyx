@@ -176,22 +176,22 @@ Las columnas de una fila de una tabla se pueden dividir en dos categorías\Speci
 identidad
 \emph default
  de la fila\SpecialChar \@.
- Los demás datos serán llamados 
+ Los demás datos que no sean referencias serán llamados 
 \emph on
 atributos
 \emph default
-\SpecialChar \@.
- En este sentido, al insertar una fila en la tabla original, se estaría
- registrando la creación de una versión de la fila con la identidad y los
- valores de atributos que fueron insertados en la tabla original, y se puede
- registrar un número de serie para la versión y la fecha y hora de su aparición\SpecialChar \@.
-
- Cuando se actualiza un atributo de una fila existente en la tabla original,
- se deberá registrar la creación de una nueva versión con la misma identidad
- pero con los valores nuevos de los atributos, y se registra con un número
- de serie diferente para indicar que es una versión distinta a la anterior
- — y también se registrará la fecha y hora en que fue creada la versión
- nueva a raíz de la actualización\SpecialChar \@.
+ — las referencias serán consideradas aparte\SpecialChar \@.
+ En este sentido, al insertar
+ una fila en la tabla original, se estaría registrando la creación de una
+ versión de la fila con la identidad y los valores de atributos que fueron
+ insertados en la tabla original, y se puede registrar un número de serie
+ para la versión y la fecha y hora de su aparición\SpecialChar \@.
+ Cuando se actualiza un
+ atributo de una fila existente en la tabla original, se deberá registrar
+ la creación de una nueva versión con la misma identidad pero con los valores
+ nuevos de los atributos, y se registra con un número de serie diferente
+ para indicar que es una versión distinta a la anterior — y también se registrar
+á la fecha y hora en que fue creada la versión nueva a raíz de la actualización\SpecialChar \@.
 
 \end_layout
 
@@ -511,6 +511,164 @@ La complejidad considerable de este esquema es en buena medida causada por
  de datos, por lo cual podría resultar muy significativo el ahorro de espacio
  resultante de esta factorización\SpecialChar \@.
 
+\end_layout
+
+\begin_layout Section
+Referencias
+\end_layout
+
+\begin_layout Standard
+En la discusión anterior sobre el mecanismo de control de versión para datos
+ en tablas de SQL se excluyó por completo la consideración de referencias\SpecialChar \@.
+
+ Esto se hizo únicamente para simplificar esa presentación inicial de la
+ técnica: las referencias entre tablas pueden representarse con esta técnica,
+ pero su manejo es relativamente complejo\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Las referencias son una forma de asociación dirigida entre dos objetos:
+ el objeto 
+\emph on
+referente
+\emph default
+ apunta al objeto 
+\emph on
+referido
+\emph default
+\SpecialChar \@.
+ Para ajustarse al criterio de diseño de preservación de datos históricos,
+ se desea que las referencias entre objetos que usen la técnica de diseño
+ de control de versión sean referencias entre versiones, con la propiedad
+ crucial de que una nueva relación solo podrá establecerse con datos en
+ sus versiones vigentes\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La implantación y semántica de estas referencias dependerá de si la referencia
+ se considera parte de la identidad del referente o no\SpecialChar \@.
+ En ambos casos, sin
+ embargo, no será adecuado que la referencia se manifieste en la vista que
+ representa a la tabla original como simplemente la identidad del objeto
+ referido, ya que la referencia debe especificar una versión particular
+ como objetivo\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Tampoco sería conveniente que se representara a la referencia como simplemente
+ la versión referida: aunque esta información sería estrictamente suficiente
+ para consultar y manipular la referencia, sería innecesariamente impráctico\SpecialChar \@.
+
+ Una propiedad fundamental de las referencias que interesa modelar es que
+ aunque una referencia puede apuntar a una versión no actual de un objeto,
+ no debería ser posible establecer nuevas referencias sino a versiones actuales
+ de objetos mediante sus identidades: tiene poco sentido indicar una nueva
+ referencia a un objeto que ya no existe, o a un estado de un objeto que
+ ya cambió, ya que el objetivo de esta técnica es preservar información
+ de los estados anteriores de la base de datos, mas no permitir referencias
+ arbitrarias entre versiones\SpecialChar \@.
+ Si se representa una referencia únicamente
+ por la identificación de la versión referida, sería necesario buscar la
+ identificación de la versión actual de un dato para poder establecer una
+ relación a él, y su identidad no sería útil salvo mediante una consulta
+ a la tabla de versiones activas\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Resulta conveniente, entonces, representar una referencia a una versión
+ mediante dos datos a la vez: por un lado, la identidad referida se presenta
+ en forma similar a como se especifica en una referencia en una tabla normal
+ de SQL, con cada columna que compone a esa identidad; por otro lado, la
+ identificación de la versión referida se presenta con la clave de la bitácora
+ de versiones correspondiente a la versión referida\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Cuando se desee definir la referencia, se debe definir la identidad y el
+ sistema debe buscar la versión actual asociada a esa identidad automáticamente
+ (y producir un error si no existe), y será considerado un error de uso
+ intentar definir una referencia mediante su versión.
+\end_layout
+
+\begin_layout Standard
+Sin embargo, hay una operación especial que puede ser útil: realizar una
+ actualización de la versión de una referencia definida que asigne un valor
+ nulo a la versión referida por una referencia se interpretará como una
+ solicitud al sistema de hacer que la referencia sea actualizada a la versión
+ actual de la identidad referida\SpecialChar \@.
+ Este caso especial es razonable: actualizar
+ una referencia para que apunte a la versión actual de cualquier identidad
+ 
+\emph on
+distinta
+\emph default
+ de la ya referida puede especificarse actualizando las columnas de la identidad
+ de la referencia en la vista a la identidad del nuevo objetivo, pero si
+ se actualizan esas columnas con precisamente los mismos valores que ya
+ tenían, no se está haciendo una modificación a ningún valor de la representació
+n referencia en la vista, por lo cual la actualización ni siquiera será
+ detectada — hay exactamente una identidad que no puede especificarse de
+ esta manera para actualizar la referencia a la versión actual\SpecialChar \@.
+ Por otra
+ parte, cualquier valor no nulo asignado a la versión referida debería producir
+ un error que indique que no debe manipularse la referencia asignando una
+ clave de bitácora de versiones directamente — pero un valor nulo no es
+ exactamente una clave de una bitácora de versiones\SpecialChar \@.
+ Usar el valor excepcional
+ para especificar la actualización excepcional resulta casi natural\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Subsection
+Fuera de la identidad
+\end_layout
+
+\begin_layout Standard
+Cuando una referencia no forma parte de la identidad, su implantación es
+ similar a la de un atributo\SpecialChar \@.
+ Como el referido de la referencia es una versión
+ de otro objeto, puede representarse simplemente por la clave primaria de
+ la bitácora de versiones del objeto referido\SpecialChar \@.
+ Como el referente de la referencia
+ es una versión del objeto referente y no es parte de la identidad del mismo,
+ puede usarse exactamente la misma representación usada para atributos,
+ usando una tabla de atributo y una tabla de estado para asociar la clave
+ del referido con la versión referente\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Sin embargo, la separación de atributos en dos tablas se justificaba por
+ la posibilidad de ahorrar espacio cuando los valores de los atributos pudieran
+ ser de tamaño considerable, mientras que en el caso de una referencia,
+ el valor es simplemente el identificador secuencial del referido, que es
+ un valor pequeño\SpecialChar \@.
+ Por lo tanto, resulta conveniente utilizar una representación
+ más compacta para este caso: una referencia se representa con una 
+\emph on
+tabla de referencia
+\emph default
+ análoga a una tabla de atributo, cuya clave primaria es la clave primaria
+ de la fila de la bitácora de versiones de la versión referente, y que incluye
+ además el valor de la clave primaria de la versión referida como clave
+ foránea a su bitácora de versiones — no hay análogo a la tabla de estado\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Subsection
+En la identidad
+\end_layout
+
+\begin_layout Standard
+Una referencia en la identidad se representa simplemente como una componente
+ de la identidad cuya columna correspondiente en el registro de identidades
+ de la tabla referente resulta ser una clave foránea a la bitácora de versiones
+ de la tabla referida.
 \end_layout
 
 \begin_layout Standard
