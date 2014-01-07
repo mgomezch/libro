@@ -120,7 +120,7 @@ addcontentsline{toc}{chapter}{Lista de Símbolos y Abreviaturas}
 \paragraph_spacing onehalf
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="9" columns="5">
+<lyxtabular version="3" rows="11" columns="5">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0">
 <column alignment="left" valignment="top" width="0">
@@ -168,7 +168,7 @@ API
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application Programming Interface
+Application programming interface
 \end_layout
 
 \end_inset
@@ -215,7 +215,54 @@ AJAX
 \begin_inset Text
 
 \begin_layout Plain Layout
-Asynchronous Javascript and XML
+Asynchronous JavaScript and XML
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DDL
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Data definition language
 \end_layout
 
 \end_inset
@@ -262,7 +309,7 @@ HAL
 \begin_inset Text
 
 \begin_layout Plain Layout
-Hypertext Application Language
+Hypertext application language
 \end_layout
 
 \end_inset
@@ -309,7 +356,7 @@ HTML
 \begin_inset Text
 
 \begin_layout Plain Layout
-Hypertext Markup Languaje
+Hypertext markup languaje
 \end_layout
 
 \end_inset
@@ -356,7 +403,7 @@ JSON
 \begin_inset Text
 
 \begin_layout Plain Layout
-JavaScript Object Notation
+JavaScript object notation
 \end_layout
 
 \end_inset
@@ -403,7 +450,7 @@ PHP
 \begin_inset Text
 
 \begin_layout Plain Layout
-PHP: Hypertext Preprocessor
+PHP: Hypertext preprocessor
 \end_layout
 
 \end_inset
@@ -450,7 +497,7 @@ SaaS
 \begin_inset Text
 
 \begin_layout Plain Layout
-Software as a Service
+Software as a service
 \end_layout
 
 \end_inset
@@ -497,7 +544,7 @@ SQL
 \begin_inset Text
 
 \begin_layout Plain Layout
-Structured Query Language
+Structured query language
 \end_layout
 
 \end_inset
@@ -544,7 +591,54 @@ XML
 \begin_inset Text
 
 \begin_layout Plain Layout
-eXtensible Markup Language
+Extensible markup language
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+YAML
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Yet another markup language
 \end_layout
 
 \end_inset

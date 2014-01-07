@@ -513,7 +513,7 @@ La complejidad considerable de este esquema es en buena medida causada por
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Referencias
 \end_layout
 
@@ -544,6 +544,10 @@ referido
  crucial de que una nueva relación solo podrá establecerse con datos en
  sus versiones vigentes\SpecialChar \@.
 
+\end_layout
+
+\begin_layout Subsubsection
+Representación en la vista
 \end_layout
 
 \begin_layout Standard
@@ -588,6 +592,10 @@ Resulta conveniente, entonces, representar una referencia a una versión
 
 \end_layout
 
+\begin_layout Subsubsection
+Manipulación
+\end_layout
+
 \begin_layout Standard
 Cuando se desee definir la referencia, se debe definir la identidad y el
  sistema debe buscar la versión actual asociada a esa identidad automáticamente
@@ -624,8 +632,15 @@ n referencia en la vista, por lo cual la actualización ni siquiera será
 
 \end_layout
 
-\begin_layout Subsection
-Fuera de la identidad
+\begin_layout Subsubsection
+Representación
+\end_layout
+
+\begin_layout Standard
+Una referencia en la identidad se representa simplemente como una componente
+ de la identidad cuya columna correspondiente en el registro de identidades
+ de la tabla referente resulta ser una clave foránea a la bitácora de versiones
+ de la tabla referida.
 \end_layout
 
 \begin_layout Standard
@@ -660,15 +675,156 @@ tabla de referencia
 
 \end_layout
 
-\begin_layout Subsection
-En la identidad
+\begin_layout Subsubsection
+Acciones
 \end_layout
 
 \begin_layout Standard
-Una referencia en la identidad se representa simplemente como una componente
- de la identidad cuya columna correspondiente en el registro de identidades
- de la tabla referente resulta ser una clave foránea a la bitácora de versiones
- de la tabla referida.
+Las restricciones de clave foránea de SQL pueden especificar acciones a
+ tomar cuando la referencia se vuelve inválida por la actualización o eliminació
+n del objeto referido\SpecialChar \@.
+ De igual manera, las referencias a versiones pueden
+ asociarse con acciones a tomar en estas situaciones\SpecialChar \@.
+ Se distinguieron cuatro
+ tipos de acciones que pueden ser de utilidad principalmente por su analogía
+ con sus equivalentes en restricciones de clave foránea de SQL, cada una
+ de las cuales puede asociarse con la acción a tomar cuando la fila referida
+ es eliminada o sucedida:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Cascade
+\emph default
+: La eliminación del referido causa la eliminación del referente\SpecialChar \@.
+ La actualizació
+n del referido causa el ajuste de la referencia para apuntar a la versión
+ que le sucede\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Restrict
+\emph default
+: La actualización o eliminación del referido produce una excepción\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Set null
+\emph default
+: La actualización o eliminación del referido anula la referencia\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Preserve
+\emph default
+: La actualización o eliminación del referido no produce ningún efecto\SpecialChar \@.
+ Como
+ la referencia se hace entre versiones, esto origina referencias 
+\emph on
+invariantes
+\emph default
+, que continúan refiriéndose (sin pérdida alguna de integridad) a versiones
+ de datos que han sido sucedidas o incluso eliminadas, sin que se pierda
+ la capacidad de acceder a la totalidad de los datos originalmente apuntados
+ por la referencia\SpecialChar \@.
+ Este comportamiento no existe con restricciones de claves
+ foráneas de SQL\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+
+\emph on
+Squealer
+\end_layout
+
+\begin_layout Standard
+Es posible efectuar la conversión manual de un esquema SQL a uno donde los
+ datos de cada tabla estén representados por su historial y una vista para
+ las versiones actuales\SpecialChar \@.
+ Sin embargo, la técnica prescribe una estructura
+ y un comportamiento específico que puede derivarse directamente y sin ambigüeda
+d a partir de la descripción del esquema original\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Además de poder explotarse esa regularidad para reducir la carga de trabajo
+ de generar un esquema que explote sistemáticamente esta técnica, utilizar
+ una herramienta de generación de código favorece al principio de diseño
+ de garantizar la integridad de los datos al reducir los errores de programación
+ en el esquema, así como el principio de maximizar la facilidad de refactorizaci
+ón y rediseño al reducir tremendamente el esfuerzo requerido para producir
+ la implantación del modelo de datos con las propiedades deseadas, y puede
+ proveer garantías estáticas de correctitud por ofrecer una oportunidad
+ para realizar análisis estático del esquema, por ejemplo para detectar
+ que todas las referencias vayan a tablas definidas, o por facilitar la
+ generación de código de descripción del esquema para bibliotecas de acceso
+ a la base de datos con garantías de que esa descripción del esquema es
+ consistente con la realmente usada en la implantación de la base de datos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+En este sentido, se desarrolló Squealer
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+El nombre hace alusión a que la base de datos generada es «chismosa» sobre
+ la historia de los datos, y «squealer» en inglés puede referirse a alguien
+ que divulga información confidencial.
+ Además, la palabra contiene las letras S, Q y L en ese orden.
+\end_layout
+
+\end_inset
+
+, un traductor que consume una descripción de un esquema codificada como
+ un archivo YAML y genera el código SQL DDL de una implantación de ese esquema
+ para versiones de PostgreSQL posteriores a la 9.1
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Versiones anteriores no proveían el soporte necesario para 
+\emph on
+triggers
+\emph default
+ en vistas.
+\end_layout
+
+\end_inset
+
+, incluyendo 
+\emph on
+triggers
+\emph default
+ escritos en PL/pgSQL para poder manipular las vistas directamente y obtener
+ el comportamiento deseado según la técnica descrita para registro de la
+ historia de los datos y referencias a versiones\SpecialChar \@.
+ Squealer utiliza un esquema
+ simple de generación de código por plantillas y se desarrolló usando el
+ lenguaje de programación Haskell para sacar provecho de las garantías estáticas
+ de correctitud que provee\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La implantación del modelo de datos de este proyecto de pasantías se realizó
+ enteramente en un archivo de entrada de Squealer, el cual se encarga de
+ generar la implantación concreta en código SQL que se carga en el sistema
+ de gestión de bases de datos\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
