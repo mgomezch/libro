@@ -25,7 +25,7 @@
 \bibtex_command default
 \index_command default
 \float_placement h
-\paperfontsize 12
+\paperfontsize default
 \spacing onehalf
 \use_hyperref false
 \papersize letterpaper
@@ -49,7 +49,7 @@
 \rightmargin 2cm
 \bottommargin 2cm
 \secnumdepth 3
-\tocdepth 4
+\tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
@@ -66,7 +66,7 @@
 \begin_body
 
 \begin_layout Chapter
-Principios generales de diseño
+Conceptos del modelo de datos
 \end_layout
 
 \begin_layout Standard
@@ -86,533 +86,769 @@ thispagestyle{empty}
 \end_layout
 
 \begin_layout Standard
-La naturaleza de los productos y servicios de PRX Control Solutions inducen
- un cierto conjunto de requerimientos generales sobre el diseño y la implantació
-n del modelo de datos y la abstracción de la capa de datos para los sistemas
- de la empresa\SpecialChar \@.
- Más allá de la necesidad de poder expresar ciertos conceptos
- específicos, de adaptarse a metodologías de clientes particulares o de
- facilitar la integración con ciertas tecnologías utilizadas en los sistemas
- de la empresa, estos requerimientos son principios generales según los
- cuales debe orientarse el diseño a todos los niveles de abstracción\SpecialChar \@.
+Este capítulo tiene como objetivo dar a conocer los conceptos manejados
+ por los sistemas de PRX Control Solutions que sean relevantes para el diseño
+ del modelo de datos\SpecialChar \@.
+ La definición precisa de estos conceptos está íntimamente
+ ligada al diseño final del modelo de datos, por lo cual la lectura de este
+ capítulo puede verse como una especificación parcial del nuevo modelo\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Este capítulo enumera los principios generales de diseño que se identificaron
- como los más relevantes para la operación efectiva de los productos y servicios
- de la empresa, junto con ejemplos ilustrativos de situaciones por las cuales
- cada uno de estos criterios resulta crucial\SpecialChar \@.
- Esto justifica las decisiones
- de diseño y la selección de tecnologías empleadas en este proyecto de pasantías\SpecialChar \@.
-
- A pesar de que algunos de estos principios son ideas fundamentales asociadas
- a la calidad de 
-\emph on
-software
-\emph default
- y no son específicos al desarrollo de esta empresa, se hace especial énfasis
- en ellos por el impacto especial que tienen sobre la efectividad de los
- productos, servicios y procesos particulares de PRX Control Solutions\SpecialChar \@.
+Con el fin de facilitar la comprensión de la relación entre la estructura
+ del nuevo modelo y estos conceptos, se han nombrado en 
+\series bold
+\bar under
+negrillas subrayadas
+\series default
+\bar default
+ a los conceptos que estén en correspondencia directa con entidades del
+ nuevo modelo, y aquellos de sus atributos que resulten notables para esta
+ descripción conceptual serán nombrados en 
+\series bold
+negrillas
+\series default
+ en el mismo párrafo\SpecialChar \@.
+ Esta enumeración de conceptos no sustituye, sin embargo,
+ a una descripción precisa del modelo de datos, pero se presenta en este
+ formato para motivar el diseño del modelo nuevo desde una perspectiva conceptua
+l\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Section
-Consistencia e integridad de los datos
+Farmacología
 \end_layout
 
 \begin_layout Standard
-La base de datos actual de los sistemas de PRX Control Solutions fue diseñada
- originalmente para dar soporte a prototipos de los productos actuales de
- la empresa, pero esos prototipos han sido abandonados o modificados a tal
- punto que queda muy poco de sus implantaciones originales como resultado
- de la realización de nuevas iteraciones en su desarrollo\SpecialChar \@.
- Estos prototipos
- originales de los productos de la empresa fueron diseñados principalmente
- como pruebas de concepto con el fin de ofrecer los productos a clientes
- y evaluar la viabilidad del negocio en un momento en que no estaba definida
- con precisión la naturaleza del negocio\SpecialChar \@.
- Por lo tanto, no se hizo énfasis
- en producir diseños robustos y con una estructura que sirviera de fundamento
- a desarrollos posteriores, sino que se dio prioridad al desarrollo rápido
- y ágil para facilitar la adaptación a los deseos de los clientes que estudiaban
- la posibilidad de integrar estos productos en sus procesos internos\SpecialChar \@.
+Los sistemas de PRX Control Solutions se fundamentan en el uso y análisis
+ de información farmacológica\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-En particular, la base de datos actual de los sistemas de la empresa tiene
- un diseño compuesto significativamente por soluciones 
-\emph on
-ad hoc
-\emph default
- a problemas que se presentaron a lo largo de la historia de su desarrollo\SpecialChar \@.
-
- A pesar de que se trata de una base de datos relacional, es muy frecuente
- encontrar información duplicada, relaciones sin claves especificadas, referenci
-as sin restricciones de clave foránea, relaciones enteras que no se usan
- en absoluto desde versiones muy antiguas de las aplicaciones, y varias
- otras fallas de diseño\SpecialChar \@.
- Más allá de ser errores en el diseño, todas estas
- propiedades son resultados naturales de un proceso de desarrollo que, por
- presiones del mercado y límites de tiempo y recursos, no tuvo alternativas
- viables a transformar prototipos en sistemas en producción\SpecialChar \@.
+Un fármaco es una sustancia que produce efectos fisiológicos deseables en
+ el tratamiento de alguna enfermedad al administrarse a una persona\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Como es de esperarse, un sistema en producción hecho de esta manera sufre
- de numerosas propiedades indeseables\SpecialChar \@.
- Una de las fuentes principales de
- errores y de lentitud en el desarrollo está en la gran cantidad de invariantes
- de datos que son necesarios para la correcta operación de la implantación
- de las aplicaciones de la empresa, mas no están especificadas en la implantació
-n de la base de datos mediante restricciones o por la simple estructura
- del modelo\SpecialChar \@.
- Durante la realización de este proyecto de pasantías, hubo frecuente
-s incidentes en los cuales un servicio prestado a un cliente falló por causa
- de la ausencia de este tipo de restricción, ya sea debido a referencias
- colgantes en la base de datos que no se detectaron debido a la ausencia
- de algunas restricciones de claves foráneas, datos duplicados o mal identificad
-os debido a la ausencia de algunas restricciones de unicidad y claves primarias,
- información obsoleta debido a actualizaciones incorrectas que no consideraron
- la falta de normalización en la base de datos, etc\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Este tipo de problema ha causado inconvenientes fuertes a clientes en operación,
- incluyendo retraso en la atención de los reclamos de salud de pacientes
- de algunas aseguradoras\SpecialChar \@.
- Por lo tanto, puede identificarse como un criterio
- esencial de diseño para los sistemas de la empresa 
+Una 
 \series bold
-garantizar la consistencia e integridad de la información en la base de
- datos
+\bar under
+asociación
 \series default
- para reducir la incidencia de fallas graves en operación.
+ 
+\series bold
+farmacológica
+\series default
+\bar default
+ es la combinación de uno o más fármacos, y tiene un 
+\series bold
+nombre
+\series default
+\SpecialChar \@.
+ Dependiendo
+\series bold
+ 
+\series default
+de la aplicación terapéutica para grupos fisiológicos o patológicos particulares
+, puede ser necesario distinguir entre 
+\series bold
+variantes
+\series default
+ de una misma composición farmacológica aunque se trate de las mismas sustancias
+ a nivel químico\SpecialChar \@.
+ La 
+\series bold
+dosis máxima diaria
+\series default
+ es la cantidad máxima de una asociación farmacológica que puede administrarse
+ a un adulto saludable sin perjudicar su salud\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
-Las estrategias específicas que pueden utilizarse para favorecer este criterio
- de diseño incluyen utilizar un modelo normalizado en la implantación de
- la base de datos, y la utilización de un gestor de bases de datos relacionales
- con buen soporte para restricciones de integridad\SpecialChar \@.
- Como los cambios en el
- diseño son inevitables por la continua variabilidad de los requerimientos
- de los clientes de la empresa, es importante utilizar un diseño que facilite
- que los cambios al modelo de datos se reduzcan en frecuencia y alcance,
- lo cual puede lograrse usando un modelo más expresivo, que permita representar
- metodologías de trabajo más variadas sin necesidad de hacer modificaciones
- profundas al diseño\SpecialChar \@.
- Además, cuando sea necesario hacer tales modificaciones,
- debería facilitarse hacerlas en maneras que promuevan la exclusión de datos
- inconsistentes — aunque los cambios sean inevitables, es posible implantar
- soluciones tecnológicas que dificulten los cambios que introduzcan inconsistenc
-ias y faciliten los que preservan la integridad del modelo\SpecialChar \@.
+Una 
+\series bold
+\bar under
+unidad posológica
+\series default
+\bar default
+ es una dosis particular de una unidad farmacológica, donde la 
+\series bold
+dosis
+\series default
+ es la cantidad del fármaco principal de la asociación farmacológica en
+ cada unidad posológica\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+En el caso de unidades posológicas líquidas, la dosis se especifica relativa
+ a un cierto volumen de líquido, denominado el 
+\series bold
+\bar under
+vehículo
+\series default
+\bar default
+, usado como referencia\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Las unidades posológicas se introducen en el organismo mediante una 
+\series bold
+\bar under
+forma de administración
+\series default
+\bar default
+, la cual representa el mecanismo y la forma física de la toma del medicamento\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+El 
+\emph on
+sistema de clasificación anatómica, terapéutica, química
+\emph default
+ de la Organización Mundial de la Salud especifica una taxonomía jerárquica
+ de las asociaciones farmacológicas con cinco niveles de jerarquía; en orden
+ de más general a más específico: el 
+\series bold
+\bar under
+grupo principal anatómico
+\series default
+\bar default
+, el 
+\series bold
+\bar under
+subgrupo terapéutico
+\series default
+\bar default
+, el 
+\series bold
+\bar under
+subgrupo farmacológico
+\series default
+\bar default
+ y el 
+\series bold
+\bar under
+subgrupo químico
+\series default
+\bar default
+, siendo la asociación farmacológica concreta quien ocupa el quinto nivel\SpecialChar \@.
+
+ Cada asociación farmacológica pertenece a uno o más subgrupos químicos,
+ y cada nivel de la jerarquía especifica un 
+\series bold
+código
+\series default
+ con una composición alfanumérica específica en cada nivel, así como una
+ 
+\series bold
+descripción
+\series default
+ textual\SpecialChar \@.
+ Esto permite identificar a una asociación farmacológica de manera
+ estandarizada, lo cual facilita la interoperabilidad con otros sistemas
+ que manejen información farmacológica\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Section
-Persistencia de datos históricos
+Medicamentos
 \end_layout
 
 \begin_layout Standard
-La principal fuente de valor explotada por los productos y servicios de
- PRX Control Solutions está asociada con la conducción de auditorías y otras
- formas de análisis sobre la validez de procesos de la industria de la salud\SpecialChar \@.
-
- Para poder hacer un análisis efectivo de estos procesos, es importante
- contar con información altamente detallada sobre cada paso, cada etapa
- y cada aspecto involucrado en los procesos que se analizan\SpecialChar \@.
- En particular,
- es esencial conocer en detalle la evolución de los datos asociados a un
- proceso para poder detectar irregularidades o hacer estudios estadísticos
- del desarrollo de esos procesos\SpecialChar \@.
+La industria farmacéutica desarrolla, produce y comercializa medicamentos\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Sin embargo, esto entra en conflicto con la naturaleza variable de gran
- parte de la información asociada a los procesos que están en el alcance
- de los productos y servicios de la empresa\SpecialChar \@.
- Los medicamentos cambian de
- precio y entran y salen del mercado, los cuadros clínicos de los pacientes
- evolucionan, las condiciones de cobertura de seguros médicos se alteran
- en respuesta a las demandas del mercado y a cambios en su marco legal y
- regulatorio, etc\SpecialChar \@.
- Más aún, incluso en casos en los cuales la información
- real que se utiliza en los sistemas de la empresa pudiera ser invariable,
- si es que existen tales casos, debe considerarse que la información registrada
- en el sistema puede ser incompleta o incorrecta, y sin embargo es la que
- se utiliza para efectuar los diversos procesos que deben ser potenciales
- sujetos de análisis y auditoría\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Por otra parte, es frecuente que los usuarios de los sistemas de la empresa
- hagan observaciones sobre su comportamiento y reporten quejas o problemas
- con la información generada o reportada por ellos\SpecialChar \@.
- Durante el desarrollo
- de este proyecto de pasantías, ocurrieron con frecuencia reportes de incidencia
-s por parte de los clientes que resultaron difíciles de rastrear a sus causas
- debido a que los problemas fueron detectados cuando ya habían cambiado
- muchos datos relevantes en el sistema, y en consecuencia no se conocía
- el contexto en el cual el sistema efectuó el comportamiento indeseado ni
- resultó posible reproducir el problema fácilmente\SpecialChar \@.
- Para poder atender efectivame
-nte estas inquietudes de los clientes de la empresa y entender el origen
- preciso de las posibles fallas en los procesos de los sistemas de la empresa,
- es importante contar con la información completa del contexto en el cual
- se produjo cada paso en el funcionamiento de estos sistemas\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Algunos de los datos que registran los sistemas de la empresa tienen el
- carácter de transacciones comerciales en el sentido de que acarrean gastos
- para los clientes de la empresa; por ejemplo, cuando PCA Audit genera una
- órden para que un medicamento sea dispensado a un asegurado en una farmacia,
- la empresa aseguradora deberá luego cancelar el monto aprobado de la órden
- a la farmacia que efectúe la dispensación.
- Los datos asociados a este tipo de dato que representa una transacción
- comercial deben manejarse con un fuerte énfasis en la integridad, y esto
- implica que debe indicarse en estos datos cuáles fueron los datos exactos
- usados para realizar los cálculos relevantes.
- Sin embargo, como esos datos pueden variar —por ejemplo, porque el precio
- de un medicamento cambie, o por cualquier condición de cobertura que altere
- los montos aprobados—, sería necesario asociar a cada transacción comercial
- una copia momentánea de todos los datos que fueran usados para calcular
- sus propiedades\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Hacer esto explícitamente introduciría gran complejidad al modelo de datos\SpecialChar \@.
-
- Una solución a este problema es relacionar a las transacciones comerciales
- con la 
-\emph on
-versión histórica
-\emph default
- de cada dato que fuera usado para computar sus propiedades\SpecialChar \@.
- En este sentido,
- resulta esencial 
+Un 
 \series bold
-preservar la totalidad de la historia de toda la información manejada por
- el modelo de datos
+\bar under
+laboratorio
 \series default
- dado que puede ser sujeto de dependencias por parte de transacciones comerciale
-s cuya historia debe preservarse, y también por el simple hecho de que la
- información histórica de los procesos de los sistemas de la empresa tiene
- valor intrínsico por el hecho de poder efectuar análisis sobre esa información
- con fines comerciales\SpecialChar \@.
+\bar default
+ es una compañía dedicada a esta actividad comercial, y en cada medicamento
+ se registran algunos datos del laboratorio que lo produjo, como el 
+\series bold
+nombre
+\series default
+, la 
+\series bold
+dirección
+\series default
+ de sus oficinas, un 
+\series bold
+teléfono
+\series default
+ de contacto, etc\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Este criterio de diseño puede favorecerse extensivamente con técnicas de
- diseño e implantación de la base de datos que resuelvan este problema de
- manera general\SpecialChar \@.
+Los medicamentos comerciales se asocian con una 
+\series bold
+\bar under
+marca
+\series default
+\bar default
+, que es simplemente un 
+\series bold
+nombre
+\series default
+ comercial que agrupa a varios productos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Un 
+\series bold
+\bar under
+producto
+\series default
+\bar default
+ es un medicamento específico dentro de una 
+\series bold
+marca
+\series default
+, con un 
+\series bold
+nombre
+\series default
+ particular\SpecialChar \@.
+ Es típico que a un producto corresponda exactamente una asociación
+ farmacológica, pero existen nombres comerciales específicos dentro de marcas
+ que usan asociaciones farmacológicas ligeramente diferentes entre sus presentac
+iones\SpecialChar \@.
+ Sin embargo, es típico que las 
+\series bold
+indicaciones
+\series default
+, las 
+\series bold
+contraindicaciones
+\series default
+, las 
+\series bold
+reacciones adversas
+\series default
+ y la 
+\series bold
+posología
+\series default
+ sí sean comunes a todas las presentaciones de un producto, y también se
+ les asocian 
+\series bold
+palabras clave
+\series default
+ para facilitar su búsqueda en un directorio farmacológico\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Finalmente, una 
+\series bold
+\bar under
+presentación
+\series default
+\bar default
+ es la forma comercial específica de un medicamento que puede adquirirse
+ concretamente\SpecialChar \@.
+ Una presentación tiene un 
+\series bold
+nombre
+\series default
+, es una forma concreta de un 
+\series bold
+producto
+\series default
+, es producida por un 
+\series bold
+laboratorio
+\series default
+, contiene un cierto 
+\series bold
+número de unidades
+\series default
+ de una 
+\series bold
+unidad posológica
+\series default
+ y tiene una 
+\series bold
+forma de administración
+\series default
+ particular\SpecialChar \@.
+ Además, una presentación puede ser 
+\series bold
+genérica o de marca
+\series default
+, puede ser 
+\series bold
+dispensada con o sin prescripción facultativa o solo para hospitalización
+\series default
+, y puede estar 
+\series bold
+asociada al sexo masculino o femenino o no estar asociada al sexo
+\series default
+\SpecialChar \@.
+ A cada presentación se asocia un 
+\series bold
+precio de referecia
+\series default
+ que refleja el valor esperado de la presentación en el mercado\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Section
-Extensibilidad y facilidad de refactorización
+Enfermedades
 \end_layout
 
 \begin_layout Standard
-En términos de su constitución como empresa y de la clase de servicios que
- ofrece, PRX Control Solutions puede ser considerada un 
+Los sistemas de PRX Control Solutions utilizan una taxonomía jerárquica
+ de las enfermedades similar a la 
 \emph on
-startup
+clasificación internacional de enfermedades, décima versión
 \emph default
-: sus productos se basan en ofrecer una ventaja competitiva a sus clientes
- a través de aplicaciones innovadoras de tecnología\SpecialChar \@.
+ (CIE-10) de la Organización Mundial de la Salud, pero con modificaciones\SpecialChar \@.
 
-\end_layout
-
-\begin_layout Standard
-Una consecuencia de explotar la innovación tecnológica de esta manera es
- que la estructura de los procesos involucrados en los productos de la empresa
- no está estandarizada, por lo cual hay poca homogeneidad en los requerimientos
- de diversos clientes, y más aún, el entendimiento de la interacción de
- los productos de la empresa con los procesos internos de sus clientes se
- desarrolla de forma personalizada y está en constante revisión para que
- los clientes hagan uso cada vez más efectivo de estos productos y servicios\SpecialChar \@.
-
- Otra consecuencia de la condición de 
-\emph on
-startup
-\emph default
- de la empresa es que es mucho más pequeña que sus clientes\SpecialChar \@.
- Los clientes
- de la empresa típicamente emplean sistemas de gran escala que están altamente
- integrados en sus procesos internos, y por lo tanto el esfuerzo requerido
- para lograr su integración con los productos de PRX Control Solutions es
- significativo y podría fácilmente disuadir a un potencial cliente de utilizarlo
-s\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Durante la realización de este proyecto de pasantías, la mayor parte del
- esfuerzo de los miembros del equipo de desarrollo de la empresa se enfocaron
- día a día en la realización de modificaciones simples a PCA Audit en respuesta
- a cambios constantes y pequeños en los requerimientos de los clientes\SpecialChar \@.
- En
- una ocasión, un cambio conceptualmente sencillo en los requerimientos de
- un cliente implicó una refactorización profunda de la implantación de PCA
- Audit que tardó varias semanas, y el equipo de desarrollo reportó gran
- dificultad para hacer cambios relativamente simples debido a propiedades
- de la tecnología y el diseño usados que dificultan los cambios\SpecialChar \@.
- Durante
- el mismo período se realizaron tres integraciones con nuevos clientes que
- requirieron extensiones significativas a la funcionalidad implantada, y
- el equipo encargado reportó dificultades para extender el comportamiento
- del sistema de manera que mantuviera compatibilidad con el comportamiento
- anterior debido al alto acoplamiento y la baja extensibilidad de la implantació
-n\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Para evitar estos problemas, el diseño y la implantación de los productos
- y servicios de PRX Control Solutions debe adaptarse constantemente a los
- requerimientos de sus clientes, y éstos son poco homogéneos y altamente
- variables\SpecialChar \@.
- Por lo tanto, se debe 
+ La clasificación tiene tres niveles; en orden de más general a más específico:
+ el 
 \series bold
-maximizar la extensibilidad y la facilidad de refactorización y rediseño
+\bar under
+tipo de enfermedad
 \series default
- de los productos de la empresa\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Este criterio de diseño puede favorecerse empleando técnicas diseño y tecnología
-s que faciliten la extensibilidad de la implantación, herramientas que faciliten
- la refactorización de código, herramientas de generación de código que
- agilicen el desarrollo, y mecanismos de interacción e integración que describan
- su propia estructura para que sus clientes no estén fuertemente acoplados
- a una estructura preestablecida\SpecialChar \@.
+\bar default
+, el 
+\series bold
+\bar under
+subtipo de la enfermedad
+\series default
+\bar default
+, y la 
+\series bold
+\bar under
+enfermedad
+\series default
+\bar default
+\SpecialChar \@.
+ A cada nivel corresponde un 
+\series bold
+código
+\series default
+ y una 
+\series bold
+descripción
+\series default
+ textual, y una enfermedad puede estar relacionada con uno o más subtipos
+ de enfermedad\SpecialChar \@.
+ Adicionalmente, las enfermedades tienen 
+\series bold
+palabras clave
+\series default
+ asociadas para facilitar su búsqueda en un directorio\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Section
-Garantías estáticas de correctitud
+Seguros médicos
 \end_layout
 
 \begin_layout Standard
-La alta frecuencia de cambios en los requerimientos sobre los productos
- y servicios de la empresa acarrea naturalmente una alta frecuencia de cambios
- en la implantación, y una base de código en constante evolución\SpecialChar \@.
- Esta forma
- de desarrollo presenta numerosas oportunidades para introducir errores
- de programación en los productos de la empresa, y el tamaño del equipo
- de desarrollo junto con la necesidad de atender rápidamente las peticiones
- de los clientes hace que la implantación usada en producción no sea probada
- exhaustivamente antes de desplegarse\SpecialChar \@.
-
+La aplicación PCA Audit maneja datos sobre seguros médicos:
 \end_layout
 
 \begin_layout Standard
-Desgraciadamente y por razones de la escala de la empresa y del equipo de
- desarrollo, los productos de PRX Control Solutions no cuentan con una 
-\emph on
-suite
-\emph default
- de pruebas automatizadas que verifiquen la correctitud de la implantación\SpecialChar \@.
-
- Esto ocasiona directamente una alta tasa de defectos, y la principal causa
- de reportes de fallas en producción por parte de los clientes y usuarios
- de los productos y servicios de la empresa, así como la principal causa
- de dificultades en su modificación, extensión y refactorización, está asociada
- con errores de programación relacionados con el uso de variables no asociadas
- o inicializadas, con el uso inválido de valores por incompatibilidad de
- tipos, y con inconsistencias entre la estructura de la base de datos esperada
- por la aplicación y la que está disponible en producción\SpecialChar \@.
- Los productos
- de la empresa están implantados usando los lenguajes de programación PHP
- y Python, ambos lenguajes con sistemas de tipos dinámicos que son poco
- adecuados para ser objeto de herramientas de análisis estático, por lo
- cual este tipo de problema es difícil de detectar de manera efectiva incluso
- en presencia de una 
-\emph on
-suite
-\emph default
- de pruebas completa\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Durante la realización de este proyecto de pasantías, este tipo de errores
- causó grandes dificultades al equipo de desarrollo tanto por la frecuente
- necesidad de atender incidencias por fallas del sistema en producción como
- por la elevada dificultad del desarrollo de nueva funcionalidad en ausencia
- de técnicas que favorecieran la construcción de implantaciones correctas\SpecialChar \@.
-
- En particular, el equipo de desarrollo reportó con frecuencia que errores
- de programación que hubieran sido trivialmente detectados con herramientas
- básicas de análisis estático les causaron grandes dificultades y tomaron
- tiempos inaceptablemente largos para encontrar la causa exacta de la falla\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-En este sentido, 
+Un 
 \series bold
-usar tecnologías que provean fuertes garantías estáticas de correctitud
+\bar under
+asegurador
 \series default
- eliminaría una gran cantidad de problemas simples que consumen mucho tiempo
- y esfuerzo de los desarrolladores y generan muchas fallas y problemas para
- los clientes\SpecialChar \@.
+\bar default
+ es una empresa de seguros médicos o un administrador de seguros, que tiene
+ un 
+\series bold
+nombre
+\series default
+\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Este criterio de diseño puede favorecerse utilizando herramientas de desarrollo
- que efectúen análisis estático para verificar la consistencia de la implantació
-n, como lenguajes de programación con sistemas de tipos estáticos y herramientas
- de generación de código que garanticen correctitud\SpecialChar \@.
+Una 
+\series bold
+\bar under
+póliza
+\series default
+\bar default
+ representa el conjunto de reglas y condiciones de cobertura de un seguro
+ médico al cual una persona puede afiliarse.
+ Se caracteriza por un 
+\series bold
+código
+\series default
+ suministrado por el 
+\series bold
+asegurador
+\series default
+ que provee el seguro\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Una 
+\series bold
+\bar under
+afiliación
+\series default
+\bar default
+ representa que un 
+\series bold
+asegurado
+\series default
+ está cubierto por una 
+\series bold
+póliza
+\series default
+\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Section
-Parametrización del comportamiento
+Solicitudes
 \end_layout
 
 \begin_layout Standard
-Los sistemas de PRX Control Solutions deben adaptarse a una gran cantidad
- de requerimientos heterogéneos debido a la variedad de metodologías de
- trabajo de sus clientes\SpecialChar \@.
- En muchos casos, esto implica hacer modificaciones
- al diseño y la implantación de las aplicaciones de la empresa para acomodar
- las metodologías y los modelos de datos de los clientes\SpecialChar \@.
- Sin embargo, en
- una gran cantidad de casos, la variación requerida en el comportamiento
- del sistema es suficientemente regular para que sea posible implantar esa
- variación sin tener que programar específicamente cada uno de los escenarios
- requeridos\SpecialChar \@.
- En estos casos, es posible definir parámetros asociados a ciertos
- objetos del sistema, como usuarios o pólizas de seguros, que hagan que
- el sistema se comporte de la manera adecuada al caso, de forma tal que
- estos parámetros puedan ser definidos por operadores del sistema sin necesidad
- de modificar la implantación del mismo\SpecialChar \@.
-
+Las aplicaciones de PRX Control Solutions mantienen información sobre el
+ historial de medicación de personas, ya sea a través del registro de los
+ reclamos de salud de asegurados cuyos datos son administrados por PCA Audit,
+ o por el seguimiento de adquisición de medicamentos de pacientes crónicos
+ por PCA Farma.
 \end_layout
 
 \begin_layout Standard
-En particular, PCA Audit debe tomar en cuenta las condiciones de cobertura
- asociadas a cada póliza de seguros de sus clientes a la hora de evaluar
- la validez de los reclamos de salud de los pacientes\SpecialChar \@.
- Uno de los problemas
- observados durante el desarrollo del proyecto de pasantías es que la capacidad
- de modificar el comportamiento del sistema en muchos casos estaba limitada
- por la técnica usada para implantar la parametrización: cada vez que se
- quería agregar la posibilidad de expresar reglas de negocio más complejas
- o dependientes de un parmámetro adicional, el equipo de desarrollo tuvo
- que modificar la implantación para extender la posibilidad de parametrización
- del sistema\SpecialChar \@.
- Esto acarreó retrasos en la integración con clientes nuevos
- de los servicios de la empresa, ya que el uso efectivo del sistema por
- parte de los clientes requiere que éste opere bajo las reglas de negocio
- propias de sus pólizas de cobertura para la adquisición de medicamentos\SpecialChar \@.
-
- Puede esperarse que este problema se agrave significativamente como resultado
- de los planes de expansión internacional de los servicios de la empresa\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Debido a esto, resulta importante 
+Un 
 \series bold
-permitir la parametrización del comportamiento en forma expresiva
+\bar under
+caso
 \series default
- para que una gran variedad de comportamientos puedan ser especificados
- sin necesidad de la intervención del equipo de desarrollo\SpecialChar \@.
+\bar default
+ es una unidad de seguimiento del historial de solicitudes asociadas a una
+ 
+\series bold
+afiliación
+\series default
+\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Este criterio de diseño puede favorecerse mediante el empleo de lenguajes
- de dominio específico para la parametrización del comportamiento de los
- sistemas de la empresa, así como el desarrollo de interfaces con el usuario
- que permitan a los operadores del sistema especificar parametrizaciones
- complejas con facilidad\SpecialChar \@.
+Un 
+\series bold
+\bar under
+informe médico
+\series default
+\bar default
+ contiene las observaciones e indicaciones resultantes de una consulta médica,
+ y se introduce como parte de la información asociada a un 
+\series bold
+caso
+\series default
+\SpecialChar \@.
+ Un informe es producido por un médico en su 
+\series bold
+fecha de emisión
+\series default
+ y es considerado válido hasta su 
+\series bold
+fecha de vencimiento
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Un 
+\series bold
+\bar under
+diagnóstico
+\series default
+\bar default
+ registra la inclusión de una 
+\series bold
+enfermedad
+\series default
+ en un 
+\series bold
+informe médico
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Un 
+\series bold
+\bar under
+medicamento prescrito
+\series default
+\bar default
+ en un 
+\series bold
+informe médico
+\series default
+ prescribe al paciente la toma de una cierta 
+\series bold
+cantidad
+\series default
+ de una 
+\series bold
+presentación
+\series default
+ de un medicamento con una cierta 
+\series bold
+frecuencia
+\series default
+ durante el tiempo de 
+\series bold
+duración del tratamiento
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La información asociada con la dispensación de medicamentos o reclamos de
+ reembolso por adquisición de medicamentos en farmacias por parte de un
+ paciente puede provenir de diversas fuentes\SpecialChar \@.
+ El aspecto común es que se
+ hace una 
+\series bold
+\bar under
+solicitud
+\series default
+\bar default
+ asociada a un 
+\series bold
+caso
+\series default
+, la cual puede asociarse con medicamentos de varias maneras\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Un 
+\series bold
+\bar under
+medicamento solicitado
+\series default
+\bar default
+ registra la inclusión de una 
+\series bold
+cantidad
+\series default
+ de una 
+\series bold
+presentación
+\series default
+ en una 
+\series bold
+solicitud
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Una 
+\series bold
+\bar under
+factura
+\series default
+\bar default
+ puede asociarse a una 
+\series bold
+solicitud
+\series default
+ en caso de que en ella esté registrada la compra de medicamentos asociados
+ a la solicitud\SpecialChar \@.
+ Las facturas tienen asociada una 
+\series bold
+fecha
+\series default
+ y posiblemente un 
+\series bold
+monto total
+\series default
+ para adecuarse a procesos de clientes que no ofrecen el monto detallado
+ de cada medicamento facturado\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Un 
+\series bold
+\bar under
+medicamento facturado
+\series default
+\bar default
+ registra la inclusión de un 
+\series bold
+medicamento facturado
+\series default
+ en una 
+\series bold
+factura
+\series default
+ con un cierto 
+\series bold
+precio unitario
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Cuando se completa el registro de una solicitud, PCA Audit y PCA Farma intentan
+ establecer cuáles son los 
+\series bold
+\bar under
+tratamientos relacionados
+\series default
+\bar default
+, lo cual consiste en determinar asociaciones farmacológicamente válidas
+ entre un 
+\series bold
+medicamento solicitado
+\series default
+ y un 
+\series bold
+medicamento prescrito
+\series default
+ en un informe médico del mismo caso\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Análogamente, PCA Audit y PCA Farma intentan establecer cuáles son los 
+\series bold
+\bar under
+diagnósticos relacionados
+\series default
+\bar default
+ al momento en que se indique que una solicitud está completa, lo cual consiste
+ en determinar asociaciones farmacológicamente válidas entre un 
+\series bold
+tratamiento relacionado
+\series default
+ y un 
+\series bold
+diagnóstico
+\series default
+\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Section
-Equilibrio entre simplicidad y rendimiento
+Desviaciones
 \end_layout
 
 \begin_layout Standard
-El diseño y la implantación de los sistemas de PRX Control Solutions debe
- modificarse con frecuencia frente a los siempre cambiantes requerimientos
- de los clientes, por lo cual es importante que las tecnologías empleadas
- permitan un ciclo rápido de desarrollo y empleen interfaces de programación
- sencillas que minimicen la cantidad de trabajo de desarrollo necesaria
- para la implantación de los patrones de acciones más comúnes\SpecialChar \@.
- Sin embargo,
- algunos de los problemas atacados por las aplicaciones de la empresa son
- de una naturaleza que entra en conflicto con el uso de herramientas que
- optimicen los casos simples, ya que éstas con frecuencia sacrifican la
- practicidad o el rendimiento de operaciones complejas en favor de las operacion
-es sencillas o comúnes\SpecialChar \@.
+Una desviación es un registro de la detección de algún patrón en los datos
+ asociados a solicitudes que corresponda a irregularidades o a condiciones
+ que acarrean el rechazo parcial o total de la solicitud, sea en términos
+ de la cantidad solicitada de un medicamento, de su monto, de la totalidad
+ de una solicitud o de su monto, o de la validez o la imposibilidad de alguna
+ asociación entre diagnósticos, medicamentos solicitados, facturados, y
+ prescritos\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Esta situación tiene un efecto particularmente notorio en las abstracciones
- de acceso al modelo de datos utilizadas por las aplicaciones de la empresa\SpecialChar \@.
-
- Durante la realización de este proyecto de pasantías se observó el empleo
- de una biblioteca de correspondencia objeto-relacional utilizada extensivamente
- en la implantación de las aplicaciones de la empresa, y si bien su utilización
- facilita gran parte de la implantación de estas aplicaciones orientadas
- a datos, en algunos casos fueron una fuente de fallas que inutilizaron
- por completo a una de las aplicaciones de la empresa para muchos casos\SpecialChar \@.
-
- La aplicación PRX Analyzer, encargada de generar reportes estadísticos
- a partir de los datos de uso de la aplicación PCA Audit para beneficio
- de los operadores y clientes de la aplicación, hace consultas complejas
- a la base de datos de la empresa\SpecialChar \@.
- A pesar de que la biblioteca de correspondenci
-a objeto-relacional empleada por la empresa no había presentado problemas
- para la mayor parte de la implantación de sus sistemas, expresar las consultas
- de naturaleza compleja requeridas por los reportes de PRX Analyzer resultó
- inviable debido a las propiedades de rendimiento de la biblioteca para
- ese tipo de consultas, y el producto resultó inutilizable para clientes
- cuya escala de operación sobrepasara un cierto punto\SpecialChar \@.
- A raíz de esta situación,
- se decidió reescribir la implantación de las consultas problemáticas a
- bajo nivel, sin usar la biblioteca en cuestión, y el sistema resultó usable
- otra vez\SpecialChar \@.
- Sin embargo, la implantación a bajo nivel perdió la simplicidad
- y resultó poco robusta y mantenible, por lo cual no pudo ser adaptada a
- cambios subsiguientes en la base de datos por no poder disponer de tanto
- tiempo del equipo de desarrollo para esa tarea\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Debido a este tipo de problema, es necesario 
+En general, todas las desviaciones tienen asociado un 
 \series bold
-utilizar abstracciones que hagan un equilibrio productivo de simplicidad
- y rendimiento
+tipo
 \series default
- para la implantación de las aplicaciones de la empresa\SpecialChar \@.
+ que especifica la causa por la cual se registró, y un usuario debidamente
+ autorizado puede indicar que una desviación debe ser 
+\series bold
+ignorada
+\series default
+ si se determina que la causa de su detección desea ser desconsiderada en
+ alguna situación particular\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Este criterio de diseño puede favorecerse mediante el empleo de formas de
- abstracción más expresivas, o con el uso simultáneo de varias abstracciones
- compatibles o interoperables que optimicen diferentes tipos de objetivos
- de implantación\SpecialChar \@.
+En particular, en el caso de una 
+\series bold
+\bar under
+desviación de solicitud
+\series default
+\bar default
+, se puede indicar un 
+\series bold
+monto total máximo aprobado
+\series default
+, que es una cota superior sobre el gasto considerado válido para efectos
+ de cobertura de planes de seguros totalizado entre todos los medicamentos
+ solicitados que se incluyan en una solicitud\SpecialChar \@.
 
+\end_layout
+
+\begin_layout Standard
+Análogamente, en el caso de una 
+\series bold
+\bar under
+desviación de medicamento solicitado
+\series default
+\bar default
+, se puede indicar un 
+\series bold
+precio unitario máximo aprobado
+\series default
+, que es una cota superior sobre el gasto considerado válido por cada unidad
+ de un 
+\series bold
+medicamento solicitado
+\series default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+En una 
+\series bold
+desviación de tratamiento relacionado
+\series default
+, se puede indicar una 
+\series bold
+cantidad máxima aprobada
+\series default
+, que es una cota superior sobre el número de unidades de la presentación
+ solicitada en el 
+\series bold
+tratamiento relacionado
+\series default
+ consideradas válidas.
+\end_layout
+
+\begin_layout Standard
+Finalmente, puede registrarse una 
+\series bold
+desviación de diagnóstico relacionado
+\series default
+ para indicar la invalidez de un 
+\series bold
+diagnóstico relacionado
+\series default
+.
 \end_layout
 
 \begin_layout Standard

@@ -66,7 +66,7 @@
 \begin_body
 
 \begin_layout Chapter
-Conceptos del modelo de datos
+Entorno empresarial
 \end_layout
 
 \begin_layout Standard
@@ -86,769 +86,207 @@ thispagestyle{empty}
 \end_layout
 
 \begin_layout Standard
-Este capítulo tiene como objetivo dar a conocer los conceptos manejados
- por los sistemas de PRX Control Solutions que sean relevantes para el diseño
- del modelo de datos\SpecialChar \@.
- La definición precisa de estos conceptos está íntimamente
- ligada al diseño final del modelo de datos, por lo cual la lectura de este
- capítulo puede verse como una especificación parcial del nuevo modelo\SpecialChar \@.
+PRX Control Solutions es una empresa dedicada al diseño de soluciones tecnológic
+as para el sector salud, farmacéutico y asegurador\SpecialChar \@.
+ Los productos y servicios
+ de PRX Control Solutions están dirigidos al análisis de reclamos de salud,
+ supervisión de la dispensación de tratamientos farmacológicos y el control
+ de la salud de pacientes\SpecialChar \@.
+ El principal objetivo de la empresa es aumentar
+ la rentabilidad de sus clientes a través de
+\end_layout
+
+\begin_layout Itemize
+detección de fraudes,
+\end_layout
+
+\begin_layout Itemize
+reducción de costos operativos,
+\end_layout
+
+\begin_layout Itemize
+optimización de procesos,
+\end_layout
+
+\begin_layout Itemize
+aumentar la competitividad, y
+\end_layout
+
+\begin_layout Itemize
+control y supervisión de los pacientes\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Con el fin de facilitar la comprensión de la relación entre la estructura
- del nuevo modelo y estos conceptos, se han nombrado en 
-\series bold
-\bar under
-negrillas subrayadas
-\series default
-\bar default
- a los conceptos que estén en correspondencia directa con entidades del
- nuevo modelo, y aquellos de sus atributos que resulten notables para esta
- descripción conceptual serán nombrados en 
-\series bold
-negrillas
-\series default
- en el mismo párrafo\SpecialChar \@.
- Esta enumeración de conceptos no sustituye, sin embargo,
- a una descripción precisa del modelo de datos, pero se presenta en este
- formato para motivar el diseño del modelo nuevo desde una perspectiva conceptua
-l\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Section
-Farmacología
-\end_layout
-
-\begin_layout Standard
-Los sistemas de PRX Control Solutions se fundamentan en el uso y análisis
- de información farmacológica\SpecialChar \@.
+La empresa nace en el año 2011 como una unidad de negocios independiente
+ de AUXIMED, empresa que tiene más de 5 años en el mercado dispensando tratamien
+tos farmacológicos a través de programas de salud del mercado asegurador\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Un fármaco es una sustancia que produce efectos fisiológicos deseables en
- el tratamiento de alguna enfermedad al administrarse a una persona\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Una 
-\series bold
-\bar under
-asociación
-\series default
- 
-\series bold
-farmacológica
-\series default
-\bar default
- es la combinación de uno o más fármacos, y tiene un 
-\series bold
-nombre
-\series default
-\SpecialChar \@.
- Dependiendo
-\series bold
- 
-\series default
-de la aplicación terapéutica para grupos fisiológicos o patológicos particulares
-, puede ser necesario distinguir entre 
-\series bold
-variantes
-\series default
- de una misma composición farmacológica aunque se trate de las mismas sustancias
- a nivel químico\SpecialChar \@.
- La 
-\series bold
-dosis máxima diaria
-\series default
- es la cantidad máxima de una asociación farmacológica que puede administrarse
- a un adulto saludable sin perjudicar su salud\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Una 
-\series bold
-\bar under
-unidad posológica
-\series default
-\bar default
- es una dosis particular de una unidad farmacológica, donde la 
-\series bold
-dosis
-\series default
- es la cantidad del fármaco principal de la asociación farmacológica en
- cada unidad posológica\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-En el caso de unidades posológicas líquidas, la dosis se especifica relativa
- a un cierto volumen de líquido, denominado el 
-\series bold
-\bar under
-vehículo
-\series default
-\bar default
-, usado como referencia\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Las unidades posológicas se introducen en el organismo mediante una 
-\series bold
-\bar under
-forma de administración
-\series default
-\bar default
-, la cual representa el mecanismo y la forma física de la toma del medicamento\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-El 
+PRX Solutions desarrolla cuatro aplicaciones 
 \emph on
-sistema de clasificación anatómica, terapéutica, química
+Web
 \emph default
- de la Organización Mundial de la Salud especifica una taxonomía jerárquica
- de las asociaciones farmacológicas con cinco niveles de jerarquía; en orden
- de más general a más específico: el 
-\series bold
-\bar under
-grupo principal anatómico
-\series default
-\bar default
-, el 
-\series bold
-\bar under
-subgrupo terapéutico
-\series default
-\bar default
-, el 
-\series bold
-\bar under
-subgrupo farmacológico
-\series default
-\bar default
- y el 
-\series bold
-\bar under
-subgrupo químico
-\series default
-\bar default
-, siendo la asociación farmacológica concreta quien ocupa el quinto nivel\SpecialChar \@.
+ interactivas:
+\end_layout
 
- Cada asociación farmacológica pertenece a uno o más subgrupos químicos,
- y cada nivel de la jerarquía especifica un 
-\series bold
-código
-\series default
- con una composición alfanumérica específica en cada nivel, así como una
- 
-\series bold
-descripción
-\series default
- textual\SpecialChar \@.
- Esto permite identificar a una asociación farmacológica de manera
- estandarizada, lo cual facilita la interoperabilidad con otros sistemas
- que manejen información farmacológica\SpecialChar \@.
+\begin_layout Itemize
+PCA Audit
+\end_layout
+
+\begin_layout Itemize
+PCA Farma
+\end_layout
+
+\begin_layout Itemize
+PRX Analyzer
+\end_layout
+
+\begin_layout Itemize
+PRX Vademécum
+\end_layout
+
+\begin_layout Standard
+PRX Control Solutions ofrece PCA Audit y PCA Farma a través de un modelo
+ SaaS, el cual consiste en la distribución de la aplicación como un servicio,
+ empleando un modelo de ingresos por uso\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Section
-Medicamentos
+PCA Audit
 \end_layout
 
 \begin_layout Standard
-La industria farmacéutica desarrolla, produce y comercializa medicamentos\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Un 
-\series bold
-\bar under
-laboratorio
-\series default
-\bar default
- es una compañía dedicada a esta actividad comercial, y en cada medicamento
- se registran algunos datos del laboratorio que lo produjo, como el 
-\series bold
-nombre
-\series default
-, la 
-\series bold
-dirección
-\series default
- de sus oficinas, un 
-\series bold
-teléfono
-\series default
- de contacto, etc\SpecialChar \@.
+PRX Control Solutions nace como una unidad de negocios de AUXIMED, empresa
+ dedicada al expendio de tratamientos farmacológicos a través de programas
+ de salud del mercado asegurador\SpecialChar \@.
+ La experiencia de AUXIMED en el mercado
+ le permitió a la directiva de la empresa detectar una necesidad de control
+ de siniestralidad en el mercado asegurador\SpecialChar \@.
+ Luego de 6 meses de investigación,
+ se decidió desarrollar controles tecnológicos que fueran escalables y fácilment
+e adaptables a las necesidades del mercado\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Los medicamentos comerciales se asocian con una 
-\series bold
-\bar under
-marca
-\series default
-\bar default
-, que es simplemente un 
-\series bold
-nombre
-\series default
- comercial que agrupa a varios productos\SpecialChar \@.
+Se tomó la decisión de reestructurar la aplicación de control de históricos
+ de los pacientes de AUXIMED, diseñando un proceso inteligente de análisis
+ farmacológico y clínico, con el fin de ofrecer una herramienta sencilla
+ y rápida para ser utilizada por cualquier individuo dentro de la compañía
+ de seguros\SpecialChar \@.
+ A principios del año 2011, la directiva de AUXIMED decide separar
+ a PCA Audit de la empresa, con el fin de crear una nueva unidad de negocios
+ basada en desarrollos tecnológicos de los servicios de dispensación de
+ medicamentos\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Un 
-\series bold
-\bar under
-producto
-\series default
-\bar default
- es un medicamento específico dentro de una 
-\series bold
-marca
-\series default
-, con un 
-\series bold
-nombre
-\series default
- particular\SpecialChar \@.
- Es típico que a un producto corresponda exactamente una asociación
- farmacológica, pero existen nombres comerciales específicos dentro de marcas
- que usan asociaciones farmacológicas ligeramente diferentes entre sus presentac
-iones\SpecialChar \@.
- Sin embargo, es típico que las 
-\series bold
-indicaciones
-\series default
-, las 
-\series bold
-contraindicaciones
-\series default
-, las 
-\series bold
-reacciones adversas
-\series default
- y la 
-\series bold
-posología
-\series default
- sí sean comunes a todas las presentaciones de un producto, y también se
- les asocian 
-\series bold
-palabras clave
-\series default
- para facilitar su búsqueda en un directorio farmacológico\SpecialChar \@.
+En Venezuela existe un servicio conocido como APS que permite a los asegurados
+ obtener atención médica o tratamientos farmacológicos sin desembolsar su
+ propio dinero\SpecialChar \@.
+ Por el alto costo de los tratamientos farmacológicos en Venezuela
+, el modelo ha obtenido gran aceptación por los asegurados, reduciendo el
+ número de reclamos por la modalidad de reembolso\SpecialChar \@.
+ Actualmente, el mercado
+ asegurador en Venezuela está compuesto por 36 compañías de seguros que
+ ofrecen pólizas de salud, junto a más de 10 administradoras de planes de
+ salud y más de 10 empresas con pólizas auto-administradas\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Finalmente, una 
-\series bold
-\bar under
-presentación
-\series default
-\bar default
- es la forma comercial específica de un medicamento que puede adquirirse
- concretamente\SpecialChar \@.
- Una presentación tiene un 
-\series bold
-nombre
-\series default
-, es una forma concreta de un 
-\series bold
-producto
-\series default
-, es producida por un 
-\series bold
-laboratorio
-\series default
-, contiene un cierto 
-\series bold
-número de unidades
-\series default
- de una 
-\series bold
-unidad posológica
-\series default
- y tiene una 
-\series bold
-forma de administración
-\series default
- particular\SpecialChar \@.
- Además, una presentación puede ser 
-\series bold
-genérica o de marca
-\series default
-, puede ser 
-\series bold
-dispensada con o sin prescripción facultativa o solo para hospitalización
-\series default
-, y puede estar 
-\series bold
-asociada al sexo masculino o femenino o no estar asociada al sexo
-\series default
-\SpecialChar \@.
- A cada presentación se asocia un 
-\series bold
-precio de referecia
-\series default
- que refleja el valor esperado de la presentación en el mercado\SpecialChar \@.
+La idea de contar con un departamento clínico o farmacológico, conformado
+ por más de 10 médicos y farmacéuticos, es una ilusión improductiva que
+ acabaría con la rentabilidad del sector\SpecialChar \@.
+ Por lo tanto, pocas compañías de
+ seguros tienen la oportunidad de contar con un médico para dirigir una
+ orquesta de analistas sin experiencia clínica o farmacológica\SpecialChar \@.
+ Las demás
+ compañías se deben conformar consultando guías farmacológicas y el Internet\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+PCA Audit es una aplicación tecnológica que permite a proveedores de planes
+ de salud analizar y controlar reclamos de salud, detectando más de 30 tipos
+ de fraude y logrando grandes volúmenes de ahorro a empresas de seguros,
+ administradoras de planes de salud, instituciones gubernamentales y empresas
+ de medicina prepagada\SpecialChar \@.
+ PCA Audit sirve de apoyo a proveedores de planes
+ de salud, identificando desviaciones fraudulentas o farmacológicas antes
+ del reembolso al asegurado o proveedor, logrando grandes volúmenes de ahorro\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Actualmente la empresa cuenta con 4 clientes operativos: Mercantil Seguros,
+ AON, Humanitas y Seguros Caroní\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Section
-Enfermedades
+PCA Farma
 \end_layout
 
 \begin_layout Standard
-Los sistemas de PRX Control Solutions utilizan una taxonomía jerárquica
- de las enfermedades similar a la 
+La principal causa de muerte en el mundo es la falta de cumplimiento a los
+ tratamientos farmacológicos en enfermedades crónicas\SpecialChar \@.
+ Los infartos, los
+ accidentes cerebro vasculares, entre otras, son producto de la falta de
+ conocimiento del ser humano hacia la importancia de ingerir correctamente
+ los medicamentos y seguir las indicaciones médicas\SpecialChar \@.
+ El gobierno norteamericano
+ y las empresas de seguros del mismo país pierden más de $290 mil millones
+ al año por la falta de cumplimiento de prescripciones de medicamentos\SpecialChar \@.
+ El
+ 33% de los pacientes no vuelven a comprar el tratamiento farmacológico
+ necesario para tratar las enfermedades crónicas después de la primera adquisici
+ón\SpecialChar \@.
+ El 50% de los ciudadanos norteamericanos no toman correctamente sus medicamen
+tos\SpecialChar \@.
+ La expansión de las grandes cadenas de farmacias al estilo anglosajón
+ en los mercados de latinoamérica ha venido afectando la supervisión de
+ las boticas familiares o farmacias independientes, las cuales siguen representa
+ndo la mayoría del mercado latinoamericano\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+PCA Farma es una aplicación que ayuda a las farmacias aumentar las ventas
+ a través del control y seguimiento de pacientes crónicos\SpecialChar \@.
+ A través de PCA
+ Farma las farmacias pueden retener a sus pacientes, ofreciendo un servicio
+ personalizado y garantizando que renueven los tratamientos en sus tiendas
+ y así competir con las grandes cadenas\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+PRX Analyzer
+\end_layout
+
+\begin_layout Standard
+PRX Analyzer es una aplicación 
 \emph on
-clasificación internacional de enfermedades, décima versión
+Web
 \emph default
- (CIE-10) de la Organización Mundial de la Salud, pero con modificaciones\SpecialChar \@.
+ que permite organizar la información registrada de los siniestros analizados
+ en PCA Audit, produciendo una gran cantidad de información estadística
+ para ser comercializada al mercado asegurador, el estado y la industria
+ farmacéutica\SpecialChar \@.
+ Esta información permite a los clientes diseñar reportes a
+ la medida, con el objetivo de tomar decisiones gerenciales, creando estrategias
+ para estimular la productividad, incrementar los ingresos y aumentar la
+ competitividad del negocio\SpecialChar \@.
+ Por cada siniestro registrado en el PCA Audit
+ se registran entre 15 y 40 variables que pueden ser conjugables en múltiples
+ reportes dinámicos estadísticos\SpecialChar \@.
 
- La clasificación tiene tres niveles; en orden de más general a más específico:
- el 
-\series bold
-\bar under
-tipo de enfermedad
-\series default
-\bar default
-, el 
-\series bold
-\bar under
-subtipo de la enfermedad
-\series default
-\bar default
-, y la 
-\series bold
-\bar under
-enfermedad
-\series default
-\bar default
-\SpecialChar \@.
- A cada nivel corresponde un 
-\series bold
-código
-\series default
- y una 
-\series bold
-descripción
-\series default
- textual, y una enfermedad puede estar relacionada con uno o más subtipos
- de enfermedad\SpecialChar \@.
- Adicionalmente, las enfermedades tienen 
-\series bold
-palabras clave
-\series default
- asociadas para facilitar su búsqueda en un directorio\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Section
-Seguros médicos
-\end_layout
-
-\begin_layout Standard
-La aplicación PCA Audit maneja datos sobre seguros médicos:
-\end_layout
-
-\begin_layout Standard
-Un 
-\series bold
-\bar under
-asegurador
-\series default
-\bar default
- es una empresa de seguros médicos o un administrador de seguros, que tiene
- un 
-\series bold
-nombre
-\series default
-\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Una 
-\series bold
-\bar under
-póliza
-\series default
-\bar default
- representa el conjunto de reglas y condiciones de cobertura de un seguro
- médico al cual una persona puede afiliarse.
- Se caracteriza por un 
-\series bold
-código
-\series default
- suministrado por el 
-\series bold
-asegurador
-\series default
- que provee el seguro\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Una 
-\series bold
-\bar under
-afiliación
-\series default
-\bar default
- representa que un 
-\series bold
-asegurado
-\series default
- está cubierto por una 
-\series bold
-póliza
-\series default
-\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Section
-Solicitudes
-\end_layout
-
-\begin_layout Standard
-Las aplicaciones de PRX Control Solutions mantienen información sobre el
- historial de medicación de personas, ya sea a través del registro de los
- reclamos de salud de asegurados cuyos datos son administrados por PCA Audit,
- o por el seguimiento de adquisición de medicamentos de pacientes crónicos
- por PCA Farma.
-\end_layout
-
-\begin_layout Standard
-Un 
-\series bold
-\bar under
-caso
-\series default
-\bar default
- es una unidad de seguimiento del historial de solicitudes asociadas a una
- 
-\series bold
-afiliación
-\series default
-\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Un 
-\series bold
-\bar under
-informe médico
-\series default
-\bar default
- contiene las observaciones e indicaciones resultantes de una consulta médica,
- y se introduce como parte de la información asociada a un 
-\series bold
-caso
-\series default
-\SpecialChar \@.
- Un informe es producido por un médico en su 
-\series bold
-fecha de emisión
-\series default
- y es considerado válido hasta su 
-\series bold
-fecha de vencimiento
-\series default
-\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Un 
-\series bold
-\bar under
-diagnóstico
-\series default
-\bar default
- registra la inclusión de una 
-\series bold
-enfermedad
-\series default
- en un 
-\series bold
-informe médico
-\series default
-\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Un 
-\series bold
-\bar under
-medicamento prescrito
-\series default
-\bar default
- en un 
-\series bold
-informe médico
-\series default
- prescribe al paciente la toma de una cierta 
-\series bold
-cantidad
-\series default
- de una 
-\series bold
-presentación
-\series default
- de un medicamento con una cierta 
-\series bold
-frecuencia
-\series default
- durante el tiempo de 
-\series bold
-duración del tratamiento
-\series default
-\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-La información asociada con la dispensación de medicamentos o reclamos de
- reembolso por adquisición de medicamentos en farmacias por parte de un
- paciente puede provenir de diversas fuentes\SpecialChar \@.
- El aspecto común es que se
- hace una 
-\series bold
-\bar under
-solicitud
-\series default
-\bar default
- asociada a un 
-\series bold
-caso
-\series default
-, la cual puede asociarse con medicamentos de varias maneras\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Un 
-\series bold
-\bar under
-medicamento solicitado
-\series default
-\bar default
- registra la inclusión de una 
-\series bold
-cantidad
-\series default
- de una 
-\series bold
-presentación
-\series default
- en una 
-\series bold
-solicitud
-\series default
-\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Una 
-\series bold
-\bar under
-factura
-\series default
-\bar default
- puede asociarse a una 
-\series bold
-solicitud
-\series default
- en caso de que en ella esté registrada la compra de medicamentos asociados
- a la solicitud\SpecialChar \@.
- Las facturas tienen asociada una 
-\series bold
-fecha
-\series default
- y posiblemente un 
-\series bold
-monto total
-\series default
- para adecuarse a procesos de clientes que no ofrecen el monto detallado
- de cada medicamento facturado\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Un 
-\series bold
-\bar under
-medicamento facturado
-\series default
-\bar default
- registra la inclusión de un 
-\series bold
-medicamento facturado
-\series default
- en una 
-\series bold
-factura
-\series default
- con un cierto 
-\series bold
-precio unitario
-\series default
-\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Cuando se completa el registro de una solicitud, PCA Audit y PCA Farma intentan
- establecer cuáles son los 
-\series bold
-\bar under
-tratamientos relacionados
-\series default
-\bar default
-, lo cual consiste en determinar asociaciones farmacológicamente válidas
- entre un 
-\series bold
-medicamento solicitado
-\series default
- y un 
-\series bold
-medicamento prescrito
-\series default
- en un informe médico del mismo caso\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Análogamente, PCA Audit y PCA Farma intentan establecer cuáles son los 
-\series bold
-\bar under
-diagnósticos relacionados
-\series default
-\bar default
- al momento en que se indique que una solicitud está completa, lo cual consiste
- en determinar asociaciones farmacológicamente válidas entre un 
-\series bold
-tratamiento relacionado
-\series default
- y un 
-\series bold
-diagnóstico
-\series default
-\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Section
-Desviaciones
-\end_layout
-
-\begin_layout Standard
-Una desviación es un registro de la detección de algún patrón en los datos
- asociados a solicitudes que corresponda a irregularidades o a condiciones
- que acarrean el rechazo parcial o total de la solicitud, sea en términos
- de la cantidad solicitada de un medicamento, de su monto, de la totalidad
- de una solicitud o de su monto, o de la validez o la imposibilidad de alguna
- asociación entre diagnósticos, medicamentos solicitados, facturados, y
- prescritos\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-En general, todas las desviaciones tienen asociado un 
-\series bold
-tipo
-\series default
- que especifica la causa por la cual se registró, y un usuario debidamente
- autorizado puede indicar que una desviación debe ser 
-\series bold
-ignorada
-\series default
- si se determina que la causa de su detección desea ser desconsiderada en
- alguna situación particular\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-En particular, en el caso de una 
-\series bold
-\bar under
-desviación de solicitud
-\series default
-\bar default
-, se puede indicar un 
-\series bold
-monto total máximo aprobado
-\series default
-, que es una cota superior sobre el gasto considerado válido para efectos
- de cobertura de planes de seguros totalizado entre todos los medicamentos
- solicitados que se incluyan en una solicitud\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Análogamente, en el caso de una 
-\series bold
-\bar under
-desviación de medicamento solicitado
-\series default
-\bar default
-, se puede indicar un 
-\series bold
-precio unitario máximo aprobado
-\series default
-, que es una cota superior sobre el gasto considerado válido por cada unidad
- de un 
-\series bold
-medicamento solicitado
-\series default
-\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-En una 
-\series bold
-desviación de tratamiento relacionado
-\series default
-, se puede indicar una 
-\series bold
-cantidad máxima aprobada
-\series default
-, que es una cota superior sobre el número de unidades de la presentación
- solicitada en el 
-\series bold
-tratamiento relacionado
-\series default
- consideradas válidas.
-\end_layout
-
-\begin_layout Standard
-Finalmente, puede registrarse una 
-\series bold
-desviación de diagnóstico relacionado
-\series default
- para indicar la invalidez de un 
-\series bold
-diagnóstico relacionado
-\series default
-.
 \end_layout
 
 \begin_layout Standard

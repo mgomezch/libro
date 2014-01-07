@@ -25,7 +25,7 @@
 \bibtex_command default
 \index_command default
 \float_placement h
-\paperfontsize default
+\paperfontsize 12
 \spacing onehalf
 \use_hyperref false
 \papersize letterpaper
@@ -49,7 +49,7 @@
 \rightmargin 2cm
 \bottommargin 2cm
 \secnumdepth 3
-\tocdepth 3
+\tocdepth 4
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
@@ -66,7 +66,7 @@
 \begin_body
 
 \begin_layout Chapter
-Control de versión en bases de datos
+Principios generales de diseño
 \end_layout
 
 \begin_layout Standard
@@ -86,744 +86,532 @@ thispagestyle{empty}
 \end_layout
 
 \begin_layout Standard
-Los principios generales de diseño necesarios para atender en forma efectiva
- los requerimientos asociados a las aplicaciones de PRX Control Solutions
- afectan extensivamente al diseño del modelo de datos, y más aún a su implantaci
-ón\SpecialChar \@.
- En particular, la combinación de los requerimientos de consistencia e
- integridad de los datos y de persistencia de datos históricos inducen un
- diseño complejo a la implantación de la base de datos: no basta con almacenar
- los datos necesarios para la operación simple del sistema, sino que cada
- estado que cada dato tuviera a lo largo del tiempo debe ser preservado,
- no solo para su posterior análisis fuera de línea, sino porque un dato
- debería poder indicar que hace referencia a una versión específica de otro
- dato que existió en algún momento dentro de la base de datos\SpecialChar \@.
+La naturaleza de los productos y servicios de PRX Control Solutions inducen
+ un cierto conjunto de requerimientos generales sobre el diseño y la implantació
+n del modelo de datos y la abstracción de la capa de datos para los sistemas
+ de la empresa\SpecialChar \@.
+ Más allá de la necesidad de poder expresar ciertos conceptos
+ específicos, de adaptarse a metodologías de clientes particulares o de
+ facilitar la integración con ciertas tecnologías utilizadas en los sistemas
+ de la empresa, estos requerimientos son principios generales según los
+ cuales debe orientarse el diseño a todos los niveles de abstracción\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Existen sistemas de control de versión que proveen este tipo de referencias:
- en el sistema de control de versión Git, un repositorio puede hacer referencia
- a una revisión particular de otro repositorio usando 
+Este capítulo enumera los principios generales de diseño que se identificaron
+ como los más relevantes para la operación efectiva de los productos y servicios
+ de la empresa, junto con ejemplos ilustrativos de situaciones por las cuales
+ cada uno de estos criterios resulta crucial\SpecialChar \@.
+ Esto justifica las decisiones
+ de diseño y la selección de tecnologías empleadas en este proyecto de pasantías\SpecialChar \@.
+
+ A pesar de que algunos de estos principios son ideas fundamentales asociadas
+ a la calidad de 
 \emph on
-submodules
+software
 \emph default
-, y en cada uno se almacena la historia completa de todos los estados del
- repositorio\SpecialChar \@.
- Sin embargo, un sistema como Git no está diseñado para ser
- usado como base de datos para un sistema de información, y sería tremendamente
- impráctico e ineficiente usarlo para este fin\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-La base de datos que se desea implantar es basada en SQL por una diversidad
- de razones, la más notoria de las cuales es que facilita tremendamente
- la implantación de garantías de integridad mediante restricciones, y que
- facilita la especificación de consultas con un lenguaje declarativo muy
- conocido, por lo cual hay una gran cantidad de herramientas existentes
- para abstraer y facilitar la construcción de consultas — pero ni SQL ni
- el modelo relacional que lo fundamenta manejan directamente el concepto
- de control de versión ni el de hacer referencias a una versión de un dato\SpecialChar \@.
-
- Sin embargo, dada una descripción completa de un esquema relacional, es
- posible diseñar otro esquema relacional basado en el primero que sea capaz
- de representar toda su información histórica y establecer relaciones entre
- versiones de datos\SpecialChar \@.
+ y no son específicos al desarrollo de esta empresa, se hace especial énfasis
+ en ellos por el impacto especial que tienen sobre la efectividad de los
+ productos, servicios y procesos particulares de PRX Control Solutions\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Section
-La anatomía de un dato
+Consistencia e integridad de los datos
 \end_layout
 
 \begin_layout Standard
-Cuando se desea representar la información de un conjunto de tipos de objetos
- abstractos en un esquema relacional, es necesario modelarlos en relaciones\SpecialChar \@.
-
- El modelado de datos relacional es un problema ampliamente estudiado y
- hay técnicas de expresión establecidas para muchos patrones de datos; por
- lo tanto, este problema no será tratado\SpecialChar \@.
- Además, aunque sería un desarrollo
- interesante, elaborar una descripción formal de la técnica usada escapa
- del alcance de este proyecto, por lo cual se abandonará también el nivel
- de abstracción del modelo relacional, y se discutirá en términos de SQL\SpecialChar \@.
-
- Se supondrá entonces que se dispone de un conjunto de tablas de SQL que
- modela a todos los datos de interés, y que se desea registrar la historia
- de las filas de las tablas de ese esquema\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Las tablas en SQL contienen filas, y cada fila contiene un conjunto de columnas
- con datos considerados atómicos\SpecialChar \@.
- Supóngase que en cada tabla ha sido declarada
- una restricción de clave primaria con un subconjunto de sus columnas\SpecialChar \@.
- Se
- desea mantener un registro de las modificaciones hechas a filas particulares
- de cada tabla; por lo tanto, es necesario identificar cuándo se considera
- que dos filas de una tabla son dos versiones del mismo dato\SpecialChar \@.
+La base de datos actual de los sistemas de PRX Control Solutions fue diseñada
+ originalmente para dar soporte a prototipos de los productos actuales de
+ la empresa, pero esos prototipos han sido abandonados o modificados a tal
+ punto que queda muy poco de sus implantaciones originales como resultado
+ de la realización de nuevas iteraciones en su desarrollo\SpecialChar \@.
+ Estos prototipos
+ originales de los productos de la empresa fueron diseñados principalmente
+ como pruebas de concepto con el fin de ofrecer los productos a clientes
+ y evaluar la viabilidad del negocio en un momento en que no estaba definida
+ con precisión la naturaleza del negocio\SpecialChar \@.
+ Por lo tanto, no se hizo énfasis
+ en producir diseños robustos y con una estructura que sirviera de fundamento
+ a desarrollos posteriores, sino que se dio prioridad al desarrollo rápido
+ y ágil para facilitar la adaptación a los deseos de los clientes que estudiaban
+ la posibilidad de integrar estos productos en sus procesos internos\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Las columnas de una fila de una tabla se pueden dividir en dos categorías\SpecialChar \@.
-
- Las que formen parte de la clave primaria de la tabla forman parte de la
- 
+En particular, la base de datos actual de los sistemas de la empresa tiene
+ un diseño compuesto significativamente por soluciones 
 \emph on
-identidad
+ad hoc
 \emph default
- de la fila\SpecialChar \@.
- Los demás datos que no sean referencias serán llamados 
-\emph on
-atributos
-\emph default
- — las referencias serán consideradas aparte\SpecialChar \@.
- En este sentido, al insertar
- una fila en la tabla original, se estaría registrando la creación de una
- versión de la fila con la identidad y los valores de atributos que fueron
- insertados en la tabla original, y se puede registrar un número de serie
- para la versión y la fecha y hora de su aparición\SpecialChar \@.
- Cuando se actualiza un
- atributo de una fila existente en la tabla original, se deberá registrar
- la creación de una nueva versión con la misma identidad pero con los valores
- nuevos de los atributos, y se registra con un número de serie diferente
- para indicar que es una versión distinta a la anterior — y también se registrar
-á la fecha y hora en que fue creada la versión nueva a raíz de la actualización\SpecialChar \@.
+ a problemas que se presentaron a lo largo de la historia de su desarrollo\SpecialChar \@.
+
+ A pesar de que se trata de una base de datos relacional, es muy frecuente
+ encontrar información duplicada, relaciones sin claves especificadas, referenci
+as sin restricciones de clave foránea, relaciones enteras que no se usan
+ en absoluto desde versiones muy antiguas de las aplicaciones, y varias
+ otras fallas de diseño\SpecialChar \@.
+ Más allá de ser errores en el diseño, todas estas
+ propiedades son resultados naturales de un proceso de desarrollo que, por
+ presiones del mercado y límites de tiempo y recursos, no tuvo alternativas
+ viables a transformar prototipos en sistemas en producción\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Como es de esperarse, un sistema en producción hecho de esta manera sufre
+ de numerosas propiedades indeseables\SpecialChar \@.
+ Una de las fuentes principales de
+ errores y de lentitud en el desarrollo está en la gran cantidad de invariantes
+ de datos que son necesarios para la correcta operación de la implantación
+ de las aplicaciones de la empresa, mas no están especificadas en la implantació
+n de la base de datos mediante restricciones o por la simple estructura
+ del modelo\SpecialChar \@.
+ Durante la realización de este proyecto de pasantías, hubo frecuente
+s incidentes en los cuales un servicio prestado a un cliente falló por causa
+ de la ausencia de este tipo de restricción, ya sea debido a referencias
+ colgantes en la base de datos que no se detectaron debido a la ausencia
+ de algunas restricciones de claves foráneas, datos duplicados o mal identificad
+os debido a la ausencia de algunas restricciones de unicidad y claves primarias,
+ información obsoleta debido a actualizaciones incorrectas que no consideraron
+ la falta de normalización en la base de datos, etc\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Este tipo de problema ha causado inconvenientes fuertes a clientes en operación,
+ incluyendo retraso en la atención de los reclamos de salud de pacientes
+ de algunas aseguradoras\SpecialChar \@.
+ Por lo tanto, puede identificarse como un criterio
+ esencial de diseño para los sistemas de la empresa 
+\series bold
+garantizar la consistencia e integridad de la información en la base de
+ datos
+\series default
+ para reducir la incidencia de fallas graves en operación.
+\end_layout
+
+\begin_layout Standard
+Las estrategias específicas que pueden utilizarse para favorecer este criterio
+ de diseño incluyen utilizar un modelo normalizado en la implantación de
+ la base de datos, y la utilización de un gestor de bases de datos relacionales
+ con buen soporte para restricciones de integridad\SpecialChar \@.
+ Como los cambios en el
+ diseño son inevitables por la continua variabilidad de los requerimientos
+ de los clientes de la empresa, es importante utilizar un diseño que facilite
+ que los cambios al modelo de datos se reduzcan en frecuencia y alcance,
+ lo cual puede lograrse usando un modelo más expresivo, que permita representar
+ metodologías de trabajo más variadas sin necesidad de hacer modificaciones
+ profundas al diseño\SpecialChar \@.
+ Además, cuando sea necesario hacer tales modificaciones,
+ debería facilitarse hacerlas en maneras que promuevan la exclusión de datos
+ inconsistentes — aunque los cambios sean inevitables, es posible implantar
+ soluciones tecnológicas que dificulten los cambios que introduzcan inconsistenc
+ias y faciliten los que preservan la integridad del modelo\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Section
-Implantación en SQL
+Persistencia de datos históricos
 \end_layout
 
 \begin_layout Standard
-Este concepto de control de revisiones puede representarse fácilmente en
- un esquema relacional\SpecialChar \@.
+La principal fuente de valor explotada por los productos y servicios de
+ PRX Control Solutions está asociada con la conducción de auditorías y otras
+ formas de análisis sobre la validez de procesos de la industria de la salud\SpecialChar \@.
 
-\end_layout
+ Para poder hacer un análisis efectivo de estos procesos, es importante
+ contar con información altamente detallada sobre cada paso, cada etapa
+ y cada aspecto involucrado en los procesos que se analizan\SpecialChar \@.
+ En particular,
+ es esencial conocer en detalle la evolución de los datos asociados a un
+ proceso para poder detectar irregularidades o hacer estudios estadísticos
+ del desarrollo de esos procesos\SpecialChar \@.
 
-\begin_layout Subsection
-Registro de identidades
 \end_layout
 
 \begin_layout Standard
-Para reducir la cantidad de información repetida y así ahorrar espacio,
- se puede mantener una tabla que registre la identidad de cada fila de la
- tabla original que haya sido alguna vez creada\SpecialChar \@.
- Esta tabla, el
+Sin embargo, esto entra en conflicto con la naturaleza variable de gran
+ parte de la información asociada a los procesos que están en el alcance
+ de los productos y servicios de la empresa\SpecialChar \@.
+ Los medicamentos cambian de
+ precio y entran y salen del mercado, los cuadros clínicos de los pacientes
+ evolucionan, las condiciones de cobertura de seguros médicos se alteran
+ en respuesta a las demandas del mercado y a cambios en su marco legal y
+ regulatorio, etc\SpecialChar \@.
+ Más aún, incluso en casos en los cuales la información
+ real que se utiliza en los sistemas de la empresa pudiera ser invariable,
+ si es que existen tales casos, debe considerarse que la información registrada
+ en el sistema puede ser incompleta o incorrecta, y sin embargo es la que
+ se utiliza para efectuar los diversos procesos que deben ser potenciales
+ sujetos de análisis y auditoría\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Por otra parte, es frecuente que los usuarios de los sistemas de la empresa
+ hagan observaciones sobre su comportamiento y reporten quejas o problemas
+ con la información generada o reportada por ellos\SpecialChar \@.
+ Durante el desarrollo
+ de este proyecto de pasantías, ocurrieron con frecuencia reportes de incidencia
+s por parte de los clientes que resultaron difíciles de rastrear a sus causas
+ debido a que los problemas fueron detectados cuando ya habían cambiado
+ muchos datos relevantes en el sistema, y en consecuencia no se conocía
+ el contexto en el cual el sistema efectuó el comportamiento indeseado ni
+ resultó posible reproducir el problema fácilmente\SpecialChar \@.
+ Para poder atender efectivame
+nte estas inquietudes de los clientes de la empresa y entender el origen
+ preciso de las posibles fallas en los procesos de los sistemas de la empresa,
+ es importante contar con la información completa del contexto en el cual
+ se produjo cada paso en el funcionamiento de estos sistemas\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Algunos de los datos que registran los sistemas de la empresa tienen el
+ carácter de transacciones comerciales en el sentido de que acarrean gastos
+ para los clientes de la empresa; por ejemplo, cuando PCA Audit genera una
+ órden para que un medicamento sea dispensado a un asegurado en una farmacia,
+ la empresa aseguradora deberá luego cancelar el monto aprobado de la órden
+ a la farmacia que efectúe la dispensación.
+ Los datos asociados a este tipo de dato que representa una transacción
+ comercial deben manejarse con un fuerte énfasis en la integridad, y esto
+ implica que debe indicarse en estos datos cuáles fueron los datos exactos
+ usados para realizar los cálculos relevantes.
+ Sin embargo, como esos datos pueden variar —por ejemplo, porque el precio
+ de un medicamento cambie, o por cualquier condición de cobertura que altere
+ los montos aprobados—, sería necesario asociar a cada transacción comercial
+ una copia momentánea de todos los datos que fueran usados para calcular
+ sus propiedades\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Hacer esto explícitamente introduciría gran complejidad al modelo de datos\SpecialChar \@.
+
+ Una solución a este problema es relacionar a las transacciones comerciales
+ con la 
 \emph on
- registro de identidades
+versión histórica
 \emph default
-, deberá tener una restricción de unicidad asociada a todas las columnas
- en las cuales se almacenen valores que compongan a la identidad de la tabla
- original\SpecialChar \@.
- Adicionalmente, se asignará un identificador secuencial generado
- para cada identidad registrada como clave postiza, que será la clave primaria
- del registro de identidades\SpecialChar \@.
- Almacenar las identidades de esta manera, en
- una tabla separada y con una clave postiza, es sencillamente una técnica
- para hacer que la forma de las tablas del esquema generado para el control
- de versión sea un poco más regular y ocupe menos espacio, pero no es estrictame
-nte necesario para la aplicación de esta técnica\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Subsection
-Bitácora de versiones
-\end_layout
-
-\begin_layout Standard
-Adicionalmente al registro de identidades, se mantendrá una 
-\emph on
-bitácora de versiones
-\emph default
-, que será una tabla con una fila por cada versión registrada de las filas
- de la tabla original\SpecialChar \@.
- A las filas de la bitácora de versiones se asignará
- un identificador secuencial generado para cada versión registrada como
- clave postiza, que será la clave primaria de la bitácora de versiones\SpecialChar \@.
- Cada
- fila de la bitácora de versiones incluirá también la fecha y hora de registro
- de la versión que representa\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Subsection
-Tabla de versiones activas
-\end_layout
-
-\begin_layout Standard
-Por otra parte, se mantendrá una 
-\emph on
-tabla de versiones activas
-\emph default
-, que contendrá, para cada fila presente en la tabla original, una referencia
- a su entrada en el registro de identidades y una referencia a la entrada
- en la bitácora de versiones que represente a su versión activa\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Subsection
-Atributos
-\end_layout
-
-\begin_layout Standard
-Es necesario ahora mantener un registro de los valores de los atributos
- de las filas de la tabla original en cada versión\SpecialChar \@.
- Éstos podrían almacenarse
- directamente en la bitácora de versiones\SpecialChar \@.
- Sin embargo, considérese el caso
- de una tabla original con una gran cantidad de columnas, donde algunas
- de esas columnas contienen valores de tamaño considerable — por ejemplo,
- columnas que contengan texto de longitud considerable\SpecialChar \@.
- Si los valores de
- los atributos en cada versión se almacenaran directamente en la bitácora
- de versiones, una modificación de una única columna de una fila de la tabla
- original implicaría crear una nueva fila con copias de todos los valores
- de la versión anterior salvo por el que se modificó\SpecialChar \@.
- En casos de tablas
- con pocos atributos, y en especial si los atributos son valores pequeños,
- esto no representa un problema, pero en muchos casos puede implicar un
- desperdicio considerable de espacio\SpecialChar \@.
+ de cada dato que fuera usado para computar sus propiedades\SpecialChar \@.
+ En este sentido,
+ resulta esencial 
+\series bold
+preservar la totalidad de la historia de toda la información manejada por
+ el modelo de datos
+\series default
+ dado que puede ser sujeto de dependencias por parte de transacciones comerciale
+s cuya historia debe preservarse, y también por el simple hecho de que la
+ información histórica de los procesos de los sistemas de la empresa tiene
+ valor intrínsico por el hecho de poder efectuar análisis sobre esa información
+ con fines comerciales\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Para evitar esto, los valores de los atributos pueden almacenarse en tablas
- separadas\SpecialChar \@.
- Para cada atributo, se utilizará una 
-\emph on
-tabla de estado
-\emph default
- donde se almacena el valor del atributo y un identificador secuencial generado
- al almacenarlo que servirá de clave primaria\SpecialChar \@.
- Además, se utilizará una 
-\emph on
-tabla de atributo
-\emph default
- que tendrá dos referencias: una referencia a la tabla de estado del atributo
- correspondiente, y una referencia a la bitácora de versiones\SpecialChar \@.
- La clave primaria
- de la tabla de atributo estará compuesta de ambas referencias\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Subsection
-Inserción
-\end_layout
-
-\begin_layout Standard
-Con este esquema, cuando se inserte una nueva fila en la tabla original,
- se deberá
-\end_layout
-
-\begin_layout Enumerate
-agregar su identidad al registro de identidades si no estaba ya presente;
-\end_layout
-
-\begin_layout Enumerate
-registrar una nueva fila en la bitácora de versiones que hará referencia
- a la fila del registro de identidades correspondiente;
-\end_layout
-
-\begin_layout Enumerate
-crear filas en las tablas de estado con los valores de los atributos de
- la fila nueva;
-\end_layout
-
-\begin_layout Enumerate
-crear filas en las tablas de atributo que asocien a la fila recién creada
- de la bitácora de versiones con las filas recién creadas de las tablas
- de estado; y
-\end_layout
-
-\begin_layout Enumerate
-registrar la asociación entre las filas correspondientes del registro de
- identidades y de la bitácora de versiones en la tabla de versiones activas\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Subsection
-Eliminación
-\end_layout
-
-\begin_layout Standard
-Adicionalmente, se mantendrá una tabla separada, la 
-\emph on
-bitácora de revocación
-\emph default
-, que registre cuáles filas de la bitácora de versiones no contienen la
- información de la versión actualmente presente en la tabla original\SpecialChar \@.
- La
- bitácora de revocación tendrá una referencia a la bitácora de versiones,
- que además será su clave primaria, y también tendrá la fecha y hora en
- la cual se determinó que la entrada referida de la bitácora de versiones
- dejó de representar a la versión actualmente presente de la fila en la
- tabla original\SpecialChar \@.
- En ese sentido, cuando se elimine una fila de la tabla original,
- se deberá
-\end_layout
-
-\begin_layout Enumerate
-encontrar la fila correspondiente del registro de identidades;
-\end_layout
-
-\begin_layout Enumerate
-encontrar la fila correspondiente a esa identidad en la tabla de versiones
- activas;
-\end_layout
-
-\begin_layout Enumerate
-agregar una fila a la bitácora de revocación que se refiera a la fila de
- la bitácora de versiones asociada a la identidad encontrada en la tabla
- de versiones activas, registrando además la fecha y hora actuales; y
-\end_layout
-
-\begin_layout Enumerate
-eliminar la fila encontrada en la tabla de versiones activas\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Subsection
-Actualización
-\end_layout
-
-\begin_layout Standard
-Adicionalmente, se mantendrá una tabla separada, la 
-\emph on
-bitácora de sucesión
-\emph default
-, que registre cuáles filas de la bitácora de revocación fueron registradas
- por la sucesión de una versión por otra debido a una actualización realizada
- en la tabla original\SpecialChar \@.
- La bitácora de sucesión tendrá una referencia a la
- bitácora de revocación, que además será su clave primaria, y también tendrá
- una referencia a la entrada de la bitácora de versiones que representa
- a la versión que sucede a la referida por la clave primaria\SpecialChar \@.
- En ese sentido,
- cuando una fila ya existente en la tabla original se actualice cambiando
- únicamente valores de atributos, se deberá
-\end_layout
-
-\begin_layout Enumerate
-encontrar la fila correspondiente en el registro de identidad;
-\end_layout
-
-\begin_layout Enumerate
-encontrar la fila correspondiente a esa identidad en la tabla de versiones
- activas;
-\end_layout
-
-\begin_layout Enumerate
-agregar una fila a la bitácora de revocación que se refiera a la fila de
- la bitácora de versiones asociada a la identidad encontrada en la tabla
- de versiones activas, registrando además la fecha y hora actuales;
-\end_layout
-
-\begin_layout Enumerate
-registrar una nueva fila en la bitácora de versiones que hará referencia
- a la fila del registro de identidades encontrada;
-\end_layout
-
-\begin_layout Enumerate
-agregar una fila a la bitácora de sucesión que se refiera a la fila recién
- registrada de la bitácora de revocación en su clave primaria, y a la fila
- recién registrada de la bitácora de versiones en su otra referencia;
-\end_layout
-
-\begin_layout Enumerate
-actualizar la tabla de versiones activas para indicar que la versión activa
- correspondiente a la identidad encontrada ahora es representada por la
- fila recién registrada en la bitácora de versiones;
-\end_layout
-
-\begin_layout Enumerate
-para cada atributo que cambió de valor, crear filas nuevas en las tablas
- de estado con el valor nuevo del atributo, y además, crear filas en las
- tablas de atributo que asocien a la fila recién creada de la bitácora de
- versiones con las filas recién creadas de las tablas de estado; y
-\end_layout
-
-\begin_layout Enumerate
-para cada atributo que no cambió de valor, crear filas en las tablas de
- atributo que asocien a la fila recién creada de la bitácora de versiones
- con las filas de las tablas de atributo que estaban relacionadas con la
- fila de la bitácora de versiones correspondiente a la versión anterior.
-\end_layout
-
-\begin_layout Subsection
-Vistas
-\end_layout
-
-\begin_layout Standard
-Al utilizar esta representación, la tabla original puede recuperarse juntando
- a la tabla de versiones activas con el registro de identidades y las tablas
- de atributos a través de la bitácora de versiones — por lo tanto, la tabla
- original podría sustituirse por una vista que tome las acciones indicadas
- cuando se solicite insertar, eliminar o actualizar datos en ella\SpecialChar \@.
- Incluso
- sería posible prescindir de la tabla de versiones activas: ella misma puede
- recuperarse con una consulta sobre la bitácora de versiones, ya que las
- filas de la tabla de versiones activas corresponden precisamente a aquellas
- filas de la bitácora de versiones que no son referidas por una fila de
- la bitácora de revocación\SpecialChar \@.
- Sin embargo, la implantación de este sistema
- resulta considerablemente más simple si se mantiene la tabla de versiones
- activas como una tabla real\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-El gestor de bases de datos relacionales PostgreSQL permite la ejecución
- de 
-\emph on
-triggers
-\emph default
- que sustituyan acciones sobre vistas de inserción, eliminación y actualización,
- lo cual permite implantar esta lógica con una vista en lugar de la tabla
- original\SpecialChar \@.
- Además, las consultas sobre vistas en PostgreSQL son transformadas
- por reglas de reescritura en consultas sobre las tablas en la definición
- de la vista, por lo cual esta implantación ofrece oportunidades al planificador
- de consultas de solo incluir en la ejecución de consultas sobre estas vistas
- a las tablas subyacentes que sean necesarias para computar los resultados\SpecialChar \@.
-
- En consecuencia, a pesar de la naturaleza compleja del esquema usado para
- representar las versiones de datos en una tabla, el costo de efectuar consultas
- sobre vistas que representen a las tablas originales implantadas de esta
- manera podría tener propiedades deseables para algunos patrones de consultas\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-La complejidad considerable de este esquema es en buena medida causada por
- usar un diseño para el esquema de control de versión que reduzca la repetición
- de información entre versiones similares\SpecialChar \@.
- Esto no es estrictamente necesario:
- introduce claves postizas y tablas adicionales innecesarias y complica
- significativamente el proceso de actualización\SpecialChar \@.
- Sin embargo, la intención
- de esta técnica es que se use para guardar la información histórica completa
- de todos los datos de una tabla a lo largo de la vida útil de una base
- de datos, por lo cual podría resultar muy significativo el ahorro de espacio
- resultante de esta factorización\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Subsection
-Referencias
-\end_layout
-
-\begin_layout Standard
-En la discusión anterior sobre el mecanismo de control de versión para datos
- en tablas de SQL se excluyó por completo la consideración de referencias\SpecialChar \@.
-
- Esto se hizo únicamente para simplificar esa presentación inicial de la
- técnica: las referencias entre tablas pueden representarse con esta técnica,
- pero su manejo es relativamente complejo\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Las referencias son una forma de asociación dirigida entre dos objetos:
- el objeto 
-\emph on
-referente
-\emph default
- apunta al objeto 
-\emph on
-referido
-\emph default
-\SpecialChar \@.
- Para ajustarse al criterio de diseño de preservación de datos históricos,
- se desea que las referencias entre objetos que usen la técnica de diseño
- de control de versión sean referencias entre versiones, con la propiedad
- crucial de que una nueva relación solo podrá establecerse con datos en
- sus versiones vigentes\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Subsubsection
-Representación en la vista
-\end_layout
-
-\begin_layout Standard
-La implantación y semántica de estas referencias dependerá de si la referencia
- se considera parte de la identidad del referente o no\SpecialChar \@.
- En ambos casos, sin
- embargo, no será adecuado que la referencia se manifieste en la vista que
- representa a la tabla original como simplemente la identidad del objeto
- referido, ya que la referencia debe especificar una versión particular
- como objetivo\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Tampoco sería conveniente que se representara a la referencia como simplemente
- la versión referida: aunque esta información sería estrictamente suficiente
- para consultar y manipular la referencia, sería innecesariamente impráctico\SpecialChar \@.
-
- Una propiedad fundamental de las referencias que interesa modelar es que
- aunque una referencia puede apuntar a una versión no actual de un objeto,
- no debería ser posible establecer nuevas referencias sino a versiones actuales
- de objetos mediante sus identidades: tiene poco sentido indicar una nueva
- referencia a un objeto que ya no existe, o a un estado de un objeto que
- ya cambió, ya que el objetivo de esta técnica es preservar información
- de los estados anteriores de la base de datos, mas no permitir referencias
- arbitrarias entre versiones\SpecialChar \@.
- Si se representa una referencia únicamente
- por la identificación de la versión referida, sería necesario buscar la
- identificación de la versión actual de un dato para poder establecer una
- relación a él, y su identidad no sería útil salvo mediante una consulta
- a la tabla de versiones activas\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Resulta conveniente, entonces, representar una referencia a una versión
- mediante dos datos a la vez: por un lado, la identidad referida se presenta
- en forma similar a como se especifica en una referencia en una tabla normal
- de SQL, con cada columna que compone a esa identidad; por otro lado, la
- identificación de la versión referida se presenta con la clave de la bitácora
- de versiones correspondiente a la versión referida\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Subsubsection
-Manipulación
-\end_layout
-
-\begin_layout Standard
-Cuando se desee definir la referencia, se debe definir la identidad y el
- sistema debe buscar la versión actual asociada a esa identidad automáticamente
- (y producir un error si no existe), y será considerado un error de uso
- intentar definir una referencia mediante su versión.
-\end_layout
-
-\begin_layout Standard
-Sin embargo, hay una operación especial que puede ser útil: realizar una
- actualización de la versión de una referencia definida que asigne un valor
- nulo a la versión referida por una referencia se interpretará como una
- solicitud al sistema de hacer que la referencia sea actualizada a la versión
- actual de la identidad referida\SpecialChar \@.
- Este caso especial es razonable: actualizar
- una referencia para que apunte a la versión actual de cualquier identidad
- 
-\emph on
-distinta
-\emph default
- de la ya referida puede especificarse actualizando las columnas de la identidad
- de la referencia en la vista a la identidad del nuevo objetivo, pero si
- se actualizan esas columnas con precisamente los mismos valores que ya
- tenían, no se está haciendo una modificación a ningún valor de la representació
-n referencia en la vista, por lo cual la actualización ni siquiera será
- detectada — hay exactamente una identidad que no puede especificarse de
- esta manera para actualizar la referencia a la versión actual\SpecialChar \@.
- Por otra
- parte, cualquier valor no nulo asignado a la versión referida debería producir
- un error que indique que no debe manipularse la referencia asignando una
- clave de bitácora de versiones directamente — pero un valor nulo no es
- exactamente una clave de una bitácora de versiones\SpecialChar \@.
- Usar el valor excepcional
- para especificar la actualización excepcional resulta casi natural\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Subsubsection
-Representación
-\end_layout
-
-\begin_layout Standard
-Una referencia en la identidad se representa simplemente como una componente
- de la identidad cuya columna correspondiente en el registro de identidades
- de la tabla referente resulta ser una clave foránea a la bitácora de versiones
- de la tabla referida.
-\end_layout
-
-\begin_layout Standard
-Cuando una referencia no forma parte de la identidad, su implantación es
- similar a la de un atributo\SpecialChar \@.
- Como el referido de la referencia es una versión
- de otro objeto, puede representarse simplemente por la clave primaria de
- la bitácora de versiones del objeto referido\SpecialChar \@.
- Como el referente de la referencia
- es una versión del objeto referente y no es parte de la identidad del mismo,
- puede usarse exactamente la misma representación usada para atributos,
- usando una tabla de atributo y una tabla de estado para asociar la clave
- del referido con la versión referente\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Sin embargo, la separación de atributos en dos tablas se justificaba por
- la posibilidad de ahorrar espacio cuando los valores de los atributos pudieran
- ser de tamaño considerable, mientras que en el caso de una referencia,
- el valor es simplemente el identificador secuencial del referido, que es
- un valor pequeño\SpecialChar \@.
- Por lo tanto, resulta conveniente utilizar una representación
- más compacta para este caso: una referencia se representa con una 
-\emph on
-tabla de referencia
-\emph default
- análoga a una tabla de atributo, cuya clave primaria es la clave primaria
- de la fila de la bitácora de versiones de la versión referente, y que incluye
- además el valor de la clave primaria de la versión referida como clave
- foránea a su bitácora de versiones — no hay análogo a la tabla de estado\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Subsubsection
-Acciones
-\end_layout
-
-\begin_layout Standard
-Las restricciones de clave foránea de SQL pueden especificar acciones a
- tomar cuando la referencia se vuelve inválida por la actualización o eliminació
-n del objeto referido\SpecialChar \@.
- De igual manera, las referencias a versiones pueden
- asociarse con acciones a tomar en estas situaciones\SpecialChar \@.
- Se distinguieron cuatro
- tipos de acciones que pueden ser de utilidad principalmente por su analogía
- con sus equivalentes en restricciones de clave foránea de SQL, cada una
- de las cuales puede asociarse con la acción a tomar cuando la fila referida
- es eliminada o sucedida:
-\end_layout
-
-\begin_layout Itemize
-
-\emph on
-Cascade
-\emph default
-: La eliminación del referido causa la eliminación del referente\SpecialChar \@.
- La actualizació
-n del referido causa el ajuste de la referencia para apuntar a la versión
- que le sucede\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Itemize
-
-\emph on
-Restrict
-\emph default
-: La actualización o eliminación del referido produce una excepción\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Itemize
-
-\emph on
-Set null
-\emph default
-: La actualización o eliminación del referido anula la referencia\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Itemize
-
-\emph on
-Preserve
-\emph default
-: La actualización o eliminación del referido no produce ningún efecto\SpecialChar \@.
- Como
- la referencia se hace entre versiones, esto origina referencias 
-\emph on
-invariantes
-\emph default
-, que continúan refiriéndose (sin pérdida alguna de integridad) a versiones
- de datos que han sido sucedidas o incluso eliminadas, sin que se pierda
- la capacidad de acceder a la totalidad de los datos originalmente apuntados
- por la referencia\SpecialChar \@.
- Este comportamiento no existe con restricciones de claves
- foráneas de SQL\SpecialChar \@.
+Este criterio de diseño puede favorecerse extensivamente con técnicas de
+ diseño e implantación de la base de datos que resuelvan este problema de
+ manera general\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Section
+Extensibilidad y facilidad de refactorización
+\end_layout
 
+\begin_layout Standard
+En términos de su constitución como empresa y de la clase de servicios que
+ ofrece, PRX Control Solutions puede ser considerada un 
 \emph on
-Squealer
-\end_layout
-
-\begin_layout Standard
-Es posible efectuar la conversión manual de un esquema SQL a uno donde los
- datos de cada tabla estén representados por su historial y una vista para
- las versiones actuales\SpecialChar \@.
- Sin embargo, la técnica prescribe una estructura
- y un comportamiento específico que puede derivarse directamente y sin ambigüeda
-d a partir de la descripción del esquema original\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Además de poder explotarse esa regularidad para reducir la carga de trabajo
- de generar un esquema que explote sistemáticamente esta técnica, utilizar
- una herramienta de generación de código favorece al principio de diseño
- de garantizar la integridad de los datos al reducir los errores de programación
- en el esquema, así como el principio de maximizar la facilidad de refactorizaci
-ón y rediseño al reducir tremendamente el esfuerzo requerido para producir
- la implantación del modelo de datos con las propiedades deseadas, y puede
- proveer garantías estáticas de correctitud por ofrecer una oportunidad
- para realizar análisis estático del esquema, por ejemplo para detectar
- que todas las referencias vayan a tablas definidas, o por facilitar la
- generación de código de descripción del esquema para bibliotecas de acceso
- a la base de datos con garantías de que esa descripción del esquema es
- consistente con la realmente usada en la implantación de la base de datos\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-En este sentido, se desarrolló Squealer
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-El nombre hace alusión a que la base de datos generada es «chismosa» sobre
- la historia de los datos, y «squealer» en inglés puede referirse a alguien
- que divulga información confidencial.
- Además, la palabra contiene las letras S, Q y L en ese orden.
-\end_layout
-
-\end_inset
-
-, un traductor que consume una descripción de un esquema codificada como
- un archivo YAML y genera el código SQL DDL de una implantación de ese esquema
- para versiones de PostgreSQL posteriores a la 9.1
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Versiones anteriores no proveían el soporte necesario para 
-\emph on
-triggers
+startup
 \emph default
- en vistas.
-\end_layout
-
-\end_inset
-
-, incluyendo 
-\emph on
-triggers
-\emph default
- escritos en PL/pgSQL para poder manipular las vistas directamente y obtener
- el comportamiento deseado según la técnica descrita para registro de la
- historia de los datos y referencias a versiones\SpecialChar \@.
- Squealer utiliza un esquema
- simple de generación de código por plantillas y se desarrolló usando el
- lenguaje de programación Haskell para sacar provecho de las garantías estáticas
- de correctitud que provee\SpecialChar \@.
+: sus productos se basan en ofrecer una ventaja competitiva a sus clientes
+ a través de aplicaciones innovadoras de tecnología\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-La implantación del modelo de datos de este proyecto de pasantías se realizó
- enteramente en un archivo de entrada de Squealer, el cual se encarga de
- generar la implantación concreta en código SQL que se carga en el sistema
- de gestión de bases de datos\SpecialChar \@.
+Una consecuencia de explotar la innovación tecnológica de esta manera es
+ que la estructura de los procesos involucrados en los productos de la empresa
+ no está estandarizada, por lo cual hay poca homogeneidad en los requerimientos
+ de diversos clientes, y más aún, el entendimiento de la interacción de
+ los productos de la empresa con los procesos internos de sus clientes se
+ desarrolla de forma personalizada y está en constante revisión para que
+ los clientes hagan uso cada vez más efectivo de estos productos y servicios\SpecialChar \@.
+
+ Otra consecuencia de la condición de 
+\emph on
+startup
+\emph default
+ de la empresa es que es mucho más pequeña que sus clientes\SpecialChar \@.
+ Los clientes
+ de la empresa típicamente emplean sistemas de gran escala que están altamente
+ integrados en sus procesos internos, y por lo tanto el esfuerzo requerido
+ para lograr su integración con los productos de PRX Control Solutions es
+ significativo y podría fácilmente disuadir a un potencial cliente de utilizarlo
+s\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Durante la realización de este proyecto de pasantías, la mayor parte del
+ esfuerzo de los miembros del equipo de desarrollo de la empresa se enfocaron
+ día a día en la realización de modificaciones simples a PCA Audit en respuesta
+ a cambios constantes y pequeños en los requerimientos de los clientes\SpecialChar \@.
+ En
+ una ocasión, un cambio conceptualmente sencillo en los requerimientos de
+ un cliente implicó una refactorización profunda de la implantación de PCA
+ Audit que tardó varias semanas, y el equipo de desarrollo reportó gran
+ dificultad para hacer cambios relativamente simples debido a propiedades
+ de la tecnología y el diseño usados que dificultan los cambios\SpecialChar \@.
+ Durante
+ el mismo período se realizaron tres integraciones con nuevos clientes que
+ requirieron extensiones significativas a la funcionalidad implantada, y
+ el equipo encargado reportó dificultades para extender el comportamiento
+ del sistema de manera que mantuviera compatibilidad con el comportamiento
+ anterior debido al alto acoplamiento y la baja extensibilidad de la implantació
+n\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Para evitar estos problemas, el diseño y la implantación de los productos
+ y servicios de PRX Control Solutions debe adaptarse constantemente a los
+ requerimientos de sus clientes, y éstos son poco homogéneos y altamente
+ variables\SpecialChar \@.
+ Por lo tanto, se debe 
+\series bold
+maximizar la extensibilidad y la facilidad de refactorización y rediseño
+\series default
+ de los productos de la empresa\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Este criterio de diseño puede favorecerse empleando técnicas diseño y tecnología
+s que faciliten la extensibilidad de la implantación, herramientas que faciliten
+ la refactorización de código, herramientas de generación de código que
+ agilicen el desarrollo, y mecanismos de interacción e integración que describan
+ su propia estructura para que sus clientes no estén fuertemente acoplados
+ a una estructura preestablecida\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+Garantías estáticas de correctitud
+\end_layout
+
+\begin_layout Standard
+La alta frecuencia de cambios en los requerimientos sobre los productos
+ y servicios de la empresa acarrea naturalmente una alta frecuencia de cambios
+ en la implantación, y una base de código en constante evolución\SpecialChar \@.
+ Esta forma
+ de desarrollo presenta numerosas oportunidades para introducir errores
+ de programación en los productos de la empresa, y el tamaño del equipo
+ de desarrollo junto con la necesidad de atender rápidamente las peticiones
+ de los clientes hace que la implantación usada en producción no sea probada
+ exhaustivamente antes de desplegarse\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Desgraciadamente y por razones de la escala de la empresa y del equipo de
+ desarrollo, los productos de PRX Control Solutions no cuentan con una 
+\emph on
+suite
+\emph default
+ de pruebas automatizadas que verifiquen la correctitud de la implantación\SpecialChar \@.
+
+ Esto ocasiona directamente una alta tasa de defectos, y la principal causa
+ de reportes de fallas en producción por parte de los clientes y usuarios
+ de los productos y servicios de la empresa, así como la principal causa
+ de dificultades en su modificación, extensión y refactorización, está asociada
+ con errores de programación relacionados con el uso de variables no asociadas
+ o inicializadas, con el uso inválido de valores por incompatibilidad de
+ tipos, y con inconsistencias entre la estructura de la base de datos esperada
+ por la aplicación y la que está disponible en producción\SpecialChar \@.
+ Los productos
+ de la empresa están implantados usando los lenguajes de programación PHP
+ y Python, ambos lenguajes con sistemas de tipos dinámicos que son poco
+ adecuados para ser objeto de herramientas de análisis estático, por lo
+ cual este tipo de problema es difícil de detectar de manera efectiva incluso
+ en presencia de una 
+\emph on
+suite
+\emph default
+ de pruebas completa\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Durante la realización de este proyecto de pasantías, este tipo de errores
+ causó grandes dificultades al equipo de desarrollo tanto por la frecuente
+ necesidad de atender incidencias por fallas del sistema en producción como
+ por la elevada dificultad del desarrollo de nueva funcionalidad en ausencia
+ de técnicas que favorecieran la construcción de implantaciones correctas\SpecialChar \@.
+
+ En particular, el equipo de desarrollo reportó con frecuencia que errores
+ de programación que hubieran sido trivialmente detectados con herramientas
+ básicas de análisis estático les causaron grandes dificultades y tomaron
+ tiempos inaceptablemente largos para encontrar la causa exacta de la falla\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+En este sentido, 
+\series bold
+usar tecnologías que provean fuertes garantías estáticas de correctitud
+\series default
+ eliminaría una gran cantidad de problemas simples que consumen mucho tiempo
+ y esfuerzo de los desarrolladores y generan muchas fallas y problemas para
+ los clientes\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Este criterio de diseño puede favorecerse utilizando herramientas de desarrollo
+ que efectúen análisis estático para verificar la consistencia de la implantació
+n, como lenguajes de programación con sistemas de tipos estáticos y herramientas
+ de generación de código que garanticen correctitud\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+Parametrización del comportamiento
+\end_layout
+
+\begin_layout Standard
+Los sistemas de PRX Control Solutions deben adaptarse a una gran cantidad
+ de requerimientos heterogéneos debido a la variedad de metodologías de
+ trabajo de sus clientes\SpecialChar \@.
+ En muchos casos, esto implica hacer modificaciones
+ al diseño y la implantación de las aplicaciones de la empresa para acomodar
+ las metodologías y los modelos de datos de los clientes\SpecialChar \@.
+ Sin embargo, en
+ una gran cantidad de casos, la variación requerida en el comportamiento
+ del sistema es suficientemente regular para que sea posible implantar esa
+ variación sin tener que programar específicamente cada uno de los escenarios
+ requeridos\SpecialChar \@.
+ En estos casos, es posible definir parámetros asociados a ciertos
+ objetos del sistema, como usuarios o pólizas de seguros, que hagan que
+ el sistema se comporte de la manera adecuada al caso, de forma tal que
+ estos parámetros puedan ser definidos por operadores del sistema sin necesidad
+ de modificar la implantación del mismo\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+En particular, PCA Audit debe tomar en cuenta las condiciones de cobertura
+ asociadas a cada póliza de seguros de sus clientes a la hora de evaluar
+ la validez de los reclamos de salud de los pacientes\SpecialChar \@.
+ Uno de los problemas
+ observados durante el desarrollo del proyecto de pasantías es que la capacidad
+ de modificar el comportamiento del sistema en muchos casos estaba limitada
+ por la técnica usada para implantar la parametrización: cada vez que se
+ quería agregar la posibilidad de expresar reglas de negocio más complejas
+ o dependientes de un parmámetro adicional, el equipo de desarrollo tuvo
+ que modificar la implantación para extender la posibilidad de parametrización
+ del sistema\SpecialChar \@.
+ Esto acarreó retrasos en la integración con clientes nuevos
+ de los servicios de la empresa, ya que el uso efectivo del sistema por
+ parte de los clientes requiere que éste opere bajo las reglas de negocio
+ propias de sus pólizas de cobertura para la adquisición de medicamentos\SpecialChar \@.
+
+ Puede esperarse que este problema se agrave significativamente como resultado
+ de los planes de expansión internacional de los servicios de la empresa\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Debido a esto, resulta importante 
+\series bold
+permitir la parametrización del comportamiento en forma expresiva
+\series default
+ para que una gran variedad de comportamientos puedan ser especificados
+ sin necesidad de la intervención del equipo de desarrollo\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Este criterio de diseño puede favorecerse mediante el empleo de lenguajes
+ de dominio específico para la parametrización del comportamiento de los
+ sistemas de la empresa, así como el desarrollo de interfaces con el usuario
+ que permitan a los operadores del sistema especificar parametrizaciones
+ complejas con facilidad\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+Equilibrio entre simplicidad y rendimiento
+\end_layout
+
+\begin_layout Standard
+El diseño y la implantación de los sistemas de PRX Control Solutions debe
+ modificarse con frecuencia frente a los siempre cambiantes requerimientos
+ de los clientes, por lo cual es importante que las tecnologías empleadas
+ permitan un ciclo rápido de desarrollo y empleen interfaces de programación
+ sencillas que minimicen la cantidad de trabajo de desarrollo necesaria
+ para la implantación de los patrones de acciones más comúnes\SpecialChar \@.
+ Sin embargo,
+ algunos de los problemas atacados por las aplicaciones de la empresa son
+ de una naturaleza que entra en conflicto con el uso de herramientas que
+ optimicen los casos simples, ya que éstas con frecuencia sacrifican la
+ practicidad o el rendimiento de operaciones complejas en favor de las operacion
+es sencillas o comúnes\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Esta situación tiene un efecto particularmente notorio en las abstracciones
+ de acceso al modelo de datos utilizadas por las aplicaciones de la empresa\SpecialChar \@.
+
+ Durante la realización de este proyecto de pasantías se observó el empleo
+ de una biblioteca de correspondencia objeto-relacional utilizada extensivamente
+ en la implantación de las aplicaciones de la empresa, y si bien su utilización
+ facilita gran parte de la implantación de estas aplicaciones orientadas
+ a datos, en algunos casos fueron una fuente de fallas que inutilizaron
+ por completo a una de las aplicaciones de la empresa para muchos casos\SpecialChar \@.
+
+ La aplicación PRX Analyzer, encargada de generar reportes estadísticos
+ a partir de los datos de uso de la aplicación PCA Audit para beneficio
+ de los operadores y clientes de la aplicación, hace consultas complejas
+ a la base de datos de la empresa\SpecialChar \@.
+ A pesar de que la biblioteca de correspondenci
+a objeto-relacional empleada por la empresa no había presentado problemas
+ para la mayor parte de la implantación de sus sistemas, expresar las consultas
+ de naturaleza compleja requeridas por los reportes de PRX Analyzer resultó
+ inviable debido a las propiedades de rendimiento de la biblioteca para
+ ese tipo de consultas, y el producto resultó inutilizable para clientes
+ cuya escala de operación sobrepasara un cierto punto\SpecialChar \@.
+ A raíz de esta situación,
+ se decidió reescribir la implantación de las consultas problemáticas a
+ bajo nivel, sin usar la biblioteca en cuestión, y el sistema resultó usable
+ otra vez\SpecialChar \@.
+ Sin embargo, la implantación a bajo nivel perdió la simplicidad
+ y resultó poco robusta y mantenible, por lo cual no pudo ser adaptada a
+ cambios subsiguientes en la base de datos por no poder disponer de tanto
+ tiempo del equipo de desarrollo para esa tarea\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Debido a este tipo de problema, es necesario 
+\series bold
+utilizar abstracciones que hagan un equilibrio productivo de simplicidad
+ y rendimiento
+\series default
+ para la implantación de las aplicaciones de la empresa\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Este criterio de diseño puede favorecerse mediante el empleo de formas de
+ abstracción más expresivas, o con el uso simultáneo de varias abstracciones
+ compatibles o interoperables que optimicen diferentes tipos de objetivos
+ de implantación\SpecialChar \@.
 
 \end_layout
 
