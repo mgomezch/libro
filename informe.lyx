@@ -759,25 +759,6 @@ filename "capitulo4.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch Conclusiones
-status open
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "conclusiones.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \lang english
 \begin_inset ERT
@@ -798,6 +779,10 @@ parskip}{7pt}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
 \begin_inset Branch Bibliografía
 status open
 
@@ -805,6 +790,11 @@ status open
 \begin_inset CommandInset include
 LatexCommand include
 filename "bibliografia.lyx"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

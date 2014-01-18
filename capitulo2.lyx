@@ -149,23 +149,33 @@ farmacológica
 nombre
 \series default
 \SpecialChar \@.
- Dependiendo
+
+\end_layout
+
+\begin_layout Standard
+Dependiendo
 \series bold
  
 \series default
 de la aplicación terapéutica para grupos fisiológicos o patológicos particulares
-, puede ser necesario distinguir entre 
+, puede ser necesario distinguir entre una y otra 
 \series bold
-variantes
+\bar under
+variante de asociación farmacológica
 \series default
- de una misma composición farmacológica aunque se trate de las mismas sustancias
+\bar default
+ de una misma asociación farmacológica, aunque se trate de las mismas sustancias
  a nivel químico\SpecialChar \@.
- La 
+ Cada una tiene un 
+\series bold
+nombre
+\series default
+ y una 
 \series bold
 dosis máxima diaria
 \series default
- es la cantidad máxima de una asociación farmacológica que puede administrarse
- a un adulto saludable sin perjudicar su salud\SpecialChar \@.
+ que es la cantidad máxima que puede administrarse a un adulto saludable
+ sin perjudicar su salud\SpecialChar \@.
 
 \end_layout
 
@@ -176,7 +186,8 @@ Una
 unidad posológica
 \series default
 \bar default
- es una dosis particular de una unidad farmacológica, donde la 
+ es una dosis particular de una variante de asociación farmacológica, donde
+ la 
 \series bold
 dosis
 \series default
