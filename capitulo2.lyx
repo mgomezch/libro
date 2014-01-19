@@ -338,11 +338,12 @@ marca
 nombre
 \series default
  particular\SpecialChar \@.
- Es típico que a un producto corresponda exactamente una asociación
- farmacológica, pero existen nombres comerciales específicos dentro de marcas
- que usan asociaciones farmacológicas ligeramente diferentes entre sus presentac
-iones\SpecialChar \@.
- Sin embargo, es típico que las 
+ Es típico que a un producto corresponda exactamente una variante
+ de asociación farmacológica, pero existen nombres comerciales específicos
+ dentro de marcas que usan asociaciones farmacológicas (o sus variantes)
+ ligeramente diferentes entre sus presentaciones\SpecialChar \@.
+ Sin embargo, es típico
+ que las 
 \series bold
 indicaciones
 \series default
