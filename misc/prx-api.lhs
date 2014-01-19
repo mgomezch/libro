@@ -14,17 +14,17 @@
 
 # Resources
 
-Resource                                    Route
-------------------------------------------- ------------------------------------------------------------------------------
-Table collection                            `/v1/database`
-Table column metadata collection            `/v1/database/«table code name»`
-Column metadata                             `/v1/database/«table code name»/column/«column code name»`
-Table active row collection                 `/v1/database/«table code name»/rows`
-Table row version data                      `/v1/database/«table code name»/version/«row version identifier»`
-Redirect, table row version data            `/v1/database/«table code name»/version/«row version identifier»/predecessor`
-Redirect, table row version data            `/v1/database/«table code name»/version/«row version identifier»/successor`
-Version-centric row history sequence        `/v1/database/«table code name»/version/«row version identifier»/history`
-------------------------------------------- ------------------------------------------------------------------------------
+Resource                                   Route
+------------------------------------------ -------------------------------------------------------------------------
+Table collection                           `/v1/database`
+Table column metadata collection           `/v1/database/«table name»`
+Column metadata                            `/v1/database/«table name»/column/«column name»`
+Table active row collection                `/v1/database/«table name»/rows`
+Table row version data                     `/v1/database/«table name»/version/«row version identifier»`
+Redirect, table row version data           `/v1/database/«table name»/version/«row version identifier»/predecessor`
+Redirect, table row version data           `/v1/database/«table name»/version/«row version identifier»/successor`
+<!-- Version-centric row history sequence  `/v1/database/«table name»/version/«row version identifier»/history` -->
+------------------------------------------ -------------------------------------------------------------------------
 
 # Entry point
 
@@ -33,9 +33,9 @@ Version-centric row history sequence        `/v1/database/«table code name»/ve
 
     ← 200 OK
     { "links":
-      [ { "rel": ["self"], "href": "http://api.pcaaudit.com/v1/database"            }
-      , { "rel": ["item"], "href": "http://api.pcaaudit.com/v1/database/asociacion" }
-      , { "rel": ["item"], "href": "http://api.pcaaudit.com/v1/database/variante"   }
+      [ { "rel": ["self"], "href": "https://api.pcaaudit.com/v1/database"                                      }
+      , { "rel": ["item"], "href": "https://api.pcaaudit.com/v1/database/Asociación+farmacológica"             }
+      , { "rel": ["item"], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica" }
       …
       ]
     }
@@ -55,26 +55,25 @@ documentation, diagrams or other forms of metadata.  Specifically,
 it should not be used to generate URIs — that’s what links and
 actions are for.
 
-    → GET /variante
+    → GET /Variante+de+asociación+farmacológica
     Accept: application/vnd.siren+json
 
     ← 200 OK
     { "properties":
       { "table name": "Variante de asociación farmacológica"
-      , "code name": "variante"
       , "comment": "Forma distinguida de una asociación farmacológica según su aplicación terapéutica para grupos fisiológicos o patológicos particulares."
       }
 
     , "entities":
-      [ { "rel": "item", "href": "http://api.pcaaudit.com/v1/database/variante/column/asociacion" }
-      , { "rel": "item", "href": "http://api.pcaaudit.com/v1/database/variante/column/variante"   }
-      , { "rel": "item", "href": "http://api.pcaaudit.com/v1/database/variante/column/dmd"        }
+      [ { "rel": "item", "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/asociación+farmacológica" }
+      , { "rel": "item", "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/variante"                 }
+      , { "rel": "item", "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/dosis+máxima+diaria"                      }
       ]
 
     , "links":
-      [ { "rel": ["self"      ], "href": "http://api.pcaaudit.com/v1/database/variante"      }
-      , { "rel": ["describes" ], "href": "http://api.pcaaudit.com/v1/database/variante/rows" }
-      , { "rel": ["collection"], "href": "http://api.pcaaudit.com/v1/database"               }
+      [ { "rel": ["self"      ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica"      }
+      , { "rel": ["describes" ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/rows" }
+      , { "rel": ["collection"], "href": "https://api.pcaaudit.com/v1/database"                                           }
       ]
     }
 
@@ -92,7 +91,7 @@ at least support references perhaps with some sort of autocompletion
 UI, enumerated types with selectors, and rule ASTs with the Blockly
 GUI.
 
-    → GET /variante/column/asociacion
+    → GET /Variante+de+asociación+farmacológica/column/asociación+farmacológica
 
     ← 200 OK
     { "properties":
@@ -100,8 +99,8 @@ GUI.
       }
 
     , "links":
-      [ { "rel": ["self"      ], "href": "http://api.pcaaudit.com/v1/database/variante/column/variante" }
-      , { "rel": ["collection"], "href": "http://api.pcaaudit.com/v1/database/variante"                 }
+      [ { "rel": ["self"      ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/variante" }
+      , { "rel": ["collection"], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica"                 }
       ]
     }
 
@@ -114,13 +113,13 @@ embedded links (as an optimization) with some request parameter.  There
 should be stronger limits on the number of requested representations
 in this case.  Something like `?embed` in the query string.
 
-    → GET /variante/rows
+    → GET /Variante+de+asociación+farmacológica/rows
     Accept: application/vnd.siren+json
 
     ← 302 Found
-    Location: /variante/rows?offset=0&limit=5
+    Location: /Variante+de+asociación+farmacológica/rows?offset=0&limit=5
 
-    → GET /variante/rows?offset=0&limit=5
+    → GET /Variante+de+asociación+farmacológica/rows?offset=0&limit=5
     Accept: application/vnd.siren+json
 
     ← 200 OK
@@ -129,33 +128,33 @@ in this case.  Something like `?embed` in the query string.
       }
 
     , "entities":
-      [ { "rel": "item", "href": "http://api.pcaaudit.com/v1/database/variante/version/3e7c1b67-6452-46b8-b0e0-690150ef9e0a" }
-      , { "rel": "item", "href": "http://api.pcaaudit.com/v1/database/variante/version/53d11f52-3f2b-48f1-98d2-95a2135ae827" }
-      , { "rel": "item", "href": "http://api.pcaaudit.com/v1/database/variante/version/45a1556d-50af-4dba-8430-d8fb840e10ae" }
-      , { "rel": "item", "href": "http://api.pcaaudit.com/v1/database/variante/version/b5616572-c36c-42b5-b5df-c160d7908480" }
-      , { "rel": "item", "href": "http://api.pcaaudit.com/v1/database/variante/version/6e9a49d4-0d4d-4ac6-85ed-71d6323db336" }
+      [ { "rel": "item", "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/3e7c1b67-6452-46b8-b0e0-690150ef9e0a" }
+      , { "rel": "item", "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/53d11f52-3f2b-48f1-98d2-95a2135ae827" }
+      , { "rel": "item", "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/45a1556d-50af-4dba-8430-d8fb840e10ae" }
+      , { "rel": "item", "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/b5616572-c36c-42b5-b5df-c160d7908480" }
+      , { "rel": "item", "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/6e9a49d4-0d4d-4ac6-85ed-71d6323db336" }
       ]
 
     , "links":
-      [ { "rel": ["self"       ], "href": "http://api.pcaaudit.com/v1/database/variante/rows?offset=0&limit=5" }
-      , { "rel": ["next"       ], "href": "http://api.pcaaudit.com/v1/database/variante/rows?offset=5&limit=5" }
-      , { "rel": ["describedby"], "href": "http://api.pcaaudit.com/v1/database/variante"                       }
+      [ { "rel": ["self"       ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/rows?offset=0&limit=5" }
+      , { "rel": ["next"       ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/rows?offset=5&limit=5" }
+      , { "rel": ["describedby"], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica"                       }
       ]
 
     , "actions":
       [ { "name": "insert"
         , "title": "Insert"
         , "method": "POST"
-        , "href": "http://api.pcaaudit.com/v1/database/variante/rows"
+        , "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/rows"
         , "fields":
           [ { "name": "asociación farmacológica"
-            , "type": "http://api.pcaaudit.com/v1/database/asociacion"
+            , "type": "https://api.pcaaudit.com/v1/database/Asociación+farmacológica"
             }
           , { "name": "variante"
-            , "type": "http://api.pcaaudit.com/v1/database/variante/column/variante"
+            , "type": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/variante"
             }
           , { "name": "dosis máxima diaria"
-            , "type": "http://api.pcaaudit.com/v1/database/variante/column/dmd"
+            , "type": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/dosis+máxima+diaria"
             }
           ]
         }
@@ -163,7 +162,7 @@ in this case.  Something like `?embed` in the query string.
       , { "name": "limit"
         , "title": "Limit"
         , "method": "GET"
-        , "href": "http://api.pcaaudit.com/v1/database/variante/rows"
+        , "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/rows"
         , "fields":
           [ { "name": "offset", "type": "number", "value": 0 }
           , { "name": "limit" , "type": "number", "value": 5 }
@@ -173,16 +172,16 @@ in this case.  Something like `?embed` in the query string.
       , { "name": "search"
         , "title": "Search"
         , "method": "GET"
-        , "href": "http://api.pcaaudit.com/v1/database/variante/rows"
+        , "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/rows"
         , "fields":
           [ { "name": "asociación farmacológica"
-            , "type": "http://api.pcaaudit.com/v1/database/variante/column/asociacion"
+            , "type": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/asociación+farmacológica"
             }
           , { "name": "variante"
-            , "type": "http://api.pcaaudit.com/v1/database/variante/column/variante"
+            , "type": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/variante"
             }
           , { "name": "dosis máxima diaria"
-            , "type": "http://api.pcaaudit.com/v1/database/variante/column/dmd"
+            , "type": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/dosis+máxima+diaria"
             }
           ]
         }
@@ -199,12 +198,12 @@ it’s been succeeded by an update.  Therefore, it does not make sense
 for deletion to be an available action.  It’s provided solely as an
 example of how deletion actions would look.
 
-    → GET /variante/version/c4462cf1-33d8-4123-8a05-a2ee318ff141
+    → GET /Variante+de+asociación+farmacológica/version/c4462cf1-33d8-4123-8a05-a2ee318ff141
     Accept: application/vnd.siren+json
 
     ← 200 OK
     { "properties":
-      { "asociación farmacológica": "http://api.pcaaudit.com/v1/database/asociacion/version/44bc82d6-b1da-4368-92e2-93c561a65493"
+      { "asociación farmacológica": "https://api.pcaaudit.com/v1/database/Asociación+farmacológica/version/44bc82d6-b1da-4368-92e2-93c561a65493"
       , "variante": "uso dermatológico"
       , "dosis máxima diaria": 42
       }
@@ -215,15 +214,15 @@ example of how deletion actions would look.
       }
 
     , "links":
-      [ { "rel": ["self"               ], "href": "http://api.pcaaudit.com/v1/database/variante/version/c4462cf1-33d8-4123-8a05-a2ee318ff141"                     }
-      , { "rel": ["predecessor-version"], "href": "http://api.pcaaudit.com/v1/database/variante/version/c4462cf1-33d8-4123-8a05-a2ee318ff141/predecessor-version" }
-      , { "rel": ["successor-version"  ], "href": "http://api.pcaaudit.com/v1/database/variante/version/c4462cf1-33d8-4123-8a05-a2ee318ff141/successor-version"   }
-      , { "rel": ["version-history"    ], "href": "http://api.pcaaudit.com/v1/database/variante/version/c4462cf1-33d8-4123-8a05-a2ee318ff141/history"             }
-      , { "rel": ["type"               ], "href": "http://api.pcaaudit.com/v1/database/variante"                                                                  }
-      , { "rel": ["collection"         ], "href": "http://api.pcaaudit.com/v1/database/variante/rows"                                                             }
+      [ { "rel": ["self"               ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/c4462cf1-33d8-4123-8a05-a2ee318ff141"                     }
+      , { "rel": ["predecessor-version"], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/c4462cf1-33d8-4123-8a05-a2ee318ff141/predecessor-version" }
+      , { "rel": ["successor-version"  ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/c4462cf1-33d8-4123-8a05-a2ee318ff141/successor-version"   }
+--    , { "rel": ["version-history"    ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/c4462cf1-33d8-4123-8a05-a2ee318ff141/history"             }
+      , { "rel": ["type"               ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica"                                                                  }
+      , { "rel": ["collection"         ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/rows"                                                             }
 
-      , { "rel": ["http://api.pcaaudit.com/v1/database/variante/column/asociacion"]
-        , "href": "http://api.pcaaudit.com/v1/database/asociacion/version/44bc82d6-b1da-4368-92e2-93c561a65493"
+      , { "rel": ["https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/asociación+farmacológica"]
+        , "href": "https://api.pcaaudit.com/v1/database/Asociación+farmacológica/version/44bc82d6-b1da-4368-92e2-93c561a65493"
         }
       ]
 
@@ -231,23 +230,23 @@ example of how deletion actions would look.
       [ { "name": "delete"
         , "title": "Delete"
         , "method": "DELETE"
-        , "href": "http://api.pcaaudit.com/v1/database/variante/version/c4462cf1-33d8-4123-8a05-a2ee318ff141"
+        , "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/c4462cf1-33d8-4123-8a05-a2ee318ff141"
         }
       , { "name": "update"
         , "title": "Update"
         , "method": "PUT"
-        , "href": "http://api.pcaaudit.com/v1/database/variante/version/c4462cf1-33d8-4123-8a05-a2ee318ff141"
+        , "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/c4462cf1-33d8-4123-8a05-a2ee318ff141"
         , "fields":
           [ { "name": "asociación farmacológica"
-            , "type": "http://api.pcaaudit.com/v1/database/variante/column/asociacion"
-            , "value": "http://api.pcaaudit.com/v1/database/asociacion/version/44bc82d6-b1da-4368-92e2-93c561a65493"
+            , "type": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/asociación+farmacológica"
+            , "value": "https://api.pcaaudit.com/v1/database/Asociación+farmacológica/version/44bc82d6-b1da-4368-92e2-93c561a65493"
             }
           , { "name": "variante"
-            , "type": "http://api.pcaaudit.com/v1/database/variante/column/variante"
+            , "type": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/variante"
             , "value": "uso dermatológico"
             }
           , { "name": "dosis máxima diaria"
-            , "type": "http://api.pcaaudit.com/v1/database/variante/column/dmd"
+            , "type": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/dosis+máxima+diaria"
             , "value": 42
             }
           ]
