@@ -252,8 +252,8 @@ subgrupo químico
 \bar default
 , siendo la asociación farmacológica concreta quien ocupa el quinto nivel\SpecialChar \@.
 
- Cada asociación farmacológica pertenece a uno o más subgrupos químicos,
- y cada nivel de la jerarquía especifica un 
+ Cada variante de asociación farmacológica pertenece a uno o más subgrupos
+ químicos, y cada nivel de la jerarquía especifica un 
 \series bold
 código
 \series default
@@ -267,6 +267,11 @@ descripción
  estandarizada, lo cual facilita la interoperabilidad con otros sistemas
  que manejen información farmacológica\SpecialChar \@.
 
+\end_layout
+
+\begin_layout Standard
+Un subgrupo farmacológico se relaciona con cada subtipo de enfermedad para
+ el cual puede usarse como tratamiento.
 \end_layout
 
 \begin_layout Section
