@@ -55,7 +55,7 @@ customHeadersFooters
 \paperfontsize 12
 \spacing onehalf
 \use_hyperref true
-\pdf_title "TBD"
+\pdf_title "Diseño e implantación de un nuevo"
 \pdf_author "Manuel Ignacio Gómez Chacón"
 \pdf_subject "Informe de pasantía larga"
 \pdf_keywords "Universidad Simón Bolívar, USB, PRX Control Solutions, PRX, pasantía, bases de datos"
@@ -116,7 +116,7 @@ customHeadersFooters
 \color #faf0e6
 \end_branch
 \branch Bibliografía
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -146,6 +146,11 @@ customHeadersFooters
 \color #faf0e6
 \end_branch
 \branch ActaEscaneada
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Capítulo-5
 \selected 1
 \filename_suffix 0
 \color #faf0e6
@@ -759,6 +764,25 @@ filename "capitulo4.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Branch Capítulo-5
+status open
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "capitulo5.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \lang english
 \begin_inset ERT
@@ -779,22 +803,13 @@ parskip}{7pt}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
 \begin_inset Branch Bibliografía
-status open
+status collapsed
 
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "bibliografia.lyx"
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 

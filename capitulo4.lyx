@@ -734,7 +734,7 @@ Preserve
 invariantes
 \emph default
 , que continúan refiriéndose (sin pérdida alguna de integridad) a versiones
- de datos que han sido sucedidas o incluso eliminadas, sin que se pierda
+ de datos que han sido sucedidas o simplemente eliminadas, sin que se pierda
  la capacidad de acceder a la totalidad de los datos originalmente apuntados
  por la referencia\SpecialChar \@.
  Este comportamiento no existe con restricciones de claves
@@ -812,10 +812,35 @@ triggers
  escritos en PL/pgSQL para poder manipular las vistas directamente y obtener
  el comportamiento deseado según la técnica descrita para registro de la
  historia de los datos y referencias a versiones\SpecialChar \@.
- Squealer utiliza un esquema
- simple de generación de código por plantillas y se desarrolló usando el
- lenguaje de programación Haskell para sacar provecho de las garantías estáticas
- de correctitud que provee\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Squealer utiliza un esquema simple de generación de código por plantillas
+ y se desarrolló usando el lenguaje de programación Haskell para sacar provecho
+ de las garantías estáticas de correctitud que provee\SpecialChar \@.
+ Se utilizó el formato
+ YAML por estar diseñado específicamente para ser fácil de manipular directament
+e como texto, y se aprovecharon los paquetes 
+\family typewriter
+yaml
+\family default
+ y 
+\family typewriter
+aeson
+\family default
+, del repositorio Hackage de bibliotecas para Haskell, para generar el código
+ necesario para la decodificación del formato de entrada\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La herramienta se implantó en dos partes: se desarrolló una biblioteca reutiliza
+ble que representa la estructura abstracta del esquema de la base de datos
+ a generar usando tipos de datos algebráicos y a partir de esa representación
+ puede generar el código SQL de la salida; junto con la biblioteca, se ofrece
+ un ejecutable simple que lee un archivo con la entrada codificada en YAML
+ y escribe los archivos de salida para cada parte del esquema generado\SpecialChar \@.
 
 \end_layout
 
@@ -824,6 +849,34 @@ La implantación del modelo de datos de este proyecto de pasantías se realizó
  enteramente en un archivo de entrada de Squealer, el cual se encarga de
  generar la implantación concreta en código SQL que se carga en el sistema
  de gestión de bases de datos\SpecialChar \@.
+ Cabe destacar que ni la técnica usada ni la
+ implantación del traductor incluyen consideraciones propias del modelo
+ de datos específico usado para la base de datos de la empresa, por lo cual
+ la técnica y la herramienta tienen aplicabilidad general a problemas con
+ requerimientos similares de persistencia de la historia de los datos.
+\end_layout
+
+\begin_layout Standard
+La organización de la implantación de Squealer en una biblioteca y un ejecutable
+ simple que la utiliza resultó útil para el desarrollo: en particular, se
+ desarrolló un módulo simple adicional, independiente del generador de SQL,
+ para la generación automática de diagramas para la base de datos especificada,
+ usando el paquete 
+\family typewriter
+graphviz
+\family default
+ de Hackage y la biblioteca de Squealer\SpecialChar \@.
+ En particular, el diagrama de la
+ base de datos para PRX Control Solutions que se incluye en este informe
+ no fue compuesto manualmente, sino que fue generado automáticamente a partir
+ de la misma especificación usada para generar el código SQL de la implantación
+ final de la base de datos de la empresa\SpecialChar \@.
+ La generación automática de parte
+ de la documentación del sistema favorece su facilidad de refactorización
+ y extensión, ya que reduce el esfuerzo requerido por el equipo de desarrollo
+ para mantener consistencia entre la implantación y la documentación al
+ hacer modificaciones futuras al modelo de datos para adaptarse a cambios
+ en los requerimientos\SpecialChar \@.
 
 \end_layout
 
