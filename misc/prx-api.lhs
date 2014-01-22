@@ -1,16 +1,26 @@
+> import Data.Aeson.Types (Object)
+>
 > data Revocation
 >   = Revocation
 >     { revocationTimestamp ∷ UTCTime
 >     , successor           ∷ Maybe Route
 >     }
 >
-> data Version state
+> data Version a
 >   = Version
 >     { predecessor      ∷ Maybe Route
 >     , revocation       ∷ Maybe Revocation
->     , state            ∷ state
+>     , state            ∷ State a
 >     , versionTimestamp ∷ UTCTime
 >     }
+>
+> data State a
+>   = State
+>     { properties ∷ Object
+>     , links ∷ Map Relation URI
+>     }
+>
+> type Relation = Text
 
 # Resources
 
@@ -83,7 +93,7 @@ actions are for.
 Server-side validation will catch all errors and usability can be
 postponed, so property types may temporarily be simplified to `text`.
 
-Note:
+TODO:
 Property type representations should include a type description that
 allows for the generation of appropriate form controls with validation.
 However, this will require support in the Siren browser.  This should
@@ -106,7 +116,9 @@ GUI.
 
 
 
-# Collections
+# Rows
+
+## Collections
 
 It should be possible to ask for embedded representations instead of
 embedded links (as an optimization) with some request parameter.  There
@@ -190,7 +202,7 @@ in this case.  Something like `?embed` in the query string.
 
 
 
-# Resource states
+# Versions
 
 Note:
 This example has a successor version and a revocation timestamp, so
@@ -256,7 +268,7 @@ example of how deletion actions would look.
 
 
 
-## TODO: Version history of some specific version.
+# TODO: Version history of some specific version.
 
 This should be similar to a collection, but order becomes very
 important.  Mind the possibility of key-changing updates — version
@@ -265,7 +277,7 @@ history of a row, even across identities!
 
 
 
-## TODO: Full version history browsing with filters.
+# TODO: Full version history browsing with filters.
 
 This refers to version history for rows with no active version.
 As they won’t appear in the table active row collection, their
