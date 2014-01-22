@@ -188,9 +188,232 @@ r, se requiere acceso programático a las operaciones primitivas asociadas
  a los datos y a los procesos implantados por estos sistemas, de manera
  que operaciones más complejas puedan realizarse componiendo estas operaciones
  primitivas\SpecialChar \@.
- Una parte significativa de esta tarea corresponde a proveer
- un mecanismo para consultar y manipular los datos de la base de datos\SpecialChar \@.
 
+\end_layout
+
+\begin_layout Standard
+Una parte significativa de esta tarea corresponde a proveer un mecanismo
+ para consultar y manipular los datos de la base de datos de manera simple,
+ ya que muchos de los datos en el modelo no corresponden al resultado de
+ procesos con lógica compleja, sino que son datos simples que deben poder
+ insertarse, modificarse y eliminarse directamente\SpecialChar \@.
+ Por otra parte, aunque
+ la técnica usada para generar la implantación de la base de datos provee
+ un buen grado de abstracción sobre el registro de la historia de los datos,
+ la abstracción no es perfecta y la estructura de las tablas no corresponde
+ exactamente con la del modelo especificado (debido a la representación
+ especial de las referencias)\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Por estas razones, conviene proveer una abstracción para el acceso a datos
+ en forma de un servicio 
+\emph on
+Web
+\emph default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+Capa de datos REST
+\end_layout
+
+\begin_layout Standard
+Existen varios estilos de arquitectura comunes para el diseño de un servicio
+ 
+\emph on
+Web
+\emph default
+\SpecialChar \@.
+ En particular, el estilo de arquitectura REST provee propiedades que favorecen
+ los principios generales de diseño requeridos por los productos de la empresa:
+ REST restringe la arquitectura a un diseño por capas, con independencia
+ entre clientes y servidores y ausencia de estado en la comunicación, lo
+ cual tiene precisamente la intención de proveer un equilibrio entre simplicidad
+ y rendimiento para favorecer la escalabilidad, y el uso de hipermedios
+ y una interfaz uniforme favorece la extensibilidad y la facilidad de refactoriz
+ación\SpecialChar \@.
+ En este sentido, se decidió implantar un servicio Web siguiendo el
+ estilo de arquitectura REST para abstraer el acceso a los objetos de la
+ base de datos, tanto en sus versiones actuales como sus versiones históricas\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+El estilo de arquitectura REST no prescribe un protocolo específico, sino
+ que define propiedades de una arquitectura para el mecanismo de interacción
+ entre los entes de un sistema distribuido\SpecialChar \@.
+ En el caso particular de servicios
+ 
+\emph on
+Web
+\emph default
+ que utilicen el estilo de arquitectura REST, se utiliza el protocolo HTTP
+ para la comunicación, y debe seleccionarse el conjunto de recursos, su
+ forma de identificación con URIs, y un conjunto de formatos para la presentació
+n de las representaciones del estado de cada recurso, entre los cuales el
+ cliente del servicio podrá elegir\SpecialChar \@.
+ Además, debe seleccionarse qué métodos
+ de HTTP serán soportados por cada recurso, así como restricciones adicionales
+ relacionadas con la autorización requerida para hacer cada acción sobre
+ cada recurso\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Subsection
+Recursos e identificación
+\end_layout
+
+\begin_layout Standard
+El estado en ejecución de la base de datos se compone del estado de sus
+ tablas, el estado de las filas de cada tabla, y sus versiones históricas\SpecialChar \@.
+
+ Cada fila de las tablas de la base de datos es en realidad una versión
+ particular que resulta estar actualmente activa, y una versión de una fila
+ se compone de los valores correspondientes a cada columna junto con su
+ fecha de registro y otros metadatos como su relación con las versiones
+ que le preceden y suceden, si las hay\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Además, se representa como recursos del API REST a los metadatos que describen
+ la estructura de la base de datos, ya que las restricciones del estilo
+ de arquitectura REST establecen que la descripción de los recursos presentados
+ debe proveerse dentro del sistema para que éste se describa y documente
+ a sí mismo\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+TODO: hablar de link relations y hacer referencia al registro de IANA de
+ tipos de relación
+\end_layout
+
+\begin_layout Subsubsection
+Colección de las tablas
+\end_layout
+
+\begin_layout Standard
+El primer recurso que se identifica, que además será el punto de entrada
+ del API, corresponde a la colección que incluye a cada una de las tablas\SpecialChar \@.
+
+ Se identifica a este recurso con la ruta 
+\family typewriter
+/database
+\family default
+, y todos los demás recursos se identificarán con rutas que tengan esta
+ como prefijo; esto reduce el potencial de conflictos de nombres con desarrollos
+ posteriores del API que trabajen a un nivel de abstracción superior al
+ de la capa de datos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La colección de tablas estará enlazada con cada tabla que la compone con
+ un enlace con el tipo de relación 
+\family typewriter
+item
+\family default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Subsubsection
+Tablas
+\end_layout
+
+\begin_layout Standard
+La representación de cada tabla incluirá una descripción de qué clase de
+ información se almacena en ella, con el propósito de proveer parte de la
+ documentación del sistema dentro del mismo, donde puede encontrarse con
+ facilidad\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La representación de una tabla se comporta además como la colección de sus
+ columnas, por lo cual se enlaza con cada columna que la compone con el
+ tipo de relación 
+\family typewriter
+item
+\family default
+\SpecialChar \@.
+ Además, cada tabla enlazará a la colección de todas las tablas con la relación
+ 
+\family typewriter
+collection
+\family default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Subsubsection
+Columnas
+\end_layout
+
+\begin_layout Standard
+Cada columna de cada tabla se representará de forma similar a las tablas:
+ se provee una descripción de la columna y el tipo de dato que se almacena
+ en ella como documentación 
+\emph on
+in-band
+\emph default
+\SpecialChar \@.
+ Además, se debe proveer una especificación del tipo de la columna que sea
+ adecuada para que un cliente que comprenda esta especificación pueda mostrar
+ y manipular adecuadamente los valores en estas columnas\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Cada columna enlazará a la tabla a la cual pertenece con el tipo de relación
+ 
+\family typewriter
+collection
+\family default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Subsubsection
+Colección de versiones activas
+\end_layout
+
+\begin_layout Standard
+TODO
+\end_layout
+
+\begin_layout Subsubsection
+Versiones de filas
+\end_layout
+
+\begin_layout Standard
+TODO
+\end_layout
+
+\begin_layout Subsection
+Representaciones
+\end_layout
+
+\begin_layout Standard
+Una de las restricciones fundamentales para el diseño de un servicio REST
+ es que las representaciones de estados de los recursos estén en un formato
+ de hipertexto que especifique en sí mismo las transiciones de estado que
+ pueden efectuarse sobre los recursos, así como las transiciones de navegación
+ por enlaces entre los recursos\SpecialChar \@.
+ Entre los formatos establecidos que permiten
+ esto, algunos se basan en XML y otros en JSON
+\end_layout
+
+\begin_layout Subsection
+Interfaz administrativa
+\end_layout
+
+\begin_layout Standard
+TODO: hablar del admin como formato HTML del API, y el Siren Browser
 \end_layout
 
 \begin_layout Standard
