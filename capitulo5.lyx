@@ -262,6 +262,64 @@ n de las representaciones del estado de cada recurso, entre los cuales el
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+TODO: referencia a la tesis de Roy Fielding y quizá otros recursos sobre
+ REST
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Representaciones
+\end_layout
+
+\begin_layout Standard
+Una de las restricciones fundamentales para el diseño de un servicio REST
+ es que las representaciones de estados de los recursos estén en un formato
+ de hipertexto que especifique en sí mismo las transiciones de estado que
+ pueden efectuarse sobre los recursos, así como las transiciones de navegación
+ por enlaces entre los recursos\SpecialChar \@.
+ Existen muchos formatos establecidos que
+ permiten esto, y típicamente están basados en HTML, XML o JSON\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La implantación inicial del API provee representaciones en el formato de
+ hipertexto Siren, basado en JSON\SpecialChar \@.
+ Este formato se eligió por su simplicidad,
+ su capacidad de expresar enlaces y acciones similares a formularios, y
+ por estar basado en JSON, lo cual facilita tremendamente el procesamiento
+ de los datos obtenidos del API en código JavaScript dentro de un navegador
+ 
+\emph on
+Web
+\emph default
+, que es la tecnología que se usará para implantar una interfaz administrativa
+ para la base de datos a partir del API\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+TODO: referencia a Siren
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Recursos e identificación
 \end_layout
@@ -288,8 +346,17 @@ Además, se representa como recursos del API REST a los metadatos que describen
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
 TODO: hablar de link relations y hacer referencia al registro de IANA de
  tipos de relación
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -334,19 +401,24 @@ La representación de cada tabla incluirá una descripción de qué clase de
 \end_layout
 
 \begin_layout Standard
-La representación de una tabla se comporta además como la colección de sus
- columnas, por lo cual se enlaza con cada columna que la compone con el
- tipo de relación 
+La representación de una tabla se comporta a la vez como la colección de
+ sus columnas, por lo cual se enlaza con cada columna que la compone con
+ el tipo de relación 
 \family typewriter
 item
 \family default
 \SpecialChar \@.
- Además, cada tabla enlazará a la colección de todas las tablas con la relación
- 
+ Además, cada tabla enlazará a la colección de todas las tablas con el tipo
+ de relación 
 \family typewriter
 collection
 \family default
-\SpecialChar \@.
+, y a la colección de sus filas activas con el tipo de relación 
+\family typewriter
+describes
+\family default
+, ya que la representación de la tabla especifica los metadatos asociados
+ a los datos contenidos en la tabla, que son sus filas\SpecialChar \@.
 
 \end_layout
 
@@ -383,7 +455,102 @@ Colección de versiones activas
 \end_layout
 
 \begin_layout Standard
-TODO
+Cada tabla tiene asociada la colección de todas las versiones de sus filas
+ que estén activas\SpecialChar \@.
+ Como estas colecciones pueden ser de gran tamaño, sería
+ inadecuado producir una representación con enlaces a todas las filas en
+ la colección\SpecialChar \@.
+ Para evitar este problema, se divide el recurso de colección
+ en páginas: consultar el recurso principal redirigirá a un recurso con
+ parámetros que indican que se pide una página con una cantidad pequeña
+ de elementos de la colección\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La única propiedad de la colección es el número de filas totales presentes
+ en ella, y se incluye independientemente de la cantidad de elementos por
+ página\SpecialChar \@.
+ Las versiones contenidas en la colección se ordenan en orden descendient
+e por fecha de registro de la versión de la fila\SpecialChar \@.
+ Cada página se representa
+ con enlaces a la página siguiente con el tipo de relación 
+\family typewriter
+next
+\family default
+, y a la página anterior con el tipo de relación 
+\family typewriter
+previous
+\family default
+\SpecialChar \@.
+ Como la colección de versiones activas de una tabla es el objeto de un
+ enlace con el tipo de relación 
+\family typewriter
+describes
+\family default
+ que proviene del recurso que representa a la tabla, se establece también
+ el enlace inverso desde la colección de versiones activas hacia la representaci
+ón de la tabla con el tipo de relación 
+\family typewriter
+describedby
+\family default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Los elementos de la colección se enlazan con el tipo de relación 
+\family typewriter
+item
+\family default
+\SpecialChar \@.
+ Finalmente, se proveen varios tipos de descripciones de acciones especiales,
+ similares a formularios:
+\end_layout
+
+\begin_layout Itemize
+Para agregar una fila nueva a la colección, se provee una acción 
+\family typewriter
+insert
+\family default
+ que usará el método 
+\family typewriter
+POST
+\family default
+ de HTTP sobre la colección de versiones activas con los datos de la fila
+ nueva a crear en los parámetros de la acción\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Itemize
+Para filtrar los elementos de la colección, se provee una acción 
+\family typewriter
+search
+\family default
+ que usará el método 
+\family typewriter
+GET
+\family default
+ de HTTP sobre la colección de versiones activas y permite especificar valores
+ para cada columna y obtener una colección restringida a las versiones activas
+ de filas que tengan esos valores en las columnas correspondientes\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Itemize
+Para expandir las opciones de paginación de la colección, se provee una
+ acción 
+\family typewriter
+paginate
+\family default
+ que usará el método 
+\family typewriter
+GET
+\family default
+ de HTTP sobre la colección de versiones activas y que recibe como parámetros
+ el número de elementos a mostrar en cada página y el número de elementos
+ de desplazamiento inicial\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -395,25 +562,20 @@ TODO
 \end_layout
 
 \begin_layout Subsection
-Representaciones
-\end_layout
-
-\begin_layout Standard
-Una de las restricciones fundamentales para el diseño de un servicio REST
- es que las representaciones de estados de los recursos estén en un formato
- de hipertexto que especifique en sí mismo las transiciones de estado que
- pueden efectuarse sobre los recursos, así como las transiciones de navegación
- por enlaces entre los recursos\SpecialChar \@.
- Entre los formatos establecidos que permiten
- esto, algunos se basan en XML y otros en JSON
-\end_layout
-
-\begin_layout Subsection
 Interfaz administrativa
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
 TODO: hablar del admin como formato HTML del API, y el Siren Browser
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

@@ -171,8 +171,8 @@ in this case.  Something like `?embed` in the query string.
           ]
         }
 
-      , { "name": "limit"
-        , "title": "Limit"
+      , { "name": "paginate"
+        , "title": "Paginate"
         , "method": "GET"
         , "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/rows"
         , "fields":
@@ -202,7 +202,7 @@ in this case.  Something like `?embed` in the query string.
 
 
 
-# Versions
+## Versions
 
 Note:
 This example has a successor version and a revocation timestamp, so
@@ -221,8 +221,8 @@ example of how deletion actions would look.
       }
 
     , "metadata":
-      { "timestamp": "2014-01-14T22:30:11,569292680-0430"
-      , "revocation": "2014-01-14T22:31:21,965875745-0430"
+      { "timestamp": "2014-01-14 22:30:11.569292680-04:30"
+      , "revocation": "2014-01-14 22:31:21.965875745-04:30"
       }
 
     , "links":
