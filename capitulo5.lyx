@@ -610,8 +610,12 @@ La única propiedad de la colección es el número de filas totales pres
 \backslash
 entes en ella, y se incluye independientemente de la cantidad de elementos
  por página\SpecialChar \@.
-Cada página se representa con enlaces a la página siguiente con
- el tipo de relación 
+
+\end_layout
+
+\begin_layout Standard
+Cada página incluye enlaces a la página siguiente con el tipo de relación
+ 
 \family typewriter
 next
 \family default
@@ -705,6 +709,108 @@ a como un recurso\SpecialChar \@.
 
 \end_layout
 
+\begin_layout Standard
+Se identifica al recurso asociado a una versión de una fila de una tabla
+ con la ruta 
+\family typewriter
+/
+\series bold
+tabla
+\series default
+/version/
+\series bold
+versión
+\family default
+\series default
+, donde 
+\family typewriter
+\series bold
+tabla
+\family default
+\series default
+ es el nombre de la tabla y 
+\family typewriter
+\series bold
+versión
+\family default
+\series default
+ es la identificación de la fila de la versión en la bitácora de versiones
+ correspondiente\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Las versiones de filas se enlazan con la colección de filas activas de la
+ tabla correspondiente con el tipo de relación 
+\family typewriter
+item
+\family default
+ incluso cuando no sean versiones activas; esto facilita la navegación del
+ API por aumentar su regularidad\SpecialChar \@.
+ Todas las versiones de filas enlazan a
+ sus versiones predecesoras y sucesoras con el tipo de relación 
+\family typewriter
+predecessor-version
+\family default
+ o 
+\family typewriter
+successor-version
+\family default
+, respectivamente, usando las rutas 
+\family typewriter
+/
+\series bold
+tabla
+\series default
+/version/
+\series bold
+versión
+\series default
+/predecessor
+\family default
+ y 
+\family typewriter
+/
+\series bold
+tabla
+\series default
+/version/
+\series bold
+versión
+\series default
+/successor
+\family default
+, que indicarán redirección a la ubicación canónica de la versión adecuada
+ si existiera, y de lo contrario indicarán un error\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+TODO: DELETE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+TODO: PUT
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Interfaz administrativa
 \end_layout
@@ -715,6 +821,16 @@ status open
 
 \begin_layout Plain Layout
 TODO: hablar del admin como formato HTML del API, y el Siren Browser
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+TODO: hablar del interpretador de reglas y de Blockly (con screenshots)
 \end_layout
 
 \end_inset

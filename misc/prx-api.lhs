@@ -231,7 +231,6 @@ example of how deletion actions would look.
       , { "rel": ["predecessor-version"], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/c4462cf1-33d8-4123-8a05-a2ee318ff141/predecessor-version" }
       , { "rel": ["successor-version"  ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/c4462cf1-33d8-4123-8a05-a2ee318ff141/successor-version"   }
 --    , { "rel": ["version-history"    ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/c4462cf1-33d8-4123-8a05-a2ee318ff141/history"             }
-      , { "rel": ["type"               ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica"                                                                  }
       , { "rel": ["collection"         ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/rows"                                                             }
 
       , { "rel": ["https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/asociación+farmacológica"]
