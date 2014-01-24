@@ -329,7 +329,7 @@ Se diseñó una capa de abstracción de datos para las aplicaciones en forma
  REST para facilitar la manipulación del modelo de datos nuevo en forma
  abstracta y flexible por parte de las aplicaciones de la empresa\SpecialChar \@.
  Se utilizó
- el formato HAL para los mensajes del servicio para facilitar la construcción
+ el formato Siren para los mensajes del servicio para facilitar la construcción
  dinámica y automática de herramientas de manipulación del servicio para
  ajustarse a los principios de la arquitectura REST\SpecialChar \@.
  Se implantó este servicio
