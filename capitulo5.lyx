@@ -640,12 +640,12 @@ describedby
 \end_layout
 
 \begin_layout Standard
-Los elementos de la colección se enlazan con el tipo de relación 
+Los elementos de la colección se enlazarán con el tipo de relación 
 \family typewriter
 item
 \family default
 \SpecialChar \@.
- Finalmente, se proveen varios tipos de descripciones de acciones especiales,
+ Finalmente, se proveerán varios tipos de descripciones de acciones especiales,
  similares a formularios:
 \end_layout
 
@@ -660,6 +660,9 @@ POST
 \family default
  de HTTP sobre la colección de versiones activas con los datos de la fila
  nueva a crear en los parámetros de la acción\SpecialChar \@.
+ Esta acción causará un error
+ si la inserción causaría la violación de una restricción de integridad
+ de la base de datos\SpecialChar \@.
 
 \end_layout
 
@@ -786,28 +789,39 @@ versión
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-TODO: DELETE
+En caso de que la versión en cuestión sea activa, se proveerán varios tipos
+ de descripciones de acciones especiales:
 \end_layout
 
-\end_inset
-
+\begin_layout Itemize
+La acción 
+\family typewriter
+delete
+\family default
+ usará el método 
+\family typewriter
+DELETE
+\family default
+ de HTTP sobre la versión, y resultará en su revocación, o en un error si
+ revocarla causaría la violación de una restricción de integridad de la
+ base de datos\SpecialChar \@.
+ Esta acción no recibe parámetros\SpecialChar \@.
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-TODO: PUT
-\end_layout
-
-\end_inset
-
+\begin_layout Itemize
+La acción 
+\family typewriter
+update
+\family default
+ usará el método 
+\family typewriter
+PUT
+\family default
+ de HTTP sobre la versión, y resultará en la revocación y sucesión de la
+ versión por una nueva cuyos datos serán incluidos como parámetros en el
+ cuerpo de la solicitud, o producirá un error si la sucesión causaría la
+ violación de una restricción de integridad de la base de datos\SpecialChar \@.
 
 \end_layout
 
