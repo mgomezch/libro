@@ -25,16 +25,17 @@
 # Resources
 
 Resource                                   Route
------------------------------------------- -------------------------------------------------------------------------
+------------------------------------------ --------------------------------------------------------------------------------
 Table collection                           `/v1/database`
 Table column metadata collection           `/v1/database/«table name»`
 Column metadata                            `/v1/database/«table name»/column/«column name»`
 Table active row collection                `/v1/database/«table name»/rows`
+Table active row collection page           `/v1/database/«table name»/rows?offset=«initial offset»&limit=«items per page»`
 Table row version data                     `/v1/database/«table name»/version/«row version identifier»`
 Redirect, table row version data           `/v1/database/«table name»/version/«row version identifier»/predecessor`
 Redirect, table row version data           `/v1/database/«table name»/version/«row version identifier»/successor`
 <!-- Version-centric row history sequence  `/v1/database/«table name»/version/«row version identifier»/history` -->
------------------------------------------- -------------------------------------------------------------------------
+------------------------------------------ --------------------------------------------------------------------------------
 
 # Entry point
 
@@ -65,7 +66,7 @@ documentation, diagrams or other forms of metadata.  Specifically,
 it should not be used to generate URIs — that’s what links and
 actions are for.
 
-    → GET /Variante+de+asociación+farmacológica
+    → GET /v1/database/Variante+de+asociación+farmacológica
     Accept: application/vnd.siren+json
 
     ← 200 OK
@@ -101,7 +102,7 @@ at least support references perhaps with some sort of autocompletion
 UI, enumerated types with selectors, and rule ASTs with the Blockly
 GUI.
 
-    → GET /Variante+de+asociación+farmacológica/column/asociación+farmacológica
+    → GET /v1/database/Variante+de+asociación+farmacológica/column/asociación+farmacológica
 
     ← 200 OK
     { "properties":
@@ -125,7 +126,7 @@ embedded links (as an optimization) with some request parameter.  There
 should be stronger limits on the number of requested representations
 in this case.  Something like `?embed` in the query string.
 
-    → GET /Variante+de+asociación+farmacológica/rows
+    → GET /v1/database/Variante+de+asociación+farmacológica/rows
     Accept: application/vnd.siren+json
 
     ← 302 Found
@@ -210,7 +211,7 @@ it’s been succeeded by an update.  Therefore, it does not make sense
 for deletion to be an available action.  It’s provided solely as an
 example of how deletion actions would look.
 
-    → GET /Variante+de+asociación+farmacológica/version/c4462cf1-33d8-4123-8a05-a2ee318ff141
+    → GET /v1/database/Variante+de+asociación+farmacológica/version/c4462cf1-33d8-4123-8a05-a2ee318ff141
     Accept: application/vnd.siren+json
 
     ← 200 OK

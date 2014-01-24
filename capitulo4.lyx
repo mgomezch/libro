@@ -812,6 +812,13 @@ triggers
  escritos en PL/pgSQL para poder manipular las vistas directamente y obtener
  el comportamiento deseado según la técnica descrita para registro de la
  historia de los datos y referencias a versiones\SpecialChar \@.
+ La única diferencia entre
+ la técnica descrita y la implantada por Squealer es que en vez de generar
+ números de secuencia para identificar identidades y versiones, se genera
+ en cada caso un UUID aleatorio con el propósito de evitar inconvenientes
+ en caso de que la implantación de la base de datos se descentralice en
+ el futuro, lo cual está previsto en los planes de la empresa aunque escapa
+ del alcance de este proyecto de pasantías\SpecialChar \@.
 
 \end_layout
 

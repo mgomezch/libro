@@ -346,6 +346,22 @@ Además, se representa como recursos del API REST a los metadatos que describen
 \end_layout
 
 \begin_layout Standard
+Cada URI que identifica a un recurso del API llevará como prefijo la ruta
+ raíz del API de la capa de datos, que será 
+\family typewriter
+/v1/database
+\family default
+ para indicar que se desea interactuar con la versión 1 del API, lo cual
+ permitirá proveer versiones futuras del API en el mismo dominio y preservar
+ la interfaz de versiones anteriores durante etapas de migración, y a la
+ vez se agrupa la parte del API correspondiente al acceso de bajo nivel
+ a las tablas de la base de datos, lo cual reduce el potencial de conflictos
+ de nombres con desarrollos posteriores del API que trabajen a un nivel
+ de abstracción superior al de la capa de datos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
@@ -367,14 +383,15 @@ Colección de las tablas
 El primer recurso que se identifica, que además será el punto de entrada
  del API, corresponde a la colección que incluye a cada una de las tablas\SpecialChar \@.
 
- Se identifica a este recurso con la ruta 
+\end_layout
+
+\begin_layout Standard
+Se identifica a este recurso con la ruta raíz del API de la capa de datos:
+ 
 \family typewriter
-/database
+/
 \family default
-, y todos los demás recursos se identificarán con rutas que tengan esta
- como prefijo; esto reduce el potencial de conflictos de nombres con desarrollos
- posteriores del API que trabajen a un nivel de abstracción superior al
- de la capa de datos\SpecialChar \@.
+\SpecialChar \@.
 
 \end_layout
 
@@ -397,6 +414,25 @@ La representación de cada tabla incluirá una descripción de qué clase de
  información se almacena en ella, con el propósito de proveer parte de la
  documentación del sistema dentro del mismo, donde puede encontrarse con
  facilidad\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Se identifica al recurso asociado a una tabla con la ruta 
+\family typewriter
+/
+\series bold
+tabla
+\family default
+\series default
+, donde 
+\family typewriter
+\series bold
+tabla
+\family default
+\series default
+ es el nombre de la tabla debidamente codificado para poder representarse
+ en un URL de HTTP\SpecialChar \@.
 
 \end_layout
 
@@ -441,6 +477,35 @@ in-band
 \end_layout
 
 \begin_layout Standard
+Se identifica al recurso asociado a una columna de una tabla con la ruta
+ 
+\family typewriter
+/
+\series bold
+tabla
+\series default
+/column/
+\series bold
+columna
+\family default
+\series default
+, donde 
+\family typewriter
+\series bold
+tabla
+\family default
+\series default
+ es el nombre de la tabla y 
+\family typewriter
+\series bold
+columna
+\family default
+\series default
+ es el de la columna, ambos debidamente codificados\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
 Cada columna enlazará a la tabla a la cual pertenece con el tipo de relación
  
 \family typewriter
@@ -460,7 +525,8 @@ Cada tabla tiene asociada la colección de todas las versiones de sus filas
  Como estas colecciones pueden ser de gran tamaño, sería
  inadecuado producir una representación con enlaces a todas las filas en
  la colección\SpecialChar \@.
- Para evitar este problema, se divide el recurso de colección
+ Para evitar este problema, se ordena a la colección por la
+ fecha de registro de la versión desde la más reciente, y divide la secuencia
  en páginas: consultar el recurso principal redirigirá a un recurso con
  parámetros que indican que se pide una página con una cantidad pequeña
  de elementos de la colección\SpecialChar \@.
@@ -468,13 +534,84 @@ Cada tabla tiene asociada la colección de todas las versiones de sus filas
 \end_layout
 
 \begin_layout Standard
-La única propiedad de la colección es el número de filas totales presentes
- en ella, y se incluye independientemente de la cantidad de elementos por
- página\SpecialChar \@.
- Las versiones contenidas en la colección se ordenan en orden descendient
-e por fecha de registro de la versión de la fila\SpecialChar \@.
- Cada página se representa
- con enlaces a la página siguiente con el tipo de relación 
+Se identifica al recurso asociado a la colección de versiones activas de
+ filas de una tabla con la ruta 
+\family typewriter
+/
+\series bold
+tabla
+\series default
+/rows
+\family default
+, donde 
+\family typewriter
+\series bold
+tabla
+\family default
+\series default
+ es el nombre de la tabla\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Los recursos correspondientes a vistas paginadas de la colección se identifican
+ con la ruta de la colección principal con parámetros que especifican el
+ alcance de la vista: 
+\family typewriter
+/
+\series bold
+tabla
+\series default
+/rows?offset=
+\series bold
+inicio
+\series default
+&limit=
+\series bold
+límite
+\family default
+\series default
+, donde 
+\family typewriter
+\series bold
+tabla
+\family default
+\series default
+ es el nombre de la tabla, 
+\family typewriter
+\series bold
+inicio
+\family default
+\series default
+ es el desplazamiento desde el inicio de la colección, y 
+\family typewriter
+\series bold
+límite
+\family default
+\series default
+ es la cantidad máxima de elementos a mostrar en la página solicitada\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Los recursos correspondientes a vistas filtradas de la colección se identifican
+ con la ruta de la colección principal o paginada, con parámetros que especifica
+n los criterios de selección de elementos\SpecialChar \@.
+ Cada parámetro corresponderá a
+ la igualdad de una columna a un valor en forma textual y adecuadamente
+ codificada; en el caso de columnas que sean referencias, los valores serán
+ representados como el URI que identifica al recurso asociado a la versión
+ referida\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La única propiedad de la colección es el número de filas totales pres
+\backslash
+entes en ella, y se incluye independientemente de la cantidad de elementos
+ por página\SpecialChar \@.
+Cada página se representa con enlaces a la página siguiente con
+ el tipo de relación 
 \family typewriter
 next
 \family default
@@ -558,7 +695,14 @@ Versiones de filas
 \end_layout
 
 \begin_layout Standard
-TODO
+Cada versión histórica de una fila en una tabla de la base de datos se represent
+a como un recurso\SpecialChar \@.
+ Las propiedades del recurso serán los valores en cada
+ columna de la fila asociados al nombre de la columna correspondiente\SpecialChar \@.
+ Se
+ proveerán además, como metadatos, la fecha de registro de la versión, y
+ si ha sido revocada o sucedida, su fecha de revocación o sucesión\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Subsection
