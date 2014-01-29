@@ -1,0 +1,13 @@
+{ "links":
+  [ { "rel": ["self"]
+    , "href": "/"
+    }
+  , { "rel": ["item"]
+    , "href": "/Asociación+farmacológica"
+    }
+  , { "rel": ["item"]
+    , "href": "/Variante+de+asociación+farmacológica"
+    }
+  ...
+  ]
+}

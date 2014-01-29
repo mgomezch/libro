@@ -1,0 +1,80 @@
+{ "properties":
+  { "count": 1337
+  }
+
+, "entities":
+  [ { "rel": "item"
+    , "href": "/Variante+de+asociación+farmacológica/version/3e7c1b67"
+    }
+  , { "rel": "item"
+    , "href": "/Variante+de+asociación+farmacológica/version/53d11f52"
+    }
+  , { "rel": "item"
+    , "href": "/Variante+de+asociación+farmacológica/version/45a1556d"
+    }
+  , { "rel": "item"
+    , "href": "/Variante+de+asociación+farmacológica/version/b5616572"
+    }
+  , { "rel": "item"
+    , "href": "/Variante+de+asociación+farmacológica/version/6e9a49d4"
+    }
+  ]
+
+, "links":
+  [ { "rel": ["self"]
+    , "href": "/Variante+de+asociación+farmacológica/rows?offset=0&limit=5"
+    }
+  , { "rel": ["next"]
+    , "href": "/Variante+de+asociación+farmacológica/rows?offset=5&limit=5"
+    }
+  , { "rel": ["describedby"]
+    , "href": "/Variante+de+asociación+farmacológica"
+    }
+  ]
+
+, "actions":
+  [ { "name": "insert"
+    , "title": "Insert"
+    , "method": "POST"
+    , "href": "/Variante+de+asociación+farmacológica/rows"
+    , "fields":
+      [ { "name": "asociación farmacológica"
+        , "type": "/Asociación+farmacológica"
+        }
+      , { "name": "variante"
+        , "type": "/Variante+de+asociación+farmacológica/column/variante"
+        }
+      , { "name": "dosis máxima diaria"
+        , "type": "/Variante+de+asociación+farmacológica/column/dosis+máxima+diaria"
+        }
+      ]
+    }
+
+  , { "name": "paginate"
+    , "title": "Paginate"
+    , "method": "GET"
+    , "href": "/Variante+de+asociación+farmacológica/rows"
+    , "fields":
+      [ { "name": "offset", "type": "number", "value": 0 }
+      , { "name": "limit" , "type": "number", "value": 5 }
+      ]
+    }
+
+  , { "name": "search"
+    , "title": "Search"
+    , "method": "GET"
+    , "href": "/Variante+de+asociación+farmacológica/rows"
+    , "fields":
+      [ { "name": "asociación farmacológica"
+        , "type": "/Variante+de+asociación+farmacológica/column/asociación+farmacológica"
+        }
+      , { "name": "variante"
+        , "type": "/Variante+de+asociación+farmacológica/column/variante"
+        }
+      , { "name": "dosis máxima diaria"
+        , "type": "/Variante+de+asociación+farmacológica/column/dosis+máxima+diaria"
+        }
+      ]
+    }
+  ]
+}

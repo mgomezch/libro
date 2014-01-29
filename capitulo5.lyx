@@ -56,6 +56,7 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\listings_params "basicstyle={\ttfamily\small}"
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -386,12 +387,7 @@ El primer recurso que se identifica, que además será el punto de entrada
 \end_layout
 
 \begin_layout Standard
-Se identifica a este recurso con la ruta raíz del API de la capa de datos:
- 
-\family typewriter
-/
-\family default
-\SpecialChar \@.
+Se identifica a este recurso con la ruta raíz del API de la capa de datos\SpecialChar \@.
 
 \end_layout
 
@@ -402,6 +398,57 @@ La colección de tablas estará enlazada con cada tabla que la compone con
 item
 \family default
 \SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Por ejemplo, una petición 
+\family typewriter
+GET
+\family default
+ a la ruta del recurso que solicite el formato Siren producirá una respuesta
+ como esta:
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Las referencias en el servicio real serán presentadas como URIs absolutos
+ incluyendo el protocolo, el 
+\emph on
+hostname
+\emph default
+ del API, y la ruta raíz del API\SpecialChar \@.
+ Por ejemplo, en el caso del segundo enlace
+ de este ejemplo, el servicio responderá en realidad con el URI 
+\family typewriter
+https://api.pcaaudit.com/v1/database/Asociación+farmacológica
+\family default
+\SpecialChar \@.
+ Los ejemplos presentados en este informe omiten la primera parte de los
+ URIs únicamente por razones de legibilidad\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "listings/api/root.json"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tb"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por razones de legibilidad, se presentan solo dos enlaces hacia tablas\SpecialChar \@.
+ En
+ una respuesta real, habrá un enlace por cada tabla en la base de datos\SpecialChar \@.
 
 \end_layout
 
@@ -421,15 +468,13 @@ La representación de cada tabla incluirá una descripción de qué clase de
 Se identifica al recurso asociado a una tabla con la ruta 
 \family typewriter
 /
+\family default
 \series bold
 tabla
-\family default
 \series default
 , donde 
-\family typewriter
 \series bold
 tabla
-\family default
 \series default
  es el nombre de la tabla debidamente codificado para poder representarse
  en un URL de HTTP\SpecialChar \@.
@@ -458,6 +503,26 @@ describes
 
 \end_layout
 
+\begin_layout Standard
+Por ejemplo, una petición 
+\family typewriter
+GET
+\family default
+ a la ruta del recurso que solicite el formato Siren producirá una respuesta
+ como esta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "listings/api/table.json"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tb"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Columnas
 \end_layout
@@ -481,25 +546,23 @@ Se identifica al recurso asociado a una columna de una tabla con la ruta
  
 \family typewriter
 /
+\family default
 \series bold
 tabla
+\family typewriter
 \series default
 /column/
+\family default
 \series bold
 columna
-\family default
 \series default
 , donde 
-\family typewriter
 \series bold
 tabla
-\family default
 \series default
  es el nombre de la tabla y 
-\family typewriter
 \series bold
 columna
-\family default
 \series default
  es el de la columna, ambos debidamente codificados\SpecialChar \@.
 
@@ -512,6 +575,25 @@ Cada columna enlazará a la tabla a la cual pertenece con el tipo de relación
 collection
 \family default
 \SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Por ejemplo, una petición 
+\family typewriter
+GET
+\family default
+ a la ruta del recurso producirá una respuesta como esta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "listings/api/column.json"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tb"
+
+\end_inset
+
 
 \end_layout
 
@@ -538,16 +620,16 @@ Se identifica al recurso asociado a la colección de versiones activas de
  filas de una tabla con la ruta 
 \family typewriter
 /
+\family default
 \series bold
 tabla
+\family typewriter
 \series default
 /rows
 \family default
 , donde 
-\family typewriter
 \series bold
 tabla
-\family default
 \series default
  es el nombre de la tabla\SpecialChar \@.
 
@@ -559,23 +641,25 @@ Los recursos correspondientes a vistas paginadas de la colección se identifican
  alcance de la vista: 
 \family typewriter
 /
+\family default
 \series bold
 tabla
+\family typewriter
 \series default
 /rows?offset=
+\family default
 \series bold
 inicio
+\family typewriter
 \series default
 &limit=
+\family default
 \series bold
 límite
-\family default
 \series default
 , donde 
-\family typewriter
 \series bold
 tabla
-\family default
 \series default
  es el nombre de la tabla, 
 \family typewriter
@@ -584,10 +668,8 @@ inicio
 \family default
 \series default
  es el desplazamiento desde el inicio de la colección, y 
-\family typewriter
 \series bold
 límite
-\family default
 \series default
  es la cantidad máxima de elementos a mostrar en la página solicitada\SpecialChar \@.
 
@@ -697,6 +779,26 @@ GET
 
 \end_layout
 
+\begin_layout Standard
+Por ejemplo, una petición 
+\family typewriter
+GET
+\family default
+ a la ruta del recurso que solicite el formato Siren producirá una respuesta
+ como esta:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "listings/api/collection.json"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tb"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Versiones de filas
 \end_layout
@@ -717,25 +819,23 @@ Se identifica al recurso asociado a una versión de una fila de una tabla
  con la ruta 
 \family typewriter
 /
+\family default
 \series bold
 tabla
+\family typewriter
 \series default
 /version/
+\family default
 \series bold
 versión
-\family default
 \series default
 , donde 
-\family typewriter
 \series bold
 tabla
-\family default
 \series default
  es el nombre de la tabla y 
-\family typewriter
 \series bold
 versión
-\family default
 \series default
  es la identificación de la fila de la versión en la bitácora de versiones
  correspondiente\SpecialChar \@.
@@ -762,29 +862,41 @@ successor-version
 , respectivamente, usando las rutas 
 \family typewriter
 /
+\family default
 \series bold
 tabla
+\family typewriter
 \series default
 /version/
+\family default
 \series bold
 versión
+\family typewriter
 \series default
 /predecessor
 \family default
  y 
 \family typewriter
 /
+\family default
 \series bold
 tabla
+\family typewriter
 \series default
 /version/
+\family default
 \series bold
 versión
+\family typewriter
 \series default
 /successor
 \family default
 , que indicarán redirección a la ubicación canónica de la versión adecuada
  si existiera, y de lo contrario indicarán un error\SpecialChar \@.
+ Cada referencia que
+ una versión haga a otra se representará como un enlace cuyo tipo de relación
+ será el URI del recurso que representa a la columna correspondiente a la
+ referencia, y cuyo valor será el URI de la versión referida\SpecialChar \@.
 
 \end_layout
 
@@ -825,21 +937,97 @@ PUT
 
 \end_layout
 
-\begin_layout Subsection
-Interfaz administrativa
-\end_layout
-
 \begin_layout Standard
-\begin_inset Note Comment
+Por ejemplo, una petición 
+\family typewriter
+GET
+\family default
+ a la ruta del recurso que solicite el formato Siren producirá una respuesta
+ como esta:
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-TODO: hablar del admin como formato HTML del API, y el Siren Browser
+Este ejemplo incluye metadatos de fecha de revocación y un enlace a una
+ versión sucesora, y también los controles asociados a modificación o eliminació
+n de la fila\SpecialChar \@.
+ Sin embargo, una versión revocada no mostrará controles para
+ actualización, y una versión activa, que sí mostrará los controles, no
+ mostrará fecha de revocación ni un enlace a una versión sucesora\SpecialChar \@.
+ Se muestra
+ un ejemplo con ambos datos para hacer al ejemplo más ilustrativo, pero
+ esta respuesta no podrá ocurrir en el API real\SpecialChar \@.
+
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "listings/api/version.json"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tb"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Interfaz administrativa
+\end_layout
+
+\begin_layout Standard
+La estructura uniforme del API y permite que sea implantado de manera genérica
+ únicamente con la provisión de la información estructural y descriptiva
+ de la base de datos\SpecialChar \@.
+ Por lo tanto, la implantación del API puede ser generada
+ sin mayor dificultad a partir de la misma especificación del modelo de
+ datos usada para generar su implantación en SQL\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Además, la representación de los estados de recursos del API con un formato
+ de hipertexto como Siren incluye toda la información necesaria para generar
+ una interfaz que permita manipular los recursos, ya que sus representaciones
+ especifican enlaces de navegación con los cuales puede explorarse el grafo
+ de recursos modelados en el API, así como acciones que pueden efectuarse
+ para manipular sus estados\SpecialChar \@.
+ Los enlaces entre recursos pueden representarse
+ en una vista 
+\emph on
+Web
+\emph default
+ como enlaces simples, y las acciones como formularios\SpecialChar \@.
+ Por lo tanto, una
+ interfaz 
+\emph on
+Web
+\emph default
+ para la administración de los datos representados como recursos en el API
+ también puede implantarse de manera genérica e independiente de la estructura
+ de los datos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Estas propiedades favorecen la extensibilidad y la facilidad de refactorización,
+ ya que tanto el API y como la interfaz administrativa que lo utiliza directamen
+te no tendrían una implantación ligada al modelo de datos específico, y
+ quedarían automáticamente adaptadas a cualquier modificación o extensión
+ futura del modelo de datos\SpecialChar \@.
+ Además, se excluye enteramente la posibilidad
+ de inconsistencias entre el modelo de datos y la implantación del API y
+ su interfaz administrativa, ya que no existirá código ligado a una versión
+ específica del modelo de datos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 

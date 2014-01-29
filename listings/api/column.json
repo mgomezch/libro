@@ -1,0 +1,12 @@
+{ "properties":
+  { "comment": "Asociación farmacológica de la cual deriva la variante."
+  }
+
+, "links":
+  [ { "rel": ["self"]
+    , "href": "/Variante+de+asociación+farmacológica/column/variante" }
+  , { "rel": ["collection"]
+    , "href": "/Variante+de+asociación+farmacológica"
+    }
+  ]
+}

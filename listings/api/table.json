@@ -1,0 +1,29 @@
+{ "properties":
+  { "table name": "Variante de asociación farmacológica"
+  , "comment": "Forma distinguida de una asociación farmacológica según su aplicación terapéutica para grupos fisiológicos o patológicos particulares."
+  }
+
+, "entities":
+  [ { "rel": "item"
+    , "href": "/Variante+de+asociación+farmacológica/column/asociación+farmacológica"
+    }
+  , { "rel": "item"
+    , "href": "/Variante+de+asociación+farmacológica/column/variante"
+    }
+  , { "rel": "item"
+    , "href": "/Variante+de+asociación+farmacológica/column/dosis+máxima+diaria"
+    }
+  ]
+
+, "links":
+  [ { "rel": ["self"]
+    , "href": "/Variante+de+asociación+farmacológica"
+    }
+  , { "rel": ["describes" ]
+    , "href": "/Variante+de+asociación+farmacológica/rows"
+    }
+  , { "rel": ["collection"]
+    , "href": "/"
+    }
+  ]
+}

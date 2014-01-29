@@ -78,7 +78,7 @@ actions are for.
     , "entities":
       [ { "rel": "item", "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/asociación+farmacológica" }
       , { "rel": "item", "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/variante"                 }
-      , { "rel": "item", "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/dosis+máxima+diaria"                      }
+      , { "rel": "item", "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/dosis+máxima+diaria"      }
       ]
 
     , "links":
@@ -232,6 +232,7 @@ example of how deletion actions would look.
       , { "rel": ["successor-version"  ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/c4462cf1-33d8-4123-8a05-a2ee318ff141/successor-version"   }
 --    , { "rel": ["version-history"    ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/version/c4462cf1-33d8-4123-8a05-a2ee318ff141/history"             }
       , { "rel": ["collection"         ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/rows"                                                             }
+      , { "rel": ["profile"            ], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica"                                                                  }
 
       , { "rel": ["https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica/column/asociación+farmacológica"]
         , "href": "https://api.pcaaudit.com/v1/database/Asociación+farmacológica/version/44bc82d6-b1da-4368-92e2-93c561a65493"

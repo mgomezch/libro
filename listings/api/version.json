@@ -1,0 +1,59 @@
+{ "properties":
+  { "asociación farmacológica": "/Asociación+farmacológica/version/44bc82d6"
+  , "variante": "uso dermatológico"
+  , "dosis máxima diaria": 42
+  }
+
+, "metadata":
+  { "timestamp": "2014-01-14 22:30:11.569292680-04:30"
+  , "revocation": "2014-01-14 22:31:21.965875745-04:30"
+  }
+
+, "links":
+  [ { "rel": ["self"]
+    , "href": "/Variante+de+asociación+farmacológica/version/c4462cf1"
+    }
+  , { "rel": ["predecessor-version"]
+    , "href": "/Variante+de+asociación+farmacológica/version/c4462cf1/predecessor-version"
+    }
+  , { "rel": ["successor-version"]
+    , "href": "/Variante+de+asociación+farmacológica/version/c4462cf1/successor-version"
+    }
+  , { "rel": ["version-history"]
+    , "href": "/Variante+de+asociación+farmacológica/version/c4462cf1/history"
+    }
+  , { "rel": ["collection"]
+    , "href": "/Variante+de+asociación+farmacológica/rows"
+    }
+  , { "rel": ["/Variante+de+asociación+farmacológica/column/asociación+farmacológica"]
+    , "href": "/Asociación+farmacológica/version/44bc82d6-b1da-4368-92e2-93c561a65493"
+    }
+  ]
+
+, "actions":
+  [ { "name": "delete"
+    , "title": "Delete"
+    , "method": "DELETE"
+    , "href": "/Variante+de+asociación+farmacológica/version/c4462cf1"
+    }
+  , { "name": "update"
+    , "title": "Update"
+    , "method": "PUT"
+    , "href": "/Variante+de+asociación+farmacológica/version/c4462cf1"
+    , "fields":
+      [ { "name": "asociación farmacológica"
+        , "type": "/Variante+de+asociación+farmacológica/column/asociación+farmacológica"
+        , "value": "/Asociación+farmacológica/version/44bc82d6"
+        }
+      , { "name": "variante"
+        , "type": "/Variante+de+asociación+farmacológica/column/variante"
+        , "value": "uso dermatológico"
+        }
+      , { "name": "dosis máxima diaria"
+        , "type": "/Variante+de+asociación+farmacológica/column/dosis+máxima+diaria"
+        , "value": 42
+        }
+      ]
+    }
+  ]
+}
