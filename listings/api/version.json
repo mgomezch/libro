@@ -19,14 +19,11 @@
   , { "rel": ["successor-version"]
     , "href": "/Variante+de+asociación+farmacológica/version/c4462cf1/successor-version"
     }
-  , { "rel": ["version-history"]
-    , "href": "/Variante+de+asociación+farmacológica/version/c4462cf1/history"
-    }
   , { "rel": ["collection"]
     , "href": "/Variante+de+asociación+farmacológica/rows"
     }
   , { "rel": ["/Variante+de+asociación+farmacológica/column/asociación+farmacológica"]
-    , "href": "/Asociación+farmacológica/version/44bc82d6-b1da-4368-92e2-93c561a65493"
+    , "href": "/Asociación+farmacológica/version/44bc82d6"
     }
   ]
 
