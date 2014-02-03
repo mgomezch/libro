@@ -55,10 +55,10 @@ customHeadersFooters
 \paperfontsize 12
 \spacing onehalf
 \use_hyperref true
-\pdf_title "Diseño e implantación de un nuevo"
-\pdf_author "Manuel Ignacio Gómez Chacón"
-\pdf_subject "Informe de pasantía larga"
-\pdf_keywords "Universidad Simón Bolívar, USB, PRX Control Solutions, PRX, pasantía, bases de datos"
+\pdf_title "Nuevo modelo de datos de PRX Control Solutions"
+\pdf_author "Manuel Gomez"
+\pdf_subject "Informe de pasantia larga"
+\pdf_keywords "Universidad Simon Bolivar, USB, PRX Control Solutions, PRX, pasantia, bases de datos"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
@@ -472,6 +472,11 @@ LatexCommand tableofcontents
 
 \begin_layout Standard
 
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+
 \lang english
 \begin_inset ERT
 status open
@@ -488,7 +493,7 @@ addcontentsline{toc}{chapter}{Índice de cuadros}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset FloatList table
 
 \end_inset
@@ -496,8 +501,13 @@ addcontentsline{toc}{chapter}{Índice de cuadros}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -771,6 +781,25 @@ status open
 \begin_inset CommandInset include
 LatexCommand include
 filename "capitulo5.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Conclusiones
+status open
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "conclusiones.lyx"
 
 \end_inset
 

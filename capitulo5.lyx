@@ -1128,6 +1128,94 @@ s de la entidad de Siren obtenida como representación de un recurso del
 \end_layout
 
 \begin_layout Standard
+La figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:siren-browser-form"
+
+\end_inset
+
+ muestra el formulario generado para la acción 
+\emph on
+Paginate
+\emph default
+ disponible en la entidad mostrada en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:siren-browser"
+
+\end_inset
+
+\SpecialChar \@.
+ La aplicación 
+\emph on
+Siren Browser
+\emph default
+ genera controles para edición de valores de los tipos soportados por elementos
+ 
+\family typewriter
+input
+\family default
+ de HTML\SpecialChar \@.
+ Desarrollos posteriores a este proyecto incluirán la adaptación
+ de esta aplicación para permitir la manipulación directa de referencias
+ con una interfaz que brinde mayor facilidad y usabilidad; actualmente,
+ una referencia se manipula como la forma textual del URI que identifica
+ al recurso asociado al objeto referido\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/siren-browser-form.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Vista del formulario generado para una acción de una entidad en el prototipo
+ de interfaz administrativa 
+\emph on
+Web
+\emph default
+ para la base de datos usando la aplicación 
+\emph on
+Siren Browser
+\emph default
+\SpecialChar \@.
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:siren-browser-form"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
