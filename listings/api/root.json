@@ -2,6 +2,8 @@
   [ { "rel": ["self"]
     , "href": "/"
     }
+  ]
+, "entities":
   , { "rel": ["item"]
     , "href": "/Asociación+farmacológica"
     }

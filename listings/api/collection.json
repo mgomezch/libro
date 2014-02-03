@@ -1,5 +1,7 @@
 { "properties":
   { "count": 1337
+  , "limit": 5
+  , "offset": 0
   }
 
 , "entities":

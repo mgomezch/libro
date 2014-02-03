@@ -688,10 +688,10 @@ n los criterios de selección de elementos\SpecialChar \@.
 \end_layout
 
 \begin_layout Standard
-La única propiedad de la colección es el número de filas totales pres
-\backslash
-entes en ella, y se incluye independientemente de la cantidad de elementos
- por página\SpecialChar \@.
+Las propiedades de la colección son el número de filas totales presentes
+ en ella, que se incluye independientemente de la cantidad de elementos
+ por página, así como la cantidad de elementos y el desplazamiento inicial
+ correspondiente a la página\SpecialChar \@.
 
 \end_layout
 
@@ -1024,6 +1024,106 @@ te no tendrían una implantación ligada al modelo de datos específico, y
  de inconsistencias entre el modelo de datos y la implantación del API y
  su interfaz administrativa, ya que no existirá código ligado a una versión
  específica del modelo de datos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+En efecto, una versión inicial de la interfaz administrativa se implantó
+ sencillamente tomando una aplicación 
+\emph on
+Web
+\emph default
+ existente de software libre que implanta un cliente genérico para APIs
+ que ofrezcan el formato Siren para representar los estados, enlaces y acciones
+ de sus recursos\SpecialChar \@.
+ Aunque esta interfaz genérica no está adaptada a los requerimie
+ntos de diseño gráfico de los productos de la empresa, provee la facilidad
+ de interactuar con los objetos de la base de datos a través del API REST
+ sin necesidad alguna de desarrollar o configurar una interfaz específica
+ para el modelo de datos desarrollado, por lo cual es un prototipo efectivo\SpecialChar \@.
+
+ Desarrollos futuros podrán adaptar esta interfaz administrativa genérica
+ a la identidad visual de la empresa, así como implantar modificaciones
+ a la presentación de los datos que favorezcan la usabilidad de la interfaz
+ administrativa de acuerdo a las necesidades específicas de sus usuarios\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/siren-browser.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Vista de entidad en el prototipo de interfaz administrativa 
+\emph on
+Web
+\emph default
+ para la base de datos usando la aplicación 
+\emph on
+Siren Browser
+\emph default
+\SpecialChar \@.
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:siren-browser"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:siren-browser"
+
+\end_inset
+
+ muestra la vista Web en la aplicación Siren Browser
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+TODO: referencia del Siren Browser
+\end_layout
+
+\end_inset
+
+ usada como prototipo para la interfaz administrativa\SpecialChar \@.
+ Se muestran las propiedade
+s de la entidad de Siren obtenida como representación de un recurso del
+ API, así como sus enlaces de navegación, sus entidades anidadas (que en
+ el caso mostrado en la figura son enlaces), y las acciones disponibles\SpecialChar \@.
+
+ El recurso mostrado corresponde a una página de la colección de las versiones
+ activas de las filas de una tabla\SpecialChar \@.
 
 \end_layout
 

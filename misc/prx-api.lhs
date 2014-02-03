@@ -45,7 +45,9 @@ Redirect, table row version data           `/v1/database/«table name»/version/
     ← 200 OK
     { "links":
       [ { "rel": ["self"], "href": "https://api.pcaaudit.com/v1/database"                                      }
-      , { "rel": ["item"], "href": "https://api.pcaaudit.com/v1/database/Asociación+farmacológica"             }
+      ]
+    , "entities":
+      [ { "rel": ["item"], "href": "https://api.pcaaudit.com/v1/database/Asociación+farmacológica"             }
       , { "rel": ["item"], "href": "https://api.pcaaudit.com/v1/database/Variante+de+asociación+farmacológica" }
       …
       ]
