@@ -231,14 +231,14 @@ tagless-final
  reglas de negocio en caso de que las demandas cambiantes de los clientes
  de la empresa requieran extensiones al sistema\SpecialChar \@.
  Las técnicas usuales de
- representación de árboles sintácticos abstractos de expresiones con tipos
- de datos algebráicos no proveen extensibilidad, ya que al realizar extensiones
- al álgebra inicial, las funciones existentes se volverán parciales hasta
- tanto sean actualizadas, lo cual puede producir errores a tiempo de ejecución\SpecialChar \@.
-
- Esta situación es imposible al hacer uso de coálgebras finales para modelar
- las expresiones, por lo cual la aplicación de esta técnica provee fuertes
- garantías estáticas de correctitud\SpecialChar \@.
+ representación de ASTs de expresiones con tipos de datos algebráicos no
+ proveen extensibilidad, ya que al realizar extensiones al álgebra inicial,
+ las funciones existentes se volverán parciales hasta tanto sean actualizadas,
+ lo cual puede producir errores a tiempo de ejecución\SpecialChar \@.
+ Esta situación es
+ imposible al hacer uso de coálgebras finales para modelar las expresiones,
+ por lo cual la aplicación de esta técnica provee fuertes garantías estáticas
+ de correctitud\SpecialChar \@.
 
 \end_layout
 
@@ -491,6 +491,48 @@ TODO: screenshots y referencias
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+La plataforma de Blockly provee un formato de serialización XML para los
+ programas compuestos con bloques, lo cual permite tanto cargar programas
+ guardados en base a una especificación en este formato como guardar programas
+ compuestos a través de la interfaz visual\SpecialChar \@.
+ Se desarrolló una biyección entre
+ el formato de serialización XML correspondiente a los programas compuestos
+ de los bloques creados para representar reglas de negocio, y el formato
+ de serialización JSON usado para serializar las reglas de negocio en la
+ base de datos\SpecialChar \@.
+ No se utilizó el mismo formato XML para el almacenamiento
+ de las reglas de negocio debido a que el esquema usado refleja más directamente
+ la forma en que los bloques fueron compuestos visualmente, y es poco convenient
+e como estructura de datos para representar un AST a interpretar en el evaluador\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Esta biyección permite que una regla de negocio se cargue de su forma serializad
+a en la base de datos, que luego se represente y manipule visualmente, y
+ finalmente se aplique la serialización a XML y la transformación al formato
+ JSON para almacenar la versión modificada en la base de datos\SpecialChar \@.
+ Aunque los
+ tipos son birepresentables, algunos detalles de los dos formatos, como
+ la falta de normalización por haber múltiples formas de representar algunos
+ valores, impide que esta transformación sea propiamente un isomorfismo:
+ la composición de las dos transformaciones podría alterar la representación
+ exacta\SpecialChar \@.
+ Por ejemplo, si se había almacenado en el formato JSON de la base
+ de datos una conjunción de cero términos en una parte de una proposición,
+ al pasar a bloques de Blockly y volver a JSON sin modificar la estructura,
+ se obtendrá en su lugar un literal 
+\family typewriter
+true
+\family default
+\SpecialChar \@.
+ Este cambio no altera la semántica de la proposición ni su representación
+ visual, por lo cual no debería causar ningún efecto perceptible para los
+ usuarios del sistema\SpecialChar \@.
 
 \end_layout
 
