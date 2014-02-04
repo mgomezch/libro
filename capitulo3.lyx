@@ -207,7 +207,7 @@ Las estrategias específicas que pueden utilizarse para favorecer este criterio
  profundas al diseño\SpecialChar \@.
  Además, cuando sea necesario hacer tales modificaciones,
  debería facilitarse hacerlas en maneras que promuevan la exclusión de datos
- inconsistentes — aunque los cambios sean inevitables, es posible implantar
+ inconsistentes --- aunque los cambios sean inevitables, es posible implantar
  soluciones tecnológicas que dificulten los cambios que introduzcan inconsistenc
 ias y faciliten los que preservan la integridad del modelo\SpecialChar \@.
 
@@ -280,9 +280,9 @@ Algunos de los datos que registran los sistemas de la empresa tienen el
  comercial deben manejarse con un fuerte énfasis en la integridad, y esto
  implica que debe indicarse en estos datos cuáles fueron los datos exactos
  usados para realizar los cálculos relevantes.
- Sin embargo, como esos datos pueden variar —por ejemplo, porque el precio
+ Sin embargo, como esos datos pueden variar ---por ejemplo, porque el precio
  de un medicamento cambie, o por cualquier condición de cobertura que altere
- los montos aprobados—, sería necesario asociar a cada transacción comercial
+ los montos aprobados---, sería necesario asociar a cada transacción comercial
  una copia momentánea de todos los datos que fueran usados para calcular
  sus propiedades\SpecialChar \@.
 

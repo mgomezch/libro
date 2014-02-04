@@ -122,8 +122,8 @@ La base de datos que se desea implantar es basada en SQL por una diversidad
  la implantación de garantías de integridad mediante restricciones, y que
  facilita la especificación de consultas con un lenguaje declarativo muy
  conocido, por lo cual hay una gran cantidad de herramientas existentes
- para abstraer y facilitar la construcción de consultas — pero ni SQL ni
- el modelo relacional que lo fundamenta manejan directamente el concepto
+ para abstraer y facilitar la construcción de consultas --- pero ni SQL
+ ni el modelo relacional que lo fundamenta manejan directamente el concepto
  de control de versión ni el de hacer referencias a una versión de un dato\SpecialChar \@.
 
  Sin embargo, dada una descripción completa de un esquema relacional, es
@@ -180,7 +180,7 @@ identidad
 \emph on
 atributos
 \emph default
- — las referencias serán consideradas aparte\SpecialChar \@.
+ --- las referencias serán consideradas aparte\SpecialChar \@.
  En este sentido, al insertar
  una fila en la tabla original, se estaría registrando la creación de una
  versión de la fila con la identidad y los valores de atributos que fueron
@@ -190,8 +190,9 @@ atributos
  atributo de una fila existente en la tabla original, se deberá registrar
  la creación de una nueva versión con la misma identidad pero con los valores
  nuevos de los atributos, y se registra con un número de serie diferente
- para indicar que es una versión distinta a la anterior — y también se registrar
-á la fecha y hora en que fue creada la versión nueva a raíz de la actualización\SpecialChar \@.
+ para indicar que es una versión distinta a la anterior --- y también se
+ registrará la fecha y hora en que fue creada la versión nueva a raíz de
+ la actualización\SpecialChar \@.
 
 \end_layout
 
@@ -277,7 +278,7 @@ Es necesario ahora mantener un registro de los valores de los atributos
  directamente en la bitácora de versiones\SpecialChar \@.
  Sin embargo, considérese el caso
  de una tabla original con una gran cantidad de columnas, donde algunas
- de esas columnas contienen valores de tamaño considerable — por ejemplo,
+ de esas columnas contienen valores de tamaño considerable --- por ejemplo,
  columnas que contengan texto de longitud considerable\SpecialChar \@.
  Si los valores de
  los atributos en cada versión se almacenaran directamente en la bitácora
@@ -461,8 +462,8 @@ Vistas
 \begin_layout Standard
 Al utilizar esta representación, la tabla original puede recuperarse juntando
  a la tabla de versiones activas con el registro de identidades y las tablas
- de atributos a través de la bitácora de versiones — por lo tanto, la tabla
- original podría sustituirse por una vista que tome las acciones indicadas
+ de atributos a través de la bitácora de versiones --- por lo tanto, la
+ tabla original podría sustituirse por una vista que tome las acciones indicadas
  cuando se solicite insertar, eliminar o actualizar datos en ella\SpecialChar \@.
  Incluso
  sería posible prescindir de la tabla de versiones activas: ella misma puede
@@ -620,12 +621,12 @@ distinta
  se actualizan esas columnas con precisamente los mismos valores que ya
  tenían, no se está haciendo una modificación a ningún valor de la representació
 n referencia en la vista, por lo cual la actualización ni siquiera será
- detectada — hay exactamente una identidad que no puede especificarse de
- esta manera para actualizar la referencia a la versión actual\SpecialChar \@.
+ detectada --- hay exactamente una identidad que no puede especificarse
+ de esta manera para actualizar la referencia a la versión actual\SpecialChar \@.
  Por otra
  parte, cualquier valor no nulo asignado a la versión referida debería producir
  un error que indique que no debe manipularse la referencia asignando una
- clave de bitácora de versiones directamente — pero un valor nulo no es
+ clave de bitácora de versiones directamente --- pero un valor nulo no es
  exactamente una clave de una bitácora de versiones\SpecialChar \@.
  Usar el valor excepcional
  para especificar la actualización excepcional resulta casi natural\SpecialChar \@.
@@ -671,7 +672,7 @@ tabla de referencia
  análoga a una tabla de atributo, cuya clave primaria es la clave primaria
  de la fila de la bitácora de versiones de la versión referente, y que incluye
  además el valor de la clave primaria de la versión referida como clave
- foránea a su bitácora de versiones — no hay análogo a la tabla de estado\SpecialChar \@.
+ foránea a su bitácora de versiones --- no hay análogo a la tabla de estado\SpecialChar \@.
 
 \end_layout
 
