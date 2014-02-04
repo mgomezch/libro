@@ -333,8 +333,8 @@ La regla mostrada en su forma serializada corresponde a la detección de
 \family typewriter
 0c4cef91
 \family default
-, con excepciones para los tipos de póliza identificados por los códigos
- 
+, con excepciones para los tipos de póliza cuyas versiones son identificadas
+ por los códigos 
 \family typewriter
 7b131585
 \family default
@@ -347,6 +347,8 @@ La regla mostrada en su forma serializada corresponde a la detección de
 68a2d623
 \family default
 \SpecialChar \@.
+ Al igual que en la descripción del API de datos, los códigos se representan
+ cortos por razones de legibilidad, pero en el sistema real son UUIDs\SpecialChar \@.
 
 \end_layout
 
@@ -487,6 +489,142 @@ status open
 
 \begin_layout Plain Layout
 TODO: screenshots y referencias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/blockly.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Visualización en la interfaz de Blockly para la regla de negocio presentada
+ en forma serializada en el ejemplo anterior\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/blockly-menu.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Selección de propiedad en referencias al contexto de evaluación de reglas
+ de negocio.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/blockly-edit-set.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Configuración de bloques de combinación.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/blockly-nested.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Condiciones complejas con anidamiento, en este caso con excepciones por
+ enfermedad.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
