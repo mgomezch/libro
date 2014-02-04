@@ -4,3 +4,6 @@ class ConditionSYM repr where
   neg   :: repr   -> repr
   and   :: [repr] -> repr
   or    :: [repr] -> repr
+
+class RecordConditionSYM repr where
+  has :: Text -> Text -> repr
