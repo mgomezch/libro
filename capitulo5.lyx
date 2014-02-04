@@ -1578,8 +1578,55 @@ Uno de los objetivos principales del sistema de evaluación de reglas de
  con facilidad este comportamiento\SpecialChar \@.
  Con este fin, se desarrolló una interfaz
  visual para facilitar la manipulación directa de las proposiciones lógicas
- asociadas a reglas de negocio que no requiere trabajar con código en ningún
- lenguaje de programación ni en ningún formato de serialización\SpecialChar \@.
+ asociadas a reglas de negocio que no requiere trabajar directamente con
+ código en ningún lenguaje de programación ni en ningún formato de serialización\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Para este fin se utilizó Blockly, una herramienta de programación visual
+ de software libre desarrollada por Google principalmente con el fin principal
+ de servir como plataforma tecnológica para la enseñanza de la programación,
+ aunque uno de los objetivos iniciales del proyecto incluía la personalización
+ del comportamiento de aplicaciones 
+\emph on
+Web
+\emph default
+ de Google, como Gmail y Google Docs, con pequeños programas compuestos
+ por los propios usuarios de las aplicaciones para adaptarlos a sus necesidades\SpecialChar \@.
+
+ La interacción con Blockly consiste en la composición de programas a partir
+ de bloques similares a piezas de rompecabezas, cada uno de los cuales represent
+a una forma sintáctica particular del programa\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Blockly está diseñado para servir como plataforma para la construcción de
+ interfaces de aplicaciones 
+\emph on
+Web
+\emph default
+, y se promueve su modificación para incorporar tipos de bloques relevantes
+ para cada dominio donde la herramienta se aplique\SpecialChar \@.
+ Se desarrolló una modificació
+n simple de Blockly que incorpora bloques especiales para la construcción
+ de proposiciones lógicas y referencias a contextos de evaluación de reglas
+ de negocios\SpecialChar \@.
+ Para mantener la interfaz simple, se desarrollaron únicamente
+ dos tipos de bloques: un bloque para especificar referencias a propiedades
+ del contexto de evaluación, donde se asocia un valor textual al nombre
+ de una propiedad del contexto, y un bloque para combinaciones\SpecialChar \@.
+ El bloque
+ de combinaciones puede tener cualquier cantidad de entradas para términos
+ en disyunción, y además puede configurarse para estar negado; los dos modos
+ de operación del bloque se representan con las palabras «alguna» y «ninguna»,
+ que representan cuáles proposiciones anidadas deben ser verdaderas para
+ que sea verdadera la combinación\SpecialChar \@.
+ Una negación simple puede representarse
+ como una combinación negada de un solo elemento\SpecialChar \@.
+ Para representar conjunciones,
+ simplemente se conectan los bloques uno debajo de otro\SpecialChar \@.
 
 \end_layout
 
@@ -1588,7 +1635,7 @@ Uno de los objetivos principales del sistema de evaluación de reglas de
 status open
 
 \begin_layout Plain Layout
-TODO: hablar del interpretador de reglas y de Blockly (con screenshots)
+TODO: screenshots y referencias
 \end_layout
 
 \end_inset
