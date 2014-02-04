@@ -1,0 +1,13 @@
+{ "and":
+  , { "key": "Asegurador"              , "value": "7c0c87f3" }
+  , { "key": "Asociación farmacológica", "value": "0c4cef91" }
+  [ { "neg":
+      { "or":
+        [ { "key":"Póliza", "value": "7b131585" }
+        , { "key":"Póliza", "value": "1230e6f1" }
+        , { "key":"Póliza", "value": "68a2d623" }
+        ]
+      }
+    }
+  ]
+}

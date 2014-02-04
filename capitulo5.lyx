@@ -1215,6 +1215,164 @@ name "fig:siren-browser-form"
 
 \end_layout
 
+\begin_layout Chapter
+Evaluación de reglas de negocio
+\end_layout
+
+\begin_layout Standard
+Uno de los aspectos más complejos de la aplicación PCA Audit es la necesidad
+ de hacerlo adaptable a la gran variedad de requerimientos específicos de
+ sus clientes\SpecialChar \@.
+ La aplicación realiza análisis sobre los reclamos de salud
+ que introducen los analistas y pacientes afiliados a pólizas de seguros
+ de clientes de la empresa, y parte de ese análisis es de naturaleza puramente
+ farmacológica y médica, y se realiza por la aplicación precisamente para
+ que la empresa aseguradora pueda validar las operaciones de sus asegurados
+ sin tener que definir en detalle las reglas que determinan qué operaciones
+ son legítimas\SpecialChar \@.
+ Sin embargo, las pólizas de seguros están asociadas a una
+ gran cantidad de reglas de cobertura que sí deben ser definidas por el
+ asegurador: cada tipo de póliza de seguros médicos define detalladamente
+ cuándo se cubre el costo de adquisición de cuáles medicamentos específicos,
+ y en relación a cuáles enfermedades, entre muchas otras condiciones a considera
+r\SpecialChar \@.
+ En efecto, es un principio de diseño esencial para los productos de la
+ empresa que sea posible parametrizar y adaptar el comportamiento de sus
+ aplicaciones a las necesidades, reglas de negocio y modalidades de operación
+ específicas de cada cliente\SpecialChar \@.
+ En efecto, es posible expresar cualquier comportami
+ento deseado en la implantación de PCA Audit\SpecialChar \@.
+ Sin embargo, la complejidad
+ de la aplicación es considerable incluso sin tomar en cuenta la adaptación
+ a reglas específicas para cada póliza de cada cliente, y si se implantaran
+ módulos de la aplicación con código específico para todas las condiciones
+ de cobertura que es necesario considerar, la complejidad de la aplicación
+ aumentaría muy rápidamente y se enfrentarían aún más problemas de mantenibilida
+d\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+Antecedentes
+\end_layout
+
+\begin_layout Standard
+La estrategia usada hasta el momento consiste en establecer unos pocos parámetro
+s por los cuales puede alterarse el comportamiento del proceso de análisis
+ de reclamos de salud para las demandas de cada cliente\SpecialChar \@.
+ En particular, se
+ ha integrado en el análisis farmacológico la verificación de condiciones
+ de cobertura por cliente o por póliza para medicamentos y sus subgrupos
+ farmacológicos asociados, así como para enfermedades y sus agrupaciones
+ en tipos\SpecialChar \@.
+ Luego de identificados los criterios por los cuales las empresas
+ aseguradoras han solicitado parametrizar el comportamiento del producto,
+ se diseñó un esquema poco flexible que permite expresar que cada tipo de
+ criterio produce el rechazo de un reclamo de salud, así como reglas relacionada
+s con casos de aprobación excepcional contra las reglas más generales de
+ rechazo\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La implantación de esta funcionalidad empleaba una tabla en la base de datos
+ por cada criterio de rechazo y por cada tipo de asociación de la regla
+ con un grupo: a nivel de toda una empresa aseguradora, o a nivel de un
+ tipo específico de póliza\SpecialChar \@.
+ Además, se empleaba una tabla adicional para
+ cada tipo de excepción, las cuales podían definirse para cada tipo de criterio
+ de rechazo; por ejemplo, si los criterios de rechazo hubieran sido por
+ enfermedad, medicamento y principio activo, se podían definir excepciones
+ al rechazo por enfermedad en base al medicamento o al principio activo\SpecialChar \@.
+
+ Es claro que esta técnica no es escalable con respecto a la complejidad
+ de las reglas de negocio que modela\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+En efecto, algunas solicitudes de opciones de parametrización hechas por
+ los clientes han sido atendidas produciendo código en la aplicación específico
+ para esos requerimientos particulares, lo cual requiere que esta configuración
+ sea manipulada por los desarrolladores del sistema y no por sus operadores
+ que no poseen conocimientos técnicos\SpecialChar \@.
+ Esto afecta significativamente la
+ capacidad de la empresa de implantar sus planes de expansión internacional
+ bajo un modelo de franquicias donde el desarrollo del sistema está centralizado
+ y las sucursales de cada región solo realizan labores de operación que
+ no impliquen modificaciones a la implantación del producto\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+Reglas de negocio proposicionales
+\end_layout
+
+\begin_layout Standard
+Se determinó que una gran parte de la implantación de reglas de negocio
+ puede reducirse a la evaluación de una proposición lógica que involucre
+ información de las relaciones establecidas entre enfermedades y medicamentos
+ solicitados y prescritos, junto con los demás datos asociados a una solicitud,
+ de forma tal que si el juicio de la proposición resulta verdadero, habrá
+ de registrarse la detección de alguna desviación\SpecialChar \@.
+ La flexibilidad del cálculo
+ proposicional permite expresar de esta manera a muchas de las reglas de
+ negocio especificadas por los clientes para ser incorporadas en el proceso
+ de validación de reclamos de salud, por lo cual una estrategia viable para
+ incorporarlas al análisis es el almacenamiento de proposiciones como parte
+ de la configuración del sistema para cada empresa aseguradora, y su interpretac
+ión durante el procesamiento de una solicitud en el contexto de cada relación
+ farmacológica que pueda establecerse\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La representación de una proposición en una base de datos SQL puede resultar
+ compleja si se pretende que las columnas de las tablas usadas no contengan
+ datos más complejos que texto sin estructura, valores numéricos y referencias\SpecialChar \@.
+
+ El modelado de datos con esa granularidad en un esquema relacional corresponde
+ a la intención de manipular los datos o especificar restricciones sobre
+ ellos a ese nivel de detalle\SpecialChar \@.
+ Sin embargo, no está actualmente planteado
+ que se hagan consultas o que se manipule a nivel de la base de datos la
+ 
+\emph on
+estructura interna
+\emph default
+ de una proposición que represente a una regla de negocios, por lo cual
+ en esta situación resulta conveniente representar a una proposición completa
+ en forma serializada como un dato atómico en una columna de una tabla de
+ la base de datos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+Implantación
+\end_layout
+
+\begin_layout Standard
+Se implantó un modelo coalgebráico de proposiciones lógicas en Haskell siguiendo
+ la técnica 
+\emph on
+tagless-final
+\emph default
+, junto con intérpretes para conversión a texto, evaluación, y serialización
+ al formato JSON para almacenamiento en la base de datos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "listings/api/ConditionSYM.hs"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tb"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Note Comment
 status open
