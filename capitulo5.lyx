@@ -407,7 +407,14 @@ Por ejemplo, una petición
 GET
 \family default
  a la ruta del recurso que solicite el formato Siren producirá una respuesta
- como esta:
+ como la mostrada en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:siren-tables"
+
+\end_inset
+
+
 \begin_inset Foot
 status open
 
@@ -429,14 +436,48 @@ https://api.pcaaudit.com/v1/database/Asociación+farmacológica
 
 \end_inset
 
+\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "listings/api/root.json"
-lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tb"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tblr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ejemplo de representación en el formato Siren del recurso asociado la colección
+ de todas las tablas\SpecialChar \@.
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:siren-tables"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -507,14 +548,55 @@ Por ejemplo, una petición
 GET
 \family default
  a la ruta del recurso que solicite el formato Siren producirá una respuesta
- como esta:
+ como la mostrada el la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:siren-table"
+
+\end_inset
+
+\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "listings/api/table.json"
-lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tb"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tblr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ejemplo de representación en el formato Siren del recurso asociado a una
+ tabla\SpecialChar \@.
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:siren-table"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -578,14 +660,56 @@ Por ejemplo, una petición
 \family typewriter
 GET
 \family default
- a la ruta del recurso producirá una respuesta como esta:
+ a la ruta del recurso producirá una respuesta como la mostrada en la figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:siren-column"
+
+\end_inset
+
+\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "listings/api/column.json"
-lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tb"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tblr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ejemplo de representación en el formato Siren del recurso asociado a una
+ columna de una tabla\SpecialChar \@.
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:siren-column"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -780,14 +904,55 @@ Por ejemplo, una petición
 GET
 \family default
  a la ruta del recurso que solicite el formato Siren producirá una respuesta
- como esta:
+ como la mostrada en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:siren-rows"
+
+\end_inset
+
+\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "listings/api/collection.json"
-lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tb"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tblr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ejemplo de representación en el formato Siren del recurso asociado a la
+ colección de versiones activas de una tabla\SpecialChar \@.
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:siren-rows"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -938,9 +1103,9 @@ Por ejemplo, una petición
 GET
 \family default
  a la ruta del recurso que solicite el formato Siren producirá una respuesta
- como esta:
+ como la mostrada en la figura 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Este ejemplo incluye metadatos de fecha de revocación y un enlace a una
@@ -957,14 +1122,48 @@ n de la fila\SpecialChar \@.
 
 \end_inset
 
+\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "listings/api/version.json"
-lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tb"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tblr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ejemplo de representación en el formato Siren del recurso asociado a una
+ versión de una fila de una tabla\SpecialChar \@.
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:siren-version"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

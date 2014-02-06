@@ -261,10 +261,42 @@ El modelo básico de proposición se extendió con una primitiva adicional
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "listings/api/ConditionSYM.hs"
-lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tb"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tblr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Modelo coalgebráico de proposiciones lógicas\SpecialChar \@.
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:symantics"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -312,10 +344,42 @@ value
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "listings/api/RecordCondition.json"
-lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tb"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tblr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ejemplo de la forma serializada en JSON de una regla de negocio proposicional\SpecialChar \@.
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:json-rule"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -323,9 +387,15 @@ lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,frame=tb"
 \end_layout
 
 \begin_layout Standard
-La regla mostrada en su forma serializada corresponde a la detección de
- una desviación si el contexto se asocia al asegurador identificado por
- el código 
+La regla mostrada en su forma serializada en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:json-rule"
+
+\end_inset
+
+ corresponde a la detección de una desviación si el contexto se asocia al
+ asegurador identificado por el código 
 \family typewriter
 7c0c87f3
 \family default
@@ -445,12 +515,12 @@ Para este fin se utilizó Blockly, una herramienta de programación visual
 \emph on
 Web
 \emph default
- de Google, como Gmail y Google Docs, con pequeños programas compuestos
- por los propios usuarios de las aplicaciones para adaptarlos a sus necesidades\SpecialChar \@.
-
- La interacción con Blockly consiste en la composición de programas a partir
- de bloques similares a piezas de rompecabezas, cada uno de los cuales represent
-a una forma sintáctica particular del programa\SpecialChar \@.
+ de Google con pequeños programas compuestos por los propios usuarios de
+ esas aplicaciones para adaptarlos a sus necesidades\SpecialChar \@.
+ La interacción con
+ Blockly consiste en la composición de programas a partir de bloques similares
+ a piezas de rompecabezas, cada uno de los cuales representa una forma sintáctic
+a particular del programa\SpecialChar \@.
 
 \end_layout
 
