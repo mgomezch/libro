@@ -96,6 +96,332 @@ addcontentsline{toc}{chapter}{Conclusiones y recomendaciones}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Un compañero de oficina me dijo hace unos minutos, viéndome almorzar al
+ atardecer en mis pantalones formales, franela informal y 
+\emph on
+dreadlocks
+\emph default
+ despeinados, que todo lo que hago es raro: «eres rebeldía 101»\SpecialChar \@.
+ El desarrollo
+ de este proyecto de pasantía ciertamente fue raro\SpecialChar \@.
+ No soy la única persona
+ que conozco que desarrolla productos comerciales empleando programación
+ funcional y una visión de la tecnología de la información con un enfoque
+ en lenguajes formales; de hecho, varios compañeros de la universidad con
+ quienes compartí cursos de esta área están emprendiendo vías similares
+ en el desarrollo de sus carreras profesionales\SpecialChar \@.
+ Sin embargo, no hay duda
+ de que es un enfoque profundamente distinto al usual de nuestra industria\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Plain Layout
+No quisiera pensar que la rebeldía haya sido un factor en las decisiones
+ que tomé al enfrentar problemas técnicos en este proyecto, y menos aún
+ los fanatismos, aunque rápidamente he ganado fama —no sin merecerla— de
+ fanático de Haskell\SpecialChar \@.
+ Creo que todas las decisiones de tecnología que he
+ tomado durante el desarrollo de esta pasantía han estado fundamentadas
+ por las propiedades tecnológicas y metodológicas de la empresa: mucho que
+ hacer (y mantener) para pocos desarrolladores con poco tiempo, cambios
+ constantes (mi paradoja favorita), consecuencias graves para el negocio
+ cuando la tecnología falla, y la sombra aterradora en el futuro del crecimiento
+ exponencial\SpecialChar \@.
+ En cualquier caso, el uso de Haskell ha resultado ser prácticamente
+ un detalle interno de implementación que debería ser poco visible para
+ los sistemas que dependan de lo que se desarrolló en esta pasantía, así
+ que no me preocupo tanto por el punto específico de haber usado programación
+ funcional\SpecialChar \@.
+ Mucho más interesante y preocupante es la noción de emplear dos
+ técnicas de abstracción verdaderamente raras: Squealer y REST\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Plain Layout
+Aunque REST está de moda y todo el mundo cree estar haciendo 
+\emph on
+RESTful
+\emph default
+ a sus APIs, casi nadie le presta atención al hecho de que ese estilo de
+ arquitectura prescribe el uso de hipermedios como el fundamento de la interacci
+ón con la aplicación, y los desarrollos de los pocos que sí le prestan atención
+ a ese 
+\emph on
+detalle
+\emph default
+ todavía están en una fase que no puede describirse de otra manera que como
+ experimental: se ensayan patrones y se proponen especificaciones de formatos
+ para modelar recursos y sus estados, pero nadie tiene muy claro cómo va
+ a funcionar todo esto hasta tal punto que podría incluso decirse que el
+ único sistema público de gran escala en el mundo diseñado bajo los principios
+ de arquitectura REST es la propia 
+\emph on
+World Wide Web
+\emph default
+ — y la 
+\emph on
+Web
+\emph default
+ es para consumo humano, no para máquinas\SpecialChar \@.
+ La tendencia recientes de (ab)usar
+ la 
+\emph on
+Web
+\emph default
+ como plataforma para construir aplicaciones pareciera estar alejando poco
+ a poco el sueño del 
+\emph on
+Web 
+\family typewriter
+\emph default
+2.0
+\family default
+, o 
+\family typewriter
+3.0
+\family default
+, o como se esté llamando hoy día a la idea de que habrá entre nosotros
+ más máquinas que personas frente a un browser: HTML5 se aleja de la formalidad
+ y acopla muy fuertemente presentación con datos, y el sueño dorado de integraci
+ón universal bajo la 
+\emph on
+lingua franca
+\emph default
+ de XML bien hecho está desapareciendo ante el acoplamiento imponente de
+ la 
+\emph on
+Web
+\emph default
+ a ese monstruo infeccioso de muchos nombres: JavaScript, ECMAScript, Satanás,
+ o como lo quieran llamar, y su hijo bastardo, deforme y dinámico sin estructura
+ ni extensibilidad real, JSON\SpecialChar \@.
+ La lucha por definir un formato de datos genérico
+ adecuado para servicios 
+\emph on
+Web
+\emph default
+ se ha centrado en JSON como formato estructural y de serialización, a pesar
+ de que el problema podría resolverse de manera simple y extensible con
+ algo similar a XForms\SpecialChar \@.
+ El rechazo a la complejidad repugnante de SOAP ha
+ hecho mucho daño a la 
+\emph on
+Web
+\emph default
+\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Plain Layout
+En este proyecto decidí no ir contra la corriente en ese sentido: es tan
+ lamentable como inevitable que la 
+\emph on
+Web
+\emph default
+ sea la única opción razonable como plataforma de desarrollo para prácticamente
+ cualquier aplicación interactiva que no pueda justificar un instalador
+ por su tamaño o rendimiento requerido, y las herramientas modernas para
+ adecentar el trabajo en el browser no saben ni quieren saber hablar XML,
+ sino JSON\SpecialChar \@.
+ La selección de Siren como formato para el API llegó algo tarde
+ en el proceso: originalmente había planeado usar HAL, pero su soporte es
+ pobre para APIs que hagan más que leer recursos sin parámetros\SpecialChar \@.
+ Me preocupa
+ un poco que aún estén en discusión aspectos relativamente básicos de su
+ diseño, pero es un formato suficientemente simple como para que no sea
+ un problema: como es simple manipularlo directamente desde JavaScript,
+ por ahora no hace falta una biblioteca de cliente muy compleja\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Plain Layout
+Squealer, por su parte, es muchísimo más aterrador\SpecialChar \@.
+ Su diseño es sencillo
+ (en retrospectiva, claro) y su implementación solo es compleja porque generar
+ SQL es una actividad fundamentalmente desagradable\SpecialChar \@.
+ Eso es lo de menos\SpecialChar \@.
+ Incluso
+ no hay mayor razón para preocuparse en términos de la dificultad relativa
+ de usarlo desde un lenguaje de aplicación, porque el API, que en realidad
+ es un 
+\emph on
+RESTful resource–relational mapper
+\emph default
+, abstrae completamente ese problema — y para aquellos casos donde el rendimient
+o de trabajar a través del API sea inadecuado incluso haciendo uso extenso
+ de 
+\emph on
+caching
+\emph default
+ y otros intermediarios, siempre queda la opción de generar SQL a mano,
+ y la abstracción interna de Squealer no es nada mala\SpecialChar \@.
+ Eso no es lo preocupante\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Plain Layout
+El problema real de Squealer está en que no tenemos idea de cómo va a ser
+ el comportamiento a largo plazo de una base de datos con ese patrón: no
+ sabemos si tiene sentido eliminar datos «inalcanzables» desde activos (algo
+ así como el 
+\family typewriter
+VACUUM
+\family default
+ de sistemas que emplean MVCC, que a su vez es algo así como recolección
+ de basura), o si es simplemente cuestión de preservarlos pero en un servidor
+ separado, o si no tiene sentido pensar en ellos como inalcanzables porque
+ a fin de cuentas constituyen información en la base de datos que pudiera
+ ser importante y punto\SpecialChar \@.
+ Tampoco sabemos cómo se van a comportar los índices,
+ ni si normalizar los microesquemas produce un 
+\emph on
+tradeoff
+\emph default
+ adecuado para el rendimiento de las consultas a las vistas, ni si será
+ mejor emplear vistas materializadas, o quizá mejor sea ofrecer vistas materiali
+zadas y también vistas basadas en reescritura de consultas, pero entonces
+ las escrituras serán lentas, y\SpecialChar \ldots{}
+
+\end_layout
+
+\begin_layout Plain Layout
+En fin, Squealer corresponde a un patrón de diseño de bases de datos que
+ pareciera ser original, y por lo tanto, nadie lo ha estudiado\SpecialChar \@.
+ Nosotros
+ no tenemos tiempo de estudiarlo — necesitamos usarlo ahora mismo, pero
+ solo si suponemos que tendrá propiedades de rendimiento compatibles con
+ nuestro negocio\SpecialChar \@.
+ Si no, es posible que podamos adaptar algún 
+\emph on
+tradeoff
+\emph default
+ tomado en la implantación actual y volverlo favorable\SpecialChar \@.
+ Pero también es posible
+ que el modelo simplemente sea un fracaso\SpecialChar \@.
+ La base de datos podría crecer
+ mucho más rápido que lo sostenible si hay demasiadas escrituras, en especial
+ si las tablas que cambian con frecuencia son objeto directa o indirectamente
+ de muchas relaciones covariantes\SpecialChar \@.
+ Modelos SQL normales potencialmente sufren
+ de problemas de rendimiento en escrituras con el mismo origen porque también
+ pueden tener 
+\family typewriter
+ON UPDATE CASCADE
+\family default
+, pero en este caso es mucho más frecuente: si las referencias son a versiones,
+ 
+\emph on
+cualquier
+\emph default
+ cambio rompe la clave foránea, y al menos en SQL normal, se sobreescribe
+ en vez de agregar a la historia\SpecialChar \@.
+ Yo no sé de 
+\emph on
+big data
+\emph default
+, pero es posible que esto nos llene de más datos de lo que quisiéramos
+ tener\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Plain Layout
+Creo que es un riesgo que vale la pena correr\SpecialChar \@.
+ Creo que vale la pena porque
+ el modelo se adapta perfectamente a la visión de la empresa: después de
+ todo, el punto del patrón de diseño de Squealer es que la base de datos
+ sea totalmente auditable, y nuestro principal producto se llama 
+\emph on
+Audit
+\emph default
+ por algo\SpecialChar \@.
+ También sospecho que el riesgo vale la pena porque el patrón ha
+ demostrado tener muchas de las propiedades de una buena idea: es completamente
+ consistente con sí mismo, puede abstraerse hasta casi desaparecer, y es
+ una encarnación en el dominio específico de las bases de datos de ideas
+ muy buenas que son de aplicabilidad mucho más general y que han traído
+ enormes beneficios a muchas otras ramas de la tecnología, como el concepto
+ general de inmutabilidad\SpecialChar \@.
+ Normalmente, cuando una idea encaja de manera
+ tan elegante en su contexto conceptual, es una idea que no traerá problemas\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Plain Layout
+El resto del proyecto también ha sido interesante, y me divierto con la
+ fantasía de que varias ramas pequeñas de mi pasantía podrían haber constituido
+ por sí solos proyectos de suficiente escala e interés para una pasantía;
+ en particular, y abandonando toda humildad, creo que Squealer podría motivar
+ al menos una tesis de maestría —y no soy el único que lo cree!—, y debe
+ haber algo de valor en la idea de un intérprete con interfaz 
+\emph on
+RESTful
+\emph default
+ para evaluar en paralelo ASTs de reglas de negocio, todo implantado como
+ un coálgebra final\SpecialChar \@.
+ Incluso la idea de hacer que el sistema sea configurable
+ con una herramienta de programación visual como Blockly me parece más merecedor
+a de atención que muchos proyectos de pasantía de la carrera que se limitan
+ a llenar plantillas de RUP y hacer alguna basura en Struts\SpecialChar \@.
+ En mi defensa,
+ advertí que abandonaría toda humildad en este párrafo\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Plain Layout
+Hablando de humildad: recuerdo cuando recibí el plan de trabajo de mi pasantía
+ con observaciones de la coordinación, entre las cuales decía que el proyecto
+ parecía «ambicioso»\SpecialChar \@.
+ Descarté el comentario como una exageración: cinco
+ meses —casi dos trimestres!— a tiempo completo seguramente serían más que
+ suficiente para hacer una tonta base de datos y adaptar unas tontas aplicacione
+s, incluso para mí, que soy lento para las bases de datos\SpecialChar \@.
+ Esto comenzó en
+ abril del año pasado, y ya es febrero — llevo casi un año, y quizá he cumplido
+ la mitad de los objetivos del plan de trabajo original\SpecialChar \@.
+ Claramente, lo único
+ tonto era yo mismo\SpecialChar \@.
+ Aunque no es este tipo de reflexión la que se supone
+ que escriba al final de mi libro, si me preguntan qué puedo concluir de
+ mi pasantía, diría que me he dado cuenta de lo tonto que soy y de lo difícil,
+ lo increíblemente difícil que es desarrollar 
+\emph on
+software
+\emph default
+ en el fulano 
+\emph on
+mundo real
+\emph default
+\SpecialChar \@.
+ Todos los días tienes que aprender e inventar miles de pequeñas y grandes
+ ideas, analizar cada una, y descartar casi todas cuando no pasan el filtro
+ de ser adecuadas para el 
+\emph on
+big picture
+\emph default
+ de lo que estés haciendo\SpecialChar \@.
+ Evaluar las consecuencias de tus decisiones tecnológic
+as para no equivocarte requiere un entendimiento amplio y a la vez profundo
+ de la tecnología informática como un todo, así como de tu dominio específico,
+ y lograr ese entendimiento es imposible sin mucha experiencia, mucha comunicaci
+ón, y sobre todo, muchos, muchísimos errores\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Plain Layout
+Jamás dejo de impresionarme por lo difícil que es programar\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 TODO
 \end_layout
 

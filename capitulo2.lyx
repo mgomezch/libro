@@ -104,7 +104,7 @@ negrillas subrayadas
 \series default
 \bar default
  a los conceptos que estén en correspondencia directa con entidades del
- nuevo modelo, y aquellos de sus atributos que resulten notables para esta
+ nuevo modelo, y aquéllos de sus atributos que resulten notables para esta
  descripción conceptual serán nombrados en 
 \series bold
 negrillas
@@ -303,7 +303,7 @@ dirección
 \series bold
 teléfono
 \series default
- de contacto, etc\SpecialChar \@.
+ de contacto, y cualquier otro dato que se determine relevante\SpecialChar \@.
 
 \end_layout
 
@@ -429,12 +429,8 @@ Enfermedades
 
 \begin_layout Standard
 Los sistemas de PRX Control Solutions utilizan una taxonomía jerárquica
- de las enfermedades similar a la 
-\emph on
-clasificación internacional de enfermedades, décima versión
-\emph default
- (CIE-10) de la Organización Mundial de la Salud, pero con modificaciones\SpecialChar \@.
-
+ de las enfermedades similar al sistema CIE-10 de la OMS, pero con modificacione
+s\SpecialChar \@.
  La clasificación tiene tres niveles; en orden de más general a más específico:
  el 
 \series bold

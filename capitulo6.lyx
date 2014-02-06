@@ -455,48 +455,6 @@ a una forma sintáctica particular del programa\SpecialChar \@.
 \end_layout
 
 \begin_layout Standard
-Blockly está diseñado para servir como plataforma para la construcción de
- interfaces de aplicaciones 
-\emph on
-Web
-\emph default
-, y se promueve su modificación para incorporar tipos de bloques relevantes
- para cada dominio donde la herramienta se aplique\SpecialChar \@.
- Se desarrolló una modificació
-n simple de Blockly que incorpora bloques especiales para la construcción
- de proposiciones lógicas y referencias a contextos de evaluación de reglas
- de negocios\SpecialChar \@.
- Para mantener la interfaz simple, se desarrollaron únicamente
- dos tipos de bloques: un bloque para especificar referencias a propiedades
- del contexto de evaluación, donde se asocia un valor textual al nombre
- de una propiedad del contexto, y un bloque para combinaciones\SpecialChar \@.
- El bloque
- de combinaciones puede tener cualquier cantidad de entradas para términos
- en disyunción, y además puede configurarse para estar negado; los dos modos
- de operación del bloque se representan con las palabras «alguna» y «ninguna»,
- que representan cuáles proposiciones anidadas deben ser verdaderas para
- que sea verdadera la combinación\SpecialChar \@.
- Una negación simple puede representarse
- como una combinación negada de un solo elemento\SpecialChar \@.
- Para representar conjunciones,
- simplemente se conectan los bloques uno debajo de otro\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-TODO: screenshots y referencias
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -528,6 +486,35 @@ Visualización en la interfaz de Blockly para la regla de negocio presentada
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+Blockly está diseñado para servir como plataforma para la construcción de
+ interfaces de aplicaciones 
+\emph on
+Web
+\emph default
+, y se promueve su modificación para incorporar tipos de bloques relevantes
+ para cada dominio donde la herramienta se aplique\SpecialChar \@.
+ Se desarrolló una modificació
+n simple de Blockly que incorpora bloques especiales para la construcción
+ de proposiciones lógicas y referencias a contextos de evaluación de reglas
+ de negocios\SpecialChar \@.
+ Para mantener la interfaz simple, se desarrollaron únicamente
+ dos tipos de bloques: un bloque para especificar referencias a propiedades
+ del contexto de evaluación, donde se asocia un valor textual al nombre
+ de una propiedad del contexto, y un bloque para combinaciones\SpecialChar \@.
+ El bloque
+ de combinaciones puede tener cualquier cantidad de entradas para términos
+ en disyunción, y además puede configurarse para estar negado; los dos modos
+ de operación del bloque se representan con las palabras «alguna» y «ninguna»,
+ que representan cuáles proposiciones anidadas deben ser verdaderas para
+ que sea verdadera la combinación\SpecialChar \@.
+ Una negación simple puede representarse
+ como una combinación negada de un solo elemento\SpecialChar \@.
+ Para representar conjunciones,
+ simplemente se conectan los bloques uno debajo de otro\SpecialChar \@.
 
 \end_layout
 

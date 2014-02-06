@@ -120,13 +120,33 @@ addcontentsline{toc}{chapter}{Lista de Símbolos y Abreviaturas}
 \paragraph_spacing onehalf
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="16" columns="5">
+<lyxtabular version="3" rows="43" columns="2">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0">
-<column alignment="left" valignment="top" width="0">
-<column alignment="left" valignment="top" width="0">
-<column alignment="left" valignment="top" width="0">
 <column alignment="left" valignment="top" width="11cm">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+aeson
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Biblioteca para procesamiento de JSON en el lenguaje de programación Haskell\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
@@ -141,34 +161,17 @@ AJAX
 \begin_inset Text
 
 \begin_layout Plain Layout
+Sigla de 
+\emph on
+asynchronous JavaScript and XML
+\emph default
+, una técnica de comunicación asíncrona sobre el protocolo HTTP entre un
+ navegador y un servidor 
+\emph on
+Web
+\emph default
+\SpecialChar \@.
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Asynchronous JavaScript and XML
 \end_layout
 
 \end_inset
@@ -188,81 +191,13 @@ API
 \begin_inset Text
 
 \begin_layout Plain Layout
+Sigla de 
+\emph on
+application programming interface
+\emph default
+, la interfaz de un sistema informático que permite que sea utilizado de
+ forma programática por otro sistema\SpecialChar \@.
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Application programming interface
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-APS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Atención primaria de salud
 \end_layout
 
 \end_inset
@@ -282,7 +217,24 @@ AST
 \begin_inset Text
 
 \begin_layout Plain Layout
+Sigla de 
+\emph on
+abstract syntax tree
+\emph default
+, una estructura de datos que representa la sintaxis abstracta correspondiente
+ a una frase en un lenguaje formal\SpecialChar \@.
 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Blockly
 \end_layout
 
 \end_inset
@@ -291,7 +243,18 @@ AST
 \begin_inset Text
 
 \begin_layout Plain Layout
+TODO
+\end_layout
 
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CIE-10
 \end_layout
 
 \end_inset
@@ -300,16 +263,16 @@ AST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
+Abreviación del nombre de la décima versión del estándar de la OMS 
+\begin_inset Quotes eld
 \end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
-\begin_layout Plain Layout
-Abstract syntax tree
+Clasificación internacional de enfermedades
+\begin_inset Quotes erd
+\end_inset
+
+\SpecialChar \@.
+
 \end_layout
 
 \end_inset
@@ -329,7 +292,153 @@ DDL
 \begin_inset Text
 
 \begin_layout Plain Layout
+Sigla de 
+\emph on
+data definition language
+\emph default
+, un tipo de lenguaje formal utilizado para definir estructuras de datos\SpecialChar \@.
 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+DELETE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Método de HTTP para eliminación de recursos\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+GET
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Método de HTTP para acciones sin efectos sobre recursos\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gmail
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Google
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Google Docs
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+graphviz
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Biblioteca para abstraer la interacción con los programas que componen a
+ GraphViz y sus lenguajes asociados para descripción de diagramas\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GraphViz
 \end_layout
 
 \end_inset
@@ -339,6 +448,22 @@ DDL
 
 \begin_layout Plain Layout
 
+\emph on
+Software
+\emph default
+ para visualización de grafos\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hackage
 \end_layout
 
 \end_inset
@@ -347,7 +472,20 @@ DDL
 \begin_inset Text
 
 \begin_layout Plain Layout
+Repositorio público de paquetes de software para el lenguaje de programación
+ Haskell\SpecialChar \@.
 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Haskell
 \end_layout
 
 \end_inset
@@ -356,7 +494,8 @@ DDL
 \begin_inset Text
 
 \begin_layout Plain Layout
-Data definition language
+Un lenguaje de programación funcional de propósito general\SpecialChar \@.
+
 \end_layout
 
 \end_inset
@@ -376,34 +515,38 @@ HTML
 \begin_inset Text
 
 \begin_layout Plain Layout
+Sigla de 
+\emph on
+hypertext markup language
+\emph default
+, un lenguaje formal para documentos multimedios con hipertexto\SpecialChar \@.
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+HTTP
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+Sigla de 
+\emph on
+hypertext transfer protocol
+\emph default
+, un protocolo de comunicación para sistemas informáticos distribuidos que
+ emplean hipermedios\SpecialChar \@.
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Hypertext markup languaje
 \end_layout
 
 \end_inset
@@ -423,34 +566,102 @@ JSON
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+Sigla de 
+\emph on
 JavaScript object notation
+\emph default
+, un formato estándar de datos basado en la sintaxis de JavaScript\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OMS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sigla para la Organización Mundial de la Salud\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PCA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Prescription control analyzer
+\emph default
+ forma parte del nombre de varios productos de PRX Control Solutions\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PCA Audit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Una aplicación que permite a proveedores de planes de salud analizar y controlar
+ reclamos de salud\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PCA Farma
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Una aplicación que ayuda a las farmacias a aumentar las ventas a través
+ de la supervisión y seguimiento de pacientes crónicos\SpecialChar \@.
+
 \end_layout
 
 \end_inset
@@ -470,34 +681,151 @@ PHP
 \begin_inset Text
 
 \begin_layout Plain Layout
+Un lenguaje de programación orientado al desarrollo 
+\emph on
+Web
+\emph default
+\SpecialChar \@.
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+pl/pgSQL
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Un lenguaje de programación para procedimientos almacenados en bases de
+ datos en PostgreSQL\SpecialChar \@.
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+PostgreSQL
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Un sistema de gestión de bases de datos relacionales\SpecialChar \@.
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-PHP: Hypertext preprocessor
+PRX Analyzer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Una aplicación 
+\emph on
+Web
+\emph default
+ que permite organizar la información registrada de los siniestros analizados
+ por PCA Audit y la dispensación de medicamentos a usuarios de PCA Farma\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PRX Control Solutions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Empresa en la cual se realizó el proyecto de pasantías, dedicada al diseño
+ de soluciones tecnológicas para el sector salud, farmacéutico y asegurador\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PRX Vademécum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Un directorio gratuito publicado en la 
+\emph on
+Web
+\emph default
+ con información de medicamentos, enfermedades y fármacos\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+PUT
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Método de HTTP para la creación o modificación de recursos\SpecialChar \@.
+
 \end_layout
 
 \end_inset
@@ -517,34 +845,16 @@ REST
 \begin_inset Text
 
 \begin_layout Plain Layout
+Sigla de 
+\emph on
+representational state transfer
+\emph default
+, un estilo de arquitectura para servicios 
+\emph on
+Web
+\emph default
+\SpecialChar \@.
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Representational state transfer
 \end_layout
 
 \end_inset
@@ -564,7 +874,27 @@ SaaS
 \begin_inset Text
 
 \begin_layout Plain Layout
+Sigla de 
+\emph on
+software as a service
+\emph default
+, un modelo de comercialización de 
+\emph on
+software
+\emph default
+\SpecialChar \@.
 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Siren
 \end_layout
 
 \end_inset
@@ -573,7 +903,18 @@ SaaS
 \begin_inset Text
 
 \begin_layout Plain Layout
+TODO
+\end_layout
 
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Siren Browser
 \end_layout
 
 \end_inset
@@ -582,16 +923,13 @@ SaaS
 \begin_inset Text
 
 \begin_layout Plain Layout
+Una aplicación 
+\emph on
+Web
+\emph default
+ que consume como cliente a cualquier servicio REST que produzca sus respuestas
+ en el formato Siren\SpecialChar \@.
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Software as a service
 \end_layout
 
 \end_inset
@@ -611,34 +949,59 @@ SQL
 \begin_inset Text
 
 \begin_layout Plain Layout
+Sigla de 
+\emph on
+structured query language
+\emph default
+, un lenguaje formal usado para manipular bases de datos relacionales\SpecialChar \@.
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+Squealer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Una herramienta desarrollada en este proyecto que transforma una descripción
+ de un modelo de datos en una implantación del mismo en SQL con características
+ de control de versiones para sus datos\SpecialChar \@.
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
+\emph on
+Tagless-final
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Structured query language
+Una técnica usada para implantar intérpretes para lenguajes de dominio específic
+o embebidos en lenguajes de programación estáticamente tipados\SpecialChar \@.
+
 \end_layout
 
 \end_inset
@@ -658,81 +1021,15 @@ URI
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Uniform resource identifier
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-URL
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Uniform resource locator
+Sigla de 
+\emph on
+uniform resource identifier
+\emph default
+, un formato estándar de texto usado para identificar recursos en la 
+\emph on
+Web
+\emph default
+.
 \end_layout
 
 \end_inset
@@ -752,7 +1049,26 @@ UUID
 \begin_inset Text
 
 \begin_layout Plain Layout
+Sigla de 
+\emph on
+universally unique identifier
+\emph default
+, un estándar para la creación de identificadores con una muy alta probabilidad
+ de ser universalmente únicos\SpecialChar \@.
 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Web
 \end_layout
 
 \end_inset
@@ -761,25 +1077,12 @@ UUID
 \begin_inset Text
 
 \begin_layout Plain Layout
+Abreviación de 
+\emph on
+world wide web
+\emph default
+, un sistema informatico globalmente distribuido y sus tecnologías relacionadas\SpecialChar \@.
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Universally unique identifier
 \end_layout
 
 \end_inset
@@ -799,34 +1102,36 @@ XML
 \begin_inset Text
 
 \begin_layout Plain Layout
+Sigla de 
+\emph on
+extensible markup language
+\emph default
+, un formato estándar de datos representados en texto\SpecialChar \@.
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
+\family typewriter
+yaml
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+Biblioteca para el procesamiento de YAML en el lenguaje de programación
+ Haskell\SpecialChar \@.
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Extensible markup language
 \end_layout
 
 \end_inset
@@ -846,34 +1151,13 @@ YAML
 \begin_inset Text
 
 \begin_layout Plain Layout
+Sigla de 
+\emph on
+yet another markup language
+\emph default
+, un formato estándar de datos representados en texto con énfasis en legibilidad
+ por humanos\SpecialChar \@.
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Yet another markup language
 \end_layout
 
 \end_inset

@@ -336,9 +336,7 @@ Se diseñó una capa de abstracción de datos para las aplicaciones en forma
 \emph on
 Web
 \emph default
-, la biblioteca de correspondencia algebráico-relacional Groundhog y la
- biblioteca de álgebra relacional HaskellDB en el lenguaje de programación
- Haskell\SpecialChar \@.
+ en el lenguaje de programación Haskell\SpecialChar \@.
 
 \end_layout
 
@@ -424,17 +422,6 @@ Implantar la capa de abstracción de acceso a los datos del modelo nuevo\Special
 
 \end_layout
 
-\begin_layout Itemize
-Especificar mecanismos para la puesta en producción de la nueva base de
- datos\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Itemize
-Especificar mecanismos para la puesta en producción del servicio de datos\SpecialChar \@.
-
-\end_layout
-
 \begin_layout Standard
 \begin_inset VSpace 7.5pt
 \end_inset
@@ -457,43 +444,11 @@ Alcance
 \end_layout
 
 \begin_layout Standard
-PRX Control Solutions actualmente desarrolla cuatro productos:
-\end_layout
-
-\begin_layout Itemize
-PRX Vademécum es un directorio gratuito publicado en la 
-\emph on
-Web
-\emph default
- con información de medicamentos, enfermedades y fármacos\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Itemize
-PCA Audit es una aplicación tecnológica que permite a proveedores de planes
- de salud analizar y controlar reclamos de salud\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Itemize
-PCA Farma es una aplicación que ayuda a las farmacias a aumentar las ventas
- a través de la supervisión y seguimiento de pacientes crónicos\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Itemize
-PRX Analyzer es una aplicación 
-\emph on
-Web
-\emph default
- que permite organizar la información registrada de los siniestros analizados
- por PCA Audit y la dispensación de medicamentos a usuarios de PCA Farma\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-Aunque la operación de estos sistemas es en buena parte independiente, todos
- utilizan la misma base de datos, ya que manipulan la misma información\SpecialChar \@.
+PRX Control Solutions actualmente desarrolla cuatro productos: PRX Vademécum,
+ PCA Audit, PCA Farma y PRX Analyzer\SpecialChar \@.
+ Aunque la operación de estos sistemas
+ es en buena parte independiente, todos utilizan la misma base de datos,
+ ya que manipulan la misma información\SpecialChar \@.
 
 \end_layout
 
@@ -503,6 +458,10 @@ El alcance del desarrollo consiste en la implantación de un modelo de datos
  teniendo en cuenta la preservación, integridad y confidencialidad de los
  datos a los que se tendrá acesso\SpecialChar \@.
 
+\end_layout
+
+\begin_layout Standard
+TODO: explicación de la estructura del libro!
 \end_layout
 
 \begin_layout Standard

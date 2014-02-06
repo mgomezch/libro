@@ -176,12 +176,13 @@ s incidentes en los cuales un servicio prestado a un cliente falló por causa
  de algunas restricciones de claves foráneas, datos duplicados o mal identificad
 os debido a la ausencia de algunas restricciones de unicidad y claves primarias,
  información obsoleta debido a actualizaciones incorrectas que no consideraron
- la falta de normalización en la base de datos, etc\SpecialChar \@.
+ la falta de normalización en la base de datos, y otros tipos de inconsistencias
+ de datos\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Este tipo de problema ha causado inconvenientes fuertes a clientes en operación,
+Este tipo de problema ha causado inconvenientes a clientes en operación,
  incluyendo retraso en la atención de los reclamos de salud de pacientes
  de algunas aseguradoras\SpecialChar \@.
  Por lo tanto, puede identificarse como un criterio
@@ -190,7 +191,7 @@ Este tipo de problema ha causado inconvenientes fuertes a clientes en operación
 garantizar la consistencia e integridad de la información en la base de
  datos
 \series default
- para reducir la incidencia de fallas graves en operación.
+ para reducir la incidencia de fallas en operación.
 \end_layout
 
 \begin_layout Standard
@@ -235,18 +236,18 @@ La principal fuente de valor explotada por los productos y servicios de
 \begin_layout Standard
 Sin embargo, esto entra en conflicto con la naturaleza variable de gran
  parte de la información asociada a los procesos que están en el alcance
- de los productos y servicios de la empresa\SpecialChar \@.
- Los medicamentos cambian de
- precio y entran y salen del mercado, los cuadros clínicos de los pacientes
- evolucionan, las condiciones de cobertura de seguros médicos se alteran
- en respuesta a las demandas del mercado y a cambios en su marco legal y
- regulatorio, etc\SpecialChar \@.
- Más aún, incluso en casos en los cuales la información
- real que se utiliza en los sistemas de la empresa pudiera ser invariable,
- si es que existen tales casos, debe considerarse que la información registrada
- en el sistema puede ser incompleta o incorrecta, y sin embargo es la que
- se utiliza para efectuar los diversos procesos que deben ser potenciales
- sujetos de análisis y auditoría\SpecialChar \@.
+ de los productos y servicios de la empresa.
+ Hay muchas fuentes de variación de los datos; por ejemplo, que los medicamentos
+ cambien de precio y entren y salgan del mercado, que los cuadros clínicos
+ de los pacientes evolucionen, y que las condiciones de cobertura de seguros
+ médicos se alteren en respuesta a las demandas del mercado y a cambios
+ en su marco legal y regulatorio\SpecialChar \@.
+ Más aún, incluso en casos en los cuales
+ la información real que se utiliza en los sistemas de la empresa pudiera
+ ser invariable, si es que existen tales casos, debe considerarse que la
+ información registrada en el sistema puede ser incompleta o incorrecta,
+ y sin embargo es la que se utiliza para efectuar los diversos procesos
+ que deben ser potenciales sujetos de análisis y auditoría\SpecialChar \@.
 
 \end_layout
 
@@ -273,7 +274,7 @@ nte estas inquietudes de los clientes de la empresa y entender el origen
 Algunos de los datos que registran los sistemas de la empresa tienen el
  carácter de transacciones comerciales en el sentido de que acarrean gastos
  para los clientes de la empresa; por ejemplo, cuando PCA Audit genera una
- órden para que un medicamento sea dispensado a un asegurado en una farmacia,
+ orden para que un medicamento sea dispensado a un asegurado en una farmacia,
  la empresa aseguradora deberá luego cancelar el monto aprobado de la órden
  a la farmacia que efectúe la dispensación.
  Los datos asociados a este tipo de dato que representa una transacción
@@ -300,14 +301,14 @@ versión histórica
  En este sentido,
  resulta esencial 
 \series bold
-preservar la totalidad de la historia de toda la información manejada por
- el modelo de datos
+preservar la historia completa de toda la información manejada por el modelo
+ de datos
 \series default
- dado que puede ser sujeto de dependencias por parte de transacciones comerciale
-s cuya historia debe preservarse, y también por el simple hecho de que la
- información histórica de los procesos de los sistemas de la empresa tiene
- valor intrínsico por el hecho de poder efectuar análisis sobre esa información
- con fines comerciales\SpecialChar \@.
+, debido a que puede ser sujeto de dependencias por parte de transacciones
+ comerciales cuya historia debe preservarse, y también por el simple hecho
+ de que la información histórica de los procesos de los sistemas de la empresa
+ tiene valor intrínsico por el hecho de poder efectuar análisis sobre esa
+ información con fines comerciales\SpecialChar \@.
 
 \end_layout
 
@@ -324,12 +325,10 @@ Extensibilidad y facilidad de refactorización
 
 \begin_layout Standard
 En términos de su constitución como empresa y de la clase de servicios que
- ofrece, PRX Control Solutions puede ser considerada un 
-\emph on
-startup
-\emph default
-: sus productos se basan en ofrecer una ventaja competitiva a sus clientes
- a través de aplicaciones innovadoras de tecnología\SpecialChar \@.
+ ofrece, PRX Control Solutions puede ser considerada una compañía incipiente:
+ es una empresa que tiene poco tiempo desde su constitución y sus productos
+ se basan en ofrecer una ventaja competitiva a sus clientes a través de
+ aplicaciones innovadoras de tecnología\SpecialChar \@.
 
 \end_layout
 
@@ -342,17 +341,13 @@ Una consecuencia de explotar la innovación tecnológica de esta manera es
  desarrolla de forma personalizada y está en constante revisión para que
  los clientes hagan uso cada vez más efectivo de estos productos y servicios\SpecialChar \@.
 
- Otra consecuencia de la condición de 
-\emph on
-startup
-\emph default
- de la empresa es que es mucho más pequeña que sus clientes\SpecialChar \@.
- Los clientes
- de la empresa típicamente emplean sistemas de gran escala que están altamente
- integrados en sus procesos internos, y por lo tanto el esfuerzo requerido
- para lograr su integración con los productos de PRX Control Solutions es
- significativo y podría fácilmente disuadir a un potencial cliente de utilizarlo
-s\SpecialChar \@.
+ Otra consecuencia de la condición de compañía incipiente de la empresa
+ es que es mucho más pequeña que sus clientes\SpecialChar \@.
+ Los clientes de la empresa
+ típicamente emplean sistemas de gran escala que están altamente integrados
+ en sus procesos internos, y por lo tanto el esfuerzo requerido para lograr
+ su integración con los productos de PRX Control Solutions es significativo
+ y podría fácilmente disuadir a un potencial cliente de utilizarlos\SpecialChar \@.
 
 \end_layout
 
@@ -419,10 +414,7 @@ La alta frecuencia de cambios en los requerimientos sobre los productos
 
 \begin_layout Standard
 Desgraciadamente y por razones de la escala de la empresa y del equipo de
- desarrollo, los productos de PRX Control Solutions no cuentan con una 
-\emph on
-suite
-\emph default
+ desarrollo, los productos de PRX Control Solutions no cuentan con un sistema
  de pruebas automatizadas que verifiquen la correctitud de la implantación\SpecialChar \@.
 
  Esto ocasiona directamente una alta tasa de defectos, y la principal causa
@@ -438,11 +430,7 @@ suite
  y Python, ambos lenguajes con sistemas de tipos dinámicos que son poco
  adecuados para ser objeto de herramientas de análisis estático, por lo
  cual este tipo de problema es difícil de detectar de manera efectiva incluso
- en presencia de una 
-\emph on
-suite
-\emph default
- de pruebas completa\SpecialChar \@.
+ en presencia de un sistema de pruebas completo\SpecialChar \@.
 
 \end_layout
 

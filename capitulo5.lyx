@@ -413,13 +413,11 @@ status open
 
 \begin_layout Plain Layout
 Las referencias en el servicio real serán presentadas como URIs absolutos
- incluyendo el protocolo, el 
-\emph on
-hostname
-\emph default
- del API, y la ruta raíz del API\SpecialChar \@.
- Por ejemplo, en el caso del segundo enlace
- de este ejemplo, el servicio responderá en realidad con el URI 
+ incluyendo la especificación del protocolo, el nombre de dominio del servidor
+ que ofrece el API, y la ruta raíz del API dentro de ese servidor\SpecialChar \@.
+ Por ejemplo,
+ en el caso del segundo enlace de este ejemplo, el servicio responderá en
+ realidad con el URI 
 \family typewriter
 https://api.pcaaudit.com/v1/database/Asociación+farmacológica
 \family default
@@ -477,7 +475,7 @@ tabla
 tabla
 \series default
  es el nombre de la tabla debidamente codificado para poder representarse
- en un URL de HTTP\SpecialChar \@.
+ en un URI\SpecialChar \@.
 
 \end_layout
 
@@ -530,20 +528,17 @@ Columnas
 \begin_layout Standard
 Cada columna de cada tabla se representará de forma similar a las tablas:
  se provee una descripción de la columna y el tipo de dato que se almacena
- en ella como documentación 
-\emph on
-in-band
-\emph default
-\SpecialChar \@.
- Además, se debe proveer una especificación del tipo de la columna que sea
- adecuada para que un cliente que comprenda esta especificación pueda mostrar
- y manipular adecuadamente los valores en estas columnas\SpecialChar \@.
+ en ella como documentación dentro del servicio\SpecialChar \@.
+ Además, se debe proveer
+ una especificación del tipo de la columna que sea adecuada para que un
+ cliente que comprenda esta especificación pueda mostrar y manipular adecuadamen
+te los valores en estas columnas\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Se identifica al recurso asociado a una columna de una tabla con la ruta
- 
+Se identifica al recurso asociado a una columna particular de una tabla
+ con la ruta 
 \family typewriter
 /
 \family default
@@ -637,8 +632,8 @@ tabla
 
 \begin_layout Standard
 Los recursos correspondientes a vistas paginadas de la colección se identifican
- con la ruta de la colección principal con parámetros que especifican el
- alcance de la vista: 
+ con la ruta de la colección principal junto con parámetros que especifican
+ el alcance de la vista: 
 \family typewriter
 /
 \family default
@@ -859,7 +854,7 @@ predecessor-version
 \family typewriter
 successor-version
 \family default
-, respectivamente, usando las rutas 
+, respectivamente, usando las dos rutas especiales para redirección, 
 \family typewriter
 /
 \family default
@@ -1106,7 +1101,11 @@ reference "fig:siren-browser"
 
 \end_inset
 
- muestra la vista Web en la aplicación Siren Browser
+ muestra la vista 
+\emph on
+Web
+\emph default
+ en la aplicación Siren Browser
 \begin_inset Note Comment
 status open
 

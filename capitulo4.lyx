@@ -104,15 +104,12 @@ Los principios generales de diseño necesarios para atender en forma efectiva
 \begin_layout Standard
 Existen sistemas de control de versión que proveen este tipo de referencias:
  en el sistema de control de versión Git, un repositorio puede hacer referencia
- a una revisión particular de otro repositorio usando 
-\emph on
-submodules
-\emph default
-, y en cada uno se almacena la historia completa de todos los estados del
- repositorio\SpecialChar \@.
- Sin embargo, un sistema como Git no está diseñado para ser
- usado como base de datos para un sistema de información, y sería tremendamente
- impráctico e ineficiente usarlo para este fin\SpecialChar \@.
+ a una revisión particular de otro repositorio usando submódulos, y en cada
+ uno se almacena la historia completa de todos sus estados\SpecialChar \@.
+ Sin embargo,
+ un sistema como Git no está diseñado para ser usado como base de datos
+ para un sistema de información, y sería tremendamente impráctico e ineficiente
+ usarlo para este fin\SpecialChar \@.
 
 \end_layout
 
@@ -479,23 +476,20 @@ Al utilizar esta representación, la tabla original puede recuperarse juntando
 
 \begin_layout Standard
 El gestor de bases de datos relacionales PostgreSQL permite la ejecución
- de 
-\emph on
-triggers
-\emph default
- que sustituyan acciones sobre vistas de inserción, eliminación y actualización,
- lo cual permite implantar esta lógica con una vista en lugar de la tabla
- original\SpecialChar \@.
- Además, las consultas sobre vistas en PostgreSQL son transformadas
- por reglas de reescritura en consultas sobre las tablas en la definición
- de la vista, por lo cual esta implantación ofrece oportunidades al planificador
- de consultas de solo incluir en la ejecución de consultas sobre estas vistas
- a las tablas subyacentes que sean necesarias para computar los resultados\SpecialChar \@.
-
- En consecuencia, a pesar de la naturaleza compleja del esquema usado para
- representar las versiones de datos en una tabla, el costo de efectuar consultas
- sobre vistas que representen a las tablas originales implantadas de esta
- manera podría tener propiedades deseables para algunos patrones de consultas\SpecialChar \@.
+ de disparadores que sustituyan acciones de inserción, eliminación y actualizaci
+ón sobre vistas, lo cual permite implantar esta lógica con una vista en
+ lugar de la tabla original\SpecialChar \@.
+ Además, las consultas sobre vistas en PostgreSQL
+ son transformadas por reglas de reescritura en consultas sobre las tablas
+ en la definición de la vista, por lo cual esta implantación ofrece oportunidade
+s al planificador de consultas de solamente incluir en la ejecución de consultas
+ sobre estas vistas a las tablas subyacentes que sean necesarias para computar
+ los resultados\SpecialChar \@.
+ En consecuencia, a pesar de la naturaleza compleja del esquema
+ usado para representar las versiones de datos en una tabla, el costo de
+ efectuar consultas sobre vistas que representen a las tablas originales
+ implantadas de esta manera podría tener propiedades deseables para algunos
+ patrones de consultas\SpecialChar \@.
 
 \end_layout
 
@@ -782,9 +776,23 @@ En este sentido, se desarrolló Squealer
 status collapsed
 
 \begin_layout Plain Layout
-El nombre hace alusión a que la base de datos generada es «chismosa» sobre
- la historia de los datos, y «squealer» en inglés puede referirse a alguien
- que divulga información confidencial.
+El nombre hace alusión a que la base de datos generada es 
+\begin_inset Quotes eld
+\end_inset
+
+chismosa
+\begin_inset Quotes erd
+\end_inset
+
+ sobre la historia de los datos, y 
+\begin_inset Quotes eld
+\end_inset
+
+squealer
+\begin_inset Quotes erd
+\end_inset
+
+ en inglés puede referirse a alguien que divulga información confidencial.
  Además, la palabra contiene las letras S, Q y L en ese orden.
 \end_layout
 
@@ -797,29 +805,23 @@ El nombre hace alusión a que la base de datos generada es «chismosa» sobre
 status collapsed
 
 \begin_layout Plain Layout
-Versiones anteriores no proveían el soporte necesario para 
-\emph on
-triggers
-\emph default
+Versiones anteriores no proveían el soporte necesario para disparadores
  en vistas.
 \end_layout
 
 \end_inset
 
-, incluyendo 
-\emph on
-triggers
-\emph default
- escritos en PL/pgSQL para poder manipular las vistas directamente y obtener
- el comportamiento deseado según la técnica descrita para registro de la
- historia de los datos y referencias a versiones\SpecialChar \@.
- La única diferencia entre
- la técnica descrita y la implantada por Squealer es que en vez de generar
- números de secuencia para identificar identidades y versiones, se genera
- en cada caso un UUID aleatorio con el propósito de evitar inconvenientes
- en caso de que la implantación de la base de datos se descentralice en
- el futuro, lo cual está previsto en los planes de la empresa aunque escapa
- del alcance de este proyecto de pasantías\SpecialChar \@.
+, incluyendo disparadores que ejecutan procedimientos escritos en PL/pgSQL
+ para poder manipular las vistas directamente y obtener el comportamiento
+ deseado según la técnica descrita para registro de la historia de los datos
+ y referencias a versiones\SpecialChar \@.
+ La única diferencia entre la técnica descrita
+ y la implantada por Squealer es que en vez de generar números de secuencia
+ para identificar identidades y versiones, se genera en cada caso un UUID
+ aleatorio con el propósito de evitar inconvenientes en caso de que la implantac
+ión de la base de datos se descentralice en el futuro, lo cual está previsto
+ en los planes de la empresa aunque escapa del alcance de este proyecto
+ de pasantías\SpecialChar \@.
 
 \end_layout
 
