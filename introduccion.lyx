@@ -68,37 +68,33 @@
 \begin_body
 
 \begin_layout Chapter*
-
-\series bold
 Introducción
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-addcontentsline{toc}{chapter}{Introducción}
-\end_layout
-
-\end_inset
-
-
-\lang spanish
-
-\begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
 thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\lang english
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Introducción}
 \end_layout
 
 \end_inset
@@ -118,25 +114,8 @@ A continuación, se describen los antecedentes, el planteamiento y solución
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset VSpace 7.5pt
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\series bold
+\begin_layout Section*
 Antecedentes
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace 7.5pt
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -173,25 +152,8 @@ PCA Farma es una aplicación que ayuda a las farmacias aumentar las ventas
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset VSpace 7.5pt
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\series bold
+\begin_layout Section*
 Planteamiento del problema
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace 7.5pt
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -242,25 +204,8 @@ Es así como PRX Control Solutions se propone desarrollar un modelo de datos
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset VSpace 7.5pt
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\series bold
+\begin_layout Section*
 Solución del problema
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace 7.5pt
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -340,29 +285,17 @@ Web
 
 \end_layout
 
+\begin_layout Section*
+Objetivos
+\end_layout
+
 \begin_layout Standard
 A continuación, se presentan los objetivos del proyecto de pasantía larga\SpecialChar \@.
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset VSpace 7.5pt
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\series bold
-Objetivo general
-\series default
-
-\begin_inset VSpace 7.5pt
-\end_inset
-
-
+\begin_layout Subsection*
+Objetivos generales
 \end_layout
 
 \begin_layout Standard
@@ -372,24 +305,11 @@ Diseñar e implantar un modelo de datos que permita registrar información
  médicos y facturas de asegurados, y desarrollar una capa de abstracción
  de datos para utilizar el modelo en las aplicaciones de la empresa de manera
  flexible y desacoplada\SpecialChar \@.
- 
-\begin_inset VSpace 7.5pt
-\end_inset
-
 
 \end_layout
 
-\begin_layout Standard
-\noindent
-
-\series bold
+\begin_layout Subsection*
 Objetivos específicos
-\series default
-
-\begin_inset VSpace 7.5pt
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -422,25 +342,8 @@ Implantar la capa de abstracción de acceso a los datos del modelo nuevo\Special
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset VSpace 7.5pt
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\series bold
+\begin_layout Section*
 Alcance
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace 7.5pt
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -460,8 +363,65 @@ El alcance del desarrollo consiste en la implantación de un modelo de datos
 
 \end_layout
 
+\begin_layout Section*
+Estructura del informe
+\end_layout
+
 \begin_layout Standard
-TODO: explicación de la estructura del libro!
+El desarrollo de este proyecto de pasantía se presenta en este informe dividido
+ en seis capítulos:
+\end_layout
+
+\begin_layout Enumerate
+Se define el contexto del proyecto en términos del entorno empresarial donde
+ se desarrolló: la historia de la empresa, sus productos y los problemas
+ que enfrentan\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Enumerate
+Se establecen los conceptos relevantes para el diseño del nuevo modelo de
+ datos y su correspondencia con los objetos de la base de datos nueva\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Enumerate
+Se enuncian los principios generales de diseño requerido por los productos
+ de la empresa y que deberán orientar todo el desarrollo del proyecto\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Enumerate
+Se describe el funcionamiento de la herramienta desarrollada para generar
+ una implantación del nuevo modelo de datos que sea acorde con los principios
+ generales de diseño enunciados en el capítulo anterior, usando un generador
+ de código SQL para bases de datos que incorporan técnicas de control de
+ versiones\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Enumerate
+Se describe el diseño y la implantación de la capa de abstracción para la
+ manipulación de la base de datos nueva en forma de un API 
+\emph on
+Web
+\emph default
+ construido según el estilo REST de arquitectura de servicios, junto con
+ una interfaz administrativa generada dinámicamente a partir de los datos
+ que se obtienen del API\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Enumerate
+Se describe la estrategia específica usada para resolver el problema de
+ la configuración y evaluación de reglas de negocio para el producto principal
+ de la empresa, usando un servicio 
+\emph on
+Web
+\emph default
+ de interpretación de proposiciones lógicas, junto con una interfaz de programac
+ión visual para configurarla\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard

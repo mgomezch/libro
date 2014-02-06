@@ -86,10 +86,18 @@ addcontentsline{toc}{chapter}{Conclusiones y recomendaciones}
 \end_inset
 
 
+\lang spanish
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty} 
 \end_layout
 
-\begin_layout Standard
-\begin_inset VSpace 5mm
 \end_inset
 
 
@@ -422,7 +430,45 @@ Jamás dejo de impresionarme por lo difícil que es programar\SpecialChar \@.
 \end_layout
 
 \begin_layout Standard
-TODO
+Durante el desarrollo de este proyecto de pasantía se identificaron diversos
+ problemas en la tecnología existente de PRX Control Solutions que fuera
+ relevante para este proyecto\SpecialChar \@.
+ En varios casos, la solución a esos problemas
+ implicó un replanteamiento profundo ((TODO: terminar))\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Recomendaciones:
+\end_layout
+
+\begin_layout Standard
+Los objetivos de la empresa a mediano plazo incluyen el desarrollo de PRX
+ Analyzer, un producto basado en el análisis estadístico de los datos provenient
+es de PCA Audit y PCA Farma sobre la prescripción y dispensación de medicamentos
+, ya que se estima que estos datos serán de muy alto valor para la planificación
+ de la comercialización de productos por parte de los laboratorios farmacéuticos
+ que producen esos medicamentos\SpecialChar \@.
+ En este sentido, será importante contar
+ con una base de datos unificada que incluya a los datos provenientes de
+ todas las instancias de los productos de la empresa\SpecialChar \@.
+ El modelo de operación
+ de PCA Audit hasta ahora ha mantenido completamente aisladas las bases
+ de datos de cada instancia de la aplicación que se destina a cada cliente,
+ principalmente debido a preocupaciones de seguridad y confidencialidad
+ de los datos que la aplicación maneja, y los datos que son comunes a varias
+ instancias se transmiten manualmente\SpecialChar \@.
+ La operación de PRX Analyzer idealmente
+ trabajaría con los datos provenientes de todos estos orígenes en tiempo
+ real, por lo cual es importante implantar un mecanismo que replique automáticam
+ente los datos obtenidos o generados en los servidores de los clientes hacia
+ la ubicación centralizada donde se realizará el análisis propio de PRX
+ Analyzer\SpecialChar \@.
+ Este proceso debe prestar especial atención a mantener la confidencial
+idad de los datos, ya que los datos propios de los reclamos de salud de
+ una compañía aseguradora no deben ser visibles por las demás\SpecialChar \@.
+ ((TODO: informació
+n personal))
 \end_layout
 
 \begin_layout Standard

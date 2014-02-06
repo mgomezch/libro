@@ -71,6 +71,22 @@ Evaluación de reglas de negocio
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Uno de los aspectos más complejos de la aplicación PCA Audit es la necesidad
  de hacerlo adaptable a la gran variedad de requerimientos específicos de
  sus clientes\SpecialChar \@.

@@ -66,7 +66,7 @@
 \begin_body
 
 \begin_layout Chapter
-Control de versión en bases de datos
+Control de versiones en bases de datos
 \end_layout
 
 \begin_layout Standard
@@ -821,7 +821,7 @@ Versiones anteriores no proveían el soporte necesario para disparadores
  aleatorio con el propósito de evitar inconvenientes en caso de que la implantac
 ión de la base de datos se descentralice en el futuro, lo cual está previsto
  en los planes de la empresa aunque escapa del alcance de este proyecto
- de pasantías\SpecialChar \@.
+ de pasantía\SpecialChar \@.
 
 \end_layout
 
@@ -855,7 +855,7 @@ ble que representa la estructura abstracta del esquema de la base de datos
 \end_layout
 
 \begin_layout Standard
-La implantación del modelo de datos de este proyecto de pasantías se realizó
+La implantación del modelo de datos de este proyecto de pasantía se realizó
  enteramente en un archivo de entrada de Squealer, el cual se encarga de
  generar la implantación concreta en código SQL que se carga en el sistema
  de gestión de bases de datos\SpecialChar \@.

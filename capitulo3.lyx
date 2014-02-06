@@ -104,7 +104,7 @@ Este capítulo enumera los principios generales de diseño que se identificaron
  de la empresa, junto con ejemplos ilustrativos de situaciones por las cuales
  cada uno de estos criterios resulta crucial\SpecialChar \@.
  Esto justifica las decisiones
- de diseño y la selección de tecnologías empleadas en este proyecto de pasantías\SpecialChar \@.
+ de diseño y la selección de tecnologías empleadas en este proyecto de pasantía\SpecialChar \@.
 
  A pesar de que algunos de estos principios son ideas fundamentales asociadas
  a la calidad de 
@@ -169,8 +169,8 @@ Como es de esperarse, un sistema en producción hecho de esta manera sufre
  de las aplicaciones de la empresa, mas no están especificadas en la implantació
 n de la base de datos mediante restricciones o por la simple estructura
  del modelo\SpecialChar \@.
- Durante la realización de este proyecto de pasantías, hubo frecuente
-s incidentes en los cuales un servicio prestado a un cliente falló por causa
+ Durante la realización de este proyecto de pasantía, hubo frecuentes
+ incidentes en los cuales un servicio prestado a un cliente falló por causa
  de la ausencia de este tipo de restricción, ya sea debido a referencias
  colgantes en la base de datos que no se detectaron debido a la ausencia
  de algunas restricciones de claves foráneas, datos duplicados o mal identificad
@@ -256,8 +256,8 @@ Por otra parte, es frecuente que los usuarios de los sistemas de la empresa
  hagan observaciones sobre su comportamiento y reporten quejas o problemas
  con la información generada o reportada por ellos\SpecialChar \@.
  Durante el desarrollo
- de este proyecto de pasantías, ocurrieron con frecuencia reportes de incidencia
-s por parte de los clientes que resultaron difíciles de rastrear a sus causas
+ de este proyecto de pasantía, ocurrieron con frecuencia reportes de incidencias
+ por parte de los clientes que resultaron difíciles de rastrear a sus causas
  debido a que los problemas fueron detectados cuando ya habían cambiado
  muchos datos relevantes en el sistema, y en consecuencia no se conocía
  el contexto en el cual el sistema efectuó el comportamiento indeseado ni
@@ -352,7 +352,7 @@ Una consecuencia de explotar la innovación tecnológica de esta manera es
 \end_layout
 
 \begin_layout Standard
-Durante la realización de este proyecto de pasantías, la mayor parte del
+Durante la realización de este proyecto de pasantía, la mayor parte del
  esfuerzo de los miembros del equipo de desarrollo de la empresa se enfocaron
  día a día en la realización de modificaciones simples a PCA Audit en respuesta
  a cambios constantes y pequeños en los requerimientos de los clientes\SpecialChar \@.
@@ -435,7 +435,7 @@ Desgraciadamente y por razones de la escala de la empresa y del equipo de
 \end_layout
 
 \begin_layout Standard
-Durante la realización de este proyecto de pasantías, este tipo de errores
+Durante la realización de este proyecto de pasantía, este tipo de errores
  causó grandes dificultades al equipo de desarrollo tanto por la frecuente
  necesidad de atender incidencias por fallas del sistema en producción como
  por la elevada dificultad del desarrollo de nueva funcionalidad en ausencia
@@ -496,7 +496,7 @@ En particular, PCA Audit debe tomar en cuenta las condiciones de cobertura
  asociadas a cada póliza de seguros de sus clientes a la hora de evaluar
  la validez de los reclamos de salud de los pacientes\SpecialChar \@.
  Uno de los problemas
- observados durante el desarrollo del proyecto de pasantías es que la capacidad
+ observados durante el desarrollo del proyecto de pasantía es que la capacidad
  de modificar el comportamiento del sistema en muchos casos estaba limitada
  por la técnica usada para implantar la parametrización: cada vez que se
  quería agregar la posibilidad de expresar reglas de negocio más complejas
@@ -556,7 +556,7 @@ es sencillas o comúnes\SpecialChar \@.
 Esta situación tiene un efecto particularmente notorio en las abstracciones
  de acceso al modelo de datos utilizadas por las aplicaciones de la empresa\SpecialChar \@.
 
- Durante la realización de este proyecto de pasantías se observó el empleo
+ Durante la realización de este proyecto de pasantía se observó el empleo
  de una biblioteca de correspondencia objeto-relacional utilizada extensivamente
  en la implantación de las aplicaciones de la empresa, y si bien su utilización
  facilita gran parte de la implantación de estas aplicaciones orientadas
