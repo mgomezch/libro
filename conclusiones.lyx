@@ -430,16 +430,81 @@ Jamás dejo de impresionarme por lo difícil que es programar\SpecialChar \@.
 \end_layout
 
 \begin_layout Standard
-Durante el desarrollo de este proyecto de pasantía se identificaron diversos
- problemas en la tecnología existente de PRX Control Solutions que fuera
- relevante para este proyecto\SpecialChar \@.
- En varios casos, la solución a esos problemas
- implicó un replanteamiento profundo ((TODO: terminar))\SpecialChar \@.
+La práctica hasta ahora en el desarrollo de tecnología dentro de PRX Control
+ Solutions ha estado enfocada principalmente en adaptar tecnología existente
+ a los requerimientos de la empresa, incluso cuando la semántica implantada
+ por estas tecnologías no se ajustara adecuadamente a los requerimientos
+ prácticos del negocio\SpecialChar \@.
+ Durante el desarrollo de este proyecto de pasantía
+ se identificaron diversos problemas de esta naturaleza: el origen de estos
+ problemas no radica tanto en que se cometieran errores de diseño e implantación
+ en las soluciones tecnológicas de la empresa, sino que las tecnologías
+ que han fundamentado a este diseño, por más que se usaran de la mejor manera
+ posible, no son capaces de expresar directamente los mecanismos con los
+ cuales se relacionan e interaccionan los objetos del dominio de los productos
+ de la empresa\SpecialChar \@.
+ En varios casos, la solución a esos problemas implicó un
+ replanteamiento de los principios básicos de la operación tecnológica para
+ lograr una adaptación efectiva a los requerimientos prácticos del negocio\SpecialChar \@.
+
+ En particular, se logró desarrollar un mecanismo genérico para la persistencia
+ e integridad de datos en contextos que requieran asociaciones de naturaleza
+ similar a la provista en sistemas de control de versiones, lo cual se ajusta
+ mucho mejor al tipo de problemas que la empresa pretende atacar con sus
+ productos que las técnicas usuales de modelado de datos que no tienen soporte
+ directo para el registro y la asociación de información histórica\SpecialChar \@.
+ Este
+ mecanismo genérico además soporta suficiente abstracción para permitir
+ reducciones importantes en la discrepancia entre el modelo abstracto de
+ los conceptos relevantes para el negocio, y la implantación concreta en
+ la base de datos, hasta tal punto que las tablas de la base de datos implantada
+ corresponden con precisión a los conceptos del dominio relevantes para
+ los sistemas de la empresa\SpecialChar \@.
+ El desarrollo de esta abstracción requirió un
+ cambio en la estrategia fundamental de desarrollo: en vez de partir de
+ tecnologías existentes e intentar modelar dentro de sus limitaciones los
+ problemas que se desean atacar, se procedió, al contrario, a desarrollar
+ tecnología diseñada con el propósito específico de atacar problemas de
+ manera genérica que compartan los mismos principios generales requeridos
+ por el problema específico a resolver, y luego, dotados de esa tecnología
+ diseñada a la medida del problema, se desarrolló de manera simple y directa
+ la solución al problema específico\SpecialChar \@.
+ Esta inversión en el proceso desplaza
+ la dificultad de construcción del 
+\emph on
+software
+\emph default
+ a etapas más tempranas en el proceso de desarrollo y simplifica las etapas
+ posteriores, y se estima que este intercambio de complejidad redicurá el
+ esfuerzo requerido para adaptar el 
+\emph on
+software
+\emph default
+ desarrollado a los requerimientos siempre cambiantes de los clientes de
+ la empresa\SpecialChar \@.
 
 \end_layout
 
 \begin_layout Standard
-Recomendaciones:
+En conclusión, se determinó que se pueden obtener beneficios importantes
+ al enfocar el desarrollo de 
+\emph on
+software
+\emph default
+ en los principios generales de diseño requeridos por el dominio del problema,
+ y que más allá de adaptar tecnologías existentes al problema que se desea
+ resolver, es deseable la creación de tecnologías nuevas que integren profundame
+nte a los principios generales requeridos por el dominio del problema dentro
+ de su diseño\SpecialChar \@.
+ Esta estrategia se aplicó exitosamente como fundamento a todo
+ el desarrollo realizado en este proyecto de pasantía, y permitió alcanzar
+ los objetivos del proyecto de manera favorable al crecimiento futuro de
+ la empresa y al mantenimiento y desarrollo futuro de sus productos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section*
+Recomendaciones
 \end_layout
 
 \begin_layout Standard
@@ -450,25 +515,111 @@ es de PCA Audit y PCA Farma sobre la prescripción y dispensación de medicament
  de la comercialización de productos por parte de los laboratorios farmacéuticos
  que producen esos medicamentos\SpecialChar \@.
  En este sentido, será importante contar
- con una base de datos unificada que incluya a los datos provenientes de
- todas las instancias de los productos de la empresa\SpecialChar \@.
+ con una base de datos centralizada que incluya a los datos provenientes
+ de todas las instancias de los productos de la empresa\SpecialChar \@.
  El modelo de operación
  de PCA Audit hasta ahora ha mantenido completamente aisladas las bases
  de datos de cada instancia de la aplicación que se destina a cada cliente,
  principalmente debido a preocupaciones de seguridad y confidencialidad
  de los datos que la aplicación maneja, y los datos que son comunes a varias
- instancias se transmiten manualmente\SpecialChar \@.
- La operación de PRX Analyzer idealmente
- trabajaría con los datos provenientes de todos estos orígenes en tiempo
- real, por lo cual es importante implantar un mecanismo que replique automáticam
-ente los datos obtenidos o generados en los servidores de los clientes hacia
+ instancias, como la información farmacológica que se emplea en el análisis
+ de reclamos de salud, se transmiten manualmente entre las bases de datos
+ independientes de cada cliente\SpecialChar \@.
+ La operación de PRX Analyzer deberá disponer
+ de los datos provenientes de todos estos orígenes en tiempo real, por lo
+ cual es importante implantar un mecanismo que replique automáticamente
+ los datos obtenidos o generados en los servidores de los clientes hacia
  la ubicación centralizada donde se realizará el análisis propio de PRX
  Analyzer\SpecialChar \@.
  Este proceso debe prestar especial atención a mantener la confidencial
 idad de los datos, ya que los datos propios de los reclamos de salud de
  una compañía aseguradora no deben ser visibles por las demás\SpecialChar \@.
- ((TODO: informació
-n personal))
+ Además, deben
+ determinarse políticas de privacidad claras que especifiquen el manejo
+ de información personal sobre los afiliados a pólizas de seguros, de forma
+ que el análisis posterior no comprometa la privacidad de los clientes\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+La adaptación de los productos de la empresa a este requerimiento necesariamente
+ los llevará a convertirse propiamente en sistemas distribuidos, lo cual
+ encaja convenientemente en la aplicación del estilo de arquitectura REST
+ empleado en el desarrollo de este proyecto de pasantía\SpecialChar \@.
+ Además, el posible
+ crecimiento acelerado de la escala de la operación de PCA Farma podría
+ requerir el pase a un modelo de computación distribuida a escala 
+\emph on
+Web
+\emph default
+, que es precisamente el tipo de problema para el cual está diseñado el
+ estilo de arquitectura REST\SpecialChar \@.
+ Se recomienda, por lo tanto, extender la aplicación
+ de los principios de REST a todos los aspectos de la implantación de los
+ productos de la empresa donde resulten aplicables\SpecialChar \@.
+ En particular, se recomienda
+ diseñar e implantar un API REST que permita realizar de manera programática
+ todas las acciones disponibles a través de la interfaz 
+\emph on
+Web
+\emph default
+ de las aplicaciones de la empresa\SpecialChar \@.
+ Esto traería el beneficio adicional de
+ facilitar el proceso de integración con clientes nuevos, ya que su interacción
+ con los sistemas de la empresa podría hacerse a través del API genérico
+ y dejaría de ser necesario implantar APIs específicos para cada cliente,
+ que es la práctica actual, y requiere una gran cantidad de esfuerzo del
+ equipo de desarrollo, lo cual retarda el proceso de integración\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+El desarrollo de este proyecto de pasantía sacó provecho extensamente de
+ la aplicación de técnicas relacionadas con la traducción e interpretación
+ de lenguajes formales para resolver los problemas técnicos específicos
+ que la empresa enfrenta\SpecialChar \@.
+ En particular, este enfoque facilitó la construcción
+ de una solución general al problema de bases de datos con referencias a
+ versiones, ya que se resolvió como un traductor entre dos lenguajes de
+ definición de datos: el formato de entrada de Squealer, y el dialecto de
+ SQL de PostgreSQL\SpecialChar \@.
+ De la misma manera, el enfoque linguístico motivó la
+ construcción de una solución genérica y extensible para el problema de
+ la parametrización del comportamiento del análisis farmacológico de reclamos
+ de salud mediante intérpretes de proposiciones lógicas representadas como
+ sus ASTs serializados\SpecialChar \@.
+ Toda la programación en este proyecto de pasantía
+ se realizó en el lenguaje de programación Haskell, cuyo diseño hace muy
+ conveniente el desarrollo de programas bajo este enfoque linguístico, y
+ además provee excelentes garantías estáticas de correctitud que permitieron
+ la implantación de varios traductores e interpretadores (el propio Squealer,
+ el evaluador de reglas de negocio con sus múltiples intérpretes coalgebráicos,
+ y las transformaciones entre los formatos de reglas usados en Blockly y
+ en el evaluador) con facilidad: debido a que su semántica nunca se especificó
+ formalmente antes de iniciar su desarrollo, estos traductores e intérpretes
+ debieron ser sujetos a refactorizaciones relativamente profundas durante
+ su implantación, pero el sistema de tipos expresivo de Haskell guió estas
+ transformaciones y facilitó la detección rápida de muchos errores\SpecialChar \@.
+ El equipo
+ de desarrollo de PRX Control Solutions ha reportado con frecuencia que
+ es muy problemático refactorizar la implantación de los productos de la
+ empresa en respuesta a demandas de los clientes, y que las herramientas
+ de desarrollo proveen muy poco apoyo para la detección de errores y para
+ la programación de soluciones genéricas y adaptables a las necesidades
+ específicas de sus clientes, lo cual es directamente contrario a lo que
+ se observó en la experiencia del uso de Haskell en este proyecto de pasantía\SpecialChar \@.
+
+ Por lo tanto, se recomienda el uso de herramientas como esta para reducir
+ estos problemas de mantenibilidad en los futuros desarrollos de 
+\emph on
+software
+\emph default
+ de la empresa\SpecialChar \@.
+ En efecto, uno de los planes a mediano plazo de la empresa
+ incluye la reimplementación del análisis farmacológico de reclamos de salud
+ para aprovechar las garantías estáticas de correctitud provistas por el
+ sistema de tipos del lenguaje de programación Haskell\SpecialChar \@.
+
 \end_layout
 
 \begin_layout Standard

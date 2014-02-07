@@ -116,7 +116,7 @@ customHeadersFooters
 \color #faf0e6
 \end_branch
 \branch Bibliografía
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -156,7 +156,7 @@ customHeadersFooters
 \color #faf0e6
 \end_branch
 \branch Capítulo-6
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -476,7 +476,6 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
-
 \begin_inset Note Comment
 status open
 

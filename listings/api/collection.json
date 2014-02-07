@@ -1,25 +1,11 @@
-{ "properties":
-  { "count": 1337
-  , "limit": 5
-  , "offset": 0
-  }
+{ "properties": { "count": 1337, "limit": 5, "offset": 0 }
 
 , "entities":
-  [ { "rel": "item"
-    , "href": "/Variante+de+asociación+farmacológica/version/3e7c1b67"
-    }
-  , { "rel": "item"
-    , "href": "/Variante+de+asociación+farmacológica/version/53d11f52"
-    }
-  , { "rel": "item"
-    , "href": "/Variante+de+asociación+farmacológica/version/45a1556d"
-    }
-  , { "rel": "item"
-    , "href": "/Variante+de+asociación+farmacológica/version/b5616572"
-    }
-  , { "rel": "item"
-    , "href": "/Variante+de+asociación+farmacológica/version/6e9a49d4"
-    }
+  [ { "rel": "item", "href": "/Variante+de+asociación+farmacológica/version/3e7c1b67" }
+  , { "rel": "item", "href": "/Variante+de+asociación+farmacológica/version/53d11f52" }
+  , { "rel": "item", "href": "/Variante+de+asociación+farmacológica/version/45a1556d" }
+  , { "rel": "item", "href": "/Variante+de+asociación+farmacológica/version/b5616572" }
+  , { "rel": "item", "href": "/Variante+de+asociación+farmacológica/version/6e9a49d4" }
   ]
 
 , "links":
@@ -35,9 +21,7 @@
   ]
 
 , "actions":
-  [ { "name": "insert"
-    , "title": "Insert"
-    , "method": "POST"
+  [ { "name": "insert", "title": "Insert", "method": "POST"
     , "href": "/Variante+de+asociación+farmacológica/rows"
     , "fields":
       [ { "name": "asociación farmacológica"
@@ -52,9 +36,7 @@
       ]
     }
 
-  , { "name": "paginate"
-    , "title": "Paginate"
-    , "method": "GET"
+  , { "name": "paginate", "title": "Paginate", "method": "GET"
     , "href": "/Variante+de+asociación+farmacológica/rows"
     , "fields":
       [ { "name": "offset", "type": "number", "value": 0 }
@@ -62,9 +44,7 @@
       ]
     }
 
-  , { "name": "search"
-    , "title": "Search"
-    , "method": "GET"
+  , { "name": "search", "title": "Search", "method": "GET"
     , "href": "/Variante+de+asociación+farmacológica/rows"
     , "fields":
       [ { "name": "asociación farmacológica"

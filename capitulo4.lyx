@@ -876,17 +876,105 @@ La organización de la implantación de Squealer en una biblioteca y un ejecutab
 graphviz
 \family default
  de Hackage y la biblioteca de Squealer\SpecialChar \@.
- En particular, el diagrama de la
- base de datos para PRX Control Solutions que se incluye en este informe
+ El diagrama de la base de datos
+ para PRX Control Solutions mostrado en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:modelo-simple"
+
+\end_inset
+
  no fue compuesto manualmente, sino que fue generado automáticamente a partir
  de la misma especificación usada para generar el código SQL de la implantación
  final de la base de datos de la empresa\SpecialChar \@.
- La generación automática de parte
- de la documentación del sistema favorece su facilidad de refactorización
- y extensión, ya que reduce el esfuerzo requerido por el equipo de desarrollo
- para mantener consistencia entre la implantación y la documentación al
- hacer modificaciones futuras al modelo de datos para adaptarse a cambios
- en los requerimientos\SpecialChar \@.
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Aunque en efecto el diagrama puede generarse automáticamente sin problemas,
+ la imagen exacta mostrada en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:modelo-simple"
+
+\end_inset
+
+ se produjo haciendo leves modificaciones manuales al diagrama producido
+ por el generador para reducir las flechas cruzadas al mínimo posible, y
+ para reducir el tamaño total del diagrama\SpecialChar \@.
+ El diagrama se genera en formato
+ SVG e incluye información de las columnas de cada tabla con sus tipos,
+ lo cual permite que sea visualizado en un navegador 
+\emph on
+Web
+\emph default
+ a cualquier escala e incluso permite hacer búsquedas de texto sobre él,
+ lo cual es sumamente práctico a la hora de escribir consultas\SpecialChar \@.
+ Aunque el
+ diagrama original generado por GraphViz es perfectamente legible ---incluso
+ más que el presentado---, por desgracia, no se adapta bien al medio tradicional
+ de este informe que no soporta esas formas de interacción\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+
+ Se muestran las tablas del esquema suministrado como entrada a Squealer
+ como recuadros con sus nombres, y con flechas que representan las referencias\SpecialChar \@.
+
+ La generación automática de parte de la documentación del sistema favorece
+ su facilidad de refactorización y extensión, ya que reduce el esfuerzo
+ requerido por el equipo de desarrollo para mantener consistencia entre
+ la implantación y la documentación al hacer modificaciones futuras al modelo
+ de datos para adaptarse a cambios en los requerimientos\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/graph-simple.png
+	lyxscale 40
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagrama simplificado del modelo de datos nuevo generado usando la biblioteca
+ de Squealer y el paquete 
+\family typewriter
+graphviz
+\family default
+ de Hackage\SpecialChar \@.
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:modelo-simple"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 

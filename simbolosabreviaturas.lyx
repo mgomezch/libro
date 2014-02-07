@@ -120,7 +120,7 @@ addcontentsline{toc}{chapter}{Lista de Símbolos y Abreviaturas}
 \paragraph_spacing onehalf
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="41" columns="2">
+<lyxtabular version="3" rows="42" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top" width="0pt">
 <column alignment="left" valignment="top" width="11cm">
@@ -948,6 +948,31 @@ Squealer
 Una herramienta desarrollada en este proyecto que transforma una descripción
  de un modelo de datos en una implantación del mismo en SQL con características
  de control de versiones para sus datos\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SVG
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sigla de 
+\emph on
+scalable vector graphics
+\emph default
+, un formato de gráficos vectoriales basado en XML\SpecialChar \@.
 
 \end_layout
 
