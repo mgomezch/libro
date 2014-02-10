@@ -894,8 +894,26 @@ parskip}{7.5pt}
 
 \end_layout
 
-\begin_layout Chapter
+\begin_layout Standard
 \start_of_appendix
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Apéndices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
 Ejemplo de Squealer
 \end_layout
 
@@ -1080,6 +1098,51 @@ Extensión para evaluación en contexto
 LatexCommand lstinputlisting
 filename "listings/rules/Record.hs"
 lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,numbers=left"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Gráfico del modelo nuevo
+\end_layout
+
+\begin_layout Standard
+Se presenta el gráfico completo correspondiente al nuevo modelo de datos\SpecialChar \@.
+
+ Cada recuadro representa a una tabla titulada con su nombre, y en su interior
+ se representan las columnas de la tabla con sus nombres: para columnas
+ que no sean referencias, se presenta además el tipo de la columna, y para
+ aquellas que son referencias a otras tablas, se conecta con la tabla receptora
+ usando una flecha con la punta oscura si la referencia es covariante, y
+ con la punta clara si es invariante\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+Este gráfico se generó de manera completamente automatizada, sin ningún
+ ajuste manual, por lo cual tiene padece de deficiencias estéticas\SpecialChar \@.
+ Sin embargo,
+ no se requiere casi ningún trabajo adicional para generarlo aparte del
+ necesario para generar la implantación de la base de datos en SQL, lo cual
+ es muy útil para siempre contar con documentación continuamente actualizada\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename img/graph.svg
+	lyxscale 10
+	width 65page%
+	rotateAngle 90
 
 \end_inset
 

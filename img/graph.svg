@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3162pt" height="1840pt" viewBox="0.00 0.00 3162.03 1840.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1836)">
+<title>%3</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-1836 3158.03,-1836 3158.03,4 -4,4" />
+<!-- 0 -->
+<g id="node1" class="node"><title>0</title>
+<polygon fill="#000000" stroke="none" points="66.5278,-1748 66.5278,-1828 303.528,-1828 303.528,-1748 66.5278,-1748" />
+<polygon fill="#000000" stroke="none" points="68.0278,-1795 68.0278,-1827 303.028,-1827 303.028,-1795 68.0278,-1795" />
+<text text-anchor="start" x="76.0278" y="-1808.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Grupo principal anatómico</text>
+<polygon fill="#ffffff" stroke="none" points="68.0278,-1772 68.0278,-1795 171.028,-1795 171.028,-1772 68.0278,-1772" />
+<text text-anchor="start" x="72.0278" y="-1780.8" font-family="sans-serif" font-weight="bold" font-size="14.00">código</text>
+<polygon fill="#ffffff" stroke="none" points="171.028,-1772 171.028,-1795 303.028,-1795 303.028,-1772 171.028,-1772" />
+<text text-anchor="start" x="175.028" y="-1779.8" font-family="sans-serif" font-size="14.00">character(1)</text>
+<polygon fill="#ffffff" stroke="none" points="68.0278,-1749 68.0278,-1772 171.028,-1772 171.028,-1749 68.0278,-1749" />
+<text text-anchor="start" x="72.0278" y="-1756.8" font-family="sans-serif" font-size="14.00">nombre</text>
+<polygon fill="#ffffff" stroke="none" points="171.028,-1749 171.028,-1772 303.028,-1772 303.028,-1749 171.028,-1749" />
+<text text-anchor="start" x="175.028" y="-1756.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="67.0278,-1795 67.0278,-1795 304.028,-1795 304.028,-1795 67.0278,-1795" />
+<polygon fill="black" stroke="black" points="171.028,-1772 171.028,-1795 171.028,-1795 171.028,-1772 171.028,-1772" />
+<polygon fill="black" stroke="black" points="67.0278,-1772 67.0278,-1772 171.028,-1772 171.028,-1772 67.0278,-1772" />
+<polygon fill="black" stroke="black" points="171.028,-1772 171.028,-1772 304.028,-1772 304.028,-1772 171.028,-1772" />
+<polygon fill="black" stroke="black" points="171.028,-1748 171.028,-1772 171.028,-1772 171.028,-1748 171.028,-1748" />
+<polygon fill="none" stroke="black" points="66.5278,-1748 66.5278,-1828 303.528,-1828 303.528,-1748 66.5278,-1748" />
+</g>
+<!-- 1 -->
+<g id="node2" class="node"><title>1</title>
+<polygon fill="#000000" stroke="none" points="71.0278,-1600.5 71.0278,-1703.5 299.028,-1703.5 299.028,-1600.5 71.0278,-1600.5" />
+<polygon fill="#000000" stroke="none" points="72.0278,-1670 72.0278,-1702 298.028,-1702 298.028,-1670 72.0278,-1670" />
+<text text-anchor="start" x="80.0278" y="-1683.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Subgrupo terapéutico</text>
+<polygon fill="#ffffff" stroke="none" points="72.0278,-1647 72.0278,-1670 298.028,-1670 298.028,-1647 72.0278,-1647" />
+<text text-anchor="start" x="76.0278" y="-1655.8" font-family="sans-serif" font-weight="bold" font-size="14.00">grupo principal anatómico</text>
+<polygon fill="#ffffff" stroke="none" points="72.0278,-1624 72.0278,-1647 175.028,-1647 175.028,-1624 72.0278,-1624" />
+<text text-anchor="start" x="76.0278" y="-1632.8" font-family="sans-serif" font-weight="bold" font-size="14.00">código</text>
+<polygon fill="#ffffff" stroke="none" points="175.028,-1624 175.028,-1647 298.028,-1647 298.028,-1624 175.028,-1624" />
+<text text-anchor="start" x="179.028" y="-1631.8" font-family="sans-serif" font-size="14.00">numeric(2)</text>
+<polygon fill="#ffffff" stroke="none" points="72.0278,-1601 72.0278,-1624 175.028,-1624 175.028,-1601 72.0278,-1601" />
+<text text-anchor="start" x="76.0278" y="-1608.8" font-family="sans-serif" font-size="14.00">nombre</text>
+<polygon fill="#ffffff" stroke="none" points="175.028,-1601 175.028,-1624 298.028,-1624 298.028,-1601 175.028,-1601" />
+<text text-anchor="start" x="179.028" y="-1608.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="71.0278,-1670 71.0278,-1670 299.028,-1670 299.028,-1670 71.0278,-1670" />
+<polygon fill="black" stroke="black" points="71.0278,-1647 71.0278,-1647 299.028,-1647 299.028,-1647 71.0278,-1647" />
+<polygon fill="black" stroke="black" points="175.028,-1624 175.028,-1647 175.028,-1647 175.028,-1624 175.028,-1624" />
+<polygon fill="black" stroke="black" points="71.0278,-1624 71.0278,-1624 175.028,-1624 175.028,-1624 71.0278,-1624" />
+<polygon fill="black" stroke="black" points="175.028,-1624 175.028,-1624 299.028,-1624 299.028,-1624 175.028,-1624" />
+<polygon fill="black" stroke="black" points="175.028,-1600 175.028,-1624 175.028,-1624 175.028,-1600 175.028,-1600" />
+<polygon fill="none" stroke="black" points="71.0278,-1600.5 71.0278,-1703.5 299.028,-1703.5 299.028,-1600.5 71.0278,-1600.5" />
+</g>
+<!-- 0&#45;&gt;1 -->
+<g id="edge1" class="edge"><title>0-&gt;1:1</title>
+<path fill="none" stroke="black" d="M274.933,-1737.21C284.119,-1728.64 292.2,-1718.91 298.028,-1708 308.289,-1688.79 320.81,-1659 299.028,-1659" />
+<polygon fill="black" stroke="black" points="272.575,-1734.63 267.351,-1743.84 277.183,-1739.9 272.575,-1734.63" />
+</g>
+<!-- 2 -->
+<g id="node3" class="node"><title>2</title>
+<polygon fill="#000000" stroke="none" points="74.5278,-1452.5 74.5278,-1555.5 293.528,-1555.5 293.528,-1452.5 74.5278,-1452.5" />
+<polygon fill="#000000" stroke="none" points="76.0278,-1522 76.0278,-1554 293.028,-1554 293.028,-1522 76.0278,-1522" />
+<text text-anchor="start" x="84.0278" y="-1535.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Subgrupo farmacológico</text>
+<polygon fill="#ffffff" stroke="none" points="76.0278,-1499 76.0278,-1522 293.028,-1522 293.028,-1499 76.0278,-1499" />
+<text text-anchor="start" x="80.0278" y="-1507.8" font-family="sans-serif" font-weight="bold" font-size="14.00">subgrupo terapéutico</text>
+<polygon fill="#ffffff" stroke="none" points="76.0278,-1476 76.0278,-1499 170.028,-1499 170.028,-1476 76.0278,-1476" />
+<text text-anchor="start" x="80.0278" y="-1484.8" font-family="sans-serif" font-weight="bold" font-size="14.00">código</text>
+<polygon fill="#ffffff" stroke="none" points="170.028,-1476 170.028,-1499 293.028,-1499 293.028,-1476 170.028,-1476" />
+<text text-anchor="start" x="174.028" y="-1483.8" font-family="sans-serif" font-size="14.00">character(1)</text>
+<polygon fill="#ffffff" stroke="none" points="76.0278,-1453 76.0278,-1476 170.028,-1476 170.028,-1453 76.0278,-1453" />
+<text text-anchor="start" x="80.0278" y="-1460.8" font-family="sans-serif" font-size="14.00">nombre</text>
+<polygon fill="#ffffff" stroke="none" points="170.028,-1453 170.028,-1476 293.028,-1476 293.028,-1453 170.028,-1453" />
+<text text-anchor="start" x="174.028" y="-1460.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="75.0278,-1522 75.0278,-1522 294.028,-1522 294.028,-1522 75.0278,-1522" />
+<polygon fill="black" stroke="black" points="75.0278,-1499 75.0278,-1499 294.028,-1499 294.028,-1499 75.0278,-1499" />
+<polygon fill="black" stroke="black" points="170.028,-1476 170.028,-1499 170.028,-1499 170.028,-1476 170.028,-1476" />
+<polygon fill="black" stroke="black" points="75.0278,-1476 75.0278,-1476 170.028,-1476 170.028,-1476 75.0278,-1476" />
+<polygon fill="black" stroke="black" points="170.028,-1476 170.028,-1476 294.028,-1476 294.028,-1476 170.028,-1476" />
+<polygon fill="black" stroke="black" points="170.028,-1452 170.028,-1476 170.028,-1476 170.028,-1452 170.028,-1452" />
+<polygon fill="none" stroke="black" points="74.5278,-1452.5 74.5278,-1555.5 293.528,-1555.5 293.528,-1452.5 74.5278,-1452.5" />
+</g>
+<!-- 1&#45;&gt;2 -->
+<g id="edge2" class="edge"><title>1-&gt;2:2</title>
+<path fill="none" stroke="black" d="M273.617,-1588.75C281.339,-1579.96 288.084,-1570.35 293.028,-1560 302.414,-1540.34 315.81,-1511 294.028,-1511" />
+<polygon fill="black" stroke="black" points="270.868,-1586.57 266.6,-1596.26 275.983,-1591.35 270.868,-1586.57" />
+</g>
+<!-- 3 -->
+<g id="node4" class="node"><title>3</title>
+<polygon fill="#000000" stroke="none" points="56.5278,-1304.5 56.5278,-1407.5 265.528,-1407.5 265.528,-1304.5 56.5278,-1304.5" />
+<polygon fill="#000000" stroke="none" points="58.0278,-1374 58.0278,-1406 265.028,-1406 265.028,-1374 58.0278,-1374" />
+<text text-anchor="start" x="66.0278" y="-1387.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Subgrupo químico</text>
+<polygon fill="#ffffff" stroke="none" points="58.0278,-1351 58.0278,-1374 265.028,-1374 265.028,-1351 58.0278,-1351" />
+<text text-anchor="start" x="62.0278" y="-1359.8" font-family="sans-serif" font-weight="bold" font-size="14.00">subgrupo farmacológico</text>
+<polygon fill="#ffffff" stroke="none" points="58.0278,-1328 58.0278,-1351 147.028,-1351 147.028,-1328 58.0278,-1328" />
+<text text-anchor="start" x="62.0278" y="-1336.8" font-family="sans-serif" font-weight="bold" font-size="14.00">código</text>
+<polygon fill="#ffffff" stroke="none" points="147.028,-1328 147.028,-1351 265.028,-1351 265.028,-1328 147.028,-1328" />
+<text text-anchor="start" x="151.028" y="-1335.8" font-family="sans-serif" font-size="14.00">character(1)</text>
+<polygon fill="#ffffff" stroke="none" points="58.0278,-1305 58.0278,-1328 147.028,-1328 147.028,-1305 58.0278,-1305" />
+<text text-anchor="start" x="62.0278" y="-1312.8" font-family="sans-serif" font-size="14.00">nombre</text>
+<polygon fill="#ffffff" stroke="none" points="147.028,-1305 147.028,-1328 265.028,-1328 265.028,-1305 147.028,-1305" />
+<text text-anchor="start" x="151.028" y="-1312.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="57.0278,-1374 57.0278,-1374 266.028,-1374 266.028,-1374 57.0278,-1374" />
+<polygon fill="black" stroke="black" points="57.0278,-1351 57.0278,-1351 266.028,-1351 266.028,-1351 57.0278,-1351" />
+<polygon fill="black" stroke="black" points="147.028,-1328 147.028,-1351 147.028,-1351 147.028,-1328 147.028,-1328" />
+<polygon fill="black" stroke="black" points="57.0278,-1328 57.0278,-1328 147.028,-1328 147.028,-1328 57.0278,-1328" />
+<polygon fill="black" stroke="black" points="147.028,-1328 147.028,-1328 266.028,-1328 266.028,-1328 147.028,-1328" />
+<polygon fill="black" stroke="black" points="147.028,-1304 147.028,-1328 147.028,-1328 147.028,-1304 147.028,-1304" />
+<polygon fill="none" stroke="black" points="56.5278,-1304.5 56.5278,-1407.5 265.528,-1407.5 265.528,-1304.5 56.5278,-1304.5" />
+</g>
+<!-- 2&#45;&gt;3 -->
+<g id="edge3" class="edge"><title>2-&gt;3:3</title>
+<path fill="none" stroke="black" d="M249.599,-1439.99C255.801,-1431.18 261.194,-1421.77 265.028,-1412 272.983,-1391.72 287.81,-1363 266.028,-1363" />
+<polygon fill="black" stroke="black" points="246.61,-1438.14 243.428,-1448.25 252.217,-1442.33 246.61,-1438.14" />
+</g>
+<!-- 19 -->
+<g id="node20" class="node"><title>19</title>
+<polygon fill="#000000" stroke="none" points="658.028,-1304.5 658.028,-1407.5 1168.03,-1407.5 1168.03,-1304.5 658.028,-1304.5" />
+<polygon fill="#000000" stroke="none" points="659.028,-1374 659.028,-1406 1167.03,-1406 1167.03,-1374 659.028,-1374" />
+<text text-anchor="start" x="667.028" y="-1387.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Relación: Subtipo de enfermedad - Subgrupo farmacológico</text>
+<polygon fill="#ffffff" stroke="none" points="659.028,-1351 659.028,-1374 1167.03,-1374 1167.03,-1351 659.028,-1351" />
+<text text-anchor="start" x="663.028" y="-1359.8" font-family="sans-serif" font-weight="bold" font-size="14.00">subtipo de enfermedad</text>
+<polygon fill="#ffffff" stroke="none" points="659.028,-1328 659.028,-1351 1167.03,-1351 1167.03,-1328 659.028,-1328" />
+<text text-anchor="start" x="663.028" y="-1336.8" font-family="sans-serif" font-weight="bold" font-size="14.00">subgrupo farmacológico</text>
+<polygon fill="#ffffff" stroke="none" points="659.028,-1305 659.028,-1328 919.028,-1328 919.028,-1305 659.028,-1305" />
+<text text-anchor="start" x="663.028" y="-1312.8" font-family="sans-serif" font-size="14.00">prioridad</text>
+<polygon fill="#ffffff" stroke="none" points="919.028,-1305 919.028,-1328 1167.03,-1328 1167.03,-1305 919.028,-1305" />
+<text text-anchor="start" x="923.028" y="-1312.8" font-family="sans-serif" font-size="14.00">integer</text>
+<polygon fill="black" stroke="black" points="658.028,-1374 658.028,-1374 1168.03,-1374 1168.03,-1374 658.028,-1374" />
+<polygon fill="black" stroke="black" points="658.028,-1351 658.028,-1351 1168.03,-1351 1168.03,-1351 658.028,-1351" />
+<polygon fill="black" stroke="black" points="658.028,-1328 658.028,-1328 1168.03,-1328 1168.03,-1328 658.028,-1328" />
+<polygon fill="black" stroke="black" points="919.028,-1304 919.028,-1328 919.028,-1328 919.028,-1304 919.028,-1304" />
+<polygon fill="none" stroke="black" points="658.028,-1304.5 658.028,-1407.5 1168.03,-1407.5 1168.03,-1304.5 658.028,-1304.5" />
+</g>
+<!-- 2&#45;&gt;19 -->
+<g id="edge4" class="edge"><title>2-&gt;19:19</title>
+<path fill="none" stroke="black" d="M311.634,-1453.43C318.486,-1451.44 325.313,-1449.61 332.028,-1448 399.244,-1431.84 589.467,-1458.05 641.028,-1412 665.874,-1389.81 624.715,-1339 658.028,-1339" />
+<polygon fill="black" stroke="black" points="310.16,-1450.22 301.588,-1456.45 312.172,-1456.92 310.16,-1450.22" />
+</g>
+<!-- 8 -->
+<g id="node9" class="node"><title>8</title>
+<polygon fill="#000000" stroke="none" points="26.0278,-1110.5 26.0278,-1213.5 598.028,-1213.5 598.028,-1110.5 26.0278,-1110.5" />
+<polygon fill="#000000" stroke="none" points="27.0278,-1180 27.0278,-1212 597.028,-1212 597.028,-1180 27.0278,-1180" />
+<text text-anchor="start" x="35.0278" y="-1193.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Relación: Subgrupo químico - Variante de asociación farmacológica</text>
+<polygon fill="#ffffff" stroke="none" points="27.0278,-1157 27.0278,-1180 597.028,-1180 597.028,-1157 27.0278,-1157" />
+<text text-anchor="start" x="31.0278" y="-1165.8" font-family="sans-serif" font-weight="bold" font-size="14.00">subgrupo químico</text>
+<polygon fill="#ffffff" stroke="none" points="27.0278,-1134 27.0278,-1157 597.028,-1157 597.028,-1134 27.0278,-1134" />
+<text text-anchor="start" x="31.0278" y="-1142.8" font-family="sans-serif" font-weight="bold" font-size="14.00">variante de asociación farmacológica</text>
+<polygon fill="#ffffff" stroke="none" points="27.0278,-1111 27.0278,-1134 318.028,-1134 318.028,-1111 27.0278,-1111" />
+<text text-anchor="start" x="31.0278" y="-1118.8" font-family="sans-serif" font-size="14.00">prioridad</text>
+<polygon fill="#ffffff" stroke="none" points="318.028,-1111 318.028,-1134 597.028,-1134 597.028,-1111 318.028,-1111" />
+<text text-anchor="start" x="322.028" y="-1118.8" font-family="sans-serif" font-size="14.00">integer</text>
+<polygon fill="black" stroke="black" points="26.0278,-1180 26.0278,-1180 598.028,-1180 598.028,-1180 26.0278,-1180" />
+<polygon fill="black" stroke="black" points="26.0278,-1157 26.0278,-1157 598.028,-1157 598.028,-1157 26.0278,-1157" />
+<polygon fill="black" stroke="black" points="26.0278,-1134 26.0278,-1134 598.028,-1134 598.028,-1134 26.0278,-1134" />
+<polygon fill="black" stroke="black" points="318.028,-1110 318.028,-1134 318.028,-1134 318.028,-1110 318.028,-1110" />
+<polygon fill="none" stroke="black" points="26.0278,-1110.5 26.0278,-1213.5 598.028,-1213.5 598.028,-1110.5 26.0278,-1110.5" />
+</g>
+<!-- 3&#45;&gt;8 -->
+<g id="edge5" class="edge"><title>3-&gt;8:7</title>
+<path fill="none" stroke="black" d="M88.5536,-1293.59C28.7779,-1239.42 -36.8211,-1169 26.0278,-1169" />
+<polygon fill="black" stroke="black" points="86.404,-1296.37 96.181,-1300.45 91.0835,-1291.16 86.404,-1296.37" />
+</g>
+<!-- 4 -->
+<g id="node5" class="node"><title>4</title>
+<polygon fill="#000000" stroke="none" points="349.028,-1475.5 349.028,-1532.5 575.028,-1532.5 575.028,-1475.5 349.028,-1475.5" />
+<polygon fill="#000000" stroke="none" points="350.028,-1499 350.028,-1531 574.028,-1531 574.028,-1499 350.028,-1499" />
+<text text-anchor="start" x="358.028" y="-1512.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Asociación farmacológica</text>
+<polygon fill="#ffffff" stroke="none" points="350.028,-1476 350.028,-1499 480.028,-1499 480.028,-1476 350.028,-1476" />
+<text text-anchor="start" x="354.028" y="-1484.8" font-family="sans-serif" font-weight="bold" font-size="14.00">nombre</text>
+<polygon fill="#ffffff" stroke="none" points="480.028,-1476 480.028,-1499 574.028,-1499 574.028,-1476 480.028,-1476" />
+<text text-anchor="start" x="484.028" y="-1483.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="349.028,-1499 349.028,-1499 575.028,-1499 575.028,-1499 349.028,-1499" />
+<polygon fill="black" stroke="black" points="480.028,-1475 480.028,-1499 480.028,-1499 480.028,-1475 480.028,-1475" />
+<polygon fill="none" stroke="black" points="349.028,-1475.5 349.028,-1532.5 575.028,-1532.5 575.028,-1475.5 349.028,-1475.5" />
+</g>
+<!-- 5 -->
+<g id="node6" class="node"><title>5</title>
+<polygon fill="#000000" stroke="none" points="300.028,-1304.5 300.028,-1407.5 624.028,-1407.5 624.028,-1304.5 300.028,-1304.5" />
+<polygon fill="#000000" stroke="none" points="301.028,-1374 301.028,-1406 623.028,-1406 623.028,-1374 301.028,-1374" />
+<text text-anchor="start" x="309.028" y="-1387.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Variante de asociación farmacológica</text>
+<polygon fill="#ffffff" stroke="none" points="301.028,-1351 301.028,-1374 623.028,-1374 623.028,-1351 301.028,-1351" />
+<text text-anchor="start" x="305.028" y="-1359.8" font-family="sans-serif" font-weight="bold" font-size="14.00">asociación farmacológica</text>
+<polygon fill="#ffffff" stroke="none" points="301.028,-1328 301.028,-1351 516.028,-1351 516.028,-1328 301.028,-1328" />
+<text text-anchor="start" x="305.028" y="-1336.8" font-family="sans-serif" font-weight="bold" font-size="14.00">variante</text>
+<polygon fill="#ffffff" stroke="none" points="516.028,-1328 516.028,-1351 623.028,-1351 623.028,-1328 516.028,-1328" />
+<text text-anchor="start" x="520.028" y="-1335.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="301.028,-1305 301.028,-1328 516.028,-1328 516.028,-1305 301.028,-1305" />
+<text text-anchor="start" x="305.028" y="-1312.8" font-family="sans-serif" font-size="14.00">dosis máxima diaria</text>
+<polygon fill="#ffffff" stroke="none" points="516.028,-1305 516.028,-1328 623.028,-1328 623.028,-1305 516.028,-1305" />
+<text text-anchor="start" x="520.028" y="-1312.8" font-family="sans-serif" font-size="14.00">real</text>
+<polygon fill="black" stroke="black" points="300.028,-1374 300.028,-1374 624.028,-1374 624.028,-1374 300.028,-1374" />
+<polygon fill="black" stroke="black" points="300.028,-1351 300.028,-1351 624.028,-1351 624.028,-1351 300.028,-1351" />
+<polygon fill="black" stroke="black" points="516.028,-1328 516.028,-1351 516.028,-1351 516.028,-1328 516.028,-1328" />
+<polygon fill="black" stroke="black" points="300.028,-1328 300.028,-1328 516.028,-1328 516.028,-1328 300.028,-1328" />
+<polygon fill="black" stroke="black" points="516.028,-1328 516.028,-1328 624.028,-1328 624.028,-1328 516.028,-1328" />
+<polygon fill="black" stroke="black" points="516.028,-1304 516.028,-1328 516.028,-1328 516.028,-1304 516.028,-1304" />
+<polygon fill="none" stroke="black" points="300.028,-1304.5 300.028,-1407.5 624.028,-1407.5 624.028,-1304.5 300.028,-1304.5" />
+</g>
+<!-- 4&#45;&gt;5 -->
+<g id="edge6" class="edge"><title>4-&gt;5:4</title>
+<path fill="none" stroke="black" d="M563.474,-1466.43C586.986,-1453.01 609.16,-1435.22 623.028,-1412 634.196,-1393.3 645.81,-1363 624.028,-1363" />
+<polygon fill="black" stroke="black" points="561.522,-1463.51 554.411,-1471.37 564.868,-1469.66 561.522,-1463.51" />
+</g>
+<!-- 6 -->
+<g id="node7" class="node"><title>6</title>
+<polygon fill="#000000" stroke="none" points="1240.53,-1110.5 1240.53,-1213.5 1555.53,-1213.5 1555.53,-1110.5 1240.53,-1110.5" />
+<polygon fill="#000000" stroke="none" points="1242.03,-1180 1242.03,-1212 1555.03,-1212 1555.03,-1180 1242.03,-1180" />
+<text text-anchor="start" x="1250.03" y="-1193.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Unidad posológica</text>
+<polygon fill="#ffffff" stroke="none" points="1242.03,-1157 1242.03,-1180 1555.03,-1180 1555.03,-1157 1242.03,-1157" />
+<text text-anchor="start" x="1246.03" y="-1165.8" font-family="sans-serif" font-weight="bold" font-size="14.00">variante de asociación farmacológica</text>
+<polygon fill="#ffffff" stroke="none" points="1242.03,-1134 1242.03,-1157 1399.03,-1157 1399.03,-1134 1242.03,-1134" />
+<text text-anchor="start" x="1246.03" y="-1142.8" font-family="sans-serif" font-weight="bold" font-size="14.00">dosis</text>
+<polygon fill="#ffffff" stroke="none" points="1399.03,-1134 1399.03,-1157 1555.03,-1157 1555.03,-1134 1399.03,-1134" />
+<text text-anchor="start" x="1403.03" y="-1141.8" font-family="sans-serif" font-size="14.00">real</text>
+<polygon fill="#ffffff" stroke="none" points="1242.03,-1111 1242.03,-1134 1399.03,-1134 1399.03,-1111 1242.03,-1111" />
+<text text-anchor="start" x="1246.03" y="-1118.8" font-family="sans-serif" font-size="14.00">asociación a sexo</text>
+<polygon fill="#ffffff" stroke="none" points="1399.03,-1111 1399.03,-1134 1555.03,-1134 1555.03,-1111 1399.03,-1111" />
+<text text-anchor="start" x="1403.03" y="-1118.8" font-family="sans-serif" font-size="14.00">asociación a sexo</text>
+<polygon fill="black" stroke="black" points="1241.03,-1180 1241.03,-1180 1556.03,-1180 1556.03,-1180 1241.03,-1180" />
+<polygon fill="black" stroke="black" points="1241.03,-1157 1241.03,-1157 1556.03,-1157 1556.03,-1157 1241.03,-1157" />
+<polygon fill="black" stroke="black" points="1399.03,-1134 1399.03,-1157 1399.03,-1157 1399.03,-1134 1399.03,-1134" />
+<polygon fill="black" stroke="black" points="1241.03,-1134 1241.03,-1134 1399.03,-1134 1399.03,-1134 1241.03,-1134" />
+<polygon fill="black" stroke="black" points="1399.03,-1134 1399.03,-1134 1556.03,-1134 1556.03,-1134 1399.03,-1134" />
+<polygon fill="black" stroke="black" points="1399.03,-1110 1399.03,-1134 1399.03,-1134 1399.03,-1110 1399.03,-1110" />
+<polygon fill="none" stroke="black" points="1240.53,-1110.5 1240.53,-1213.5 1555.53,-1213.5 1555.53,-1110.5 1240.53,-1110.5" />
+</g>
+<!-- 5&#45;&gt;6 -->
+<g id="edge7" class="edge"><title>5-&gt;6:5</title>
+<path fill="none" stroke="black" d="M612.096,-1297.05C767.136,-1242.46 1017.33,-1169 1241.03,-1169" />
+<polygon fill="black" stroke="black" points="610.742,-1293.81 602.484,-1300.45 613.078,-1300.41 610.742,-1293.81" />
+</g>
+<!-- 5&#45;&gt;8 -->
+<g id="edge8" class="edge"><title>5-&gt;8:8</title>
+<path fill="none" stroke="black" d="M529.495,-1293.32C593.254,-1231.37 669.338,-1145 598.028,-1145" />
+<polygon fill="black" stroke="black" points="526.956,-1290.91 522.188,-1300.37 531.815,-1295.95 526.956,-1290.91" />
+</g>
+<!-- 7 -->
+<g id="node8" class="node"><title>7</title>
+<polygon fill="#000000" stroke="none" points="1316.53,-813 1316.53,-893 1477.53,-893 1477.53,-813 1316.53,-813" />
+<polygon fill="#000000" stroke="none" points="1318.03,-860 1318.03,-892 1477.03,-892 1477.03,-860 1318.03,-860" />
+<text text-anchor="start" x="1326.03" y="-873.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Vehículo</text>
+<polygon fill="#ffffff" stroke="none" points="1318.03,-837 1318.03,-860 1477.03,-860 1477.03,-837 1318.03,-837" />
+<text text-anchor="start" x="1322.03" y="-845.8" font-family="sans-serif" font-weight="bold" font-size="14.00">unidad posológica</text>
+<polygon fill="#ffffff" stroke="none" points="1318.03,-814 1318.03,-837 1413.03,-837 1413.03,-814 1318.03,-814" />
+<text text-anchor="start" x="1322.03" y="-821.8" font-family="sans-serif" font-size="14.00">vehículo</text>
+<polygon fill="#ffffff" stroke="none" points="1413.03,-814 1413.03,-837 1477.03,-837 1477.03,-814 1413.03,-814" />
+<text text-anchor="start" x="1417.03" y="-821.8" font-family="sans-serif" font-size="14.00">real</text>
+<polygon fill="black" stroke="black" points="1317.03,-860 1317.03,-860 1478.03,-860 1478.03,-860 1317.03,-860" />
+<polygon fill="black" stroke="black" points="1317.03,-837 1317.03,-837 1478.03,-837 1478.03,-837 1317.03,-837" />
+<polygon fill="black" stroke="black" points="1413.03,-813 1413.03,-837 1413.03,-837 1413.03,-813 1413.03,-813" />
+<polygon fill="none" stroke="black" points="1316.53,-813 1316.53,-893 1477.53,-893 1477.53,-813 1316.53,-813" />
+</g>
+<!-- 6&#45;&gt;7 -->
+<g id="edge9" class="edge"><title>6-&gt;7:6</title>
+<path fill="none" stroke="black" d="M1439.69,-1097.85C1496.49,-1006.42 1580.18,-848 1478.03,-848" />
+<polygon fill="black" stroke="black" points="1436.62,-1096.15 1434.28,-1106.48 1442.56,-1099.86 1436.62,-1096.15" />
+</g>
+<!-- 14 -->
+<g id="node15" class="node"><title>14</title>
+<polygon fill="#000000" stroke="none" points="1668.03,-686.5 1668.03,-1019.5 2012.03,-1019.5 2012.03,-686.5 1668.03,-686.5" />
+<polygon fill="#000000" stroke="none" points="1669.03,-986 1669.03,-1018 2011.03,-1018 2011.03,-986 1669.03,-986" />
+<text text-anchor="start" x="1677.03" y="-999.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Presentación</text>
+<polygon fill="#ffffff" stroke="none" points="1669.03,-963 1669.03,-986 2011.03,-986 2011.03,-963 1669.03,-963" />
+<text text-anchor="start" x="1673.03" y="-970.8" font-family="sans-serif" font-size="14.00">laboratorio</text>
+<polygon fill="#ffffff" stroke="none" points="1669.03,-940 1669.03,-963 2011.03,-963 2011.03,-940 1669.03,-940" />
+<text text-anchor="start" x="1673.03" y="-947.8" font-family="sans-serif" font-size="14.00">producto</text>
+<polygon fill="#ffffff" stroke="none" points="1669.03,-917 1669.03,-940 2011.03,-940 2011.03,-917 1669.03,-917" />
+<text text-anchor="start" x="1673.03" y="-924.8" font-family="sans-serif" font-size="14.00">unidad posológica</text>
+<polygon fill="#ffffff" stroke="none" points="1669.03,-894 1669.03,-917 2011.03,-917 2011.03,-894 1669.03,-894" />
+<text text-anchor="start" x="1673.03" y="-901.8" font-family="sans-serif" font-size="14.00">forma de administración</text>
+<polygon fill="#ffffff" stroke="none" points="1669.03,-871 1669.03,-894 1850.03,-894 1850.03,-871 1669.03,-871" />
+<text text-anchor="start" x="1673.03" y="-878.8" font-family="sans-serif" font-size="14.00">nombre</text>
+<polygon fill="#ffffff" stroke="none" points="1850.03,-871 1850.03,-894 2011.03,-894 2011.03,-871 1850.03,-871" />
+<text text-anchor="start" x="1854.03" y="-878.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="1669.03,-848 1669.03,-871 1850.03,-871 1850.03,-848 1669.03,-848" />
+<text text-anchor="start" x="1673.03" y="-855.8" font-family="sans-serif" font-size="14.00">número de unidades</text>
+<polygon fill="#ffffff" stroke="none" points="1850.03,-848 1850.03,-871 2011.03,-871 2011.03,-848 1850.03,-848" />
+<text text-anchor="start" x="1854.03" y="-855.8" font-family="sans-serif" font-size="14.00">real</text>
+<polygon fill="#ffffff" stroke="none" points="1669.03,-825 1669.03,-848 1850.03,-848 1850.03,-825 1669.03,-825" />
+<text text-anchor="start" x="1673.03" y="-832.8" font-family="sans-serif" font-size="14.00">dosis máxima diaria</text>
+<polygon fill="#ffffff" stroke="none" points="1850.03,-825 1850.03,-848 2011.03,-848 2011.03,-825 1850.03,-825" />
+<text text-anchor="start" x="1854.03" y="-832.8" font-family="sans-serif" font-size="14.00">real</text>
+<polygon fill="#ffffff" stroke="none" points="1669.03,-802 1669.03,-825 1850.03,-825 1850.03,-802 1669.03,-802" />
+<text text-anchor="start" x="1673.03" y="-809.8" font-family="sans-serif" font-size="14.00">frecuencia máxima diaria</text>
+<polygon fill="#ffffff" stroke="none" points="1850.03,-802 1850.03,-825 2011.03,-825 2011.03,-802 1850.03,-802" />
+<text text-anchor="start" x="1854.03" y="-809.8" font-family="sans-serif" font-size="14.00">real</text>
+<polygon fill="#ffffff" stroke="none" points="1669.03,-779 1669.03,-802 1850.03,-802 1850.03,-779 1669.03,-779" />
+<text text-anchor="start" x="1673.03" y="-786.8" font-family="sans-serif" font-size="14.00">precio de referencia</text>
+<polygon fill="#ffffff" stroke="none" points="1850.03,-779 1850.03,-802 2011.03,-802 2011.03,-779 1850.03,-779" />
+<text text-anchor="start" x="1854.03" y="-786.8" font-family="sans-serif" font-size="14.00">money</text>
+<polygon fill="#ffffff" stroke="none" points="1669.03,-756 1669.03,-779 1850.03,-779 1850.03,-756 1669.03,-756" />
+<text text-anchor="start" x="1673.03" y="-763.8" font-family="sans-serif" font-size="14.00">forma de dispensación</text>
+<polygon fill="#ffffff" stroke="none" points="1850.03,-756 1850.03,-779 2011.03,-779 2011.03,-756 1850.03,-756" />
+<text text-anchor="start" x="1854.03" y="-763.8" font-family="sans-serif" font-size="14.00">forma de dispensación</text>
+<polygon fill="#ffffff" stroke="none" points="1669.03,-733 1669.03,-756 1850.03,-756 1850.03,-733 1669.03,-733" />
+<text text-anchor="start" x="1673.03" y="-740.8" font-family="sans-serif" font-size="14.00">asociación a sexo</text>
+<polygon fill="#ffffff" stroke="none" points="1850.03,-733 1850.03,-756 2011.03,-756 2011.03,-733 1850.03,-733" />
+<text text-anchor="start" x="1854.03" y="-740.8" font-family="sans-serif" font-size="14.00">asociación a sexo</text>
+<polygon fill="#ffffff" stroke="none" points="1669.03,-710 1669.03,-733 1850.03,-733 1850.03,-710 1669.03,-710" />
+<text text-anchor="start" x="1673.03" y="-717.8" font-family="sans-serif" font-size="14.00">genérico o marca</text>
+<polygon fill="#ffffff" stroke="none" points="1850.03,-710 1850.03,-733 2011.03,-733 2011.03,-710 1850.03,-710" />
+<text text-anchor="start" x="1854.03" y="-717.8" font-family="sans-serif" font-size="14.00">genérico o marca</text>
+<polygon fill="#ffffff" stroke="none" points="1669.03,-687 1669.03,-710 1850.03,-710 1850.03,-687 1669.03,-687" />
+<text text-anchor="start" x="1673.03" y="-694.8" font-family="sans-serif" font-size="14.00">imagen</text>
+<polygon fill="#ffffff" stroke="none" points="1850.03,-687 1850.03,-710 2011.03,-710 2011.03,-687 1850.03,-687" />
+<text text-anchor="start" x="1854.03" y="-694.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="1668.03,-986 1668.03,-986 2012.03,-986 2012.03,-986 1668.03,-986" />
+<polygon fill="black" stroke="black" points="1668.03,-963 1668.03,-963 2012.03,-963 2012.03,-963 1668.03,-963" />
+<polygon fill="black" stroke="black" points="1668.03,-940 1668.03,-940 2012.03,-940 2012.03,-940 1668.03,-940" />
+<polygon fill="black" stroke="black" points="1668.03,-917 1668.03,-917 2012.03,-917 2012.03,-917 1668.03,-917" />
+<polygon fill="black" stroke="black" points="1668.03,-894 1668.03,-894 2012.03,-894 2012.03,-894 1668.03,-894" />
+<polygon fill="black" stroke="black" points="1850.03,-871 1850.03,-894 1850.03,-894 1850.03,-871 1850.03,-871" />
+<polygon fill="black" stroke="black" points="1668.03,-871 1668.03,-871 1850.03,-871 1850.03,-871 1668.03,-871" />
+<polygon fill="black" stroke="black" points="1850.03,-871 1850.03,-871 2012.03,-871 2012.03,-871 1850.03,-871" />
+<polygon fill="black" stroke="black" points="1850.03,-848 1850.03,-871 1850.03,-871 1850.03,-848 1850.03,-848" />
+<polygon fill="black" stroke="black" points="1668.03,-848 1668.03,-848 1850.03,-848 1850.03,-848 1668.03,-848" />
+<polygon fill="black" stroke="black" points="1850.03,-848 1850.03,-848 2012.03,-848 2012.03,-848 1850.03,-848" />
+<polygon fill="black" stroke="black" points="1850.03,-825 1850.03,-848 1850.03,-848 1850.03,-825 1850.03,-825" />
+<polygon fill="black" stroke="black" points="1668.03,-825 1668.03,-825 1850.03,-825 1850.03,-825 1668.03,-825" />
+<polygon fill="black" stroke="black" points="1850.03,-825 1850.03,-825 2012.03,-825 2012.03,-825 1850.03,-825" />
+<polygon fill="black" stroke="black" points="1850.03,-802 1850.03,-825 1850.03,-825 1850.03,-802 1850.03,-802" />
+<polygon fill="black" stroke="black" points="1668.03,-802 1668.03,-802 1850.03,-802 1850.03,-802 1668.03,-802" />
+<polygon fill="black" stroke="black" points="1850.03,-802 1850.03,-802 2012.03,-802 2012.03,-802 1850.03,-802" />
+<polygon fill="black" stroke="black" points="1850.03,-779 1850.03,-802 1850.03,-802 1850.03,-779 1850.03,-779" />
+<polygon fill="black" stroke="black" points="1668.03,-779 1668.03,-779 1850.03,-779 1850.03,-779 1668.03,-779" />
+<polygon fill="black" stroke="black" points="1850.03,-779 1850.03,-779 2012.03,-779 2012.03,-779 1850.03,-779" />
+<polygon fill="black" stroke="black" points="1850.03,-756 1850.03,-779 1850.03,-779 1850.03,-756 1850.03,-756" />
+<polygon fill="black" stroke="black" points="1668.03,-756 1668.03,-756 1850.03,-756 1850.03,-756 1668.03,-756" />
+<polygon fill="black" stroke="black" points="1850.03,-756 1850.03,-756 2012.03,-756 2012.03,-756 1850.03,-756" />
+<polygon fill="black" stroke="black" points="1850.03,-733 1850.03,-756 1850.03,-756 1850.03,-733 1850.03,-733" />
+<polygon fill="black" stroke="black" points="1668.03,-733 1668.03,-733 1850.03,-733 1850.03,-733 1668.03,-733" />
+<polygon fill="black" stroke="black" points="1850.03,-733 1850.03,-733 2012.03,-733 2012.03,-733 1850.03,-733" />
+<polygon fill="black" stroke="black" points="1850.03,-710 1850.03,-733 1850.03,-733 1850.03,-710 1850.03,-710" />
+<polygon fill="black" stroke="black" points="1668.03,-710 1668.03,-710 1850.03,-710 1850.03,-710 1668.03,-710" />
+<polygon fill="black" stroke="black" points="1850.03,-710 1850.03,-710 2012.03,-710 2012.03,-710 1850.03,-710" />
+<polygon fill="black" stroke="black" points="1850.03,-686 1850.03,-710 1850.03,-710 1850.03,-686 1850.03,-686" />
+<polygon fill="none" stroke="black" points="1668.03,-686.5 1668.03,-1019.5 2012.03,-1019.5 2012.03,-686.5 1668.03,-686.5" />
+</g>
+<!-- 6&#45;&gt;14 -->
+<g id="edge10" class="edge"><title>6-&gt;14:13</title>
+<path fill="none" stroke="black" d="M1452.57,-1098.52C1515.17,-1029.8 1615.88,-929 1668.03,-929" />
+<polygon fill="black" stroke="black" points="1449.63,-1096.55 1445.51,-1106.31 1454.82,-1101.25 1449.63,-1096.55" />
+</g>
+<!-- 9 -->
+<g id="node10" class="node"><title>9</title>
+<polygon fill="#000000" stroke="none" points="1462.53,-1327.5 1462.53,-1384.5 1771.53,-1384.5 1771.53,-1327.5 1462.53,-1327.5" />
+<polygon fill="#000000" stroke="none" points="1464.03,-1351 1464.03,-1383 1771.03,-1383 1771.03,-1351 1464.03,-1351" />
+<text text-anchor="start" x="1472.03" y="-1364.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Grupo de formas de administración</text>
+<polygon fill="#ffffff" stroke="none" points="1464.03,-1328 1464.03,-1351 1635.03,-1351 1635.03,-1328 1464.03,-1328" />
+<text text-anchor="start" x="1468.03" y="-1336.8" font-family="sans-serif" font-weight="bold" font-size="14.00">nombre</text>
+<polygon fill="#ffffff" stroke="none" points="1635.03,-1328 1635.03,-1351 1771.03,-1351 1771.03,-1328 1635.03,-1328" />
+<text text-anchor="start" x="1639.03" y="-1335.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="1463.03,-1351 1463.03,-1351 1772.03,-1351 1772.03,-1351 1463.03,-1351" />
+<polygon fill="black" stroke="black" points="1635.03,-1327 1635.03,-1351 1635.03,-1351 1635.03,-1327 1635.03,-1327" />
+<polygon fill="none" stroke="black" points="1462.53,-1327.5 1462.53,-1384.5 1771.53,-1384.5 1771.53,-1327.5 1462.53,-1327.5" />
+</g>
+<!-- 10 -->
+<g id="node11" class="node"><title>10</title>
+<polygon fill="#000000" stroke="none" points="1958.03,-1122 1958.03,-1202 2182.03,-1202 2182.03,-1122 1958.03,-1122" />
+<polygon fill="#000000" stroke="none" points="1959.03,-1169 1959.03,-1201 2181.03,-1201 2181.03,-1169 1959.03,-1169" />
+<text text-anchor="start" x="1967.03" y="-1182.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Forma de administración</text>
+<polygon fill="#ffffff" stroke="none" points="1959.03,-1146 1959.03,-1169 2181.03,-1169 2181.03,-1146 1959.03,-1146" />
+<text text-anchor="start" x="1963.03" y="-1154.8" font-family="sans-serif" font-weight="bold" font-size="14.00">grupo</text>
+<polygon fill="#ffffff" stroke="none" points="1959.03,-1123 1959.03,-1146 2088.03,-1146 2088.03,-1123 1959.03,-1123" />
+<text text-anchor="start" x="1963.03" y="-1131.8" font-family="sans-serif" font-weight="bold" font-size="14.00">nombre</text>
+<polygon fill="#ffffff" stroke="none" points="2088.03,-1123 2088.03,-1146 2181.03,-1146 2181.03,-1123 2088.03,-1123" />
+<text text-anchor="start" x="2092.03" y="-1130.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="1958.03,-1169 1958.03,-1169 2182.03,-1169 2182.03,-1169 1958.03,-1169" />
+<polygon fill="black" stroke="black" points="1958.03,-1146 1958.03,-1146 2182.03,-1146 2182.03,-1146 1958.03,-1146" />
+<polygon fill="black" stroke="black" points="2088.03,-1122 2088.03,-1146 2088.03,-1146 2088.03,-1122 2088.03,-1122" />
+<polygon fill="none" stroke="black" points="1958.03,-1122 1958.03,-1202 2182.03,-1202 2182.03,-1122 1958.03,-1122" />
+</g>
+<!-- 9&#45;&gt;10 -->
+<g id="edge11" class="edge"><title>9-&gt;10:9</title>
+<path fill="none" stroke="black" d="M1720.47,-1320.29C1742.66,-1313.25 1766.05,-1306.13 1788.03,-1300 1854.9,-1281.36 1892.58,-1314.68 1940.03,-1264 1956.51,-1246.4 1933.92,-1157 1958.03,-1157" />
+<polygon fill="black" stroke="black" points="1719.17,-1317.03 1710.7,-1323.41 1721.3,-1323.7 1719.17,-1317.03" />
+</g>
+<!-- 10&#45;&gt;14 -->
+<g id="edge12" class="edge"><title>10-&gt;14:14</title>
+<path fill="none" stroke="black" d="M2052.81,-1108.13C2045.04,-1082.87 2036.24,-1052.09 2030.03,-1024 2024.3,-998.101 2038.55,-906 2012.03,-906" />
+<polygon fill="black" stroke="black" points="2049.53,-1109.37 2055.84,-1117.88 2056.22,-1107.29 2049.53,-1109.37" />
+</g>
+<!-- 11 -->
+<g id="node12" class="node"><title>11</title>
+<polygon fill="#000000" stroke="none" points="1810.53,-1110.5 1810.53,-1213.5 1923.53,-1213.5 1923.53,-1110.5 1810.53,-1110.5" />
+<polygon fill="#000000" stroke="none" points="1812.03,-1180 1812.03,-1212 1923.03,-1212 1923.03,-1180 1812.03,-1180" />
+<text text-anchor="start" x="1820.03" y="-1193.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Laboratorio</text>
+<polygon fill="#ffffff" stroke="none" points="1812.03,-1157 1812.03,-1180 1884.03,-1180 1884.03,-1157 1812.03,-1157" />
+<text text-anchor="start" x="1816.03" y="-1164.8" font-family="sans-serif" font-size="14.00">nombre</text>
+<polygon fill="#ffffff" stroke="none" points="1884.03,-1157 1884.03,-1180 1923.03,-1180 1923.03,-1157 1884.03,-1157" />
+<text text-anchor="start" x="1888.03" y="-1164.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="1812.03,-1134 1812.03,-1157 1884.03,-1157 1884.03,-1134 1812.03,-1134" />
+<text text-anchor="start" x="1816.03" y="-1141.8" font-family="sans-serif" font-size="14.00">dirección</text>
+<polygon fill="#ffffff" stroke="none" points="1884.03,-1134 1884.03,-1157 1923.03,-1157 1923.03,-1134 1884.03,-1134" />
+<text text-anchor="start" x="1888.03" y="-1141.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="1812.03,-1111 1812.03,-1134 1884.03,-1134 1884.03,-1111 1812.03,-1111" />
+<text text-anchor="start" x="1816.03" y="-1118.8" font-family="sans-serif" font-size="14.00">teléfono</text>
+<polygon fill="#ffffff" stroke="none" points="1884.03,-1111 1884.03,-1134 1923.03,-1134 1923.03,-1111 1884.03,-1111" />
+<text text-anchor="start" x="1888.03" y="-1118.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="1811.03,-1180 1811.03,-1180 1924.03,-1180 1924.03,-1180 1811.03,-1180" />
+<polygon fill="black" stroke="black" points="1884.03,-1157 1884.03,-1180 1884.03,-1180 1884.03,-1157 1884.03,-1157" />
+<polygon fill="black" stroke="black" points="1811.03,-1157 1811.03,-1157 1884.03,-1157 1884.03,-1157 1811.03,-1157" />
+<polygon fill="black" stroke="black" points="1884.03,-1157 1884.03,-1157 1924.03,-1157 1924.03,-1157 1884.03,-1157" />
+<polygon fill="black" stroke="black" points="1884.03,-1134 1884.03,-1157 1884.03,-1157 1884.03,-1134 1884.03,-1134" />
+<polygon fill="black" stroke="black" points="1811.03,-1134 1811.03,-1134 1884.03,-1134 1884.03,-1134 1811.03,-1134" />
+<polygon fill="black" stroke="black" points="1884.03,-1134 1884.03,-1134 1924.03,-1134 1924.03,-1134 1884.03,-1134" />
+<polygon fill="black" stroke="black" points="1884.03,-1110 1884.03,-1134 1884.03,-1134 1884.03,-1110 1884.03,-1110" />
+<polygon fill="none" stroke="black" points="1810.53,-1110.5 1810.53,-1213.5 1923.53,-1213.5 1923.53,-1110.5 1810.53,-1110.5" />
+</g>
+<!-- 11&#45;&gt;14 -->
+<g id="edge13" class="edge"><title>11-&gt;14:11</title>
+<path fill="none" stroke="black" d="M1906.3,-1097.87C1916.53,-1084.34 1928.3,-1070.87 1941.03,-1060 1967.63,-1037.28 1992.5,-1053.68 2011.03,-1024 2022.56,-1005.52 2033.81,-975 2012.03,-975" />
+<polygon fill="black" stroke="black" points="1903.22,-1096.14 1900.13,-1106.27 1908.87,-1100.28 1903.22,-1096.14" />
+</g>
+<!-- 12 -->
+<g id="node13" class="node"><title>12</title>
+<polygon fill="#000000" stroke="none" points="1317.03,-1327.5 1317.03,-1384.5 1429.03,-1384.5 1429.03,-1327.5 1317.03,-1327.5" />
+<polygon fill="#000000" stroke="none" points="1318.03,-1351 1318.03,-1383 1428.03,-1383 1428.03,-1351 1318.03,-1351" />
+<text text-anchor="start" x="1326.03" y="-1364.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Marca</text>
+<polygon fill="#ffffff" stroke="none" points="1318.03,-1328 1318.03,-1351 1391.03,-1351 1391.03,-1328 1318.03,-1328" />
+<text text-anchor="start" x="1322.03" y="-1336.8" font-family="sans-serif" font-weight="bold" font-size="14.00">nombre</text>
+<polygon fill="#ffffff" stroke="none" points="1391.03,-1328 1391.03,-1351 1428.03,-1351 1428.03,-1328 1391.03,-1328" />
+<text text-anchor="start" x="1395.03" y="-1335.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="1317.03,-1351 1317.03,-1351 1429.03,-1351 1429.03,-1351 1317.03,-1351" />
+<polygon fill="black" stroke="black" points="1391.03,-1327 1391.03,-1351 1391.03,-1351 1391.03,-1327 1391.03,-1327" />
+<polygon fill="none" stroke="black" points="1317.03,-1327.5 1317.03,-1384.5 1429.03,-1384.5 1429.03,-1327.5 1317.03,-1327.5" />
+</g>
+<!-- 13 -->
+<g id="node14" class="node"><title>13</title>
+<polygon fill="#000000" stroke="none" points="1590.03,-1064.5 1590.03,-1259.5 1776.03,-1259.5 1776.03,-1064.5 1590.03,-1064.5" />
+<polygon fill="#000000" stroke="none" points="1591.03,-1226 1591.03,-1258 1775.03,-1258 1775.03,-1226 1591.03,-1226" />
+<text text-anchor="start" x="1599.03" y="-1239.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Producto</text>
+<polygon fill="#ffffff" stroke="none" points="1591.03,-1203 1591.03,-1226 1775.03,-1226 1775.03,-1203 1591.03,-1203" />
+<text text-anchor="start" x="1595.03" y="-1211.8" font-family="sans-serif" font-weight="bold" font-size="14.00">marca</text>
+<polygon fill="#ffffff" stroke="none" points="1591.03,-1180 1591.03,-1203 1738.03,-1203 1738.03,-1180 1591.03,-1180" />
+<text text-anchor="start" x="1595.03" y="-1188.8" font-family="sans-serif" font-weight="bold" font-size="14.00">nombre</text>
+<polygon fill="#ffffff" stroke="none" points="1738.03,-1180 1738.03,-1203 1775.03,-1203 1775.03,-1180 1738.03,-1180" />
+<text text-anchor="start" x="1742.03" y="-1187.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="1591.03,-1157 1591.03,-1180 1738.03,-1180 1738.03,-1157 1591.03,-1157" />
+<text text-anchor="start" x="1595.03" y="-1164.8" font-family="sans-serif" font-size="14.00">palabras clave</text>
+<polygon fill="#ffffff" stroke="none" points="1738.03,-1157 1738.03,-1180 1775.03,-1180 1775.03,-1157 1738.03,-1157" />
+<text text-anchor="start" x="1742.03" y="-1164.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="1591.03,-1134 1591.03,-1157 1738.03,-1157 1738.03,-1134 1591.03,-1134" />
+<text text-anchor="start" x="1595.03" y="-1141.8" font-family="sans-serif" font-size="14.00">indicaciones</text>
+<polygon fill="#ffffff" stroke="none" points="1738.03,-1134 1738.03,-1157 1775.03,-1157 1775.03,-1134 1738.03,-1134" />
+<text text-anchor="start" x="1742.03" y="-1141.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="1591.03,-1111 1591.03,-1134 1738.03,-1134 1738.03,-1111 1591.03,-1111" />
+<text text-anchor="start" x="1595.03" y="-1118.8" font-family="sans-serif" font-size="14.00">contraindicaciones</text>
+<polygon fill="#ffffff" stroke="none" points="1738.03,-1111 1738.03,-1134 1775.03,-1134 1775.03,-1111 1738.03,-1111" />
+<text text-anchor="start" x="1742.03" y="-1118.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="1591.03,-1088 1591.03,-1111 1738.03,-1111 1738.03,-1088 1591.03,-1088" />
+<text text-anchor="start" x="1595.03" y="-1095.8" font-family="sans-serif" font-size="14.00">posología</text>
+<polygon fill="#ffffff" stroke="none" points="1738.03,-1088 1738.03,-1111 1775.03,-1111 1775.03,-1088 1738.03,-1088" />
+<text text-anchor="start" x="1742.03" y="-1095.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="1591.03,-1065 1591.03,-1088 1738.03,-1088 1738.03,-1065 1591.03,-1065" />
+<text text-anchor="start" x="1595.03" y="-1072.8" font-family="sans-serif" font-size="14.00">reacciones adversas</text>
+<polygon fill="#ffffff" stroke="none" points="1738.03,-1065 1738.03,-1088 1775.03,-1088 1775.03,-1065 1738.03,-1065" />
+<text text-anchor="start" x="1742.03" y="-1072.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="1590.03,-1226 1590.03,-1226 1776.03,-1226 1776.03,-1226 1590.03,-1226" />
+<polygon fill="black" stroke="black" points="1590.03,-1203 1590.03,-1203 1776.03,-1203 1776.03,-1203 1590.03,-1203" />
+<polygon fill="black" stroke="black" points="1738.03,-1180 1738.03,-1203 1738.03,-1203 1738.03,-1180 1738.03,-1180" />
+<polygon fill="black" stroke="black" points="1590.03,-1180 1590.03,-1180 1738.03,-1180 1738.03,-1180 1590.03,-1180" />
+<polygon fill="black" stroke="black" points="1738.03,-1180 1738.03,-1180 1776.03,-1180 1776.03,-1180 1738.03,-1180" />
+<polygon fill="black" stroke="black" points="1738.03,-1157 1738.03,-1180 1738.03,-1180 1738.03,-1157 1738.03,-1157" />
+<polygon fill="black" stroke="black" points="1590.03,-1157 1590.03,-1157 1738.03,-1157 1738.03,-1157 1590.03,-1157" />
+<polygon fill="black" stroke="black" points="1738.03,-1157 1738.03,-1157 1776.03,-1157 1776.03,-1157 1738.03,-1157" />
+<polygon fill="black" stroke="black" points="1738.03,-1134 1738.03,-1157 1738.03,-1157 1738.03,-1134 1738.03,-1134" />
+<polygon fill="black" stroke="black" points="1590.03,-1134 1590.03,-1134 1738.03,-1134 1738.03,-1134 1590.03,-1134" />
+<polygon fill="black" stroke="black" points="1738.03,-1134 1738.03,-1134 1776.03,-1134 1776.03,-1134 1738.03,-1134" />
+<polygon fill="black" stroke="black" points="1738.03,-1111 1738.03,-1134 1738.03,-1134 1738.03,-1111 1738.03,-1111" />
+<polygon fill="black" stroke="black" points="1590.03,-1111 1590.03,-1111 1738.03,-1111 1738.03,-1111 1590.03,-1111" />
+<polygon fill="black" stroke="black" points="1738.03,-1111 1738.03,-1111 1776.03,-1111 1776.03,-1111 1738.03,-1111" />
+<polygon fill="black" stroke="black" points="1738.03,-1088 1738.03,-1111 1738.03,-1111 1738.03,-1088 1738.03,-1088" />
+<polygon fill="black" stroke="black" points="1590.03,-1088 1590.03,-1088 1738.03,-1088 1738.03,-1088 1590.03,-1088" />
+<polygon fill="black" stroke="black" points="1738.03,-1088 1738.03,-1088 1776.03,-1088 1776.03,-1088 1738.03,-1088" />
+<polygon fill="black" stroke="black" points="1738.03,-1064 1738.03,-1088 1738.03,-1088 1738.03,-1064 1738.03,-1064" />
+<polygon fill="none" stroke="black" points="1590.03,-1064.5 1590.03,-1259.5 1776.03,-1259.5 1776.03,-1064.5 1590.03,-1064.5" />
+</g>
+<!-- 12&#45;&gt;13 -->
+<g id="edge14" class="edge"><title>12-&gt;13:10</title>
+<path fill="none" stroke="black" d="M1417.63,-1317.4C1426.65,-1310.97 1436.35,-1304.82 1446.03,-1300 1498.16,-1274.04 1529.36,-1303.64 1572.03,-1264 1589.03,-1248.21 1566.83,-1215 1590.03,-1215" />
+<polygon fill="black" stroke="black" points="1415.52,-1314.6 1409.55,-1323.36 1419.68,-1320.24 1415.52,-1314.6" />
+</g>
+<!-- 13&#45;&gt;14 -->
+<g id="edge15" class="edge"><title>13-&gt;14:12</title>
+<path fill="none" stroke="black" d="M1638.96,-1050.75C1625.01,-1000.49 1623.17,-952 1668.03,-952" />
+<polygon fill="black" stroke="black" points="1635.64,-1051.86 1641.8,-1060.48 1642.36,-1049.9 1635.64,-1051.86" />
+</g>
+<!-- 29 -->
+<g id="node30" class="node"><title>29</title>
+<polygon fill="#000000" stroke="none" points="1747.53,-492.5 1747.53,-641.5 1988.53,-641.5 1988.53,-492.5 1747.53,-492.5" />
+<polygon fill="#000000" stroke="none" points="1749.03,-608 1749.03,-640 1988.03,-640 1988.03,-608 1749.03,-608" />
+<text text-anchor="start" x="1757.03" y="-621.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Medicamento prescrito</text>
+<polygon fill="#ffffff" stroke="none" points="1749.03,-585 1749.03,-608 1988.03,-608 1988.03,-585 1749.03,-585" />
+<text text-anchor="start" x="1753.03" y="-592.8" font-family="sans-serif" font-size="14.00">informe médico</text>
+<polygon fill="#ffffff" stroke="none" points="1749.03,-562 1749.03,-585 1988.03,-585 1988.03,-562 1749.03,-562" />
+<text text-anchor="start" x="1753.03" y="-569.8" font-family="sans-serif" font-size="14.00">presentación</text>
+<polygon fill="#ffffff" stroke="none" points="1749.03,-539 1749.03,-562 1930.03,-562 1930.03,-539 1749.03,-539" />
+<text text-anchor="start" x="1753.03" y="-546.8" font-family="sans-serif" font-size="14.00">cantidad</text>
+<polygon fill="#ffffff" stroke="none" points="1930.03,-539 1930.03,-562 1988.03,-562 1988.03,-539 1930.03,-539" />
+<text text-anchor="start" x="1934.03" y="-546.8" font-family="sans-serif" font-size="14.00">integer</text>
+<polygon fill="#ffffff" stroke="none" points="1749.03,-516 1749.03,-539 1930.03,-539 1930.03,-516 1749.03,-516" />
+<text text-anchor="start" x="1753.03" y="-523.8" font-family="sans-serif" font-size="14.00">frecuencia</text>
+<polygon fill="#ffffff" stroke="none" points="1930.03,-516 1930.03,-539 1988.03,-539 1988.03,-516 1930.03,-516" />
+<text text-anchor="start" x="1934.03" y="-523.8" font-family="sans-serif" font-size="14.00">integer</text>
+<polygon fill="#ffffff" stroke="none" points="1749.03,-493 1749.03,-516 1930.03,-516 1930.03,-493 1749.03,-493" />
+<text text-anchor="start" x="1753.03" y="-500.8" font-family="sans-serif" font-size="14.00">duración del tratamiento</text>
+<polygon fill="#ffffff" stroke="none" points="1930.03,-493 1930.03,-516 1988.03,-516 1988.03,-493 1930.03,-493" />
+<text text-anchor="start" x="1934.03" y="-500.8" font-family="sans-serif" font-size="14.00">integer</text>
+<polygon fill="black" stroke="black" points="1748.03,-608 1748.03,-608 1989.03,-608 1989.03,-608 1748.03,-608" />
+<polygon fill="black" stroke="black" points="1748.03,-585 1748.03,-585 1989.03,-585 1989.03,-585 1748.03,-585" />
+<polygon fill="black" stroke="black" points="1748.03,-562 1748.03,-562 1989.03,-562 1989.03,-562 1748.03,-562" />
+<polygon fill="black" stroke="black" points="1930.03,-539 1930.03,-562 1930.03,-562 1930.03,-539 1930.03,-539" />
+<polygon fill="black" stroke="black" points="1748.03,-539 1748.03,-539 1930.03,-539 1930.03,-539 1748.03,-539" />
+<polygon fill="black" stroke="black" points="1930.03,-539 1930.03,-539 1989.03,-539 1989.03,-539 1930.03,-539" />
+<polygon fill="black" stroke="black" points="1930.03,-516 1930.03,-539 1930.03,-539 1930.03,-516 1930.03,-516" />
+<polygon fill="black" stroke="black" points="1748.03,-516 1748.03,-516 1930.03,-516 1930.03,-516 1748.03,-516" />
+<polygon fill="black" stroke="black" points="1930.03,-516 1930.03,-516 1989.03,-516 1989.03,-516 1930.03,-516" />
+<polygon fill="black" stroke="black" points="1930.03,-492 1930.03,-516 1930.03,-516 1930.03,-492 1930.03,-492" />
+<polygon fill="none" stroke="black" points="1747.53,-492.5 1747.53,-641.5 1988.53,-641.5 1988.53,-492.5 1747.53,-492.5" />
+</g>
+<!-- 14&#45;&gt;29 -->
+<g id="edge16" class="edge"><title>14-&gt;29:30</title>
+<path fill="none" stroke="black" d="M1752.69,-672.856C1731.63,-619.037 1721.84,-574 1748.03,-574" />
+<polygon fill="black" stroke="black" points="1749.49,-674.29 1756.45,-682.278 1756,-671.693 1749.49,-674.29" />
+</g>
+<!-- 31 -->
+<g id="node32" class="node"><title>31</title>
+<polygon fill="#000000" stroke="none" points="2023.03,-515.5 2023.03,-618.5 2237.03,-618.5 2237.03,-515.5 2023.03,-515.5" />
+<polygon fill="#000000" stroke="none" points="2024.03,-585 2024.03,-617 2236.03,-617 2236.03,-585 2024.03,-585" />
+<text text-anchor="start" x="2032.03" y="-598.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Medicamento solicitado</text>
+<polygon fill="#ffffff" stroke="none" points="2024.03,-562 2024.03,-585 2236.03,-585 2236.03,-562 2024.03,-562" />
+<text text-anchor="start" x="2028.03" y="-569.8" font-family="sans-serif" font-size="14.00">solicitud</text>
+<polygon fill="#ffffff" stroke="none" points="2024.03,-539 2024.03,-562 2236.03,-562 2236.03,-539 2024.03,-539" />
+<text text-anchor="start" x="2028.03" y="-546.8" font-family="sans-serif" font-size="14.00">presentación</text>
+<polygon fill="#ffffff" stroke="none" points="2024.03,-516 2024.03,-539 2135.03,-539 2135.03,-516 2024.03,-516" />
+<text text-anchor="start" x="2028.03" y="-523.8" font-family="sans-serif" font-size="14.00">cantidad</text>
+<polygon fill="#ffffff" stroke="none" points="2135.03,-516 2135.03,-539 2236.03,-539 2236.03,-516 2135.03,-516" />
+<text text-anchor="start" x="2139.03" y="-523.8" font-family="sans-serif" font-size="14.00">integer</text>
+<polygon fill="black" stroke="black" points="2023.03,-585 2023.03,-585 2237.03,-585 2237.03,-585 2023.03,-585" />
+<polygon fill="black" stroke="black" points="2023.03,-562 2023.03,-562 2237.03,-562 2237.03,-562 2023.03,-562" />
+<polygon fill="black" stroke="black" points="2023.03,-539 2023.03,-539 2237.03,-539 2237.03,-539 2023.03,-539" />
+<polygon fill="black" stroke="black" points="2135.03,-515 2135.03,-539 2135.03,-539 2135.03,-515 2135.03,-515" />
+<polygon fill="none" stroke="black" points="2023.03,-515.5 2023.03,-618.5 2237.03,-618.5 2237.03,-515.5 2023.03,-515.5" />
+</g>
+<!-- 14&#45;&gt;31 -->
+<g id="edge17" class="edge"><title>14-&gt;31:33</title>
+<path fill="none" stroke="black" d="M1990.79,-673.703C1995.97,-664.564 2000.75,-655.31 2005.03,-646 2014.08,-626.274 2001.32,-550 2023.03,-550" />
+<polygon fill="black" stroke="black" points="1987.72,-672.023 1985.72,-682.426 1993.77,-675.544 1987.72,-672.023" />
+</g>
+<!-- 15 -->
+<g id="node16" class="node"><title>15</title>
+<polygon fill="#000000" stroke="none" points="1077.53,-1612 1077.53,-1692 1262.53,-1692 1262.53,-1612 1077.53,-1612" />
+<polygon fill="#000000" stroke="none" points="1079.03,-1659 1079.03,-1691 1262.03,-1691 1262.03,-1659 1079.03,-1659" />
+<text text-anchor="start" x="1087.03" y="-1672.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Tipo de enfermedad</text>
+<polygon fill="#ffffff" stroke="none" points="1079.03,-1636 1079.03,-1659 1194.03,-1659 1194.03,-1636 1079.03,-1636" />
+<text text-anchor="start" x="1083.03" y="-1644.8" font-family="sans-serif" font-weight="bold" font-size="14.00">código</text>
+<polygon fill="#ffffff" stroke="none" points="1194.03,-1636 1194.03,-1659 1262.03,-1659 1262.03,-1636 1194.03,-1636" />
+<text text-anchor="start" x="1198.03" y="-1643.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="1079.03,-1613 1079.03,-1636 1194.03,-1636 1194.03,-1613 1079.03,-1613" />
+<text text-anchor="start" x="1083.03" y="-1620.8" font-family="sans-serif" font-size="14.00">descripción</text>
+<polygon fill="#ffffff" stroke="none" points="1194.03,-1613 1194.03,-1636 1262.03,-1636 1262.03,-1613 1194.03,-1613" />
+<text text-anchor="start" x="1198.03" y="-1620.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="1078.03,-1659 1078.03,-1659 1263.03,-1659 1263.03,-1659 1078.03,-1659" />
+<polygon fill="black" stroke="black" points="1194.03,-1636 1194.03,-1659 1194.03,-1659 1194.03,-1636 1194.03,-1636" />
+<polygon fill="black" stroke="black" points="1078.03,-1636 1078.03,-1636 1194.03,-1636 1194.03,-1636 1078.03,-1636" />
+<polygon fill="black" stroke="black" points="1194.03,-1636 1194.03,-1636 1263.03,-1636 1263.03,-1636 1194.03,-1636" />
+<polygon fill="black" stroke="black" points="1194.03,-1612 1194.03,-1636 1194.03,-1636 1194.03,-1612 1194.03,-1612" />
+<polygon fill="none" stroke="black" points="1077.53,-1612 1077.53,-1692 1262.53,-1692 1262.53,-1612 1077.53,-1612" />
+</g>
+<!-- 16 -->
+<g id="node17" class="node"><title>16</title>
+<polygon fill="#000000" stroke="none" points="1062.53,-1452.5 1062.53,-1555.5 1275.53,-1555.5 1275.53,-1452.5 1062.53,-1452.5" />
+<polygon fill="#000000" stroke="none" points="1064.03,-1522 1064.03,-1554 1275.03,-1554 1275.03,-1522 1064.03,-1522" />
+<text text-anchor="start" x="1072.03" y="-1535.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Subtipo de enfermedad</text>
+<polygon fill="#ffffff" stroke="none" points="1064.03,-1499 1064.03,-1522 1193.03,-1522 1193.03,-1499 1064.03,-1499" />
+<text text-anchor="start" x="1068.03" y="-1507.8" font-family="sans-serif" font-weight="bold" font-size="14.00">código</text>
+<polygon fill="#ffffff" stroke="none" points="1193.03,-1499 1193.03,-1522 1275.03,-1522 1275.03,-1499 1193.03,-1499" />
+<text text-anchor="start" x="1197.03" y="-1506.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="1064.03,-1476 1064.03,-1499 1275.03,-1499 1275.03,-1476 1064.03,-1476" />
+<text text-anchor="start" x="1068.03" y="-1484.8" font-family="sans-serif" font-weight="bold" font-size="14.00">tipo de enfermedad</text>
+<polygon fill="#ffffff" stroke="none" points="1064.03,-1453 1064.03,-1476 1193.03,-1476 1193.03,-1453 1064.03,-1453" />
+<text text-anchor="start" x="1068.03" y="-1460.8" font-family="sans-serif" font-size="14.00">descripción</text>
+<polygon fill="#ffffff" stroke="none" points="1193.03,-1453 1193.03,-1476 1275.03,-1476 1275.03,-1453 1193.03,-1453" />
+<text text-anchor="start" x="1197.03" y="-1460.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="1063.03,-1522 1063.03,-1522 1276.03,-1522 1276.03,-1522 1063.03,-1522" />
+<polygon fill="black" stroke="black" points="1193.03,-1499 1193.03,-1522 1193.03,-1522 1193.03,-1499 1193.03,-1499" />
+<polygon fill="black" stroke="black" points="1063.03,-1499 1063.03,-1499 1193.03,-1499 1193.03,-1499 1063.03,-1499" />
+<polygon fill="black" stroke="black" points="1193.03,-1499 1193.03,-1499 1276.03,-1499 1276.03,-1499 1193.03,-1499" />
+<polygon fill="black" stroke="black" points="1063.03,-1476 1063.03,-1476 1276.03,-1476 1276.03,-1476 1063.03,-1476" />
+<polygon fill="black" stroke="black" points="1193.03,-1452 1193.03,-1476 1193.03,-1476 1193.03,-1452 1193.03,-1452" />
+<polygon fill="none" stroke="black" points="1062.53,-1452.5 1062.53,-1555.5 1275.53,-1555.5 1275.53,-1452.5 1062.53,-1452.5" />
+</g>
+<!-- 15&#45;&gt;16 -->
+<g id="edge18" class="edge"><title>15-&gt;16:15</title>
+<path fill="none" stroke="black" d="M1244.38,-1601.05C1256.76,-1589.14 1267.89,-1575.36 1275.03,-1560 1288.71,-1530.58 1308.48,-1487 1276.03,-1487" />
+<polygon fill="black" stroke="black" points="1241.97,-1598.51 1236.96,-1607.85 1246.7,-1603.67 1241.97,-1598.51" />
+</g>
+<!-- 18 -->
+<g id="node19" class="node"><title>18</title>
+<polygon fill="#000000" stroke="none" points="1805.03,-1316 1805.03,-1396 2215.03,-1396 2215.03,-1316 1805.03,-1316" />
+<polygon fill="#000000" stroke="none" points="1806.03,-1363 1806.03,-1395 2214.03,-1395 2214.03,-1363 1806.03,-1363" />
+<text text-anchor="start" x="1814.03" y="-1376.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Relación: Subtipo de enfermedad - Enfermedad</text>
+<polygon fill="#ffffff" stroke="none" points="1806.03,-1340 1806.03,-1363 2214.03,-1363 2214.03,-1340 1806.03,-1340" />
+<text text-anchor="start" x="1810.03" y="-1348.8" font-family="sans-serif" font-weight="bold" font-size="14.00">subtipo de enfermedad</text>
+<polygon fill="#ffffff" stroke="none" points="1806.03,-1317 1806.03,-1340 2214.03,-1340 2214.03,-1317 1806.03,-1317" />
+<text text-anchor="start" x="1810.03" y="-1325.8" font-family="sans-serif" font-weight="bold" font-size="14.00">enfermedad</text>
+<polygon fill="black" stroke="black" points="1805.03,-1363 1805.03,-1363 2215.03,-1363 2215.03,-1363 1805.03,-1363" />
+<polygon fill="black" stroke="black" points="1805.03,-1340 1805.03,-1340 2215.03,-1340 2215.03,-1340 1805.03,-1340" />
+<polygon fill="none" stroke="black" points="1805.03,-1316 1805.03,-1396 2215.03,-1396 2215.03,-1316 1805.03,-1316" />
+</g>
+<!-- 16&#45;&gt;18 -->
+<g id="edge19" class="edge"><title>16-&gt;18:16</title>
+<path fill="none" stroke="black" d="M1293.46,-1484.92C1473.87,-1458.68 1786.87,-1413.02 1788.03,-1412 1809.14,-1393.39 1776.88,-1351 1805.03,-1351" />
+<polygon fill="black" stroke="black" points="1292.77,-1481.48 1283.38,-1486.39 1293.78,-1488.41 1292.77,-1481.48" />
+</g>
+<!-- 16&#45;&gt;19 -->
+<g id="edge20" class="edge"><title>16-&gt;19:18</title>
+<path fill="none" stroke="black" d="M1179.62,-1438.22C1183.82,-1401.57 1184.36,-1363 1168.03,-1363" />
+<polygon fill="black" stroke="black" points="1176.11,-1438.12 1178.35,-1448.47 1183.06,-1438.98 1176.11,-1438.12" />
+</g>
+<!-- 17 -->
+<g id="node18" class="node"><title>17</title>
+<polygon fill="#000000" stroke="none" points="1566.03,-1452.5 1566.03,-1555.5 1712.03,-1555.5 1712.03,-1452.5 1566.03,-1452.5" />
+<polygon fill="#000000" stroke="none" points="1567.03,-1522 1567.03,-1554 1711.03,-1554 1711.03,-1522 1567.03,-1522" />
+<text text-anchor="start" x="1575.03" y="-1535.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Enfermedad</text>
+<polygon fill="#ffffff" stroke="none" points="1567.03,-1499 1567.03,-1522 1674.03,-1522 1674.03,-1499 1567.03,-1499" />
+<text text-anchor="start" x="1571.03" y="-1507.8" font-family="sans-serif" font-weight="bold" font-size="14.00">código</text>
+<polygon fill="#ffffff" stroke="none" points="1674.03,-1499 1674.03,-1522 1711.03,-1522 1711.03,-1499 1674.03,-1499" />
+<text text-anchor="start" x="1678.03" y="-1506.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="1567.03,-1476 1567.03,-1499 1674.03,-1499 1674.03,-1476 1567.03,-1476" />
+<text text-anchor="start" x="1571.03" y="-1483.8" font-family="sans-serif" font-size="14.00">descripción</text>
+<polygon fill="#ffffff" stroke="none" points="1674.03,-1476 1674.03,-1499 1711.03,-1499 1711.03,-1476 1674.03,-1476" />
+<text text-anchor="start" x="1678.03" y="-1483.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="1567.03,-1453 1567.03,-1476 1674.03,-1476 1674.03,-1453 1567.03,-1453" />
+<text text-anchor="start" x="1571.03" y="-1460.8" font-family="sans-serif" font-size="14.00">palabras clave</text>
+<polygon fill="#ffffff" stroke="none" points="1674.03,-1453 1674.03,-1476 1711.03,-1476 1711.03,-1453 1674.03,-1453" />
+<text text-anchor="start" x="1678.03" y="-1460.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="1566.03,-1522 1566.03,-1522 1712.03,-1522 1712.03,-1522 1566.03,-1522" />
+<polygon fill="black" stroke="black" points="1674.03,-1499 1674.03,-1522 1674.03,-1522 1674.03,-1499 1674.03,-1499" />
+<polygon fill="black" stroke="black" points="1566.03,-1499 1566.03,-1499 1674.03,-1499 1674.03,-1499 1566.03,-1499" />
+<polygon fill="black" stroke="black" points="1674.03,-1499 1674.03,-1499 1712.03,-1499 1712.03,-1499 1674.03,-1499" />
+<polygon fill="black" stroke="black" points="1674.03,-1476 1674.03,-1499 1674.03,-1499 1674.03,-1476 1674.03,-1476" />
+<polygon fill="black" stroke="black" points="1566.03,-1476 1566.03,-1476 1674.03,-1476 1674.03,-1476 1566.03,-1476" />
+<polygon fill="black" stroke="black" points="1674.03,-1476 1674.03,-1476 1712.03,-1476 1712.03,-1476 1674.03,-1476" />
+<polygon fill="black" stroke="black" points="1674.03,-1452 1674.03,-1476 1674.03,-1476 1674.03,-1452 1674.03,-1452" />
+<polygon fill="none" stroke="black" points="1566.03,-1452.5 1566.03,-1555.5 1712.03,-1555.5 1712.03,-1452.5 1566.03,-1452.5" />
+</g>
+<!-- 17&#45;&gt;18 -->
+<g id="edge21" class="edge"><title>17-&gt;18:17</title>
+<path fill="none" stroke="black" d="M1729.04,-1464.19C1751.31,-1450.65 1773.06,-1433.37 1788.03,-1412 1809.88,-1380.8 1766.94,-1328 1805.03,-1328" />
+<polygon fill="black" stroke="black" points="1727.02,-1461.31 1720.15,-1469.38 1730.55,-1467.36 1727.02,-1461.31" />
+</g>
+<!-- 28 -->
+<g id="node29" class="node"><title>28</title>
+<polygon fill="#000000" stroke="none" points="1573.03,-527 1573.03,-607 1713.03,-607 1713.03,-527 1573.03,-527" />
+<polygon fill="#000000" stroke="none" points="1574.03,-574 1574.03,-606 1712.03,-606 1712.03,-574 1574.03,-574" />
+<text text-anchor="start" x="1582.03" y="-587.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Diagnóstico</text>
+<polygon fill="#ffffff" stroke="none" points="1574.03,-551 1574.03,-574 1712.03,-574 1712.03,-551 1574.03,-551" />
+<text text-anchor="start" x="1578.03" y="-559.8" font-family="sans-serif" font-weight="bold" font-size="14.00">informe médico</text>
+<polygon fill="#ffffff" stroke="none" points="1574.03,-528 1574.03,-551 1712.03,-551 1712.03,-528 1574.03,-528" />
+<text text-anchor="start" x="1578.03" y="-536.8" font-family="sans-serif" font-weight="bold" font-size="14.00">enfermedad</text>
+<polygon fill="black" stroke="black" points="1573.03,-574 1573.03,-574 1713.03,-574 1713.03,-574 1573.03,-574" />
+<polygon fill="black" stroke="black" points="1573.03,-551 1573.03,-551 1713.03,-551 1713.03,-551 1573.03,-551" />
+<polygon fill="none" stroke="black" points="1573.03,-527 1573.03,-607 1713.03,-607 1713.03,-527 1573.03,-527" />
+</g>
+<!-- 17&#45;&gt;28 -->
+<g id="edge22" class="edge"><title>17-&gt;28:28</title>
+<path fill="none" stroke="black" d="M1547.6,-1498.35C1473.7,-1490.28 1370.7,-1468.76 1300.03,-1412 1242.22,-1365.57 1240.64,-1336.02 1223.03,-1264 1138.02,-916.439 1215.22,-539 1573.03,-539" />
+<polygon fill="black" stroke="black" points="1547.52,-1501.87 1557.83,-1499.41 1548.24,-1494.9 1547.52,-1501.87" />
+</g>
+<!-- 20 -->
+<g id="node21" class="node"><title>20</title>
+<polygon fill="#000000" stroke="none" points="2188.53,-1600.5 2188.53,-1703.5 2377.53,-1703.5 2377.53,-1600.5 2188.53,-1600.5" />
+<polygon fill="#000000" stroke="none" points="2190.03,-1670 2190.03,-1702 2377.03,-1702 2377.03,-1670 2190.03,-1670" />
+<text text-anchor="start" x="2198.03" y="-1683.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Perfil</text>
+<polygon fill="#ffffff" stroke="none" points="2190.03,-1647 2190.03,-1670 2338.03,-1670 2338.03,-1647 2190.03,-1647" />
+<text text-anchor="start" x="2194.03" y="-1654.8" font-family="sans-serif" font-size="14.00">nombre completo</text>
+<polygon fill="#ffffff" stroke="none" points="2338.03,-1647 2338.03,-1670 2377.03,-1670 2377.03,-1647 2338.03,-1647" />
+<text text-anchor="start" x="2342.03" y="-1654.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="2190.03,-1624 2190.03,-1647 2338.03,-1647 2338.03,-1624 2190.03,-1624" />
+<text text-anchor="start" x="2194.03" y="-1631.8" font-family="sans-serif" font-size="14.00">fecha de nacimiento</text>
+<polygon fill="#ffffff" stroke="none" points="2338.03,-1624 2338.03,-1647 2377.03,-1647 2377.03,-1624 2338.03,-1624" />
+<text text-anchor="start" x="2342.03" y="-1631.8" font-family="sans-serif" font-size="14.00">date</text>
+<polygon fill="#ffffff" stroke="none" points="2190.03,-1601 2190.03,-1624 2338.03,-1624 2338.03,-1601 2190.03,-1601" />
+<text text-anchor="start" x="2194.03" y="-1608.8" font-family="sans-serif" font-size="14.00">sexo</text>
+<polygon fill="#ffffff" stroke="none" points="2338.03,-1601 2338.03,-1624 2377.03,-1624 2377.03,-1601 2338.03,-1601" />
+<text text-anchor="start" x="2342.03" y="-1608.8" font-family="sans-serif" font-size="14.00">sexo</text>
+<polygon fill="black" stroke="black" points="2189.03,-1670 2189.03,-1670 2378.03,-1670 2378.03,-1670 2189.03,-1670" />
+<polygon fill="black" stroke="black" points="2338.03,-1647 2338.03,-1670 2338.03,-1670 2338.03,-1647 2338.03,-1647" />
+<polygon fill="black" stroke="black" points="2189.03,-1647 2189.03,-1647 2338.03,-1647 2338.03,-1647 2189.03,-1647" />
+<polygon fill="black" stroke="black" points="2338.03,-1647 2338.03,-1647 2378.03,-1647 2378.03,-1647 2338.03,-1647" />
+<polygon fill="black" stroke="black" points="2338.03,-1624 2338.03,-1647 2338.03,-1647 2338.03,-1624 2338.03,-1624" />
+<polygon fill="black" stroke="black" points="2189.03,-1624 2189.03,-1624 2338.03,-1624 2338.03,-1624 2189.03,-1624" />
+<polygon fill="black" stroke="black" points="2338.03,-1624 2338.03,-1624 2378.03,-1624 2378.03,-1624 2338.03,-1624" />
+<polygon fill="black" stroke="black" points="2338.03,-1600 2338.03,-1624 2338.03,-1624 2338.03,-1600 2338.03,-1600" />
+<polygon fill="none" stroke="black" points="2188.53,-1600.5 2188.53,-1703.5 2377.53,-1703.5 2377.53,-1600.5 2188.53,-1600.5" />
+</g>
+<!-- 22 -->
+<g id="node23" class="node"><title>22</title>
+<polygon fill="#000000" stroke="none" points="2181.53,-1452.5 2181.53,-1555.5 2382.53,-1555.5 2382.53,-1452.5 2181.53,-1452.5" />
+<polygon fill="#000000" stroke="none" points="2183.03,-1522 2183.03,-1554 2382.03,-1554 2382.03,-1522 2183.03,-1522" />
+<text text-anchor="start" x="2191.03" y="-1535.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Identificación</text>
+<polygon fill="#ffffff" stroke="none" points="2183.03,-1499 2183.03,-1522 2382.03,-1522 2382.03,-1499 2183.03,-1499" />
+<text text-anchor="start" x="2187.03" y="-1507.8" font-family="sans-serif" font-weight="bold" font-size="14.00">perfil</text>
+<polygon fill="#ffffff" stroke="none" points="2183.03,-1476 2183.03,-1499 2382.03,-1499 2382.03,-1476 2183.03,-1476" />
+<text text-anchor="start" x="2187.03" y="-1484.8" font-family="sans-serif" font-weight="bold" font-size="14.00">forma de identificación</text>
+<polygon fill="#ffffff" stroke="none" points="2183.03,-1453 2183.03,-1476 2320.03,-1476 2320.03,-1453 2183.03,-1453" />
+<text text-anchor="start" x="2187.03" y="-1461.8" font-family="sans-serif" font-weight="bold" font-size="14.00">identificador</text>
+<polygon fill="#ffffff" stroke="none" points="2320.03,-1453 2320.03,-1476 2382.03,-1476 2382.03,-1453 2320.03,-1453" />
+<text text-anchor="start" x="2324.03" y="-1460.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="2182.03,-1522 2182.03,-1522 2383.03,-1522 2383.03,-1522 2182.03,-1522" />
+<polygon fill="black" stroke="black" points="2182.03,-1499 2182.03,-1499 2383.03,-1499 2383.03,-1499 2182.03,-1499" />
+<polygon fill="black" stroke="black" points="2182.03,-1476 2182.03,-1476 2383.03,-1476 2383.03,-1476 2182.03,-1476" />
+<polygon fill="black" stroke="black" points="2320.03,-1452 2320.03,-1476 2320.03,-1476 2320.03,-1452 2320.03,-1452" />
+<polygon fill="none" stroke="black" points="2181.53,-1452.5 2181.53,-1555.5 2382.53,-1555.5 2382.53,-1452.5 2181.53,-1452.5" />
+</g>
+<!-- 20&#45;&gt;22 -->
+<g id="edge23" class="edge"><title>20-&gt;22:20</title>
+<path fill="none" stroke="black" d="M2363.61,-1588.81C2370.97,-1579.93 2377.39,-1570.29 2382.03,-1560 2390.99,-1540.15 2404.81,-1511 2383.03,-1511" />
+<polygon fill="black" stroke="black" points="2360.9,-1586.6 2356.92,-1596.42 2366.15,-1591.22 2360.9,-1586.6" />
+</g>
+<!-- 21 -->
+<g id="node22" class="node"><title>21</title>
+<polygon fill="#000000" stroke="none" points="1942.03,-1623.5 1942.03,-1680.5 2154.03,-1680.5 2154.03,-1623.5 1942.03,-1623.5" />
+<polygon fill="#000000" stroke="none" points="1943.03,-1647 1943.03,-1679 2153.03,-1679 2153.03,-1647 1943.03,-1647" />
+<text text-anchor="start" x="1951.03" y="-1660.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Forma de identificación</text>
+<polygon fill="#ffffff" stroke="none" points="1943.03,-1624 1943.03,-1647 2066.03,-1647 2066.03,-1624 1943.03,-1624" />
+<text text-anchor="start" x="1947.03" y="-1632.8" font-family="sans-serif" font-weight="bold" font-size="14.00">nombre</text>
+<polygon fill="#ffffff" stroke="none" points="2066.03,-1624 2066.03,-1647 2153.03,-1647 2153.03,-1624 2066.03,-1624" />
+<text text-anchor="start" x="2070.03" y="-1631.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="1942.03,-1647 1942.03,-1647 2154.03,-1647 2154.03,-1647 1942.03,-1647" />
+<polygon fill="black" stroke="black" points="2066.03,-1623 2066.03,-1647 2066.03,-1647 2066.03,-1623 2066.03,-1623" />
+<polygon fill="none" stroke="black" points="1942.03,-1623.5 1942.03,-1680.5 2154.03,-1680.5 2154.03,-1623.5 1942.03,-1623.5" />
+</g>
+<!-- 21&#45;&gt;22 -->
+<g id="edge24" class="edge"><title>21-&gt;22:21</title>
+<path fill="none" stroke="black" d="M2061.37,-1609.73C2079.97,-1561.15 2118.74,-1487 2182.03,-1487" />
+<polygon fill="black" stroke="black" points="2057.99,-1608.79 2057.81,-1619.38 2064.56,-1611.21 2057.99,-1608.79" />
+</g>
+<!-- 25 -->
+<g id="node26" class="node"><title>25</title>
+<polygon fill="#000000" stroke="none" points="2326.53,-1316 2326.53,-1396 2423.53,-1396 2423.53,-1316 2326.53,-1316" />
+<polygon fill="#000000" stroke="none" points="2328.03,-1363 2328.03,-1395 2423.03,-1395 2423.03,-1363 2328.03,-1363" />
+<text text-anchor="start" x="2336.03" y="-1376.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Afiliación</text>
+<polygon fill="#ffffff" stroke="none" points="2328.03,-1340 2328.03,-1363 2423.03,-1363 2423.03,-1340 2328.03,-1340" />
+<text text-anchor="start" x="2332.03" y="-1348.8" font-family="sans-serif" font-weight="bold" font-size="14.00">póliza</text>
+<polygon fill="#ffffff" stroke="none" points="2328.03,-1317 2328.03,-1340 2423.03,-1340 2423.03,-1317 2328.03,-1317" />
+<text text-anchor="start" x="2332.03" y="-1325.8" font-family="sans-serif" font-weight="bold" font-size="14.00">asegurado</text>
+<polygon fill="black" stroke="black" points="2327.03,-1363 2327.03,-1363 2424.03,-1363 2424.03,-1363 2327.03,-1363" />
+<polygon fill="black" stroke="black" points="2327.03,-1340 2327.03,-1340 2424.03,-1340 2424.03,-1340 2327.03,-1340" />
+<polygon fill="none" stroke="black" points="2326.53,-1316 2326.53,-1396 2423.53,-1396 2423.53,-1316 2326.53,-1316" />
+</g>
+<!-- 22&#45;&gt;25 -->
+<g id="edge25" class="edge"><title>22-&gt;25:24</title>
+<path fill="none" stroke="black" d="M2274.59,-1437.99C2272.6,-1388.21 2279.92,-1328 2327.03,-1328" />
+<polygon fill="black" stroke="black" points="2271.1,-1438.31 2275.12,-1448.11 2278.09,-1437.94 2271.1,-1438.31" />
+</g>
+<!-- 23 -->
+<g id="node24" class="node"><title>23</title>
+<polygon fill="#000000" stroke="none" points="2412.53,-1623.5 2412.53,-1680.5 2525.53,-1680.5 2525.53,-1623.5 2412.53,-1623.5" />
+<polygon fill="#000000" stroke="none" points="2414.03,-1647 2414.03,-1679 2525.03,-1679 2525.03,-1647 2414.03,-1647" />
+<text text-anchor="start" x="2422.03" y="-1660.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Asegurador</text>
+<polygon fill="#ffffff" stroke="none" points="2414.03,-1624 2414.03,-1647 2482.03,-1647 2482.03,-1624 2414.03,-1624" />
+<text text-anchor="start" x="2418.03" y="-1631.8" font-family="sans-serif" font-size="14.00">nombre</text>
+<polygon fill="#ffffff" stroke="none" points="2482.03,-1624 2482.03,-1647 2525.03,-1647 2525.03,-1624 2482.03,-1624" />
+<text text-anchor="start" x="2486.03" y="-1631.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="2413.03,-1647 2413.03,-1647 2526.03,-1647 2526.03,-1647 2413.03,-1647" />
+<polygon fill="black" stroke="black" points="2482.03,-1623 2482.03,-1647 2482.03,-1647 2482.03,-1623 2482.03,-1623" />
+<polygon fill="none" stroke="black" points="2412.53,-1623.5 2412.53,-1680.5 2525.53,-1680.5 2525.53,-1623.5 2412.53,-1623.5" />
+</g>
+<!-- 24 -->
+<g id="node25" class="node"><title>24</title>
+<polygon fill="#000000" stroke="none" points="2417.03,-1464 2417.03,-1544 2521.03,-1544 2521.03,-1464 2417.03,-1464" />
+<polygon fill="#000000" stroke="none" points="2418.03,-1511 2418.03,-1543 2520.03,-1543 2520.03,-1511 2418.03,-1511" />
+<text text-anchor="start" x="2426.03" y="-1524.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Póliza</text>
+<polygon fill="#ffffff" stroke="none" points="2418.03,-1488 2418.03,-1511 2520.03,-1511 2520.03,-1488 2418.03,-1488" />
+<text text-anchor="start" x="2422.03" y="-1496.8" font-family="sans-serif" font-weight="bold" font-size="14.00">asegurador</text>
+<polygon fill="#ffffff" stroke="none" points="2418.03,-1465 2418.03,-1488 2482.03,-1488 2482.03,-1465 2418.03,-1465" />
+<text text-anchor="start" x="2422.03" y="-1473.8" font-family="sans-serif" font-weight="bold" font-size="14.00">código</text>
+<polygon fill="#ffffff" stroke="none" points="2482.03,-1465 2482.03,-1488 2520.03,-1488 2520.03,-1465 2482.03,-1465" />
+<text text-anchor="start" x="2486.03" y="-1472.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="2417.03,-1511 2417.03,-1511 2521.03,-1511 2521.03,-1511 2417.03,-1511" />
+<polygon fill="black" stroke="black" points="2417.03,-1488 2417.03,-1488 2521.03,-1488 2521.03,-1488 2417.03,-1488" />
+<polygon fill="black" stroke="black" points="2482.03,-1464 2482.03,-1488 2482.03,-1488 2482.03,-1464 2482.03,-1464" />
+<polygon fill="none" stroke="black" points="2417.03,-1464 2417.03,-1544 2521.03,-1544 2521.03,-1464 2417.03,-1464" />
+</g>
+<!-- 23&#45;&gt;24 -->
+<g id="edge26" class="edge"><title>23-&gt;24:22</title>
+<path fill="none" stroke="black" d="M2498.98,-1610.72C2530.15,-1565.69 2568.32,-1499 2521.03,-1499" />
+<polygon fill="black" stroke="black" points="2495.95,-1608.94 2493.06,-1619.14 2501.68,-1612.97 2495.95,-1608.94" />
+</g>
+<!-- 24&#45;&gt;25 -->
+<g id="edge27" class="edge"><title>24-&gt;25:23</title>
+<path fill="none" stroke="black" d="M2473.47,-1449.84C2474.09,-1406.01 2466.41,-1351 2424.03,-1351" />
+<polygon fill="black" stroke="black" points="2469.98,-1449.76 2473.19,-1459.85 2476.97,-1449.95 2469.98,-1449.76" />
+</g>
+<!-- 26 -->
+<g id="node27" class="node"><title>26</title>
+<polygon fill="#000000" stroke="none" points="2216.03,-1122 2216.03,-1202 2534.03,-1202 2534.03,-1122 2216.03,-1122" />
+<polygon fill="#000000" stroke="none" points="2217.03,-1169 2217.03,-1201 2533.03,-1201 2533.03,-1169 2217.03,-1169" />
+<text text-anchor="start" x="2225.03" y="-1182.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Caso</text>
+<polygon fill="#ffffff" stroke="none" points="2217.03,-1146 2217.03,-1169 2533.03,-1169 2533.03,-1146 2217.03,-1146" />
+<text text-anchor="start" x="2221.03" y="-1153.8" font-family="sans-serif" font-size="14.00">afiliación</text>
+<polygon fill="#ffffff" stroke="none" points="2217.03,-1123 2217.03,-1146 2342.03,-1146 2342.03,-1123 2217.03,-1123" />
+<text text-anchor="start" x="2221.03" y="-1130.8" font-family="sans-serif" font-size="14.00">fecha de registro</text>
+<polygon fill="#ffffff" stroke="none" points="2342.03,-1123 2342.03,-1146 2533.03,-1146 2533.03,-1123 2342.03,-1123" />
+<text text-anchor="start" x="2346.03" y="-1130.8" font-family="sans-serif" font-size="14.00">timestamp with time zone</text>
+<polygon fill="black" stroke="black" points="2216.03,-1169 2216.03,-1169 2534.03,-1169 2534.03,-1169 2216.03,-1169" />
+<polygon fill="black" stroke="black" points="2216.03,-1146 2216.03,-1146 2534.03,-1146 2534.03,-1146 2216.03,-1146" />
+<polygon fill="black" stroke="black" points="2342.03,-1122 2342.03,-1146 2342.03,-1146 2342.03,-1122 2342.03,-1122" />
+<polygon fill="none" stroke="black" points="2216.03,-1122 2216.03,-1202 2534.03,-1202 2534.03,-1122 2216.03,-1122" />
+</g>
+<!-- 25&#45;&gt;26 -->
+<g id="edge28" class="edge"><title>25-&gt;26:25</title>
+<path fill="none" stroke="black" d="M2439.06,-1305.51C2511.48,-1246.87 2610.06,-1157 2534.03,-1157" />
+<polygon fill="black" stroke="black" points="2436.85,-1302.8 2431.25,-1311.79 2441.24,-1308.25 2436.85,-1302.8" />
+</g>
+<!-- 27 -->
+<g id="node28" class="node"><title>27</title>
+<polygon fill="#000000" stroke="none" points="2046.53,-801.5 2046.53,-904.5 2243.53,-904.5 2243.53,-801.5 2046.53,-801.5" />
+<polygon fill="#000000" stroke="none" points="2048.03,-871 2048.03,-903 2243.03,-903 2243.03,-871 2048.03,-871" />
+<text text-anchor="start" x="2056.03" y="-884.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Informe médico</text>
+<polygon fill="#ffffff" stroke="none" points="2048.03,-848 2048.03,-871 2243.03,-871 2243.03,-848 2048.03,-848" />
+<text text-anchor="start" x="2052.03" y="-855.8" font-family="sans-serif" font-size="14.00">caso</text>
+<polygon fill="#ffffff" stroke="none" points="2048.03,-825 2048.03,-848 2204.03,-848 2204.03,-825 2048.03,-825" />
+<text text-anchor="start" x="2052.03" y="-832.8" font-family="sans-serif" font-size="14.00">fecha de emisión</text>
+<polygon fill="#ffffff" stroke="none" points="2204.03,-825 2204.03,-848 2243.03,-848 2243.03,-825 2204.03,-825" />
+<text text-anchor="start" x="2208.03" y="-832.8" font-family="sans-serif" font-size="14.00">date</text>
+<polygon fill="#ffffff" stroke="none" points="2048.03,-802 2048.03,-825 2204.03,-825 2204.03,-802 2048.03,-802" />
+<text text-anchor="start" x="2052.03" y="-809.8" font-family="sans-serif" font-size="14.00">fecha de vencimiento</text>
+<polygon fill="#ffffff" stroke="none" points="2204.03,-802 2204.03,-825 2243.03,-825 2243.03,-802 2204.03,-802" />
+<text text-anchor="start" x="2208.03" y="-809.8" font-family="sans-serif" font-size="14.00">date</text>
+<polygon fill="black" stroke="black" points="2047.03,-871 2047.03,-871 2244.03,-871 2244.03,-871 2047.03,-871" />
+<polygon fill="black" stroke="black" points="2047.03,-848 2047.03,-848 2244.03,-848 2244.03,-848 2047.03,-848" />
+<polygon fill="black" stroke="black" points="2204.03,-825 2204.03,-848 2204.03,-848 2204.03,-825 2204.03,-825" />
+<polygon fill="black" stroke="black" points="2047.03,-825 2047.03,-825 2204.03,-825 2204.03,-825 2047.03,-825" />
+<polygon fill="black" stroke="black" points="2204.03,-825 2204.03,-825 2244.03,-825 2244.03,-825 2204.03,-825" />
+<polygon fill="black" stroke="black" points="2204.03,-801 2204.03,-825 2204.03,-825 2204.03,-801 2204.03,-801" />
+<polygon fill="none" stroke="black" points="2046.53,-801.5 2046.53,-904.5 2243.53,-904.5 2243.53,-801.5 2046.53,-801.5" />
+</g>
+<!-- 26&#45;&gt;27 -->
+<g id="edge29" class="edge"><title>26-&gt;27:26</title>
+<path fill="none" stroke="black" d="M2320.37,-1110.26C2298.13,-1086.34 2274.52,-1056.04 2261.03,-1024 2253.92,-1007.12 2262.35,-860 2244.03,-860" />
+<polygon fill="black" stroke="black" points="2318.1,-1112.95 2327.53,-1117.79 2323.18,-1108.13 2318.1,-1112.95" />
+</g>
+<!-- 30 -->
+<g id="node31" class="node"><title>30</title>
+<polygon fill="#000000" stroke="none" points="2277.53,-813 2277.53,-893 2470.53,-893 2470.53,-813 2277.53,-813" />
+<polygon fill="#000000" stroke="none" points="2279.03,-860 2279.03,-892 2470.03,-892 2470.03,-860 2279.03,-860" />
+<text text-anchor="start" x="2287.03" y="-873.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Solicitud</text>
+<polygon fill="#ffffff" stroke="none" points="2279.03,-837 2279.03,-860 2470.03,-860 2470.03,-837 2279.03,-837" />
+<text text-anchor="start" x="2283.03" y="-844.8" font-family="sans-serif" font-size="14.00">caso</text>
+<polygon fill="#ffffff" stroke="none" points="2279.03,-814 2279.03,-837 2334.03,-837 2334.03,-814 2279.03,-814" />
+<text text-anchor="start" x="2283.03" y="-821.8" font-family="sans-serif" font-size="14.00">estado</text>
+<polygon fill="#ffffff" stroke="none" points="2334.03,-814 2334.03,-837 2470.03,-837 2470.03,-814 2334.03,-814" />
+<text text-anchor="start" x="2338.03" y="-821.8" font-family="sans-serif" font-size="14.00">estado de solicitud</text>
+<polygon fill="black" stroke="black" points="2278.03,-860 2278.03,-860 2471.03,-860 2471.03,-860 2278.03,-860" />
+<polygon fill="black" stroke="black" points="2278.03,-837 2278.03,-837 2471.03,-837 2471.03,-837 2278.03,-837" />
+<polygon fill="black" stroke="black" points="2334.03,-813 2334.03,-837 2334.03,-837 2334.03,-813 2334.03,-813" />
+<polygon fill="none" stroke="black" points="2277.53,-813 2277.53,-893 2470.53,-893 2470.53,-813 2277.53,-813" />
+</g>
+<!-- 26&#45;&gt;30 -->
+<g id="edge30" class="edge"><title>26-&gt;30:31</title>
+<path fill="none" stroke="black" d="M2412.3,-1109.48C2473.7,-1020.63 2579.09,-848 2471.03,-848" />
+<polygon fill="black" stroke="black" points="2409.34,-1107.6 2406.5,-1117.81 2415.09,-1111.6 2409.34,-1107.6" />
+</g>
+<!-- 27&#45;&gt;28 -->
+<g id="edge31" class="edge"><title>27-&gt;28:27</title>
+<path fill="none" stroke="black" d="M2118.04,-788.079C2098.84,-750.812 2069.28,-706.464 2029.03,-682 1915.02,-612.712 1829.55,-735.951 1731.03,-646 1702.83,-620.256 1751.21,-562 1713.03,-562" />
+<polygon fill="black" stroke="black" points="2115.09,-790.01 2122.7,-797.384 2121.35,-786.876 2115.09,-790.01" />
+</g>
+<!-- 27&#45;&gt;29 -->
+<g id="edge32" class="edge"><title>27-&gt;29:29</title>
+<path fill="none" stroke="black" d="M2101.88,-788.917C2062.51,-731.213 2009.86,-653.666 2006.03,-646 1995.72,-625.384 2012.08,-597 1989.03,-597" />
+<polygon fill="black" stroke="black" points="2099.06,-790.99 2107.59,-797.276 2104.84,-787.044 2099.06,-790.99" />
+</g>
+<!-- 35 -->
+<g id="node36" class="node"><title>35</title>
+<polygon fill="#000000" stroke="none" points="1759.03,-175 1759.03,-255 1975.03,-255 1975.03,-175 1759.03,-175" />
+<polygon fill="#000000" stroke="none" points="1760.03,-222 1760.03,-254 1974.03,-254 1974.03,-222 1760.03,-222" />
+<text text-anchor="start" x="1768.03" y="-235.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Diagnóstico relacionado</text>
+<polygon fill="#ffffff" stroke="none" points="1760.03,-199 1760.03,-222 1974.03,-222 1974.03,-199 1760.03,-199" />
+<text text-anchor="start" x="1764.03" y="-207.8" font-family="sans-serif" font-weight="bold" font-size="14.00">tratamiento relacionado</text>
+<polygon fill="#ffffff" stroke="none" points="1760.03,-176 1760.03,-199 1974.03,-199 1974.03,-176 1760.03,-176" />
+<text text-anchor="start" x="1764.03" y="-184.8" font-family="sans-serif" font-weight="bold" font-size="14.00">diagnóstico</text>
+<polygon fill="black" stroke="black" points="1759.03,-222 1759.03,-222 1975.03,-222 1975.03,-222 1759.03,-222" />
+<polygon fill="black" stroke="black" points="1759.03,-199 1759.03,-199 1975.03,-199 1975.03,-199 1759.03,-199" />
+<polygon fill="none" stroke="black" points="1759.03,-175 1759.03,-255 1975.03,-255 1975.03,-175 1759.03,-175" />
+</g>
+<!-- 28&#45;&gt;35 -->
+<g id="edge33" class="edge"><title>28-&gt;35:40</title>
+<path fill="none" stroke="black" d="M1637.06,-514.756C1627.85,-411.247 1623.53,-187 1759.03,-187" />
+<ellipse fill="none" stroke="black" cx="1637.45" cy="-518.91" rx="4" ry="4" />
+</g>
+<!-- 34 -->
+<g id="node35" class="node"><title>34</title>
+<polygon fill="#000000" stroke="none" points="1757.53,-345 1757.53,-425 1976.53,-425 1976.53,-345 1757.53,-345" />
+<polygon fill="#000000" stroke="none" points="1759.03,-392 1759.03,-424 1976.03,-424 1976.03,-392 1759.03,-392" />
+<text text-anchor="start" x="1767.03" y="-405.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Tratamiento relacionado</text>
+<polygon fill="#ffffff" stroke="none" points="1759.03,-369 1759.03,-392 1976.03,-392 1976.03,-369 1759.03,-369" />
+<text text-anchor="start" x="1763.03" y="-377.8" font-family="sans-serif" font-weight="bold" font-size="14.00">medicamento solicitado</text>
+<polygon fill="#ffffff" stroke="none" points="1759.03,-346 1759.03,-369 1976.03,-369 1976.03,-346 1759.03,-346" />
+<text text-anchor="start" x="1763.03" y="-354.8" font-family="sans-serif" font-weight="bold" font-size="14.00">medicamento prescrito</text>
+<polygon fill="black" stroke="black" points="1758.03,-392 1758.03,-392 1977.03,-392 1977.03,-392 1758.03,-392" />
+<polygon fill="black" stroke="black" points="1758.03,-369 1758.03,-369 1977.03,-369 1977.03,-369 1758.03,-369" />
+<polygon fill="none" stroke="black" points="1757.53,-345 1757.53,-425 1976.53,-425 1976.53,-345 1757.53,-345" />
+</g>
+<!-- 29&#45;&gt;34 -->
+<g id="edge34" class="edge"><title>29-&gt;34:38</title>
+<path fill="none" stroke="black" d="M1954.32,-482.012C1966.48,-465.656 1977.16,-447.729 1984.03,-429 1990.37,-411.682 1997.01,-359.098 1984.03,-346 1965.88,-327.693 1868.03,-319.221 1868.03,-345" />
+<ellipse fill="none" stroke="black" cx="1951.83" cy="-485.264" rx="4.00002" ry="4.00002" />
+</g>
+<!-- 30&#45;&gt;31 -->
+<g id="edge35" class="edge"><title>30-&gt;31:32</title>
+<path fill="none" stroke="black" d="M2346.48,-799.853C2324.83,-758.435 2294.24,-698.89 2269.03,-646 2253.96,-614.389 2272.05,-574 2237.03,-574" />
+<polygon fill="black" stroke="black" points="2343.49,-801.693 2351.23,-808.929 2349.69,-798.446 2343.49,-801.693" />
+</g>
+<!-- 32 -->
+<g id="node33" class="node"><title>32</title>
+<polygon fill="#000000" stroke="none" points="2286.03,-515.5 2286.03,-618.5 2434.03,-618.5 2434.03,-515.5 2286.03,-515.5" />
+<polygon fill="#000000" stroke="none" points="2287.03,-585 2287.03,-617 2433.03,-617 2433.03,-585 2287.03,-585" />
+<text text-anchor="start" x="2295.03" y="-598.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Factura</text>
+<polygon fill="#ffffff" stroke="none" points="2287.03,-562 2287.03,-585 2433.03,-585 2433.03,-562 2287.03,-562" />
+<text text-anchor="start" x="2291.03" y="-569.8" font-family="sans-serif" font-size="14.00">solicitud</text>
+<polygon fill="#ffffff" stroke="none" points="2287.03,-539 2287.03,-562 2378.03,-562 2378.03,-539 2287.03,-539" />
+<text text-anchor="start" x="2291.03" y="-546.8" font-family="sans-serif" font-size="14.00">fecha</text>
+<polygon fill="#ffffff" stroke="none" points="2378.03,-539 2378.03,-562 2433.03,-562 2433.03,-539 2378.03,-539" />
+<text text-anchor="start" x="2382.03" y="-546.8" font-family="sans-serif" font-size="14.00">date</text>
+<polygon fill="#ffffff" stroke="none" points="2287.03,-516 2287.03,-539 2378.03,-539 2378.03,-516 2287.03,-516" />
+<text text-anchor="start" x="2291.03" y="-523.8" font-family="sans-serif" font-size="14.00">monto total</text>
+<polygon fill="#ffffff" stroke="none" points="2378.03,-516 2378.03,-539 2433.03,-539 2433.03,-516 2378.03,-516" />
+<text text-anchor="start" x="2382.03" y="-523.8" font-family="sans-serif" font-size="14.00">money</text>
+<polygon fill="black" stroke="black" points="2286.03,-585 2286.03,-585 2434.03,-585 2434.03,-585 2286.03,-585" />
+<polygon fill="black" stroke="black" points="2286.03,-562 2286.03,-562 2434.03,-562 2434.03,-562 2286.03,-562" />
+<polygon fill="black" stroke="black" points="2378.03,-539 2378.03,-562 2378.03,-562 2378.03,-539 2378.03,-539" />
+<polygon fill="black" stroke="black" points="2286.03,-539 2286.03,-539 2378.03,-539 2378.03,-539 2286.03,-539" />
+<polygon fill="black" stroke="black" points="2378.03,-539 2378.03,-539 2434.03,-539 2434.03,-539 2378.03,-539" />
+<polygon fill="black" stroke="black" points="2378.03,-515 2378.03,-539 2378.03,-539 2378.03,-515 2378.03,-515" />
+<polygon fill="none" stroke="black" points="2286.03,-515.5 2286.03,-618.5 2434.03,-618.5 2434.03,-515.5 2286.03,-515.5" />
+</g>
+<!-- 30&#45;&gt;32 -->
+<g id="edge36" class="edge"><title>30-&gt;32:34</title>
+<path fill="none" stroke="black" d="M2406.3,-799.861C2453.27,-719.362 2525.43,-574 2434.03,-574" />
+<polygon fill="black" stroke="black" points="2403.06,-798.475 2401,-808.868 2409.09,-802.029 2403.06,-798.475" />
+</g>
+<!-- 38 -->
+<g id="node39" class="node"><title>38</title>
+<polygon fill="#000000" stroke="none" points="2872.03,-322 2872.03,-448 3146.03,-448 3146.03,-322 2872.03,-322" />
+<polygon fill="#000000" stroke="none" points="2873.03,-415 2873.03,-447 3145.03,-447 3145.03,-415 2873.03,-415" />
+<text text-anchor="start" x="2881.03" y="-428.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Desviación de solicitud</text>
+<polygon fill="#ffffff" stroke="none" points="2873.03,-392 2873.03,-415 3145.03,-415 3145.03,-392 2873.03,-392" />
+<text text-anchor="start" x="2877.03" y="-399.8" font-family="sans-serif" font-size="14.00">tipo de desviación</text>
+<polygon fill="#ffffff" stroke="none" points="2873.03,-369 2873.03,-392 3145.03,-392 3145.03,-369 2873.03,-369" />
+<text text-anchor="start" x="2877.03" y="-376.8" font-family="sans-serif" font-size="14.00">solicitud</text>
+<polygon fill="#ffffff" stroke="none" points="2873.03,-346 2873.03,-369 3090.03,-369 3090.03,-346 2873.03,-346" />
+<text text-anchor="start" x="2877.03" y="-353.8" font-family="sans-serif" font-size="14.00">monto total máximo aprobado</text>
+<polygon fill="#ffffff" stroke="none" points="3090.03,-346 3090.03,-369 3145.03,-369 3145.03,-346 3090.03,-346" />
+<text text-anchor="start" x="3094.03" y="-353.8" font-family="sans-serif" font-size="14.00">money</text>
+<polygon fill="#ffffff" stroke="none" points="2873.03,-323 2873.03,-346 3090.03,-346 3090.03,-323 2873.03,-323" />
+<text text-anchor="start" x="2877.03" y="-330.8" font-family="sans-serif" font-size="14.00">ignorada</text>
+<polygon fill="#ffffff" stroke="none" points="3090.03,-323 3090.03,-346 3145.03,-346 3145.03,-323 3090.03,-323" />
+<text text-anchor="start" x="3094.03" y="-330.8" font-family="sans-serif" font-size="14.00">bool</text>
+<polygon fill="black" stroke="black" points="2872.03,-415 2872.03,-415 3146.03,-415 3146.03,-415 2872.03,-415" />
+<polygon fill="black" stroke="black" points="2872.03,-392 2872.03,-392 3146.03,-392 3146.03,-392 2872.03,-392" />
+<polygon fill="black" stroke="black" points="2872.03,-369 2872.03,-369 3146.03,-369 3146.03,-369 2872.03,-369" />
+<polygon fill="black" stroke="black" points="3090.03,-346 3090.03,-369 3090.03,-369 3090.03,-346 3090.03,-346" />
+<polygon fill="black" stroke="black" points="2872.03,-346 2872.03,-346 3090.03,-346 3090.03,-346 2872.03,-346" />
+<polygon fill="black" stroke="black" points="3090.03,-346 3090.03,-346 3146.03,-346 3146.03,-346 3090.03,-346" />
+<polygon fill="black" stroke="black" points="3090.03,-322 3090.03,-346 3090.03,-346 3090.03,-322 3090.03,-322" />
+<polygon fill="none" stroke="black" points="2872.03,-322 2872.03,-448 3146.03,-448 3146.03,-322 2872.03,-322" />
+</g>
+<!-- 30&#45;&gt;38 -->
+<g id="edge37" class="edge"><title>30-&gt;38:43</title>
+<path fill="none" stroke="black" d="M2486.15,-816.762C2573.13,-784.454 2691.55,-728.914 2769.03,-646 2833.3,-577.22 2823.62,-541.087 2854.03,-452 2864.68,-420.784 2839.04,-380 2872.03,-380" />
+<ellipse fill="none" stroke="black" cx="2482.38" cy="-818.148" rx="4.00001" ry="4.00001" />
+</g>
+<!-- 33 -->
+<g id="node34" class="node"><title>33</title>
+<polygon fill="#000000" stroke="none" points="2010.53,-333.5 2010.53,-436.5 2223.53,-436.5 2223.53,-333.5 2010.53,-333.5" />
+<polygon fill="#000000" stroke="none" points="2012.03,-403 2012.03,-435 2223.03,-435 2223.03,-403 2012.03,-403" />
+<text text-anchor="start" x="2020.03" y="-416.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Medicamento facturado</text>
+<polygon fill="#ffffff" stroke="none" points="2012.03,-380 2012.03,-403 2223.03,-403 2223.03,-380 2012.03,-380" />
+<text text-anchor="start" x="2016.03" y="-388.8" font-family="sans-serif" font-weight="bold" font-size="14.00">medicamento solicitado</text>
+<polygon fill="#ffffff" stroke="none" points="2012.03,-357 2012.03,-380 2223.03,-380 2223.03,-357 2012.03,-357" />
+<text text-anchor="start" x="2016.03" y="-364.8" font-family="sans-serif" font-size="14.00">factura</text>
+<polygon fill="#ffffff" stroke="none" points="2012.03,-334 2012.03,-357 2144.03,-357 2144.03,-334 2012.03,-334" />
+<text text-anchor="start" x="2016.03" y="-341.8" font-family="sans-serif" font-size="14.00">precio unitario</text>
+<polygon fill="#ffffff" stroke="none" points="2144.03,-334 2144.03,-357 2223.03,-357 2223.03,-334 2144.03,-334" />
+<text text-anchor="start" x="2148.03" y="-341.8" font-family="sans-serif" font-size="14.00">money</text>
+<polygon fill="black" stroke="black" points="2011.03,-403 2011.03,-403 2224.03,-403 2224.03,-403 2011.03,-403" />
+<polygon fill="black" stroke="black" points="2011.03,-380 2011.03,-380 2224.03,-380 2224.03,-380 2011.03,-380" />
+<polygon fill="black" stroke="black" points="2011.03,-357 2011.03,-357 2224.03,-357 2224.03,-357 2011.03,-357" />
+<polygon fill="black" stroke="black" points="2144.03,-333 2144.03,-357 2144.03,-357 2144.03,-333 2144.03,-333" />
+<polygon fill="none" stroke="black" points="2010.53,-333.5 2010.53,-436.5 2223.53,-436.5 2223.53,-333.5 2010.53,-333.5" />
+</g>
+<!-- 31&#45;&gt;33 -->
+<g id="edge38" class="edge"><title>31-&gt;33:35</title>
+<path fill="none" stroke="black" d="M2188.5,-503.11C2202.45,-484.452 2215.47,-463.068 2223.03,-441 2230.09,-420.393 2245.81,-392 2224.03,-392" />
+<polygon fill="black" stroke="black" points="2185.6,-501.149 2182.27,-511.208 2191.14,-505.421 2185.6,-501.149" />
+</g>
+<!-- 31&#45;&gt;34 -->
+<g id="edge39" class="edge"><title>31-&gt;34:37</title>
+<path fill="none" stroke="black" d="M2041.67,-506.241C2023.66,-490.465 2006.45,-472.145 1994.03,-452 1976.77,-424.012 2009.91,-380 1977.03,-380" />
+<ellipse fill="none" stroke="black" cx="2044.76" cy="-508.891" rx="4.00002" ry="4.00002" />
+</g>
+<!-- 39 -->
+<g id="node40" class="node"><title>39</title>
+<polygon fill="#000000" stroke="none" points="2258.03,-322 2258.03,-448 2592.03,-448 2592.03,-322 2258.03,-322" />
+<polygon fill="#000000" stroke="none" points="2259.03,-415 2259.03,-447 2591.03,-447 2591.03,-415 2259.03,-415" />
+<text text-anchor="start" x="2267.03" y="-428.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Desviación de medicamento solicitado</text>
+<polygon fill="#ffffff" stroke="none" points="2259.03,-392 2259.03,-415 2591.03,-415 2591.03,-392 2259.03,-392" />
+<text text-anchor="start" x="2263.03" y="-399.8" font-family="sans-serif" font-size="14.00">tipo de desviación</text>
+<polygon fill="#ffffff" stroke="none" points="2259.03,-369 2259.03,-392 2591.03,-392 2591.03,-369 2259.03,-369" />
+<text text-anchor="start" x="2263.03" y="-376.8" font-family="sans-serif" font-size="14.00">medicamento solicitado</text>
+<polygon fill="#ffffff" stroke="none" points="2259.03,-346 2259.03,-369 2515.03,-369 2515.03,-346 2259.03,-346" />
+<text text-anchor="start" x="2263.03" y="-353.8" font-family="sans-serif" font-size="14.00">precio unitario máximo aprobado</text>
+<polygon fill="#ffffff" stroke="none" points="2515.03,-346 2515.03,-369 2591.03,-369 2591.03,-346 2515.03,-346" />
+<text text-anchor="start" x="2519.03" y="-353.8" font-family="sans-serif" font-size="14.00">money</text>
+<polygon fill="#ffffff" stroke="none" points="2259.03,-323 2259.03,-346 2515.03,-346 2515.03,-323 2259.03,-323" />
+<text text-anchor="start" x="2263.03" y="-330.8" font-family="sans-serif" font-size="14.00">ignorada</text>
+<polygon fill="#ffffff" stroke="none" points="2515.03,-323 2515.03,-346 2591.03,-346 2591.03,-323 2515.03,-323" />
+<text text-anchor="start" x="2519.03" y="-330.8" font-family="sans-serif" font-size="14.00">bool</text>
+<polygon fill="black" stroke="black" points="2258.03,-415 2258.03,-415 2592.03,-415 2592.03,-415 2258.03,-415" />
+<polygon fill="black" stroke="black" points="2258.03,-392 2258.03,-392 2592.03,-392 2592.03,-392 2258.03,-392" />
+<polygon fill="black" stroke="black" points="2258.03,-369 2258.03,-369 2592.03,-369 2592.03,-369 2258.03,-369" />
+<polygon fill="black" stroke="black" points="2515.03,-346 2515.03,-369 2515.03,-369 2515.03,-346 2515.03,-346" />
+<polygon fill="black" stroke="black" points="2258.03,-346 2258.03,-346 2515.03,-346 2515.03,-346 2258.03,-346" />
+<polygon fill="black" stroke="black" points="2515.03,-346 2515.03,-346 2592.03,-346 2592.03,-346 2515.03,-346" />
+<polygon fill="black" stroke="black" points="2515.03,-322 2515.03,-346 2515.03,-346 2515.03,-322 2515.03,-322" />
+<polygon fill="none" stroke="black" points="2258.03,-322 2258.03,-448 2592.03,-448 2592.03,-322 2258.03,-322" />
+</g>
+<!-- 31&#45;&gt;39 -->
+<g id="edge40" class="edge"><title>31-&gt;39:45</title>
+<path fill="none" stroke="black" d="M2199.55,-505.551C2214.72,-489.459 2229.4,-471.173 2240.03,-452 2256.02,-423.153 2225.04,-380 2258.03,-380" />
+<ellipse fill="none" stroke="black" cx="2196.72" cy="-508.495" rx="4.00002" ry="4.00002" />
+</g>
+<!-- 32&#45;&gt;33 -->
+<g id="edge41" class="edge"><title>32-&gt;33:36</title>
+<path fill="none" stroke="black" d="M2281.74,-504.353C2266.22,-488.776 2251.5,-471.017 2241.03,-452 2231.84,-435.316 2243.07,-368 2224.03,-368" />
+<polygon fill="black" stroke="black" points="2279.32,-506.877 2288.92,-511.352 2284.21,-501.865 2279.32,-506.877" />
+</g>
+<!-- 34&#45;&gt;35 -->
+<g id="edge42" class="edge"><title>34-&gt;35:39</title>
+<path fill="none" stroke="black" d="M1919.03,-335.142C1970.67,-283.674 2034.25,-210 1975.03,-210" />
+<ellipse fill="none" stroke="black" cx="1915.97" cy="-338.176" rx="4.00002" ry="4.00002" />
+</g>
+<!-- 40 -->
+<g id="node41" class="node"><title>40</title>
+<polygon fill="#000000" stroke="none" points="2152.03,-152 2152.03,-278 2488.03,-278 2488.03,-152 2152.03,-152" />
+<polygon fill="#000000" stroke="none" points="2153.03,-245 2153.03,-277 2487.03,-277 2487.03,-245 2153.03,-245" />
+<text text-anchor="start" x="2161.03" y="-258.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Desviación de tratamiento relacionado</text>
+<polygon fill="#ffffff" stroke="none" points="2153.03,-222 2153.03,-245 2487.03,-245 2487.03,-222 2153.03,-222" />
+<text text-anchor="start" x="2157.03" y="-229.8" font-family="sans-serif" font-size="14.00">tipo de desviación</text>
+<polygon fill="#ffffff" stroke="none" points="2153.03,-199 2153.03,-222 2487.03,-222 2487.03,-199 2153.03,-199" />
+<text text-anchor="start" x="2157.03" y="-206.8" font-family="sans-serif" font-size="14.00">tratamiento relacionado</text>
+<polygon fill="#ffffff" stroke="none" points="2153.03,-176 2153.03,-199 2388.03,-199 2388.03,-176 2153.03,-176" />
+<text text-anchor="start" x="2157.03" y="-183.8" font-family="sans-serif" font-size="14.00">cantidad máxima aprobada</text>
+<polygon fill="#ffffff" stroke="none" points="2388.03,-176 2388.03,-199 2487.03,-199 2487.03,-176 2388.03,-176" />
+<text text-anchor="start" x="2392.03" y="-183.8" font-family="sans-serif" font-size="14.00">integer</text>
+<polygon fill="#ffffff" stroke="none" points="2153.03,-153 2153.03,-176 2388.03,-176 2388.03,-153 2153.03,-153" />
+<text text-anchor="start" x="2157.03" y="-160.8" font-family="sans-serif" font-size="14.00">ignorada</text>
+<polygon fill="#ffffff" stroke="none" points="2388.03,-153 2388.03,-176 2487.03,-176 2487.03,-153 2388.03,-153" />
+<text text-anchor="start" x="2392.03" y="-160.8" font-family="sans-serif" font-size="14.00">bool</text>
+<polygon fill="black" stroke="black" points="2152.03,-245 2152.03,-245 2488.03,-245 2488.03,-245 2152.03,-245" />
+<polygon fill="black" stroke="black" points="2152.03,-222 2152.03,-222 2488.03,-222 2488.03,-222 2152.03,-222" />
+<polygon fill="black" stroke="black" points="2152.03,-199 2152.03,-199 2488.03,-199 2488.03,-199 2152.03,-199" />
+<polygon fill="black" stroke="black" points="2388.03,-176 2388.03,-199 2388.03,-199 2388.03,-176 2388.03,-176" />
+<polygon fill="black" stroke="black" points="2152.03,-176 2152.03,-176 2388.03,-176 2388.03,-176 2152.03,-176" />
+<polygon fill="black" stroke="black" points="2388.03,-176 2388.03,-176 2488.03,-176 2488.03,-176 2388.03,-176" />
+<polygon fill="black" stroke="black" points="2388.03,-152 2388.03,-176 2388.03,-176 2388.03,-152 2388.03,-152" />
+<polygon fill="none" stroke="black" points="2152.03,-152 2152.03,-278 2488.03,-278 2488.03,-152 2152.03,-152" />
+</g>
+<!-- 34&#45;&gt;40 -->
+<g id="edge43" class="edge"><title>34-&gt;40:47</title>
+<path fill="none" stroke="black" d="M1928.14,-336.08C1996.33,-284.574 2103.45,-210 2152.03,-210" />
+<ellipse fill="none" stroke="black" cx="1924.85" cy="-338.572" rx="4.00002" ry="4.00002" />
+</g>
+<!-- 41 -->
+<g id="node42" class="node"><title>41</title>
+<polygon fill="#000000" stroke="none" points="2098.53,-4.5 2098.53,-107.5 2431.53,-107.5 2431.53,-4.5 2098.53,-4.5" />
+<polygon fill="#000000" stroke="none" points="2100.03,-74 2100.03,-106 2431.03,-106 2431.03,-74 2100.03,-74" />
+<text text-anchor="start" x="2108.03" y="-87.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Desviación de diagnóstico relacionado</text>
+<polygon fill="#ffffff" stroke="none" points="2100.03,-51 2100.03,-74 2431.03,-74 2431.03,-51 2100.03,-51" />
+<text text-anchor="start" x="2104.03" y="-58.8" font-family="sans-serif" font-size="14.00">tipo de desviación</text>
+<polygon fill="#ffffff" stroke="none" points="2100.03,-28 2100.03,-51 2431.03,-51 2431.03,-28 2100.03,-28" />
+<text text-anchor="start" x="2104.03" y="-35.8" font-family="sans-serif" font-size="14.00">diagnóstico relacionado</text>
+<polygon fill="#ffffff" stroke="none" points="2100.03,-5 2100.03,-28 2282.03,-28 2282.03,-5 2100.03,-5" />
+<text text-anchor="start" x="2104.03" y="-12.8" font-family="sans-serif" font-size="14.00">ignorada</text>
+<polygon fill="#ffffff" stroke="none" points="2282.03,-5 2282.03,-28 2431.03,-28 2431.03,-5 2282.03,-5" />
+<text text-anchor="start" x="2286.03" y="-12.8" font-family="sans-serif" font-size="14.00">bool</text>
+<polygon fill="black" stroke="black" points="2099.03,-74 2099.03,-74 2432.03,-74 2432.03,-74 2099.03,-74" />
+<polygon fill="black" stroke="black" points="2099.03,-51 2099.03,-51 2432.03,-51 2432.03,-51 2099.03,-51" />
+<polygon fill="black" stroke="black" points="2099.03,-28 2099.03,-28 2432.03,-28 2432.03,-28 2099.03,-28" />
+<polygon fill="black" stroke="black" points="2282.03,-4 2282.03,-28 2282.03,-28 2282.03,-4 2282.03,-4" />
+<polygon fill="none" stroke="black" points="2098.53,-4.5 2098.53,-107.5 2431.53,-107.5 2431.53,-4.5 2098.53,-4.5" />
+</g>
+<!-- 35&#45;&gt;41 -->
+<g id="edge44" class="edge"><title>35-&gt;41:49</title>
+<path fill="none" stroke="black" d="M1901.91,-164.231C1942.68,-112.498 2015.33,-39 2099.03,-39" />
+<ellipse fill="none" stroke="black" cx="1899.3" cy="-167.582" rx="4.00002" ry="4.00002" />
+</g>
+<!-- 36 -->
+<g id="node37" class="node"><title>36</title>
+<polygon fill="#000000" stroke="none" points="2580.03,-538.5 2580.03,-595.5 2752.03,-595.5 2752.03,-538.5 2580.03,-538.5" />
+<polygon fill="#000000" stroke="none" points="2581.03,-562 2581.03,-594 2751.03,-594 2751.03,-562 2581.03,-562" />
+<text text-anchor="start" x="2589.03" y="-575.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Tipo de desviación</text>
+<polygon fill="#ffffff" stroke="none" points="2581.03,-539 2581.03,-562 2690.03,-562 2690.03,-539 2581.03,-539" />
+<text text-anchor="start" x="2585.03" y="-546.8" font-family="sans-serif" font-size="14.00">descripción</text>
+<polygon fill="#ffffff" stroke="none" points="2690.03,-539 2690.03,-562 2751.03,-562 2751.03,-539 2690.03,-539" />
+<text text-anchor="start" x="2694.03" y="-546.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="black" stroke="black" points="2580.03,-562 2580.03,-562 2752.03,-562 2752.03,-562 2580.03,-562" />
+<polygon fill="black" stroke="black" points="2690.03,-538 2690.03,-562 2690.03,-562 2690.03,-538 2690.03,-538" />
+<polygon fill="none" stroke="black" points="2580.03,-538.5 2580.03,-595.5 2752.03,-595.5 2752.03,-538.5 2580.03,-538.5" />
+</g>
+<!-- 37 -->
+<g id="node38" class="node"><title>37</title>
+<polygon fill="#000000" stroke="none" points="2702.53,-322 2702.53,-448 2837.53,-448 2837.53,-322 2702.53,-322" />
+<polygon fill="#000000" stroke="none" points="2704.03,-415 2704.03,-447 2837.03,-447 2837.03,-415 2704.03,-415" />
+<text text-anchor="start" x="2712.03" y="-428.3" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#ffffff">Regla</text>
+<polygon fill="#ffffff" stroke="none" points="2704.03,-392 2704.03,-415 2794.03,-415 2794.03,-392 2704.03,-392" />
+<text text-anchor="start" x="2708.03" y="-399.8" font-family="sans-serif" font-size="14.00">nombre</text>
+<polygon fill="#ffffff" stroke="none" points="2794.03,-392 2794.03,-415 2837.03,-415 2837.03,-392 2794.03,-392" />
+<text text-anchor="start" x="2798.03" y="-399.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="2704.03,-369 2704.03,-392 2794.03,-392 2794.03,-369 2704.03,-369" />
+<text text-anchor="start" x="2708.03" y="-376.8" font-family="sans-serif" font-size="14.00">descripción</text>
+<polygon fill="#ffffff" stroke="none" points="2794.03,-369 2794.03,-392 2837.03,-392 2837.03,-369 2794.03,-369" />
+<text text-anchor="start" x="2798.03" y="-376.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="2704.03,-346 2704.03,-369 2794.03,-369 2794.03,-346 2704.03,-346" />
+<text text-anchor="start" x="2708.03" y="-353.8" font-family="sans-serif" font-size="14.00">condición</text>
+<polygon fill="#ffffff" stroke="none" points="2794.03,-346 2794.03,-369 2837.03,-369 2837.03,-346 2794.03,-346" />
+<text text-anchor="start" x="2798.03" y="-353.8" font-family="sans-serif" font-size="14.00">text</text>
+<polygon fill="#ffffff" stroke="none" points="2704.03,-323 2704.03,-346 2837.03,-346 2837.03,-323 2704.03,-323" />
+<text text-anchor="start" x="2708.03" y="-330.8" font-family="sans-serif" font-size="14.00">tipo de desviación</text>
+<polygon fill="black" stroke="black" points="2703.03,-415 2703.03,-415 2838.03,-415 2838.03,-415 2703.03,-415" />
+<polygon fill="black" stroke="black" points="2794.03,-392 2794.03,-415 2794.03,-415 2794.03,-392 2794.03,-392" />
+<polygon fill="black" stroke="black" points="2703.03,-392 2703.03,-392 2794.03,-392 2794.03,-392 2703.03,-392" />
+<polygon fill="black" stroke="black" points="2794.03,-392 2794.03,-392 2838.03,-392 2838.03,-392 2794.03,-392" />
+<polygon fill="black" stroke="black" points="2794.03,-369 2794.03,-392 2794.03,-392 2794.03,-369 2794.03,-369" />
+<polygon fill="black" stroke="black" points="2703.03,-369 2703.03,-369 2794.03,-369 2794.03,-369 2703.03,-369" />
+<polygon fill="black" stroke="black" points="2794.03,-369 2794.03,-369 2838.03,-369 2838.03,-369 2794.03,-369" />
+<polygon fill="black" stroke="black" points="2794.03,-346 2794.03,-369 2794.03,-369 2794.03,-346 2794.03,-346" />
+<polygon fill="black" stroke="black" points="2703.03,-346 2703.03,-346 2794.03,-346 2794.03,-346 2703.03,-346" />
+<polygon fill="black" stroke="black" points="2794.03,-346 2794.03,-346 2838.03,-346 2838.03,-346 2794.03,-346" />
+<polygon fill="none" stroke="black" points="2702.53,-322 2702.53,-448 2837.53,-448 2837.53,-322 2702.53,-322" />
+</g>
+<!-- 36&#45;&gt;37 -->
+<g id="edge45" class="edge"><title>36-&gt;37:41</title>
+<path fill="none" stroke="black" d="M2671.67,-524.01C2680.81,-457.159 2698.27,-334 2703.03,-334" />
+<polygon fill="black" stroke="black" points="2668.16,-523.847 2670.28,-534.228 2675.1,-524.791 2668.16,-523.847" />
+</g>
+<!-- 36&#45;&gt;38 -->
+<g id="edge46" class="edge"><title>36-&gt;38:42</title>
+<path fill="none" stroke="black" d="M2749.4,-530.792C2785.67,-511.942 2826.16,-485.609 2854.03,-452 2868.57,-434.46 2849.24,-404 2872.03,-404" />
+<ellipse fill="none" stroke="black" cx="2745.76" cy="-532.644" rx="4.00002" ry="4.00002" />
+</g>
+<!-- 36&#45;&gt;39 -->
+<g id="edge47" class="edge"><title>36-&gt;39:44</title>
+<path fill="none" stroke="black" d="M2648.22,-526.934C2626.35,-478.996 2592.13,-404 2592.03,-404" />
+<ellipse fill="none" stroke="black" cx="2649.95" cy="-530.741" rx="4.00002" ry="4.00002" />
+</g>
+<!-- 36&#45;&gt;40 -->
+<g id="edge48" class="edge"><title>36-&gt;40:46</title>
+<path fill="none" stroke="black" d="M2660.42,-526.024C2651.26,-464.87 2631.79,-351.634 2609.03,-318 2572.34,-263.782 2553.49,-234 2488.03,-234" />
+<ellipse fill="none" stroke="black" cx="2661.06" cy="-530.337" rx="4.00001" ry="4.00001" />
+</g>
+<!-- 36&#45;&gt;41 -->
+<g id="edge49" class="edge"><title>36-&gt;41:48</title>
+<path fill="none" stroke="black" d="M2665.75,-525.975C2662.61,-406.88 2635.89,-63 2432.03,-63" />
+<ellipse fill="none" stroke="black" cx="2665.84" cy="-530.155" rx="4" ry="4" />
+</g>
+</g>
+</svg>
