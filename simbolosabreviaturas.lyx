@@ -120,18 +120,135 @@ addcontentsline{toc}{chapter}{Lista de Símbolos y Abreviaturas}
 \paragraph_spacing onehalf
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="42" columns="2">
+<lyxtabular version="3" rows="55" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top" width="0pt">
 <column alignment="left" valignment="top" width="11cm">
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \family typewriter
+/v1/database
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prefijo usado en los URIs correspondientes a recursos en el API REST desarrollad
+o en este proyecto\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+&
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Separador entre parámetros de consulta usado en el API REST desarrollado
+ en este proyecto\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+?
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc3986"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Separador entre componentes de ruta y parámetros de consulta en un URI\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+/
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc3986"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Separador entre cada componente de ruta en un URI\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
 aeson
+\family default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "aeson"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -147,17 +264,24 @@ Biblioteca para procesamiento de JSON en el lenguaje de programación Haskell\Sp
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 AJAX
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AJAX"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -177,7 +301,7 @@ Web
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -187,7 +311,7 @@ API
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -203,7 +327,7 @@ application programming interface
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -213,7 +337,7 @@ AST
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -229,17 +353,24 @@ abstract syntax tree
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 Blockly
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Blockly"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -254,17 +385,24 @@ Web
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 CIE-10
+\begin_inset CommandInset citation
+LatexCommand cite
+key "iscdrhpicps"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -283,7 +421,31 @@ Clasificación internacional de enfermedades
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+column
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Componente de ruta usado en URIs que identifican recursos en el API REST
+ desarrollado en este proyecto\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -293,7 +455,7 @@ DDL
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -308,7 +470,7 @@ data definition language
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -316,11 +478,18 @@ data definition language
 
 \family typewriter
 DELETE
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc2616"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -331,7 +500,7 @@ Método de HTTP para eliminación de recursos\SpecialChar \@.
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -339,11 +508,18 @@ Método de HTTP para eliminación de recursos\SpecialChar \@.
 
 \family typewriter
 GET
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc2616"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -354,7 +530,35 @@ Método de HTTP para acciones sin efectos sobre recursos\SpecialChar \@.
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Git
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Git"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sistema distribuido de control de versiones\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -364,7 +568,7 @@ Google
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -379,7 +583,7 @@ Web
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -387,11 +591,20 @@ Web
 
 \family typewriter
 graphviz
+\family default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "graphviz"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -403,17 +616,24 @@ Biblioteca para abstraer la interacción con los programas que componen a
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 GraphViz
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ellson01graphviz"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -428,7 +648,7 @@ Software
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -438,7 +658,7 @@ Hackage
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -450,17 +670,24 @@ Repositorio público de paquetes de software para el lenguaje de programación
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 Haskell
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haskell2010"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -471,12 +698,19 @@ Un lenguaje de programación funcional de propósito general\SpecialChar \@.
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 HTML
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HTML5"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -496,17 +730,26 @@ hypertext markup language
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 HTTP
+\family typewriter
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc2616"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -522,12 +765,19 @@ hypertext transfer protocol
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 JSON
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JSON"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -547,7 +797,53 @@ JavaScript object notation
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+limit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parámetro de paginación usado en el API REST desarrollado en este proyecto\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+offset
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parámetro de paginación usado en el API REST desarrollado en este proyecto\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -557,7 +853,7 @@ OMS
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -568,7 +864,7 @@ Sigla para la Organización Mundial de la Salud\SpecialChar \@.
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -578,7 +874,7 @@ PCA
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -593,7 +889,7 @@ Prescription control analyzer
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -603,7 +899,7 @@ PCA Audit
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -615,7 +911,7 @@ Una aplicación que permite a proveedores de planes de salud analizar y controla
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -625,7 +921,7 @@ PCA Farma
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -637,12 +933,19 @@ Una aplicación que ayuda a las farmacias a aumentar las ventas a través
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 PHP
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PHP"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -662,17 +965,24 @@ Web
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-pl/pgSQL
+PL/pgSQL
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PostgreSQLv1a"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -684,17 +994,54 @@ Un lenguaje de programación para procedimientos almacenados en bases de
 \end_inset
 </cell>
 </row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
+<row interlinespace="1em">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-PostgreSQL
+
+\family typewriter
+POST
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc2616"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
 <cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Método de HTTP para creación de recursos subordinados\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PostgreSQL
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PostgreSQLv2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -705,7 +1052,7 @@ Un sistema de gestión de bases de datos relacionales\SpecialChar \@.
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -715,7 +1062,7 @@ PRX Analyzer
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -731,7 +1078,7 @@ Web
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -741,7 +1088,7 @@ PRX Control Solutions
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -753,7 +1100,7 @@ Empresa en la cual se realizó el proyecto de pasantía, dedicada al diseño
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -763,7 +1110,7 @@ PRX Vademécum
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -778,7 +1125,7 @@ Web
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -786,11 +1133,18 @@ Web
 
 \family typewriter
 PUT
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc2616"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -801,17 +1155,52 @@ Método de HTTP para la creación o modificación de recursos\SpecialChar \@.
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Python
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Python"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Un lenguaje de programación dinámico de propósito general\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 REST
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fielding:2000:ASD:932295"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -830,7 +1219,31 @@ Web
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+rows
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Componente de ruta usado en URIs que identifican recursos en el API REST
+ desarrollado en este proyecto\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -840,7 +1253,7 @@ SaaS
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -859,17 +1272,24 @@ software
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 Siren
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Siren"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -880,17 +1300,24 @@ Un tipo de datos para representar entidades con hipertexto\SpecialChar \@.
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 Siren Browser
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SirenBrowser"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -906,12 +1333,19 @@ Web
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 SQL
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ISO:2011:IIIc"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -931,7 +1365,7 @@ structured query language
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -941,7 +1375,7 @@ Squealer
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -954,17 +1388,24 @@ Una herramienta desarrollada en este proyecto que transforma una descripción
 \end_inset
 </cell>
 </row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
+<row interlinespace="1em">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 SVG
+\begin_inset CommandInset citation
+LatexCommand cite
+key "W3C:SVG11:2011"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -979,7 +1420,7 @@ scalable vector graphics
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -987,11 +1428,20 @@ scalable vector graphics
 
 \emph on
 Tagless-final
+\emph default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Carette:2009:FTP:1630623.1630626"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1003,17 +1453,24 @@ o embebidos en lenguajes de programación estáticamente tipados\SpecialChar \@.
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 URI
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc3986"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1031,17 +1488,24 @@ Web
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 UUID
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc4122"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1057,7 +1521,31 @@ universally unique identifier
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+version
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Componente de ruta usado en URIs que identifican recursos en el API REST
+ desarrollado en este proyecto\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1069,7 +1557,7 @@ Web
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1084,12 +1572,19 @@ world wide web
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 XML
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cowan:06:EML"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1109,7 +1604,7 @@ extensible markup language
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1117,11 +1612,20 @@ extensible markup language
 
 \family typewriter
 yaml
+\family default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yaml"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1133,26 +1637,61 @@ Biblioteca para el procesamiento de YAML en el lenguaje de programación
 \end_inset
 </cell>
 </row>
-<row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 YAML
+\begin_inset CommandInset citation
+LatexCommand cite
+key "YAML"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Sigla de 
-\emph on
-yet another markup language
-\emph default
-, un formato estándar de datos representados en texto con énfasis en legibilidad
+Un formato estándar de datos representados en texto con énfasis en legibilidad
  por humanos\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Yesod
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Snoyman:2012:DWA:2385471"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Marco de desarrollo de sistemas 
+\emph on
+Web
+\emph default
+ con el estilo de arquitectura REST para el lenguaje de programación Haskell\SpecialChar \@.
 
 \end_layout
 

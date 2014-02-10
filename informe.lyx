@@ -5,6 +5,7 @@
 \textclass book
 \begin_preamble
  \usepackage{titlesec}
+ \usepackage{babelbib}
 \newcommand*{\justifyheading}{\raggedright}
 
 \titleformat{\chapter}[display]
@@ -116,7 +117,7 @@ customHeadersFooters
 \color #faf0e6
 \end_branch
 \branch Bibliografía
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -856,7 +857,7 @@ parskip}{7pt}
 
 \begin_layout Standard
 \begin_inset Branch Bibliografía
-status collapsed
+status open
 
 \begin_layout Standard
 \begin_inset CommandInset include

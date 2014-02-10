@@ -263,20 +263,6 @@ n de las representaciones del estado de cada recurso, entre los cuales el
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-TODO: referencia a la tesis de Roy Fielding y quizá otros recursos sobre
- REST
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Representaciones
 \end_layout
@@ -305,19 +291,6 @@ Web
 \emph default
 , que es la tecnología que se usará para implantar una interfaz administrativa
  para la base de datos a partir del API\SpecialChar \@.
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-TODO: referencia a Siren
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
@@ -1304,24 +1277,14 @@ reference "fig:siren-browser"
 \emph on
 Web
 \emph default
- en la aplicación Siren Browser
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-TODO: referencia del Siren Browser
-\end_layout
-
-\end_inset
-
- usada como prototipo para la interfaz administrativa\SpecialChar \@.
- Se muestran las propiedade
-s de la entidad de Siren obtenida como representación de un recurso del
- API, así como sus enlaces de navegación, sus entidades anidadas (que en
- el caso mostrado en la figura son enlaces), y las acciones disponibles\SpecialChar \@.
-
- El recurso mostrado corresponde a una página de la colección de las versiones
- activas de las filas de una tabla\SpecialChar \@.
+ en la aplicación Siren Browser usada como prototipo para la interfaz administra
+tiva\SpecialChar \@.
+ Se muestran las propiedades de la entidad de Siren obtenida como representa
+ción de un recurso del API, así como sus enlaces de navegación, sus entidades
+ anidadas (que en el caso mostrado en la figura son enlaces), y las acciones
+ disponibles\SpecialChar \@.
+ El recurso mostrado corresponde a una página de la colección
+ de las versiones activas de las filas de una tabla\SpecialChar \@.
 
 \end_layout
 

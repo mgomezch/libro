@@ -594,8 +594,23 @@ n simple de Blockly que incorpora bloques especiales para la construcción
  El bloque
  de combinaciones puede tener cualquier cantidad de entradas para términos
  en disyunción, y además puede configurarse para estar negado; los dos modos
- de operación del bloque se representan con las palabras «alguna» y «ninguna»,
- que representan cuáles proposiciones anidadas deben ser verdaderas para
+ de operación del bloque se representan con las palabras 
+\begin_inset Quotes eld
+\end_inset
+
+alguna
+\begin_inset Quotes erd
+\end_inset
+
+ y 
+\begin_inset Quotes eld
+\end_inset
+
+ninguna
+\begin_inset Quotes erd
+\end_inset
+
+, que representan cuáles proposiciones anidadas deben ser verdaderas para
  que sea verdadera la combinación\SpecialChar \@.
  Una negación simple puede representarse
  como una combinación negada de un solo elemento\SpecialChar \@.
