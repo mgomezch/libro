@@ -1,0 +1,75 @@
+database name: SCD
+
+tables:
+
+- table name: Product
+
+  primary key columns:
+  - Attribute:
+      name: code
+      type: text
+
+  data columns:
+  - Attribute:
+      name: name
+      type: text
+  - Attribute:
+      name: price
+      type: money
+
+
+- table name: Client
+
+  primary key columns:
+  - Attribute:
+      name: code
+      type: text
+
+  data columns:
+  - Attribute:
+      name: name
+      type: text
+  - Attribute:
+      name: date of birth
+      type: date
+
+
+- table name: Order
+
+  primary key columns:
+  - Attribute:
+      name: code
+      type: text
+
+  data columns:
+  - Attribute:
+      name: timestamp
+      type: timestamp with time zone
+  - Attribute:
+      name: status
+      type: text
+  - Reference:
+      name: client
+      target: Client
+      onUpdate: cascade
+      onDelete: restrict
+
+
+- table name: BillItem
+
+  primary key columns:
+  - Reference:
+      name: order
+      target: Order
+      onUpdate: cascade
+      onDelete: restrict
+  - Reference:
+      name: product
+      target: Product
+      onUpdate: preserve
+      onDelete: preserve
+
+  data columns:
+  - Attribute:
+      name: quantity
+      type: integer

@@ -120,7 +120,7 @@ addcontentsline{toc}{chapter}{Lista de Símbolos y Abreviaturas}
 \paragraph_spacing onehalf
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="55" columns="2">
+<lyxtabular version="3" rows="57" columns="2">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top" width="0pt">
 <column alignment="left" valignment="top" width="11cm">
@@ -1053,6 +1053,37 @@ Un sistema de gestión de bases de datos relacionales\SpecialChar \@.
 </cell>
 </row>
 <row interlinespace="1em">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+predecessor-version
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rfc5829"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tipo de enlace para indicar la versión de la cual el contexto del enlace
+ es considerada una versión sucesora\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1389,6 +1420,30 @@ Una herramienta desarrollada en este proyecto que transforma una descripción
 </cell>
 </row>
 <row interlinespace="1em">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+successor-version
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tipo de enlace para indicar la versión de la cual el contexto del enlace
+ es considerada una versión sucesora\SpecialChar \@.
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row interlinespace="1em">
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
@@ -1645,7 +1700,7 @@ Biblioteca para el procesamiento de YAML en el lenguaje de programación
 YAML
 \begin_inset CommandInset citation
 LatexCommand cite
-key "YAML"
+key "YAMLStd"
 
 \end_inset
 

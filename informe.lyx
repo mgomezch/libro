@@ -894,5 +894,197 @@ parskip}{7.5pt}
 
 \end_layout
 
+\begin_layout Chapter
+\start_of_appendix
+Ejemplo de Squealer
+\end_layout
+
+\begin_layout Standard
+El desarrollo de Squealer se apoyó en un esquema simple usado como ejemplo\SpecialChar \@.
+
+ Inicialmente se escribió su descripción en el formato de entrada y se aplicó
+ manualmente la técnica descrita en este informe para obtener el comportamiento
+ deseado\SpecialChar \@.
+ Luego, se programó el generador de SQL para generar automáticamente
+ código SQL con la misma estructura para ese ejemplo, pero de manera genérica,
+ tal que funcionara con cualquier otro esquema\SpecialChar \@.
+ Este apéndice presenta la
+ descripción de esquema usada como entrada, así como la salida finalmente
+ generada por Squealer con esa entrada, como ejemplo del código generado\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+Entrada
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "listings/squealer/input.yaml"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,numbers=left"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Salida
+\end_layout
+
+\begin_layout Standard
+El generador produce marcas especiales con comentarios con el texto 
+\family typewriter
+/*{{{*/
+\family default
+ y 
+\family typewriter
+/*}}}*/
+\family default
+ con el fin de indicar a algunos editores de texto en qué lugares establecer
+ regiones de código colapsables, lo cual facilita la visualización del código
+ generado si se cuenta con un editor que aproveche las marcas\SpecialChar \@.
+ No tienen
+ otro efecto ni utilidad\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Subsection
+Tabla 
+\family typewriter
+Product
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "listings/squealer/SCD/Product.sql"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,numbers=left"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tabla 
+\family typewriter
+Client
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "listings/squealer/SCD/Client.sql"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,numbers=left"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tabla 
+\family typewriter
+Order
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "listings/squealer/SCD/Order.sql"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,numbers=left"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tabla 
+\family typewriter
+BillItem
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "listings/squealer/SCD/BillItem.sql"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,numbers=left"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Programa de carga
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "listings/squealer/SCD/SCD.sh"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,numbers=left"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Evaluador de reglas de negocio
+\end_layout
+
+\begin_layout Standard
+Se presenta la implantación bajo el patrón 
+\emph on
+tagless-final
+\emph default
+ de un modelo coalgebráico de reglas de negocio proposicionales, su deserializac
+ión desde JSON, y sus cuatro intérpretes asociados: serialización a JSON,
+ representación textual, evaluación pura, y evaluación con efectos por cortocirc
+uito\SpecialChar \@.
+ Se espera que se pueda apreciar la brevedad y simplicidad del código
+ resultante de la aplicación de la técnica 
+\emph on
+tagless-final
+\emph default
+ para la construcción de intérpretes con garantías estáticas de correctitud
+ y usando muy poco código incluso para cuatro intérpretes\SpecialChar \@.
+
+\end_layout
+
+\begin_layout Section
+Proposiciones simples
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "listings/rules/Condition.hs"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,numbers=left"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Extensión para evaluación en contexto
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "listings/rules/Record.hs"
+lstparams "basicstyle={\\scriptsize\\ttfamily},breaklines=true,numbers=left"
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

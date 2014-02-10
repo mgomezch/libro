@@ -1006,7 +1006,7 @@ tabla
 versión
 \family typewriter
 \series default
-/predecessor
+/predecessor-version
 \family default
  y 
 \family typewriter
@@ -1022,7 +1022,7 @@ tabla
 versión
 \family typewriter
 \series default
-/successor
+/successor-version
 \family default
 , que indicarán redirección a la ubicación canónica de la versión adecuada
  si existiera, y de lo contrario indicarán un error\SpecialChar \@.
