@@ -4,7 +4,8 @@
 
 , "links":
   [ { "rel": ["self"]
-    , "href": "/Variante+de+asociación+farmacológica/column/variante" }
+    , "href": "/Variante+de+asociación+farmacológica/column/variante"
+    }
   , { "rel": ["collection"]
     , "href": "/Variante+de+asociación+farmacológica"
     }

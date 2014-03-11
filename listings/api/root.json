@@ -4,7 +4,7 @@
     }
   ]
 , "entities":
-  , { "rel": ["item"]
+  [ { "rel": ["item"]
     , "href": "/Asociación+farmacológica"
     }
   , { "rel": ["item"]
