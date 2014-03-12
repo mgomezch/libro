@@ -88,7 +88,7 @@ thispagestyle{empty}
 
 \begin_layout Standard
 Uno de los aspectos más complejos de la aplicación PCA Audit es la necesidad
- de hacerlo adaptable a la gran variedad de requerimientos específicos de
+ de hacerla adaptable a la gran variedad de requerimientos específicos de
  sus clientes\SpecialChar \@.
  La aplicación realiza análisis sobre los reclamos de salud
  que introducen los analistas y pacientes afiliados a pólizas de seguros
@@ -484,7 +484,7 @@ Aunque pudiera parecer preocupante la posibilidad de tener que evaluar una
  evaluación de una proposición es un proceso que no puede producir efectos
  secundarios, resulta sencillo paralelizar la evaluación, y más aún por
  contar con las excelentes facilidades de evaluación paralela que provee
- la librería 
+ la biblioteca 
 \family typewriter
 parallel
 \family default
